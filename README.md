@@ -5,5 +5,5 @@ A place where we automatically deploy the pymapdl Japanese documentation.
 
 This repository is automatically edited by our army of robots on the
 GitHub CI service. Changes to the documentation should not be made
-here but rather in the [`pymapdl`](https://github.com/tkoyama010/pymapdl)
+here but rather in the [`pymapdl`](https://github.com/ansys/pymapdl)
 repository.
