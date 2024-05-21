@@ -1,0 +1,79 @@
+name: pymapdl-doc-auto-update
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Get Job URL
+        uses: Tiryoh/gha-jobid-action@v1
+        id: jobs
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          job_name: script
+      - name: Checkout with submodule
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          repository: tkoyama010/pymapdl-doc-translations
+          submodules: true
+          path: pymapdl-doc-translations
+      - name: Checkout other repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: "gh-pages"
+          path: pymapdl-docs-dev-ja
+      - name: Setup SSH
+        uses: MrSquaare/ssh-setup-action@v3
+        with:
+          host: github.com
+          private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: install
+        run: |
+          pip install -U pip setuptools wheel
+          cd pymapdl-doc-translations
+          pip install -r ./requirements.txt
+          cd ../
+      - name: build
+        env:
+          JOB_ID: ${{ steps.jobs.outputs.job_id }}
+          HTML_URL: ${{ steps.jobs.outputs.html_url }}
+        run: |
+          cd pymapdl-doc-translations
+          git submodule update --remote
+          cd pymapdl
+          cd doc
+          make html-noexamples DEFAULTS="" SPHINXOPTS="-D language=ja -D locale_dirs='../../../locale'"
+          cd ../
+          cd ../
+          cd ../
+      - name: commit
+        if: contains(github.ref, 'main')
+        env:
+          JOB_ID: ${{ steps.jobs.outputs.job_id }}
+          HTML_URL: ${{ steps.jobs.outputs.html_url }}
+        run: |
+          cd pymapdl-docs-dev-ja
+          git checkout gh-pages
+          git rm -rf --ignore-unmatch *
+          mv ../pymapdl-doc-translations/pymapdl/doc/_build/html/* .
+          touch .nojekyll
+          git config --global user.email $GITHUB_REPOSITORY
+          git config --global user.name $GITHUB_REPOSITORY
+          git add .
+          git commit --allow-empty -m "[ci skip] $JOB_ID
+          $HTML_URL"
+          git push origin gh-pages
+          cd ../
