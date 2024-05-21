@@ -61,7 +61,7 @@ jobs:
         git submodule update --remote
         cd pymapdl
         cd doc
-        make phtml DEFAULTS="" SPHINXOPTS="-D plot_gallery=0 -D language=ja -D locale_dirs='../../../locale'"
+        make html-noexamples DEFAULTS="" SPHINXOPTS="-D language=ja -D locale_dirs='../../../locale'"
         cd ../
         cd ../
         cd ../
