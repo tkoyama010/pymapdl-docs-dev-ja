@@ -761,7 +761,7 @@ which can be done with:</p>
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 APDL</label><div class="sd-tab-content docutils">
-<p>Here is the MAPDL code:</p>
+<p>以下はMAPDLコードです:</p>
 <div class="highlight-apdl notranslate"><div class="highlight"><pre><span></span><span class="k">/COM</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ANSYS MEDIA REL. 150 (11/8/2013) REF. VERIF. MANUAL: REL. 150&#39;</span>
 <span class="k">/VERIFY</span><span class="p">,</span><span class="w"> </span><span class="nv">VM1</span>
 <span class="k">/PREP7</span>
@@ -887,7 +887,7 @@ requires a command immediately following it. This normally locks the
 interface, so it's implemented in the background as an input file
 using the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a>
 attribute.</p>
-<p>Here is the obtained result:</p>
+<p>以下はその結果です:</p>
 <div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">------------------- VM1 RESULTS COMPARISON ---------------------</span>
 <span class="go">|   TARGET   |   Mechanical APDL   |   RATIO</span>
 <span class="go">/INPUT FILE=    LINE=       0</span>
@@ -896,7 +896,7 @@ attribute.</p>
 <span class="go">----------------------------------------------------------------</span>
 </pre></div>
 </div>
-<p>You can verify the reaction forces with:</p>
+<p>反力は次のようにして確認できます:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rst</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">result</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">nnum</span><span class="p">,</span> <span class="n">forces</span> <span class="o">=</span> <span class="n">rst</span><span class="o">.</span><span class="n">nodal_static_forces</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">forces</span><span class="p">)</span>
