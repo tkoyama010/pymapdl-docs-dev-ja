@@ -52,12 +52,6 @@ jobs:
           HTML_URL: ${{ steps.jobs.outputs.html_url }}
         run: |
           cd pymapdl-doc-translations
-          set -x
-          export DISPLAY=:99.0
-          export pymapdl_OFF_SCREEN=True
-          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-          sleep 3
-          set +x
           git submodule update --remote
           cd pymapdl
           cd doc
