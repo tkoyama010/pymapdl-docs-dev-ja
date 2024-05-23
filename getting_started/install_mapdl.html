@@ -96,7 +96,7 @@
     <link rel="icon" href="../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="Install PyMAPDL" href="install_pymapdl.html" />
+    <link rel="next" title="PyMAPDLをインストールする." href="install_pymapdl.html" />
     <link rel="prev" title="PyMAPDL project" href="project.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -229,7 +229,7 @@
     
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="index.html">
-                        Getting started
+                        使い始める
                       </a>
                     </li>
                 
@@ -243,21 +243,21 @@
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../mapdl_commands/index.html">
-                        MAPDL commands
+                        MAPDLコマンド集
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../api/index.html">
-                        API reference
+                        APIリファレンス
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../examples/index.html">
-                        Examples
+                        使用例
                       </a>
                     </li>
                 
@@ -425,7 +425,7 @@ document.write(`
     
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="index.html">
-                        Getting started
+                        使い始める
                       </a>
                     </li>
                 
@@ -439,21 +439,21 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../mapdl_commands/index.html">
-                        MAPDL commands
+                        MAPDLコマンド集
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../api/index.html">
-                        API reference
+                        APIリファレンス
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../examples/index.html">
-                        Examples
+                        使用例
                       </a>
                     </li>
                 
@@ -554,7 +554,7 @@ document.write(`
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="project.html">PyMAPDL project</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Install MAPDL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">Install PyMAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">PyMAPDLをインストールする.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launcher.html">Launch PyMAPDL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning.html">Learning PyMAPDL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
@@ -613,7 +613,7 @@ document.write(`
     </li>
      
     <li class="breadcrumb-item">
-      <a href="index.html" class="nav-link">Getting started</a>
+      <a href="index.html" class="nav-link">使い始める</a>
     </li>
       
     <li class="breadcrumb-item active" aria-current="page">Install MAPDL</li>
@@ -636,10 +636,7 @@ document.write(`
                   
   <section id="install-mapdl">
 <span id="id1"></span><h1>Install MAPDL<a class="headerlink" href="#install-mapdl" title="Link to this heading">#</a></h1>
-<p>The PyAnsys <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> package (PyMAPDL) requires either a local or
-remote instance of MAPDL to communicate with it. This section covers
-launching and interfacing with MAPDL from a local instance by
-launching it from Python.</p>
+<p>PyAnsys の <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> パッケージ（PyMAPDL）と通信するには、ローカルまたはリモートの MAPDL インスタンスが必要です。このセクションでは、ローカルインスタンスからMAPDLを起動し、PythonからMAPDLを起動してインターフェイスする方法について説明します。</p>
 <p>MAPDL is installed by default from the Ansys standard installer. When
 installing Ansys, verify that the <strong>Mechanical Products</strong> checkbox is
 selected under the <strong>Structural Mechanics</strong> option. While the standard
@@ -648,29 +645,18 @@ installer options can change, see the following figure for reference.</p>
 <a class="reference internal image-reference" href="../_images/unified_install_2019R1.jpg"><img alt="../_images/unified_install_2019R1.jpg" src="../_images/unified_install_2019R1.jpg" style="width: 400pt;" />
 </a>
 </figure>
-<p>If you want to avoid having to install MAPDL locally, you can use Docker.
-This is especially convenient if you are using a non-supported platform such
-as MacOS.
-For more information, see <a class="reference internal" href="macos.html#ref-pymapdl-and-macos"><span class="std std-ref">PyMAPDL and MacOS</span></a>.</p>
-<p>You can also download and try the <a class="reference external" href="https://www.ansys.com/academic/students">Ansys Student Version</a>.
-A Student Version is valid during a calendar year with limited capabilities. For
-example, there is a limit on the number of nodes and elements.</p>
-<p>If you experience problems installing MAPDL on Linux, see
-<a class="reference internal" href="../user_guide/troubleshoot.html#missing-dependencies-on-linux"><span class="std std-ref">Missing dependencies on Linux</span></a>.</p>
+<p>MAPDLをローカルにインストールする手間を省きたい場合は、Dockerを使うことができる。これはMacOSのようなサポートされていないプラットフォームを使っている場合に特に便利です。詳細は <a class="reference internal" href="macos.html#ref-pymapdl-and-macos"><span class="std std-ref">PyMAPDL and MacOS</span></a> を参照してください。</p>
+<p>また、 <a class="reference external" href="https://www.ansys.com/academic/students">Ansys Student Version</a> をダウンロードして試すこともできます。 学生版は、暦年の間有効で、機能に制限があります。例えば、ノードやエレメントの数に制限があります。</p>
+<p>Linux上でMAPDLのインストールに問題が発生した場合は、 <a class="reference internal" href="../user_guide/troubleshoot.html#missing-dependencies-on-linux"><span class="std std-ref">Missing dependencies on Linux</span></a> を参照してください。</p>
 <section id="ansys-software-requirements">
-<h2>Ansys software requirements<a class="headerlink" href="#ansys-software-requirements" title="Link to this heading">#</a></h2>
-<p>For the latest features, you must have a copy of Ansys 2021 R1 or later
-installed locally. However, PyMAPDL is compatible with Ansys 17.0 and later
-on Windows and with Ansys 13.0 on Linux. However, its usage with these older
-versions is discouraged.</p>
+<h2>Ansysソフトウェアの要件<a class="headerlink" href="#ansys-software-requirements" title="Link to this heading">#</a></h2>
+<p>最新の機能を使用するには、Ansys 2021 R1以降をローカルにインストールする必要があります。ただし、PyMAPDLはWindowsではAnsys 17.0以降、LinuxではAnsys 13.0と互換性があります。ただし、これらの古いバージョンでの使用は推奨されていません。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>The latest versions of Ansys provide significantly better support
-and features. Certain features are not supported on earlier
-Ansys versions.</p>
+<p>Ansys の最新バージョンでは、サポートと機能が大幅に向上しています。一部の機能は、以前のバージョンの Ansys ではサポートされていません。</p>
 </div>
-<p>For more information, see <a class="reference internal" href="versioning.html#versions-and-interfaces"><span class="std std-ref">Versions and interfaces</span></a>.</p>
-<p>For information on installing PyMAPDL, see <a class="reference internal" href="install_pymapdl.html#ref-pymapdl-installation"><span class="std std-ref">Install PyMAPDL</span></a>.</p>
+<p>詳細は <a class="reference internal" href="versioning.html#versions-and-interfaces"><span class="std std-ref">Versions and interfaces</span></a> を参照。</p>
+<p>PyMAPDLのインストールについては <a class="reference internal" href="install_pymapdl.html#ref-pymapdl-installation"><span class="std std-ref">PyMAPDLをインストールする.</span></a> を参照してください。</p>
 </section>
 </section>
 
@@ -694,7 +680,7 @@ Ansys versions.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ansys-software-requirements">Ansys software requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ansys-software-requirements">Ansysソフトウェアの要件</a></li>
 </ul>
   </nav></div>
 

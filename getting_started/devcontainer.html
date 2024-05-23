@@ -97,7 +97,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="Create your own MAPDL docker container" href="make_container.html" />
-    <link rel="prev" title="Develop code" href="develop_pymapdl.html" />
+    <link rel="prev" title="コードを開発する" href="develop_pymapdl.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
   </head>
@@ -229,7 +229,7 @@
     
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="index.html">
-                        Getting started
+                        使い始める
                       </a>
                     </li>
                 
@@ -243,21 +243,21 @@
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../mapdl_commands/index.html">
-                        MAPDL commands
+                        MAPDLコマンド集
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../api/index.html">
-                        API reference
+                        APIリファレンス
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../examples/index.html">
-                        Examples
+                        使用例
                       </a>
                     </li>
                 
@@ -425,7 +425,7 @@ document.write(`
     
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="index.html">
-                        Getting started
+                        使い始める
                       </a>
                     </li>
                 
@@ -439,21 +439,21 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../mapdl_commands/index.html">
-                        MAPDL commands
+                        MAPDLコマンド集
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../api/index.html">
-                        API reference
+                        APIリファレンス
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../examples/index.html">
-                        Examples
+                        使用例
                       </a>
                     </li>
                 
@@ -554,7 +554,7 @@ document.write(`
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="project.html">PyMAPDL project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install_mapdl.html">Install MAPDL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">Install PyMAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">PyMAPDLをインストールする.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launcher.html">Launch PyMAPDL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning.html">Learning PyMAPDL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
@@ -613,7 +613,7 @@ document.write(`
     </li>
      
     <li class="breadcrumb-item">
-      <a href="index.html" class="nav-link">Getting started</a>
+      <a href="index.html" class="nav-link">使い始める</a>
     </li>
       
     <li class="breadcrumb-item active" aria-current="page">コンテナでの開発</li>
@@ -642,14 +642,9 @@ The files for setting up the container can be found in the
 <a class="reference external" href="https://github.com/ansys/pymapdl/tree/main/.devcontainer">.devcontainer directory</a>.</p>
 <section id="about-the-mapdl-container">
 <h2>MAPDLコンテナについて<a class="headerlink" href="#about-the-mapdl-container" title="Link to this heading">#</a></h2>
-<p>Because MAPDL software is not open source, the GPL license does not allow to
-distribute a docker container to users.
-Having a docker container with MAPDL installed is a requirement to use
-any of the development methods mentioned on this section.
-If you want to build your own docker image, visit the following link
-<a class="reference internal" href="make_container.html#ref-make-container"><span class="std std-ref">Create your own MAPDL docker container</span></a>.</p>
+<p>MAPDL ソフトウェアはオープンソースではないため、GPL ライセンスでは docker コンテナをユーザーに配布することはできません。MAPDL がインストールされた docker コンテナがあることが、このセクションで紹介する開発方法を利用するための必須条件です。独自の docker イメージを構築したい場合は、以下のリンクを参照してください <a class="reference internal" href="make_container.html#ref-make-container"><span class="std std-ref">Create your own MAPDL docker container</span></a> 。</p>
 <section id="license">
-<h3>License<a class="headerlink" href="#license" title="Link to this heading">#</a></h3>
+<h3>ライセンス<a class="headerlink" href="#license" title="Link to this heading">#</a></h3>
 <p>As mentioned before, you must have a valid license to run MAPDL.
 When you launch the container, the file <code class="file docutils literal notranslate"><span class="pre">script.sh</span></code> automatically
 checks if the environment variable <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">ANSYSLMD_LICENSE_FILE</span></code> exists.
@@ -727,8 +722,7 @@ Because the configuration is available in the <code class="file docutils literal
 Visual Studio Code automatically launches the MAPDL container with the desired configuration.</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>The first time that you launch the devcontainer, it might take a long time before it is ready,
-This is because the container image must be pulled from the registry.</p>
+<p>初めてdevcontainerを起動したときは、準備が整うまで時間がかかるかもしれません。これは、コンテナ・イメージをレジストリから取得する必要があるためです。</p>
 </div>
 <p>You can now work normally, but you would be, in fact, working from
 inside the container.
@@ -762,7 +756,7 @@ For more information, see <a class="reference external" href="https://code.visua
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-the-mapdl-container">MAPDLコンテナについて</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#license">ライセンス</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#develop-on-a-remote-container">リモートコンテナで開発する</a></li>
