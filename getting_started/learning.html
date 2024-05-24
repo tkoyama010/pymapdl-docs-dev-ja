@@ -12,7 +12,7 @@
 
     
         
-    <title>Learning PyMAPDL &#8212; PyMAPDL</title>
+    <title>PyMAPDLを学ぶ &#8212; PyMAPDL</title>
     
 
 
@@ -97,7 +97,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="Frequently asked questions" href="faq.html" />
-    <link rel="prev" title="Launch PyMAPDL" href="launcher.html" />
+    <link rel="prev" title="PyMAPDL を起動する" href="launcher.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
   </head>
@@ -553,10 +553,10 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="project.html">PyMAPDL project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_mapdl.html">Install MAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_mapdl.html">MAPDLをインストールする.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">PyMAPDLをインストールする.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="launcher.html">Launch PyMAPDL</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Learning PyMAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launcher.html">PyMAPDL を起動する</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">PyMAPDLを学ぶ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribution.html">貢献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devcontainer.html">コンテナでの開発</a></li>
@@ -568,7 +568,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="docker.html">MAPDL and Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macos.html">PyMAPDL and MacOS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wsl.html">Windows Subsystem for Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using_julia.html">Julia and PyMAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_julia.html">JuliaとPyMAPDL</a></li>
 </ul>
 </div>
 </nav></div>
@@ -616,7 +616,7 @@ document.write(`
       <a href="index.html" class="nav-link">使い始める</a>
     </li>
       
-    <li class="breadcrumb-item active" aria-current="page">Learning PyMAPDL</li>
+    <li class="breadcrumb-item active" aria-current="page">PyMAPDLを学ぶ</li>
     
   </ul>
 </nav>
@@ -635,25 +635,16 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="learning-pymapdl">
-<span id="ref-learning"></span><h1>Learning PyMAPDL<a class="headerlink" href="#learning-pymapdl" title="Link to this heading">#</a></h1>
+<span id="ref-learning"></span><h1>PyMAPDLを学ぶ<a class="headerlink" href="#learning-pymapdl" title="Link to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<h2>イントロダクション<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p class="centered">
-<strong>_PyMAPDL provides Pythonic access to MAPDL, an Ansys finite element solver._</strong></p><p>PyMAPDL touches on different technologies such as Python and finite elements, to bring them together
-and offer you a better user experience by seamlessly connecting this Ansys solver and the Python ecosystem.
-To learn how to use this library, you have many resources available:</p>
+<strong>_PyMAPDLは、<a href="#id8"><span class="problematic" id="id9">Ansysの有限要素ソルバーであるMAPDLへのPythonicなアクセスを提供する_</span></a></strong></p><p>PyMAPDLは、Pythonや有限要素などの異なる技術に触れ、それらを統合し、このAnsysソルバーとPythonエコシステムをシームレスに接続することで、より優れたユーザーエクスペリエンスを提供します。このライブラリの使用方法を学ぶには、多くのリソースが利用可能です。</p>
 <ul class="simple">
-<li><p>Complete the <a class="reference internal" href="#ref-pymapdl-course"><span class="std std-ref">PyMAPDLを使い始める</span></a> course, which guides you through PyMAPDL's
-main functionalities.</p></li>
-<li><p>Visit the <a class="reference external" href="https://mapdl.docs.pyansys.com/version/stable/examples/index.html">Examples gallery</a> to learn from practical examples.
-The <a class="reference external" href="https://mapdl.docs.pyansys.com/version/stable/examples/gallery_examples/00-mapdl-examples/bracket_static.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-bracket-static-py">Static analysis of a corner bracket</a> example is a very
-good starting point.</p></li>
-<li><p>Become familiar with the Python programming language. There are many online courses and
-websites for learning Python. Additionally, Ansys provides a <a class="reference internal" href="#ref-python-course"><span class="std std-ref">Intro to Python</span></a> course.</p></li>
-<li><p>Understand finite element methods (FEMs). Because physical models are solved using FEMs, you
-need to know how these methods work to get accurate and adequate solutions. The
-<a class="reference external" href="https://courses.ansys.com/index.php/learning-track/introduction-to-finite-element-methods/">Introduction to Finite Element Methods</a> course on the Ansys
-Learning Resources website offers tracks to help you to get familiar with these methods.</p></li>
+<li><p><a class="reference internal" href="#ref-pymapdl-course"><span class="std std-ref">PyMAPDLを使い始める</span></a> コースを完了します。このコースでは PyMAPDL の主な機能について説明します。</p></li>
+<li><p>実践的な例から学ぶには <a class="reference external" href="https://mapdl.docs.pyansys.com/version/stable/examples/index.html">ギャラリー例</a> をご覧ください。 <a class="reference external" href="https://mapdl.docs.pyansys.com/version/stable/examples/gallery_examples/00-mapdl-examples/bracket_static.html#sphx-glr-examples-gallery-examples-00-mapdl-examples-bracket-static-py">コーナーブラケットの静解析</a> の例は非常に良い出発点です。</p></li>
+<li><p>プログラミング言語Pythonに慣れる。Pythonを学ぶためのオンラインコースやウェブサイトはたくさんあります。さらに、Ansysは <a class="reference internal" href="#ref-python-course"><span class="std std-ref">Intro to Python</span></a> コースを提供しています。</p></li>
+<li><p>有限要素法(FEM)を理解する。物理モデルは FEM を使用して解かれるため、正確で適切な解を得るためには、これらの手法がどのように機能するかを知る必要があります。Ansys Learning Resources Web サイトの <a class="reference external" href="https://courses.ansys.com/index.php/learning-track/introduction-to-finite-element-methods/">有限要素法の概要</a> コースでは、これらのメソッドに精通するためのトラックを提供しています。</p></li>
 <li><p>Take the Ansys <a class="reference internal" href="#ref-mapdl-course"><span class="std std-ref">Intro to Ansys Mechanical APDL scripting</span></a> course. Because PyMAPDL interface with MAPDL
 through APDL commands, you should become familiar with MAPDL commands and
 workflows.</p></li>
@@ -827,7 +818,7 @@ or <a class="reference external" href="https://github.com/ansys/PyMAPDL/discussi
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">イントロダクション</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloads">Downloads</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#courses">Courses</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-to-python">Intro to Python</a><ul class="nav section-nav flex-column">

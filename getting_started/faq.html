@@ -97,7 +97,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="貢献" href="contribution.html" />
-    <link rel="prev" title="Learning PyMAPDL" href="learning.html" />
+    <link rel="prev" title="PyMAPDLを学ぶ" href="learning.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
   </head>
@@ -553,10 +553,10 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="project.html">PyMAPDL project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_mapdl.html">Install MAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_mapdl.html">MAPDLをインストールする.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">PyMAPDLをインストールする.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="launcher.html">Launch PyMAPDL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="learning.html">Learning PyMAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launcher.html">PyMAPDL を起動する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning.html">PyMAPDLを学ぶ</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Frequently asked questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribution.html">貢献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devcontainer.html">コンテナでの開発</a></li>
@@ -568,7 +568,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="docker.html">MAPDL and Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macos.html">PyMAPDL and MacOS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wsl.html">Windows Subsystem for Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using_julia.html">Julia and PyMAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_julia.html">JuliaとPyMAPDL</a></li>
 </ul>
 </div>
 </nav></div>
@@ -637,8 +637,8 @@ document.write(`
   <section id="frequently-asked-questions">
 <span id="faq"></span><h1>Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Link to this heading">#</a></h1>
 <section id="how-do-you-report-issues">
-<h2>How do you report issues?<a class="headerlink" href="#how-do-you-report-issues" title="Link to this heading">#</a></h2>
-<p>If you find an issue, the first place to visit for possible solutions is the <a class="reference internal" href="../user_guide/troubleshoot.html#ref-troubleshooting"><span class="std std-ref">troubleshooting section</span></a>.</p>
+<h2>どのように問題を報告しますか？<a class="headerlink" href="#how-do-you-report-issues" title="Link to this heading">#</a></h2>
+<p>問題が見つかった場合、解決策を探すために最初に訪れるべき場所は <a class="reference internal" href="../user_guide/troubleshoot.html#ref-troubleshooting"><span class="std std-ref">トラブルシューティングセクション</span></a> です。</p>
 <p>If you do not find a solution there, you can search for your issue within the <a class="reference external" href="https://github.com/ansys/pymapdl">GitHub repository</a>. You can use <a class="reference external" href="https://github.com/ansys/pymapdl/issues?q=">the search box</a> to find related issues or pull requests.</p>
 <p>To ask more open-ended questions or seek advice from the community,
 use the <a class="reference external" href="https://github.com/ansys/PyMAPDL/discussions">PyMAPDL discussions</a> page of the GitHub repository.</p>
@@ -696,7 +696,7 @@ that leverages these machine learning tools. It also allows you to generate
 advanced plots using <a class="reference external" href="https://docs.pyvista.org/version/stable/">PyVista</a> or <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>.</p>
 </section>
 <section id="how-do-you-end-a-simulation-and-restart-a-script">
-<h2>How do you end a simulation and restart a script?<a class="headerlink" href="#how-do-you-end-a-simulation-and-restart-a-script" title="Link to this heading">#</a></h2>
+<h2>シミュレーションを終了し、スクリプトを再開するにはどうすればよいですか？<a class="headerlink" href="#how-do-you-end-a-simulation-and-restart-a-script" title="Link to this heading">#</a></h2>
 <p>Closing and reopening Python clears the solution within Python. To clear all previous
 data such as the mesh, you can use this code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -783,11 +783,11 @@ quadrilateral facet across the whole facet is not deterministic.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-you-report-issues">How do you report issues?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-you-report-issues">どのように問題を報告しますか？</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-the-pros-and-cons-of-pymapdl-versus-ansys-act">What are the pros and cons of PyMAPDL versus Ansys ACT?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#has-apdl-been-deprecated-by-ansys-if-so-what-does-that-mean-for-pymapdl">Has APDL been "deprecated" by Ansys? If so, what does that mean for PyMAPDL?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-the-main-reasons-to-use-pymapdl-over-other-ansys-products-like-workbench">What are the main reasons to use PyMAPDL over other Ansys products like Workbench?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-you-end-a-simulation-and-restart-a-script">How do you end a simulation and restart a script?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-you-end-a-simulation-and-restart-a-script">シミュレーションを終了し、スクリプトを再開するにはどうすればよいですか？</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-pymapdl-results-are-different-than-the-ones-shown-in-the-mapdl-gui">Why PyMAPDL results are different than the ones shown in the MAPDL GUI?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#listing-results">Listing results</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-results">Plotting results</a></li>

@@ -96,8 +96,8 @@
     <link rel="icon" href="../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="Launch PyMAPDL" href="launcher.html" />
-    <link rel="prev" title="Install MAPDL" href="install_mapdl.html" />
+    <link rel="next" title="PyMAPDL を起動する" href="launcher.html" />
+    <link rel="prev" title="MAPDLをインストールする." href="install_mapdl.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
   </head>
@@ -553,10 +553,10 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="project.html">PyMAPDL project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_mapdl.html">Install MAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_mapdl.html">MAPDLをインストールする.</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">PyMAPDLをインストールする.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="launcher.html">Launch PyMAPDL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="learning.html">Learning PyMAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launcher.html">PyMAPDL を起動する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning.html">PyMAPDLを学ぶ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribution.html">貢献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devcontainer.html">コンテナでの開発</a></li>
@@ -568,7 +568,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="docker.html">MAPDL and Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macos.html">PyMAPDL and MacOS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wsl.html">Windows Subsystem for Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using_julia.html">Julia and PyMAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_julia.html">JuliaとPyMAPDL</a></li>
 </ul>
 </div>
 </nav></div>
@@ -644,8 +644,7 @@ Python 3.12 on Windows, Mac OS, and Linux.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install ansys-mapdl-core</span>
 </pre></div>
 </div>
-<p>Alternatively, install the latest from
-<a class="reference external" href="https://github.com/ansys/pymapdl/issues">PyMAPDL GitHub</a> with this command:</p>
+<p>あるいは、以下のコマンドで PyMAPDL GitHub &lt;<a class="reference external" href="https://github.com/ansys/pymapdl/issues">pymapdl_issues</a>&gt;`_ から最新のものをインストールしてください:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install git+https://github.com/ansys/pymapdl.git</span>
 </pre></div>
 </div>
@@ -655,8 +654,7 @@ Python 3.12 on Windows, Mac OS, and Linux.</p>
 <span class="go">pip install -e .</span>
 </pre></div>
 </div>
-<p>After installing a development version, you can modify the <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> package
-locally and have the changes reflected in your setup after restarting the Python kernel.</p>
+<p>開発版をインストールした後、ローカルで <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> パッケージを変更し、Python カーネルを再起動すると変更がセットアップに反映されます。</p>
 </section>
 <section id="offline-installation">
 <h2>Offline installation<a class="headerlink" href="#offline-installation" title="Link to this heading">#</a></h2>
@@ -664,9 +662,7 @@ locally and have the changes reflected in your setup after restarting the Python
 of installing PyMAPDL is downloading the wheelhouse archive from the
 <a class="reference external" href="https://github.com/ansys/pymapdl/releases">Releases</a> page for your corresponding
 machine architecture.</p>
-<p>Each wheelhouse archive contains all the Python wheels necessary to install
-PyMAPDL from scratch on Windows and Linux. You can install
-this on an isolated system with a fresh Python installation or on a virtual environment.</p>
+<p>各 wheelhouse アーカイブには、Windows と Linux に PyMAPDL をゼロからインストールするために必要な Python wheel がすべて含まれています。新しいPythonがインストールされた隔離されたシステムや仮想環境にインストールすることができます。</p>
 <p>For example, on Linux with Python 3.9, unzip the wheelhouse archive and install it with
 these commands:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">unzip PyMAPDL-v0.68.dev1-wheelhouse-Linux-3.9.zip wheelhouse</span>
@@ -681,13 +677,10 @@ install using the preceding command.</p>
 <h2>Verify your installation<a class="headerlink" href="#verify-your-installation" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>To use PyMAPDL, you must have a local installation of Ansys. The
-version of Ansys installed dictates the interface and features
-available to you.</p>
-<p>For more information on getting a licensed copy of Ansys, visit
-<a class="reference external" href="https://www.ansys.com/">Ansys</a>.</p>
+<p>PyMAPDLを使用するには、Ansysがローカルにインストールされている必要があります。インストールされているAnsysのバージョンによって、使用できるインターフェイスや機能が異なります。</p>
+<p>ANSYSのライセンスコピーの入手に関する詳細は、 <a class="reference external" href="https://www.ansys.com/">Ansys</a> をご覧ください。</p>
 </div>
-<p>Check that you have installed the package correctly by importing the module:</p>
+<p>モジュールをインポートして、パッケージが正しくインストールされていることを確認してください:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">core</span> <span class="k">as</span> <span class="n">pymapdl</span>
 </pre></div>
 </div>

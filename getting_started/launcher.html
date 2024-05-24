@@ -12,7 +12,7 @@
 
     
         
-    <title>Launch PyMAPDL &#8212; PyMAPDL</title>
+    <title>PyMAPDL を起動する &#8212; PyMAPDL</title>
     
 
 
@@ -96,7 +96,7 @@
     <link rel="icon" href="../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="Learning PyMAPDL" href="learning.html" />
+    <link rel="next" title="PyMAPDLを学ぶ" href="learning.html" />
     <link rel="prev" title="PyMAPDLをインストールする." href="install_pymapdl.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -553,10 +553,10 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="project.html">PyMAPDL project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_mapdl.html">Install MAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_mapdl.html">MAPDLをインストールする.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">PyMAPDLをインストールする.</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Launch PyMAPDL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="learning.html">Learning PyMAPDL</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">PyMAPDL を起動する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning.html">PyMAPDLを学ぶ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribution.html">貢献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devcontainer.html">コンテナでの開発</a></li>
@@ -568,7 +568,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="docker.html">MAPDL and Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macos.html">PyMAPDL and MacOS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wsl.html">Windows Subsystem for Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using_julia.html">Julia and PyMAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_julia.html">JuliaとPyMAPDL</a></li>
 </ul>
 </div>
 </nav></div>
@@ -616,7 +616,7 @@ document.write(`
       <a href="index.html" class="nav-link">使い始める</a>
     </li>
       
-    <li class="breadcrumb-item active" aria-current="page">Launch PyMAPDL</li>
+    <li class="breadcrumb-item active" aria-current="page">PyMAPDL を起動する</li>
     
   </ul>
 </nav>
@@ -635,7 +635,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="launch-pymapdl">
-<span id="ref-launch-pymapdl"></span><h1>Launch PyMAPDL<a class="headerlink" href="#launch-pymapdl" title="Link to this heading">#</a></h1>
+<span id="ref-launch-pymapdl"></span><h1>PyMAPDL を起動する<a class="headerlink" href="#launch-pymapdl" title="Link to this heading">#</a></h1>
 <p>PyMAPDL can start MAPDL locally, or it can connect to a session already running locally or
 on a remote machine.</p>
 <ul class="simple">
@@ -645,7 +645,7 @@ on a remote machine.</p>
 </ul>
 <p>If you have any problem launching PyMAPDL, see <a class="reference internal" href="../user_guide/troubleshoot.html#ref-launching-issue"><span class="std std-ref">Launching issues</span></a>.</p>
 <section id="launch-pymapdl-with-a-local-mapdl-instance">
-<h2>Launch PyMAPDL with a local MAPDL instance<a class="headerlink" href="#launch-pymapdl-with-a-local-mapdl-instance" title="Link to this heading">#</a></h2>
+<h2>ローカルのMAPDLインスタンスでPyMAPDLを起動する<a class="headerlink" href="#launch-pymapdl-with-a-local-mapdl-instance" title="Link to this heading">#</a></h2>
 <p>You can use the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>
 function to start MAPDL and automatically connect to it:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
@@ -656,21 +656,17 @@ function to start MAPDL and automatically connect to it:</p>
 <span class="go">ansys.mapdl Version: 0.68.0</span>
 </pre></div>
 </div>
-<p>While this is the easiest and fastest way to get PyMAPDL up and running.
-you must be able to launch MAPDL locally.</p>
-<p>If PyMAPDL cannot find your local installation, see
-<a class="reference internal" href="#setting-the-mapdl-location-in-pymapdl">Setting the MAPDL location in PyMAPDL</a>.</p>
-<p>For more information on controlling how MAPDL launches locally, see the
-description of the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> function.</p>
+<p>これはPyMAPDLを起動して実行する最も簡単で速い方法ですが、MAPDLをローカルで起動できなければなりません。</p>
+<p>PyMAPDL がローカルのインストールを見つけられない場合は、 <a class="reference internal" href="#setting-the-mapdl-location-in-pymapdl">Setting MAPDL location in PyMAPDL</a> を参照してください。</p>
+<p>MAPDLをローカルで起動する方法の詳細については、 <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> 関数の説明を参照してください。</p>
 </section>
 <section id="connect-pymapdl-to-a-local-mapdl-instance">
-<h2>Connect PyMAPDL to a local MAPDL instance<a class="headerlink" href="#connect-pymapdl-to-a-local-mapdl-instance" title="Link to this heading">#</a></h2>
-<p>Connect to a local MAPDL instance requires two steps: launching a
-local MAPDL session and connect to it.</p>
+<h2>PyMAPDL をローカルの MAPDL インスタンスに接続する<a class="headerlink" href="#connect-pymapdl-to-a-local-mapdl-instance" title="Link to this heading">#</a></h2>
+<p>ローカルのMAPDLインスタンスに接続するには、ローカルのMAPDLセッションを起動し、そのインスタンスに接続するという2つのステップが必要です。</p>
 <section id="launch-a-local-grpc-mapdl-session">
-<span id="launch-grpc-madpl-session"></span><h3>Launch a local gRPC MAPDL session<a class="headerlink" href="#launch-a-local-grpc-mapdl-session" title="Link to this heading">#</a></h3>
-<p>You can start MAPDL from the command line and then connect to it.</p>
-<p>To launch MAPDL, use this command:</p>
+<span id="launch-grpc-madpl-session"></span><h3>ローカルのgRPC MAPDLセッションを起動する<a class="headerlink" href="#launch-a-local-grpc-mapdl-session" title="Link to this heading">#</a></h3>
+<p>コマンドラインからMAPDLを起動し、接続することができる。</p>
+<p>MAPDLを起動するには、次のコマンドを使用する:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-0">
@@ -687,9 +683,7 @@ Linux</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<p>When launching MAPDL on Windows, it is assumed that Ansys is installed in the
-<code class="file docutils literal notranslate"><span class="pre">C:/Program</span> <span class="pre">Files/ANSYS</span> <span class="pre">Inc/v241</span></code> directory and, on Linux, it is assumed
-that Ansys is installed in the <code class="file docutils literal notranslate"><span class="pre">/usr/ansys_inc</span></code> directory.</p>
+<p>Windows で MAPDL を起動する場合、ANSYS が <code class="file docutils literal notranslate"><span class="pre">C:/Program</span> <span class="pre">Files/ANSYS</span> <span class="pre">Inc/v241</span></code> ディレクトリに、Linux では <code class="file docutils literal notranslate"><span class="pre">/usr/ansys_inc</span></code> ディレクトリにインストールされているものとします。</p>
 <p>This starts MAPDL in gRPC mode. MAPDL should display this output:</p>
 <div class="highlight-output notranslate"><div class="highlight"><pre><span></span><span class="go">Start GRPC Server</span>
 
@@ -877,9 +871,9 @@ Linux</label><div class="sd-tab-content docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-pymapdl-with-a-local-mapdl-instance">Launch PyMAPDL with a local MAPDL instance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-pymapdl-to-a-local-mapdl-instance">Connect PyMAPDL to a local MAPDL instance</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-a-local-grpc-mapdl-session">Launch a local gRPC MAPDL session</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-pymapdl-with-a-local-mapdl-instance">ローカルのMAPDLインスタンスでPyMAPDLを起動する</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-pymapdl-to-a-local-mapdl-instance">PyMAPDL をローカルの MAPDL インスタンスに接続する</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-a-local-grpc-mapdl-session">ローカルのgRPC MAPDLセッションを起動する</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-the-local-mapdl-instance">Connect to the local MAPDL instance</a></li>
 </ul>
 </li>

@@ -96,7 +96,7 @@
     <link rel="icon" href="../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="Julia and PyMAPDL" href="using_julia.html" />
+    <link rel="next" title="JuliaとPyMAPDL" href="using_julia.html" />
     <link rel="prev" title="PyMAPDL and MacOS" href="macos.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -553,10 +553,10 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="project.html">PyMAPDL project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install_mapdl.html">Install MAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_mapdl.html">MAPDLをインストールする.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">PyMAPDLをインストールする.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="launcher.html">Launch PyMAPDL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="learning.html">Learning PyMAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="launcher.html">PyMAPDL を起動する</a></li>
+<li class="toctree-l1"><a class="reference internal" href="learning.html">PyMAPDLを学ぶ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribution.html">貢献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devcontainer.html">コンテナでの開発</a></li>
@@ -568,7 +568,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="docker.html">MAPDL and Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macos.html">PyMAPDL and MacOS</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Windows Subsystem for Linux</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using_julia.html">Julia and PyMAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_julia.html">JuliaとPyMAPDL</a></li>
 </ul>
 </div>
 </nav></div>
@@ -695,8 +695,7 @@ your downloads folder to WSL.</p>
 </pre></div>
 </div>
 </li>
-<li><p>To install MAPDL, go into the folder where the files have been extracted and
-run this command:</p>
+<li><p>MAPDLをインストールするには、ファイルを解凍したフォルダに入り、次のコマンドを実行します:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo ./INSTALL -silent -install_dir /usr/ansys_inc/ -mechapdl</span>
 </pre></div>
 </div>
@@ -718,8 +717,7 @@ of the <em>Windows Installation Guide</em>.</p>
 </ul>
 </li>
 </ol>
-<p>After installing MAPDL directly in <code class="docutils literal notranslate"><span class="pre">/ansys_inc</span></code> or in <code class="docutils literal notranslate"><span class="pre">/usr/ansys_inc</span></code>,
-you create a symbolic link with this command:</p>
+<p>MAPDL を <code class="docutils literal notranslate"><span class="pre">/ansys_inc</span></code> または <code class="docutils literal notranslate"><span class="pre">/usr/ansys_inc</span></code> に直接インストールした後、次のコマンドでシンボリックリンクを作成します:。</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo ln -s /usr/ansys_inc /ansys_inc</span>
 </pre></div>
 </div>
@@ -741,15 +739,7 @@ Windows firewall options, see Microsoft's
 to host that Docker image. The Docker image successfully communicates with the Windows
 license server using these ports if you use the <code class="docutils literal notranslate"><span class="pre">'-p'</span></code> flag when running the
 Docker image with these ports open.</p>
-<p>If you want to run MAPDL in the CentOS 7 image and use the Windows license
-server, opening the ports might not work properly because the Windows firewall
-seems to block all traffic coming from WSL. For security purposes, you should
-still try to open ports <code class="docutils literal notranslate"><span class="pre">1055</span></code> and <code class="docutils literal notranslate"><span class="pre">2325</span></code> in the firewall and verify that your
-MAPDL installation can communicate with the Windows hosts. If you are having
-problems after setting the firewall rules, you might have to turn off the Windows
-firewall for the WSL ethernet virtual interface. This might pose some unknown
-side effects and security risk so use it with caution. For more information, see
-<a class="reference internal" href="#disable-firewall-on-wsl-ethernet-section"><span class="std std-ref">Disable firewall on WSL ethernet</span></a>.</p>
+<p>CentOS 7 イメージで MAPDL を実行し、Windows ライセンスサーバーを使用する場合、 Windows ファイアウォールが WSL から来るすべてのトラフィックをブロックするため、ポートを開 いても正しく動作しない可能性があります。セキュリティのため、ファイアウォールでポート <code class="docutils literal notranslate"><span class="pre">1055</span></code> と <code class="docutils literal notranslate"><span class="pre">2325</span></code> を開き、MAPDL インストールが Windows ホストと通信できることを確認してください。ファイアウォールのルールを設定しても問題がある場合は、WSLイーサネットバーチャ ルインターフェイスのWindowsファイアウォールをオフにする必要があるかもしれない。これは、未知の副作用とセキュリティリスクをもたらすかもしれないので、注意して使用してください。詳しくは <a class="reference internal" href="#disable-firewall-on-wsl-ethernet-section"><span class="std std-ref">Disable firewall on WSL ethernet</span></a> を参照してください。</p>
 </section>
 <section id="set-up-an-environmental-variable-in-wsl-that-points-to-windows-host-license-server">
 <h3>Set up an environmental variable in WSL that points to Windows host license server<a class="headerlink" href="#set-up-an-environmental-variable-in-wsl-that-points-to-windows-host-license-server" title="Link to this heading">#</a></h3>
@@ -803,9 +793,7 @@ If you want to change the working directory, you can use the <code class="docuti
 </section>
 <section id="launch-mapdl-in-the-windows-host-os">
 <h2>Launch MAPDL in the Windows host OS<a class="headerlink" href="#launch-mapdl-in-the-windows-host-os" title="Link to this heading">#</a></h2>
-<p>You can launch an instance of MAPDL using the MAPDL installation from the
-Windows host OS.
-To do that, run this code:</p>
+<p>WindowsホストOSからMAPDLインストールを使用してMAPDLのインスタンスを起動できます。そのためには、次のコードを実行します:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span>
