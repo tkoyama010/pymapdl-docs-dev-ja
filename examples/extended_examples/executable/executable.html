@@ -49,7 +49,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/ansys_sphinx_theme.css?v=35e44410" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=91007d66" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
@@ -71,7 +71,7 @@
     <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JQJKPV6ZVB"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -676,8 +676,8 @@ blades and a specific material configuration.</p>
 <span class="c1"># OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span>
 <span class="c1"># SOFTWARE.</span>
 
-<span class="c1"># Script to calculate the first natural frequecy of</span>
-<span class="c1"># a rotor for a given set of properties</span>
+<span class="c1"># Script to calculate the first natural frequency of a rotor for a given set of</span>
+<span class="c1"># properties</span>
 
 <span class="c1"># Import packages</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -841,8 +841,8 @@ in a function signature.</p>
 <span class="c1"># OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span>
 <span class="c1"># SOFTWARE.</span>
 
-<span class="c1"># Script to calculate the first natural frequecy of a rotor for a given set of properties</span>
-<span class="kn">import</span> <span class="nn">click</span>
+<span class="c1"># Script to calculate the first natural frequency of a rotor for a given set of</span>
+<span class="c1"># properties</span>
 </pre></div>
 </div>
 <p>You introduce the values of these parameters by adding this code
@@ -862,9 +862,9 @@ immediately before the function definition:</p>
 <span class="c1"># OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span>
 <span class="c1"># SOFTWARE.</span>
 
-<span class="c1"># Script to calculate the first natural frequecy of a rotor for a given set of properties</span>
+<span class="c1"># Script to calculate the first natural frequency of a rotor for a given set of</span>
+<span class="c1"># properties</span>
 <span class="kn">import</span> <span class="nn">click</span>
-
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -874,8 +874,8 @@ you must specify <em>Click</em> commands immediately before the function definit
 </div>
 <p>In addition, you must add the call to the newly created function at the end
 of the script:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;loc&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">center_radious</span><span class="p">)</span>
-    <span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="s2">&quot;ux&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">mapdl</span><span class="o">.</span><span class="n">csys</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">mapdl</span><span class="o">.</span><span class="n">nsel</span><span class="p">(</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;loc&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">center_radious</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This ensure the new function is called when the script is executed.</p>
@@ -1119,7 +1119,7 @@ using this approach (non-tested):</p>
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          0.16.0. and
+          0.16.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
           on <span id="date"></span>
         </p>

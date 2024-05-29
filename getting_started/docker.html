@@ -49,7 +49,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css?v=35e44410" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=91007d66" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
@@ -71,7 +71,7 @@
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JQJKPV6ZVB"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -557,10 +557,10 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">PyMAPDLをインストールする.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launcher.html">PyMAPDL を起動する</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning.html">PyMAPDLを学ぶ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">よくあるご質問</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribution.html">貢献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devcontainer.html">コンテナでの開発</a></li>
-<li class="toctree-l1"><a class="reference internal" href="make_container.html">Create your own MAPDL docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make_container.html">独自のMAPDL dockerコンテナを作成する</a></li>
 
 
 
@@ -649,10 +649,10 @@ in a containerized environment such as Docker (or Singularity):</p>
 <p>When running MAPDL in a Docker container, you use your local Python installation to
 connect to this instance.</p>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
+<h2>必要条件<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
 <p>You must have access to a Docker image with MAPDL in it.
 For more information on how to create your own Docker image,
-see <a class="reference internal" href="make_container.html#ref-make-container"><span class="std std-ref">Create your own MAPDL docker container</span></a>.</p>
+see <a class="reference internal" href="make_container.html#ref-make-container"><span class="std std-ref">独自のMAPDL dockerコンテナを作成する</span></a>.</p>
 <p>Once you have created and uploaded your Docker image to a registry,
 you can start to pull and use the image on other devices.</p>
 <div class="admonition warning">
@@ -698,7 +698,7 @@ container.</p>
 use code like in the following examples.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-0">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-0">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="go">$env:ANSYSLMD_LICENSE_FILE=&quot;1055@MY_LICENSE_SERVER_IP&quot;</span>
 <span class="go">$env:LOCAL_MAPDL_PORT=50053</span>
@@ -709,7 +709,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-1">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-1">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">ANSYSLMD_LICENSE_FILE</span><span class="o">=</span><span class="m">1055</span>@MY_LICENSE_SERVER_IP
 <span class="nv">LOCAL_MAPDL_PORT</span><span class="o">=</span><span class="m">50053</span>
@@ -724,14 +724,14 @@ pulls the required image. This can take some time, depending on the size of the 
 <p>To rerun it, you should restart the container with this command:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-2">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-2">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">docker</span> <span class="nb">start </span><span class="n">mapdl</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-3">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-3">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>docker<span class="w"> </span>start<span class="w"> </span>mapdl
 </pre></div>
@@ -741,7 +741,7 @@ Linux</label><div class="sd-tab-content docutils">
 <p>Or you can delete the container and run it again using these commands:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-4">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-4">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">docker</span> <span class="nb">rm </span><span class="o">-f</span> <span class="n">mapdl</span>
 <span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">docker</span> <span class="n">run</span> <span class="n">-e</span> <span class="n">ANSYSLMD_LICENSE_FILE</span><span class="p">=</span><span class="nv">$ANSYSLMD_LICENSE_FILE</span> <span class="p">-</span><span class="n">-restart</span> <span class="n">always</span> <span class="p">-</span><span class="n">-name</span> <span class="n">mapdl</span> <span class="n">-p</span> <span class="nv">$LOCAL_MAPDL_PORT</span><span class="p">:</span><span class="n">50052</span>   <span class="nv">$MAPDL_DOCKER_REGISTRY_URL</span> <span class="n">-smp</span> <span class="p">&gt;</span> <span class="n">log</span><span class="p">.</span><span class="n">txt</span>
@@ -749,7 +749,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-5">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-5">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>docker<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>mapdl
 <span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>docker<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="nv">ANSYSLMD_LICENSE_FILE</span><span class="o">=</span><span class="nv">$ANSYSLMD_LICENSE_FILE</span><span class="w"> </span>--restart<span class="w"> </span>always<span class="w"> </span>--name<span class="w"> </span>mapdl<span class="w"> </span>-p<span class="w"> </span><span class="nv">$LOCAL_MAPDL_PORT</span>:50052<span class="w">   </span><span class="nv">$MAPDL_DOCKER_REGISTRY_URL</span><span class="w"> </span>-smp<span class="w"> </span>&gt;<span class="w"> </span>log.txt
@@ -787,14 +787,14 @@ appending them to the end of the command.</p>
 number available on the host machine) with the <code class="docutils literal notranslate"><span class="pre">-np</span></code> switch:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-6">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-6">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">docker</span> <span class="n">run</span> <span class="n">-e</span> <span class="n">ANSYSLMD_LICENSE_FILE</span><span class="p">=</span><span class="nv">$ANSYSLMD_LICENSE_FILE</span> <span class="p">-</span><span class="n">-restart</span> <span class="n">always</span> <span class="n">-d</span> <span class="p">-</span><span class="n">-name</span> <span class="n">mapdl</span> <span class="n">-p</span> <span class="nv">$LOCAL_MAPDL_PORT</span><span class="p">:</span><span class="n">50052</span> <span class="nv">$MAPDL_DOCKER_REGISTRY_URL</span> <span class="n">-smp</span> <span class="n">-np</span> <span class="n">8</span> <span class="p">|</span> <span class="nb">Out-File</span> <span class="n">-FilePath</span> <span class="p">.\</span><span class="n">log</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-7">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-7">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>docker<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </span><span class="nv">ANSYSLMD_LICENSE_FILE</span><span class="o">=</span><span class="nv">$ANSYSLMD_LICENSE_FILE</span><span class="w"> </span>--restart<span class="w"> </span>always<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>mapdl<span class="w"> </span>-p<span class="w"> </span><span class="nv">$LOCAL_MAPDL_PORT</span>:50052<span class="w"> </span><span class="nv">$MAPDL_DOCKER_REGISTRY_URL</span><span class="w"> </span>-smp<span class="w"> </span>-np<span class="w"> </span><span class="m">8</span><span class="w"> </span>&gt;<span class="w"> </span>log.txt
 </pre></div>
@@ -865,7 +865,7 @@ the process with the <code class="docutils literal notranslate"><span class="pre
 <p>This code shows how to do this in your <a class="reference external" href="https://docs.docker.com/engine/reference/run/">docker run</a> command:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-8">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-8">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">docker</span> <span class="n">run</span> <span class="p">`</span>
 <span class="go">    --restart always `</span>
@@ -877,7 +877,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-9">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-9">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>docker<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--restart<span class="w"> </span>always<span class="w"> </span><span class="se">\</span>
@@ -898,7 +898,7 @@ tools that Docker provides.</p>
 <p>First, get the Docker container name:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-10">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-10">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">docker</span> <span class="nb">ps </span><span class="n">-a</span>
 <span class="go">CONTAINER ID   IMAGE                                   COMMAND                  CREATED          STATUS          PORTS                      NAMES</span>
@@ -907,7 +907,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-11">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-11">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>docker<span class="w"> </span>ps<span class="w"> </span>-a
 <span class="go">CONTAINER ID   IMAGE                                   COMMAND                  CREATED          STATUS          PORTS                      NAMES</span>
@@ -919,14 +919,14 @@ Linux</label><div class="sd-tab-content docutils">
 <p>Then use the <code class="docutils literal notranslate"><span class="pre">name</span></code> in this command:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-12" name="sd-tab-set-6" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-12">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-12">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">mapdl</span> <span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">bash</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-13">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-13">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mapdl<span class="w"> </span>/bin/bash
 </pre></div>
@@ -936,7 +936,7 @@ Linux</label><div class="sd-tab-content docutils">
 <p>This command executes the command shell (<code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code>) of the container and attaches your current terminal to it (interactive <code class="docutils literal notranslate"><span class="pre">-it</span></code>).</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-14" name="sd-tab-set-7" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-14">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-14">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">mapdl</span> <span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">bash</span>
 <span class="go">[root@c14560bff70f /]#</span>
@@ -944,7 +944,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-15" name="sd-tab-set-7" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-15">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-15">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mapdl<span class="w"> </span>/bin/bash
 <span class="gp">[root@c14560bff70f /]#</span>
@@ -955,7 +955,7 @@ Linux</label><div class="sd-tab-content docutils">
 <p>Now you can enter commands inside the Docker container and navigate inside it.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-16" name="sd-tab-set-8" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-16">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-16">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">mapdl</span> <span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">bash</span>
 <span class="go">[root@c14560bff70f /]# ls</span>
@@ -966,7 +966,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-17" name="sd-tab-set-8" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-17">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-17">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mapdl<span class="w"> </span>/bin/bash
 <span class="gp">[root@c14560bff70f /]# </span>ls
@@ -981,7 +981,7 @@ Linux</label><div class="sd-tab-content docutils">
 <p>Exit the container terminal using the <code class="docutils literal notranslate"><span class="pre">exit</span></code> command:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-18" name="sd-tab-set-9" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-18">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-18">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="go">[root@c14560bff70f /]# exit</span>
 <span class="go">exit</span>
@@ -990,7 +990,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-19" name="sd-tab-set-9" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-19">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-19">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">[root@c14560bff70f /]# </span><span class="nb">exit</span>
 <span class="go">exit</span>
@@ -1002,14 +1002,14 @@ Linux</label><div class="sd-tab-content docutils">
 <p>You can then copy the noted files using the <a class="reference external" href="https://docs.docker.com/engine/reference/commandline/cp/">docker cp</a> command:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-20" name="sd-tab-set-10" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-20">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-20">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">docker</span> <span class="nb">cp </span><span class="n">mapdl</span><span class="p">:/</span><span class="n">file0</span><span class="p">.</span><span class="n">err</span> <span class="p">.</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-21" name="sd-tab-set-10" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-21">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-21">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>docker<span class="w"> </span>cp<span class="w"> </span>mapdl:/file0.err<span class="w"> </span>.
 </pre></div>
@@ -1021,7 +1021,7 @@ the second argument.</p>
 <p>If you want to retrieve multiple files, the most efficient approach is to get back inside the Docker container:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-22" name="sd-tab-set-11" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-22">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-22">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">mapdl</span> <span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">bash</span>
 <span class="go">[root@c14560bff70f /]#</span>
@@ -1029,7 +1029,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-23" name="sd-tab-set-11" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-23">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-23">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mapdl<span class="w"> </span>/bin/bash
 <span class="gp">[root@c14560bff70f /]#</span>
@@ -1040,7 +1040,7 @@ Linux</label><div class="sd-tab-content docutils">
 <p>Create a folder where you are going to copy all the desired files:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-24" name="sd-tab-set-12" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-24">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-24">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt;</span>
 <span class="go">[root@c14560bff70f /]# mkdir -p /mapdl_logs</span>
@@ -1052,7 +1052,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-25" name="sd-tab-set-12" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-25">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-25">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$</span>
 <span class="gp">[root@c14560bff70f /]# </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/mapdl_logs
@@ -1067,14 +1067,14 @@ Linux</label><div class="sd-tab-content docutils">
 <p>Then copy the entire folder content at once:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-26" name="sd-tab-set-13" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-26">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-26">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">docker</span> <span class="nb">cp </span><span class="n">mapdl</span><span class="p">:/</span><span class="n">mapdl_logs</span><span class="p">/.</span> <span class="p">.</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-27" name="sd-tab-set-13" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-27">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-27">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>docker<span class="w"> </span>cp<span class="w"> </span>mapdl:/mapdl_logs/.<span class="w"> </span>.
 </pre></div>
@@ -1105,7 +1105,7 @@ Linux</label><div class="sd-tab-content docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">必要条件</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-docker-to-access-a-private-github-registry">Configure Docker to access a private GitHub registry</a></li>
 </ul>
 </li>
@@ -1164,7 +1164,7 @@ Linux</label><div class="sd-tab-content docutils">
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          0.16.0. and
+          0.16.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
           on <span id="date"></span>
         </p>

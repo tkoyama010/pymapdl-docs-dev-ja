@@ -49,7 +49,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css?v=35e44410" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=91007d66" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
@@ -71,7 +71,7 @@
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JQJKPV6ZVB"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -557,10 +557,10 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">PyMAPDLをインストールする.</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">PyMAPDL を起動する</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning.html">PyMAPDLを学ぶ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">よくあるご質問</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribution.html">貢献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devcontainer.html">コンテナでの開発</a></li>
-<li class="toctree-l1"><a class="reference internal" href="make_container.html">Create your own MAPDL docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make_container.html">独自のMAPDL dockerコンテナを作成する</a></li>
 
 
 
@@ -669,14 +669,14 @@ function to start MAPDL and automatically connect to it:</p>
 <p>MAPDLを起動するには、次のコマンドを使用する:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-0">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-0">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">C</span><span class="p">:/</span><span class="n">Program</span> <span class="n">Files</span><span class="p">/</span><span class="n">ANSYS</span> <span class="n">Inc</span><span class="p">/</span><span class="n">v241</span><span class="p">/</span><span class="n">ansys</span><span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">winx64</span><span class="p">/</span><span class="n">ANSYS241</span><span class="p">.</span><span class="n">exe</span> <span class="n">-grpc</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-1">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-1">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>/usr/ansys_inc/v241/ansys/bin/ansys241<span class="w"> </span>-grpc
 </pre></div>
@@ -700,14 +700,14 @@ For example, you can start the server to listen for connections at
 port 50005 with this command:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-2">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-2">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">C</span><span class="p">:/</span><span class="n">Program</span> <span class="n">Files</span><span class="p">/</span><span class="n">ANSYS</span> <span class="n">Inc</span><span class="p">/</span><span class="n">v241</span><span class="p">/</span><span class="n">ansys</span><span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">winx64</span><span class="p">/</span><span class="n">ANSYS241</span><span class="p">.</span><span class="n">exe</span> <span class="n">-port</span> <span class="n">50005</span>  <span class="n">-grpc</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-3">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-3">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>/usr/ansys_inc/v241/ansys/bin/ansys241<span class="w"> </span>-port<span class="w"> </span><span class="m">50005</span><span class="w">  </span>-grpc
 </pre></div>
@@ -802,7 +802,7 @@ to enter the path again. If you must change the default Ansys path
 <p>Additionally, it is possible to specify the executable in each PyMAPDL script using the <code class="docutils literal notranslate"><span class="pre">exec_file</span></code> keyword argument.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-4">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-4">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
@@ -813,7 +813,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-5">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-5">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
@@ -826,7 +826,7 @@ Linux</label><div class="sd-tab-content docutils">
 keyword argument:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-6">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-6">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
@@ -837,7 +837,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-7">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-7">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
 
@@ -924,7 +924,7 @@ Linux</label><div class="sd-tab-content docutils">
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          0.16.0. and
+          0.16.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
           on <span id="date"></span>
         </p>

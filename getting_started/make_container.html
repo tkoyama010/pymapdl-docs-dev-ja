@@ -12,7 +12,7 @@
 
     
         
-    <title>Create your own MAPDL docker container &#8212; PyMAPDL</title>
+    <title>独自のMAPDL dockerコンテナを作成する &#8212; PyMAPDL</title>
     
 
 
@@ -49,7 +49,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css?v=35e44410" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=91007d66" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
@@ -71,7 +71,7 @@
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JQJKPV6ZVB"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -557,10 +557,10 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">PyMAPDLをインストールする.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launcher.html">PyMAPDL を起動する</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning.html">PyMAPDLを学ぶ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">よくあるご質問</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribution.html">貢献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devcontainer.html">コンテナでの開発</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Create your own MAPDL docker container</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">独自のMAPDL dockerコンテナを作成する</a></li>
 
 
 
@@ -616,7 +616,7 @@ document.write(`
       <a href="index.html" class="nav-link">使い始める</a>
     </li>
       
-    <li class="breadcrumb-item active" aria-current="page">Create your own MAPDL docker container</li>
+    <li class="breadcrumb-item active" aria-current="page">独自のMAPDL dockerコンテナを作成する</li>
     
   </ul>
 </nav>
@@ -635,20 +635,15 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="create-your-own-mapdl-docker-container">
-<span id="ref-make-container"></span><h1>Create your own MAPDL docker container<a class="headerlink" href="#create-your-own-mapdl-docker-container" title="Link to this heading">#</a></h1>
+<span id="ref-make-container"></span><h1>独自のMAPDL dockerコンテナを作成する<a class="headerlink" href="#create-your-own-mapdl-docker-container" title="Link to this heading">#</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>You need a valid Ansys license and an Ansys account to
-follow the steps detailed in this section.</p>
+<p>このセクションで説明する手順を実行するには、有効な Ansys ライセンスと Ansys アカウントが必要です。</p>
 </div>
-<p>You can create your own MAPDL docker container following
-the steps given in this page.
-This guide will use a local Ubuntu machine to generate the needed
-files for the MAPDL container by installing Ansys products first
-and then copy the generated files to the container.</p>
+<p>このページに記載されている手順に従って、独自の MAPDL docker コンテナを作成することができます。このガイドでは、ローカルの Ubuntu マシンを使用して、最初に Ansys 製品をインストールして MAPDL コンテナに必要なファイルを生成し、生成されたファイルをコンテナにコピーします。</p>
 </section>
 <section id="requirements">
-<h1>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h1>
+<h1>必要条件<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>A linux machine, preferable with Ubuntu 18.04 or later.
 CentOS Linux distribution is not supported anymore.
@@ -760,8 +755,8 @@ and script.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Create your own MAPDL docker container</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">独自のMAPDL dockerコンテナを作成する</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">必要条件</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#procedure">Procedure</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-ansys-mapdl-installation-files">Download Ansys MAPDL installation files</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-ansys-mapdl-product">Install Ansys MAPDL product</a></li>
@@ -815,7 +810,7 @@ and script.</p></li>
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          0.16.0. and
+          0.16.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
           on <span id="date"></span>
         </p>

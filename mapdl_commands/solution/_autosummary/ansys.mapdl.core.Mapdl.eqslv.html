@@ -49,7 +49,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/ansys_sphinx_theme.css?v=35e44410" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=91007d66" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
@@ -71,7 +71,7 @@
     <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JQJKPV6ZVB"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -768,31 +768,7 @@ of the residual is smaller than 1.0E-2, convergence is
 assumed to have been reached. See Iterative Solver in the
 Mechanical APDL Theory Reference for details.</p>
 </dd>
-<dt><strong>mult</strong></dt><dd><p>Multiplier (defaults to 2.5 for nonlinear analyses; 1.0
-for linear analyses) used to control the maximum number of
-iterations performed during convergence calculations. Used
-only with the Pre- conditioned Conjugate Gradient equation
-solver (PCG). The maximum number of iterations is equal to
-the multiplier (MULT) times the number of degrees of
-freedom (DOF). If MULT is input as a negative value, then
-the maximum number of iterations is equal to abs(MULT).
-Iterations continue until either the maximum number of
-iterations or solution convergence has been reached. In
-general, the default value for MULT is adequate for
-reaching convergence.  However, for ill-conditioned
-matrices (that is, models containing elements with high
-aspect ratios or material type discontinuities) the
-multiplier may be used to increase the maximum number of
-iterations used to achieve convergence.  The recommended
-range for the multiplier is 1.0 MULT 3.0.  Normally, a
-value greater than 3.0 adds no further benefit toward
-convergence, and merely increases time requirements.  If
-the solution does not converge with 1.0 MULT 3.0, or in
-less than 10,000 iterations, then convergence is highly
-unlikely and further examination of the model is
-recommended. Rather than increasing the default value of
-MULT, consider increasing the level of difficulty
-(Lev_Diff) on the PCGOPT command.</p>
+<dt><strong>mult</strong></dt><dd><p>収束計算中に実行される反復の最大数を制御するために使用される乗数（非線形解析のデフォルトは2.5、線形解析のデフォルトは1.0）。事前条件付き共役勾配方程式ソルバー（PCG）のみで使用されます。最大反復回数は、乗数(MULT)×自由度(DOF)に等しくなります。MULTが負の値として入力された場合、最大反復回数はabs(MULT)に等しくなります。反復は、最大反復回数または解の収束のどちらかに達するまで続けられます。一般的に、MULT のデフォルト値は収束に達するのに十分である。 しかし、条件の悪い行列（つまり、高いアスペクト比や材料タイプの不連続性を持つ要素を含むモデル）の場合は、収束を達成するために使用する最大反復回数を増やすために乗数を使用することができます。 乗数の推奨範囲は1.0 MULT 3.0です。 通常、3.0 より大きな値を設定しても、収束には何のメリットもなく、単に所要時間が長くなるだけです。 もし解が 1.0 MULT 3.0 で収束しない場合、または 10,000 回未満の反復で収束する場合は、収束の可能性は非常に低く、モデルのさらなる検討をお勧めします。MULTのデフォルト値を上げるよりも、PCGOPTコマンドの難易度（Lev_Diff）を上げることを検討してください。</p>
 </dd>
 <dt><strong>keepfile</strong></dt><dd><p>Determines whether files from a SPARSE solver run should be deleted
 or retained. Applies only to Lab = SPARSE for static and full
@@ -871,7 +847,7 @@ transient analyses.</p>
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          0.16.0. and
+          0.16.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
           on <span id="date"></span>
         </p>

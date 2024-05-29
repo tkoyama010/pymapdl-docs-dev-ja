@@ -49,7 +49,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css?v=35e44410" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=91007d66" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
@@ -71,7 +71,7 @@
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JQJKPV6ZVB"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -96,7 +96,7 @@
     <link rel="icon" href="../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="Create your own MAPDL docker container" href="make_container.html" />
+    <link rel="next" title="独自のMAPDL dockerコンテナを作成する" href="make_container.html" />
     <link rel="prev" title="コードを開発する" href="develop_pymapdl.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -557,10 +557,10 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">PyMAPDLをインストールする.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launcher.html">PyMAPDL を起動する</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning.html">PyMAPDLを学ぶ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">よくあるご質問</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribution.html">貢献</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">コンテナでの開発</a></li>
-<li class="toctree-l1"><a class="reference internal" href="make_container.html">Create your own MAPDL docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make_container.html">独自のMAPDL dockerコンテナを作成する</a></li>
 
 
 
@@ -642,14 +642,14 @@ The files for setting up the container can be found in the
 <a class="reference external" href="https://github.com/ansys/pymapdl/tree/main/.devcontainer">.devcontainer directory</a>.</p>
 <section id="about-the-mapdl-container">
 <h2>MAPDLコンテナについて<a class="headerlink" href="#about-the-mapdl-container" title="Link to this heading">#</a></h2>
-<p>MAPDL ソフトウェアはオープンソースではないため、GPL ライセンスでは docker コンテナをユーザーに配布することはできません。MAPDL がインストールされた docker コンテナがあることが、このセクションで紹介する開発方法を利用するための必須条件です。独自の docker イメージを構築したい場合は、以下のリンクを参照してください <a class="reference internal" href="make_container.html#ref-make-container"><span class="std std-ref">Create your own MAPDL docker container</span></a> 。</p>
+<p>MAPDL ソフトウェアはオープンソースではないため、GPL ライセンスでは docker コンテナをユーザーに配布することはできません。MAPDL がインストールされた docker コンテナがあることが、このセクションで紹介する開発方法を利用するための必須条件です。独自の docker イメージを構築したい場合は、以下のリンクを参照してください <a class="reference internal" href="make_container.html#ref-make-container"><span class="std std-ref">独自のMAPDL dockerコンテナを作成する</span></a> 。</p>
 <section id="license">
 <h3>ライセンス<a class="headerlink" href="#license" title="Link to this heading">#</a></h3>
 <p>前述のように、MAPDL を実行するには有効なライセンスが必要です。コンテナを起動すると、 <code class="file docutils literal notranslate"><span class="pre">script.sh</span></code> ファイルが環境変数 <span class="target" id="index-6"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">ANSYSLMD_LICENSE_FILE</span></code> が存在するかどうかを自動的にチェックします。この環境変数はライセンスサーバーのポートとIPアドレスを設定します。コンテナを起動する前にこの環境変数を設定していない場合は、ライセンスサーバーのポートとアドレスを入力するプロンプトが表示されます。</p>
 <p>VS Codeを起動する前に、ターミナルから環境変数 <span class="target" id="index-7"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">ANSYSLMD_LICENSE_FILE</span></code> を設定することができます。例えば、ライセンスサーバーのアドレスが <code class="docutils literal notranslate"><span class="pre">123.45.67.89</span></code> の場合、次のようにしてライセンスを設定します。</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-0">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-0">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="nv">$env:ANSYSLMD_LICENSE_FILE</span> <span class="p">=</span> <span class="s1">&#39;1055@123.45.65.89&#39;</span>
 <span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">code</span> <span class="p">.</span> <span class="c"># launch VS Code</span>
@@ -657,7 +657,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-1">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-1">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">ANSYSLMD_LICENSE_FILE</span><span class="w"> </span><span class="o">=</span><span class="m">1055</span>@123.45.65.89
 <span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$code . # </span>launch<span class="w"> </span>VS<span class="w"> </span>Code
@@ -796,7 +796,7 @@ For more information, see <a class="reference external" href="https://code.visua
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          0.16.0. and
+          0.16.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
           on <span id="date"></span>
         </p>

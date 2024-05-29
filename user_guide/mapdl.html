@@ -49,7 +49,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css?v=35e44410" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=91007d66" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
@@ -71,7 +71,7 @@
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JQJKPV6ZVB"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -646,7 +646,7 @@ compatible format. For example, <code class="docutils literal notranslate"><span
 <a class="reference internal" href="../mapdl_commands/database/_autosummary/ansys.mapdl.core.Mapdl.esel.html#ansys.mapdl.core.Mapdl.esel" title="ansys.mapdl.core.Mapdl.esel"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.esel()</span></code></a> method.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-0">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-0">
 APDL</label><div class="sd-tab-content docutils">
 <div class="highlight-apdl notranslate"><div class="highlight"><pre><span></span><span class="c">! Selecting elements whose centroid x coordinate</span>
 <span class="c">! is between 1 and 2.</span>
@@ -655,7 +655,7 @@ APDL</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-1">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key2" for="sd-tab-item-1">
 Python</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Selecting elements whose centroid x coordinate</span>
 <span class="c1"># is between 1 and 2.</span>
@@ -676,7 +676,7 @@ Out of the 1500 MAPDL commands, about 15 start with <code class="docutils litera
 start with <code class="docutils literal notranslate"><span class="pre">star</span> <span class="pre">(*)</span></code>.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-2">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-2">
 APDL</label><div class="sd-tab-content docutils">
 <div class="highlight-apdl notranslate"><div class="highlight"><pre><span></span><span class="k">*STATUS</span>
 <span class="k">/SOLU</span>
@@ -684,7 +684,7 @@ APDL</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-3">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key2" for="sd-tab-item-3">
 Python</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">startstatus</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
@@ -697,14 +697,14 @@ Python</label><div class="sd-tab-content docutils">
 or, these commands can be called using keyword arguments:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-4">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-4">
 APDL</label><div class="sd-tab-content docutils">
 <div class="highlight-apdl notranslate"><div class="highlight"><pre><span></span><span class="k">ESEL</span><span class="p">,</span><span class="nv">S</span><span class="p">,</span><span class="nv">TYPE</span><span class="p">,,</span><span class="mi">1</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-5">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key2" for="sd-tab-item-5">
 Python</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">esel</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">esel</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -716,14 +716,14 @@ Python</label><div class="sd-tab-content docutils">
 these commands, such as <code class="docutils literal notranslate"><span class="pre">&quot;/SOLU&quot;</span></code>:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-6">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-6">
 APDL</label><div class="sd-tab-content docutils">
 <div class="highlight-apdl notranslate"><div class="highlight"><pre><span></span><span class="k">/SOLU</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-7">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key2" for="sd-tab-item-7">
 Python</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The next three functions are equivalent. Enter the solution processor.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
@@ -848,7 +848,7 @@ a file) do not appear to run correctly. For example, here is the <code class="do
 macro created using the <code class="docutils literal notranslate"><span class="pre">*CREATE</span></code> command within APDL and within PyMAPDL:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-8">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-8">
 APDL</label><div class="sd-tab-content docutils">
 <div class="highlight-apdl notranslate"><div class="highlight"><pre><span></span><span class="c">! SELECT NODES AT Z = 10 TO APPLY DISPLACEMENT</span>
 <span class="k">*CREATE</span><span class="p">,</span><span class="nv">DISP</span>
@@ -867,7 +867,7 @@ APDL</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-9">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key2" for="sd-tab-item-9">
 Python</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">DISP</span><span class="p">(</span>
     <span class="n">ARG1</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -1002,7 +1002,7 @@ Pythonically or by using the <a class="reference internal" href="../api/_autosum
 attribute. For example:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-10">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-10">
 APDL</label><div class="sd-tab-content docutils">
 <div class="highlight-apdl notranslate"><div class="highlight"><pre><span></span><span class="k">*IF</span><span class="p">,</span><span class="nv">ARG1</span><span class="p">,</span><span class="nv">EQ</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="nv">THEN</span>
 <span class="k">*GET</span><span class="p">,</span><span class="nv">ARG4</span><span class="p">,</span><span class="nv">NX</span><span class="p">,</span><span class="nv">ARG2</span><span class="w">     </span><span class="c">! RETRIEVE COORDINATE LOCATIONS OF BOTH NODES</span>
@@ -1023,7 +1023,7 @@ APDL</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key3" for="sd-tab-item-11">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key3" for="sd-tab-item-11">
 Python-Non interactive</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">non_interactive</span><span class="p">:</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;*IF,ARG1,EQ,0,THEN&quot;</span><span class="p">)</span>
@@ -1047,7 +1047,7 @@ Python-Non interactive</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-12" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key2" for="sd-tab-item-12">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key2" for="sd-tab-item-12">
 Python</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">ARG1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ARG4</span><span class="p">,</span> <span class="s2">&quot;NX&quot;</span><span class="p">,</span> <span class="n">ARG2</span><span class="p">)</span>  <span class="c1"># RETRIEVE COORDINATE LOCATIONS OF BOTH NODES</span>
@@ -1973,7 +1973,7 @@ defaults to 256 MB.</p>
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          0.16.0. and
+          0.16.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
           on <span id="date"></span>
         </p>

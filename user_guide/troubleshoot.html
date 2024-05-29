@@ -49,7 +49,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css?v=35e44410" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=91007d66" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
@@ -71,7 +71,7 @@
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JQJKPV6ZVB"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -700,7 +700,7 @@ In those cases, you might see this message:</p>
 <p>In some cases, it may be necessary to run the launch command manually from the command line.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-0">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-0">
 Windows</label><div class="sd-tab-content docutils">
 <p>Open up a command prompt and run the version-dependent command:</p>
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="s2">&quot;C:\Program Files\ANSYS Inc\v241\ansys\bin\winx64\ANSYS241.exe&quot;</span>
@@ -712,7 +712,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-1">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-1">
 Linux</label><div class="sd-tab-content docutils">
 <p>Run the version-dependent command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>/usr/ansys_inc/v241/ansys/bin/ansys241
@@ -725,7 +725,7 @@ several temporary files.</p>
 <p>You can specify a directory by launching MAPDL from the temporary directory:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-2">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-2">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">mkdir</span> <span class="n">temporary_directory</span>
 <span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="nb">cd </span><span class="n">temporary_directory</span>
@@ -739,7 +739,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-3">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-3">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>mkdir<span class="w"> </span>temporary_directory
 <span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span><span class="nb">cd</span><span class="w"> </span>temporary_directory
@@ -756,7 +756,7 @@ Linux</label><div class="sd-tab-content docutils">
 <p>If this command doesn't launch MAPDL, look at the command output:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-4">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-4">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\ANSYS Inc\v241\ansys\bin\winx64\ANSYS241.exe&#39;</span>
 <span class="go">*** ERROR ***</span>
@@ -768,7 +768,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-5">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-5">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>/usr/ansys_inc/v241/ansys/bin/ansys241
 <span class="go">*** ERROR ***</span>
@@ -787,7 +787,7 @@ Linux</label><div class="sd-tab-content docutils">
 In such cases, you might see output <strong>similar</strong> to:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-6">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-6">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="p">&amp;</span> <span class="s1">&#39;C:\Program Files\ANSYS Inc\v241\ansys\bin\winx64\ANSYS241.exe&#39;</span>
 
@@ -807,7 +807,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-7">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-7">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>/usr/ansys_inc/v241/ansys/bin/ansys241
 
@@ -839,7 +839,7 @@ The following code examples show how you can see the value of this environment v
 either Windows or Linux.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-8">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-8">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="nv">$env:ANSYSLMD_LICENSE_FILE</span>
 <span class="go">1055@1.1.1.1</span>
@@ -847,7 +847,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-9">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-9">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>printenv<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ANSYSLMD_LICENSE_FILE
 <span class="go">1055@1.1.1.1</span>
@@ -891,7 +891,7 @@ you get errors like <code class="docutils literal notranslate"><span class="pre"
 dependencies.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-10" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-10">
+<label class="sd-tab-label" for="sd-tab-item-10">
 CentOS 7</label><div class="sd-tab-content docutils">
 <p>On CentOS 7, you can install missing dependencies with:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$  </span>yum<span class="w"> </span>install<span class="w"> </span>openssl<span class="w"> </span>openssh-clients<span class="w"> </span>mesa-libGL<span class="w"> </span>mesa-libGLU<span class="w"> </span>motif<span class="w"> </span>libgfortran
@@ -899,7 +899,7 @@ CentOS 7</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-11">
+<label class="sd-tab-label" for="sd-tab-item-11">
 Ubuntu 22.04</label><div class="sd-tab-content docutils">
 <p>On Ubuntu 22.04, use this code to install the needed dependencies:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>apt-get<span class="w"> </span>update
@@ -925,7 +925,7 @@ using this code:</p>
 </div>
 </div>
 <input id="sd-tab-item-12" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-12">
+<label class="sd-tab-label" for="sd-tab-item-12">
 Ubuntu 20.04 through 18.04</label><div class="sd-tab-content docutils">
 <p>If you are using Ubuntu 20.04 through 18.04, you can install missing dependencies with:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>apt-get<span class="w"> </span>update
@@ -958,7 +958,7 @@ then installs it via the <code class="docutils literal notranslate"><span class=
 </div>
 </div>
 <input id="sd-tab-item-13" name="sd-tab-set-5" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-13">
+<label class="sd-tab-label" for="sd-tab-item-13">
 Ubuntu 16.04 and older</label><div class="sd-tab-content docutils">
 <p>If you are using Ubuntu 16.04, you can install missing dependencies with:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>apt-get<span class="w"> </span>update
@@ -1089,14 +1089,14 @@ available Ansys installations.</p>
 <p>Ansys installations are normally under:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-14" name="sd-tab-set-6" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-14">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-14">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>C:/Program Files/ANSYS Inc/vXXX
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-15" name="sd-tab-set-6" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-15">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-15">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>/usr/ansys_inc/vXXX
 </pre></div>
@@ -1334,7 +1334,7 @@ create an issue on the <a class="reference external" href="https://github.com/an
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          0.16.0. and
+          0.16.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
           on <span id="date"></span>
         </p>

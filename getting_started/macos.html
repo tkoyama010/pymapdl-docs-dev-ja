@@ -49,7 +49,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css?v=35e44410" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=91007d66" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
@@ -71,7 +71,7 @@
     <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JQJKPV6ZVB"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -557,10 +557,10 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="install_pymapdl.html">PyMAPDLをインストールする.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launcher.html">PyMAPDL を起動する</a></li>
 <li class="toctree-l1"><a class="reference internal" href="learning.html">PyMAPDLを学ぶ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">よくあるご質問</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribution.html">貢献</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devcontainer.html">コンテナでの開発</a></li>
-<li class="toctree-l1"><a class="reference internal" href="make_container.html">Create your own MAPDL docker container</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make_container.html">独自のMAPDL dockerコンテナを作成する</a></li>
 
 
 
@@ -638,8 +638,7 @@ document.write(`
 <span id="ref-pymapdl-and-macos"></span><h1>PyMAPDL and MacOS<a class="headerlink" href="#pymapdl-and-macos" title="Link to this heading">#</a></h1>
 <section id="install-pymapdl">
 <h2>PyMAPDLをインストールする.<a class="headerlink" href="#install-pymapdl" title="Link to this heading">#</a></h2>
-<p>You can install PyMAPDL normally on a MacOS that fulfill PyMAPDL
-requirements using this command:</p>
+<p>PyMAPDLの要件を満たすMacOSには、次のコマンドを使ってPyMAPDLを普通にインストールできます:</p>
 <div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ansys-mapdl-core
 </pre></div>
 </div>
@@ -656,7 +655,7 @@ indicated in <a class="reference internal" href="#launch-mapdl-on-macos"><span c
 <section id="launch-mapdl-on-macos">
 <span id="id1"></span><h2>Launch MAPDL on MacOS<a class="headerlink" href="#launch-mapdl-on-macos" title="Link to this heading">#</a></h2>
 <p>If you do not have an MAPDL Docker image, you can create one on a Linux
-machine as indicated in <a class="reference internal" href="make_container.html#ref-make-container"><span class="std std-ref">Create your own MAPDL docker container</span></a>.</p>
+machine as indicated in <a class="reference internal" href="make_container.html#ref-make-container"><span class="std std-ref">独自のMAPDL dockerコンテナを作成する</span></a>.</p>
 <p>If you already have an MAPDL Docker image, you can launch MAPDL as
 indicated in <a class="reference internal" href="docker.html#run-an-mapdl-image"><span class="std std-ref">Run an MAPDL Docker image</span></a>.</p>
 <section id="apple-silicon-compatibility">
@@ -754,7 +753,7 @@ docker<span class="w"> </span>run<span class="w"> </span>-e<span class="w"> </sp
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          0.16.0. and
+          0.16.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
           on <span id="date"></span>
         </p>

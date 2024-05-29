@@ -47,7 +47,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css?v=35e44410" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=91007d66" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
@@ -69,7 +69,7 @@
     <script src="../../_static/translations.js?v=4dbe4bdc"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JQJKPV6ZVB"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -654,7 +654,7 @@ document.write(`
 <h1>Logger<a class="headerlink" href="#logger" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.mapdl.core.logging.Logger">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.logging.</span></span><span class="sig-name descname"><span class="pre">Logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_stdout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pymapdl.log'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catch_all_exceptions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/ansys/pymapdl/blob/main/src/ansys/mapdl/core/logging.py#L324-L623"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ansys.mapdl.core.logging.Logger" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.logging.</span></span><span class="sig-name descname"><span class="pre">Logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_stdout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pymapdl.log'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catch_all_exceptions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/ansys/pymapdl/blob/main/src/ansys/mapdl/core/logging.py#L324-L625"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ansys.mapdl.core.logging.Logger" title="Link to this definition">#</a></dt>
 <dd><p>Logger used for each PyMAPDL session.</p>
 <p>This class allows you to add handlers to the logger to output to a file or
 standard output.</p>
@@ -694,7 +694,7 @@ created when creating an Mapdl instance.</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.logging.Logger.add_child_logger.html#ansys.mapdl.core.logging.Logger.add_child_logger" title="ansys.mapdl.core.logging.Logger.add_child_logger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Logger.add_child_logger</span></code></a>(sufix[, level])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.logging.Logger.add_child_logger.html#ansys.mapdl.core.logging.Logger.add_child_logger" title="ansys.mapdl.core.logging.Logger.add_child_logger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Logger.add_child_logger</span></code></a>(logger_name[, level])</p></td>
 <td><p>Add a child logger to the main logger.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.logging.Logger.add_handling_uncaught_expections.html#ansys.mapdl.core.logging.Logger.add_handling_uncaught_expections" title="ansys.mapdl.core.logging.Logger.add_handling_uncaught_expections"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Logger.add_handling_uncaught_expections</span></code></a>(logger)</p></td>
@@ -795,7 +795,7 @@ created when creating an Mapdl instance.</p>
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          0.16.0. and
+          0.16.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
           on <span id="date"></span>
         </p>
