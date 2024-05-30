@@ -645,25 +645,9 @@ performance.</p>
 </dd>
 <dt><strong>memory_option</strong></dt><dd><p>Memory allocation option:</p>
 <dl class="simple">
-<dt>DEFAULT - Use the default memory allocation strategy for</dt><dd><p>the distributed sparse solver.  The default
-strategy attempts to run in the INCORE memory
-mode. If there is not enough physical memory
-available when the solver starts to run in the
-INCORE memory mode, the solver will then attempt
-to run in the OUTOFCORE memory mode.</p>
+<dt>DEFAULT - のデフォルトのメモリ割り当て戦略を使用します。</dt><dd><p>分散スパースソルバー。 デフォルトでは、INCOREメモリモードでの実行を試みます。ソルバーがINCOREメモリーモードで実行を開始したときに利用可能な物理メモリーが十分でない場合、ソルバーはOUTOFCOREメモリーモードで実行を試みます。</p>
 </dd>
-<dt>INCORE - Use a memory allocation strategy in the</dt><dd><p>distributed sparse solver that will attempt to
-obtain enough memory to run with the entire
-factorized matrix in memory. This option uses the
-most amount of memory and should avoid doing any
-I/O. By avoiding I/O, this option achieves
-optimal solver performance. However, a
-significant amount of memory is required to run
-in this mode, and it is only recommended on
-machines with a large amount of memory. If the
-allocation for in-core memory fails, the solver
-will automatically revert to out-of-core memory
-mode.</p>
+<dt>INCORE - Use a memory allocation strategy in the</dt><dd><p>分散スパース・ソルバで、因数分解された行列全体がメモリにある状態で実行するのに十分なメモリを確保しようとします。このオプションは最も多くのメモリを使用し、I/Oを避けるべきである。I/Oを回避することにより、このオプションは最適なソルバー性能を達成する。しかし、このモードで実行するにはかなりの量のメモリが必要であり、大容量のメモリを搭載したマシンでのみ推奨される。インコア・メモリの割り当てに失敗すると、ソルバーは自動的にアウトオブコア・メモリ・モードに戻ります。</p>
 </dd>
 <dt>OUTOFCORE - Use a memory allocation strategy in the</dt><dd><p>distributed sparse solver that will attempt to
 allocate only enough work space to factor each
