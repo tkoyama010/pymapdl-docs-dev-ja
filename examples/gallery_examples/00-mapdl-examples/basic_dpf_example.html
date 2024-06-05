@@ -707,8 +707,8 @@ included examples file.</p>
 </pre></div>
 </div>
 <p>Next, open the generated RST file and print out the
-<a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.model.html#ansys.dpf.core.model.Model" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> object.
-The <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.model.html#ansys.dpf.core.model.Model" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> class helps to
+<a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.model.html#ansys.dpf.core.model.Model" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> object.
+The <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.model.html#ansys.dpf.core.model.Model" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> class helps to
 organize access methods for the result by
 keeping track of the operators and data sources used by the result
 file.</p>
@@ -721,7 +721,7 @@ file.</p>
 </ul>
 <p>If you are working with a remote server, you might need to upload the <code class="docutils literal notranslate"><span class="pre">RST</span></code>
 file before working with it.
-Then you can create the <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.model.html#ansys.dpf.core.model.Model" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DPF</span> <span class="pre">Model</span></code></a>.</p>
+Then you can create the <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.model.html#ansys.dpf.core.model.Model" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DPF</span> <span class="pre">Model</span></code></a>.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">dpf</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">make_tmp_dir_server</span><span class="p">(</span><span class="n">dpf</span><span class="o">.</span><span class="n">SERVER</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">dpf</span><span class="o">.</span><span class="n">SERVER</span><span class="o">.</span><span class="n">local_server</span><span class="p">:</span>
@@ -737,36 +737,36 @@ Then you can create the <a class="reference external" href="https://dpf.docs.pya
 <section id="model-metadata">
 <h1>Model Metadata<a class="headerlink" href="#model-metadata" title="Link to this heading">#</a></h1>
 <p>Specific metadata can be extracted from the model by referencing the
-model's <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.model.html#ansys.dpf.core.model.Model.metadata" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">metadata</span></code></a>
+model's <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.model.html#ansys.dpf.core.model.Model.metadata" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">metadata</span></code></a>
 property.  For example, to print only the
-<a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.model.html#ansys.dpf.core.model.Metadata.result_info" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">result_info</span></code></a>:</p>
+<a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.model.html#ansys.dpf.core.model.Metadata.result_info" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">result_info</span></code></a>:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">metadata</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">metadata</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">result_info</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>To print the <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.meshed_region.html#ansys.dpf.core.meshed_region.MeshedRegion" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mesh</span> <span class="pre">region</span></code></a>:</p>
+<p>To print the <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.meshed_region.html#ansys.dpf.core.meshed_region.MeshedRegion" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mesh</span> <span class="pre">region</span></code></a>:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">meshed_region</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To print the time or frequency of the results use
-<a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.time_freq_support.html#ansys.dpf.core.time_freq_support.TimeFreqSupport" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">time_freq_support</span></code></a>:</p>
+<a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.time_freq_support.html#ansys.dpf.core.time_freq_support.TimeFreqSupport" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">time_freq_support</span></code></a>:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">time_freq_support</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="extracting-displacement-results">
 <h1>Extracting Displacement Results<a class="headerlink" href="#extracting-displacement-results" title="Link to this heading">#</a></h1>
-<p>All results of the model can be accessed through the <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.results.html#ansys.dpf.core.results.Results" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Results</span></code></a>
-property, which returns the <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.results.html#ansys.dpf.core.results.Results" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.dpf.core.results.Results</span></code></a>
+<p>All results of the model can be accessed through the <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.results.html#ansys.dpf.core.results.Results" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Results</span></code></a>
+property, which returns the <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.results.html#ansys.dpf.core.results.Results" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.dpf.core.results.Results</span></code></a>
 class. This class contains the DPF result operators available to a
 specific result file, which are listed when printing the object with
 <code class="docutils literal notranslate"><span class="pre">print(results)</span></code>.</p>
-<p>Here, the <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.operators.result.displacement.html#ansys.dpf.core.operators.result.displacement.displacement" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">displacement</span></code></a>
+<p>Here, the <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.operators.result.displacement.html#ansys.dpf.core.operators.result.displacement.displacement" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">displacement</span></code></a>
 operator is connected with
-<a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.data_sources.html#ansys.dpf.core.data_sources.DataSources" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataSources</span></code></a>, which
+<a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.data_sources.html#ansys.dpf.core.data_sources.DataSources" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataSources</span></code></a>, which
 takes place automatically when running
-<a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.operators.result.displacement.html#ansys.dpf.core.operators.result.displacement.displacement" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">results.displacement()</span></code></a>.
-By default, the <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.operators.result.displacement.html#ansys.dpf.core.operators.result.displacement.displacement" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">displacement</span></code></a>
+<a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.operators.result.displacement.html#ansys.dpf.core.operators.result.displacement.displacement" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">results.displacement()</span></code></a>.
+By default, the <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.operators.result.displacement.html#ansys.dpf.core.operators.result.displacement.displacement" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">displacement</span></code></a>
 operator is connected to the first result set,
 which for this static result is the only result.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">results</span>
@@ -789,7 +789,7 @@ which for this static result is the only result.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">fields</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This way is particularly useful if you have used <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.scoping.html#ansys.dpf.core.scoping.Scoping" title="(in PyDPF-Core v0.12.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.dpf.core.scoping.Scoping</span></code></a>
+<p>This way is particularly useful if you have used <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/api/ansys.dpf.core.scoping.html#ansys.dpf.core.scoping.Scoping" title="(in PyDPF-Core v0.12.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.dpf.core.scoping.Scoping</span></code></a>
 on the mesh or results.</p>
 </section>
 <section id="close-session">
