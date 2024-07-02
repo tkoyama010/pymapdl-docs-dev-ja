@@ -707,12 +707,64 @@ document.write(`
 <div><p><em>今こそPyMAPDLを開発する時です！</em></p>
 </div></blockquote>
 <p>リポジトリでコードを開発する場合、特に Git のようなバージョン管理システムを使う場合は、効率的な共同作業、コード管理、変更の追跡を確実にするために、一連の重要なガイドラインが必要になります。以下は、リポジトリでコードを開発するための主なガイドラインです:</p>
-<ol class="arabic simple">
-<li><p><strong>ブランチを使う</strong>: 異なる機能、バグフィックス、実験のためにブランチを作成しましょう。こうすることで変更を隔離し、並行開発を容易にします。</p></li>
-<li><p><strong>説明的なコミットメッセージを書く</strong>: 変更の目的と背景を説明する、明確で簡潔なコミットメッセージを書きましょう。 一貫したスタイルに従ってください。</p></li>
+<ol class="arabic">
+<li><p><strong>Use branches</strong>: Create branches for different features, bug fixes, or
+experiments. This keeps changes isolated and facilitates parallel
+development. The CI/CD checks that the branch name is compliant. For example,
+the branch name must start with a prefix and a backslash.
+The allowed prefixes are:</p>
+<ul class="simple">
+<li><p><cite>fix/</cite> - Bug fixes.</p></li>
+<li><p><cite>feat/</cite> - Changes that introduce a new feature or significant addition.</p></li>
+<li><p><cite>maint/</cite> - General maintenance of the repository. For instance, improving the CI/CD workflows.</p></li>
+<li><p><cite>docs/</cite> - Improves documentation and examples.</p></li>
+<li><p><cite>no-ci/</cite> - (Not applicable to PyMAPDL) In some repositories, branches with this prefix do not trigger CI/CD.</p></li>
+<li><p><cite>test/</cite> - Improvements or changes to testing.</p></li>
+<li><p><cite>testing/</cite> - For testing and debugging. It should not be used for branches that are going to be merged to <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li>
+<li><p><cite>release/</cite> - Contains the released versions changes.</p></li>
+<li><p><cite>dependabot/</cite> - Created by Dependabot.</p></li>
+<li><p><cite>junk/</cite> - Other purposes. It should not be used for branches that are going to be merged to <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>説明的なコミットメッセージを書く</strong>: 変更の目的と背景を説明する、明確で簡潔なコミットメッセージを書きましょう。 一貫したスタイルに従ってください。</p>
+<ul class="simple">
+<li><p><cite>fix:</cite> - Bug fixes.</p></li>
+<li><p><cite>feat:</cite> - Changes that introduce a new feature or significant addition.</p></li>
+<li><p><cite>docs:</cite> - Changes pertaining only to documentation.</p></li>
+<li><p><cite>style:</cite> - Changes that do not affect the meaning of the code (such as white space, formatting, and missing semicolons).</p></li>
+<li><p><cite>refactor:</cite> - A code change that neither fixes a bug nor adds a feature.</p></li>
+<li><p><cite>perf:</cite> - A code change that improves performance.</p></li>
+<li><p><cite>test:</cite> - Improvements or changes to testing.</p></li>
+<li><p><cite>build:</cite> - Changes that affect the build system or external dependencies (such as to <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">make</span></code>).</p></li>
+<li><p><cite>ci:</cite> - Changes to the CI/CD configuration files and scripts.</p></li>
+<li><p><cite>chore:</cite> - Other changes that don't modify the code (such as releasing and versioning).</p></li>
+<li><p><cite>revert:</cite> - Reverts a previous commit.</p></li>
+</ul>
+</li>
 <li><p><strong>頻繁にコミットする</strong>: 小さくて意味のあるコミットを頻繁に行う。1回のコミットで無関係な変更を大量に行うことは避けましょう。</p></li>
 <li><p><strong>プッシュする前にプルしてください</strong>: 競合を避けるため、自分の変更をプッシュする前に、常にリモートリポジトリの最新の変更でローカルブランチを更新してください。</p></li>
-<li><p><strong>プルリクエスト (PR) を使用してください</strong>: あなたの変更をレビューのために提出するには、PR を使ってください。こうすることで、メインブランチにマージする前に議論や検証を行うことができます。</p></li>
+<li><p><strong>Use pull requests (PRs)</strong>: Use PRs to submit your changes for review.
+This allows for discussion and validation before merging into the main branch.
+Pull requests must follow the same convention as the commit messages.
+The following prefixes are allowed in the pull request names:</p>
+<ul class="simple">
+<li><p><cite>fix:</cite> - Bug fixes.</p></li>
+<li><p><cite>feat:</cite> - Changes that introduce a new feature or significant addition.</p></li>
+<li><p><cite>docs:</cite> - Changes pertaining only to documentation.</p></li>
+<li><p><cite>style:</cite> - Changes that do not affect the meaning of the code (such as white space, formatting, and missing semicolons).</p></li>
+<li><p><cite>refactor:</cite> - A code change that neither fixes a bug nor adds a feature.</p></li>
+<li><p><cite>perf:</cite> - A code change that improves performance.</p></li>
+<li><p><cite>test:</cite> - Improvements or changes to testing.</p></li>
+<li><p><cite>build:</cite> - Changes that affect the build system or external dependencies (such as to <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">make</span></code>).</p></li>
+<li><p><cite>ci:</cite> - Changes to the CI/CD configuration files and scripts.</p></li>
+<li><p><cite>chore:</cite> - Other changes that don't modify the code (such as releasing and versioning).</p></li>
+<li><p><cite>revert:</cite> - Reverts a previous pull request.</p></li>
+</ul>
+<p>The pull requests can also be labeled for easier repository maintenance.
+The CI/CD automatically labels each pull request based on the pull requests prefix and
+the modified files, but you can also add extra labels as long as they are already defined
+in the repository.</p>
+</li>
 <li><p><strong>Write good documentation</strong>: Maintain clear and up-to-date documentation for your
 contribution or changes, including comments in code, and relevant project
 documentation in rST or Markdown files.
