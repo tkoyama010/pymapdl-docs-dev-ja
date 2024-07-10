@@ -38,11 +38,21 @@ composite materials. PyDPF modules are also used for the postprocessing of the r
 
 Problem figure
 ~~~~~~~~~~~~~~
-.. figure:: ../../../images/dcb_test.png
-   :width: 400
-   :alt: DCB experimental test setup
 
-   **Source**: https://www.wikiwand.com/en/Delamination
+.. figure:: ../../../images/dcb_test_dark_theme.png
+    :figclass: only-dark
+    :width: 400pt
+    :alt: DCB experimental test setup
+
+    **Source**: https://www.wikiwand.com/en/Delamination
+
+
+.. figure:: ../../../images/dcb_test_light_theme.png
+    :figclass: only-light
+    :width: 400pt
+    :alt: DCB experimental test setup
+
+    **Source**: https://www.wikiwand.com/en/Delamination
 
 Procedure
 ~~~~~~~~~
@@ -59,13 +69,13 @@ These additional packages are imported for use:
 * - `Matplotlib <https://matplotlib.org>`_ for plotting
 * - `Pandas <https://pandas.pydata.org/>`_ for data analysis and manipulation
 
-.. GENERATED FROM PYTHON SOURCE LINES 67-70
+.. GENERATED FROM PYTHON SOURCE LINES 77-80
 
 Start MAPDL as a service
 ~~~~~~~~~~~~~~~~~~~~~~~~
 This example begins by importing the required packages and then launching Ansys Mechanical APDL.
 
-.. GENERATED FROM PYTHON SOURCE LINES 70-84
+.. GENERATED FROM PYTHON SOURCE LINES 80-94
 
 .. code-block:: Python
 
@@ -84,13 +94,13 @@ This example begins by importing the required packages and then launching Ansys 
     print(mapdl)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-88
+.. GENERATED FROM PYTHON SOURCE LINES 95-98
 
 Set geometrical inputs
 ======================
 Set geometrical inputs for the model.
 
-.. GENERATED FROM PYTHON SOURCE LINES 88-96
+.. GENERATED FROM PYTHON SOURCE LINES 98-106
 
 .. code-block:: Python
 
@@ -103,7 +113,7 @@ Set geometrical inputs for the model.
     eps = 1e-1
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 97-110
+.. GENERATED FROM PYTHON SOURCE LINES 107-120
 
 Set up the model
 ================
@@ -119,7 +129,7 @@ Define material parameters
 Composite plates are modelled using homogeneous linear elastic orthotropic
 properties, whereas a bilinear cohesive law is used for cohesive elements.
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-132
+.. GENERATED FROM PYTHON SOURCE LINES 120-142
 
 .. code-block:: Python
 
@@ -146,14 +156,14 @@ properties, whereas a bilinear cohesive law is used for cohesive elements.
     mapdl.tbdata(1, 50.0, 0.5, 50, 0.5, 0.01, 2)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 133-137
+.. GENERATED FROM PYTHON SOURCE LINES 143-147
 
 Create the geometry in the model and meshing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The two plates are generated as two parallelepipeds. Composite material properties
 and the three-dimensional elements are then assigned.
 
-.. GENERATED FROM PYTHON SOURCE LINES 137-151
+.. GENERATED FROM PYTHON SOURCE LINES 147-161
 
 .. code-block:: Python
 
@@ -172,7 +182,7 @@ and the three-dimensional elements are then assigned.
     mapdl.eplot()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 152-162
+.. GENERATED FROM PYTHON SOURCE LINES 162-172
 
 Generate cohesive elements in between the contact surfaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -185,7 +195,7 @@ of these parameters can be found in the Ansys element documentation.
 Finally, elements are generated on top of the respective surfaces `cm_1` and
 `cm_2`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-219
+.. GENERATED FROM PYTHON SOURCE LINES 172-229
 
 .. code-block:: Python
 
@@ -247,7 +257,7 @@ Finally, elements are generated on top of the respective surfaces `cm_1` and
     mapdl.esurf()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 220-230
+.. GENERATED FROM PYTHON SOURCE LINES 230-240
 
 Generate boundary conditions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -260,7 +270,7 @@ respectively at these (x, y, z) coordinates:, ``(0.0, `y`, 0.0)`` and ``(0.0, `y
 Two different components are assigned to these sets of nodes for a faster
 identification of the nodes bearing reaction forces.
 
-.. GENERATED FROM PYTHON SOURCE LINES 230-263
+.. GENERATED FROM PYTHON SOURCE LINES 240-273
 
 .. code-block:: Python
 
@@ -298,7 +308,7 @@ identification of the nodes bearing reaction forces.
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 264-270
+.. GENERATED FROM PYTHON SOURCE LINES 274-280
 
 Solve the non-linear static analysis
 ====================================
@@ -307,7 +317,7 @@ Run a non-linear static analysis. To have smooth crack opening
 progression and facilitate convergency for the static solver, request
 100 substeps.
 
-.. GENERATED FROM PYTHON SOURCE LINES 270-289
+.. GENERATED FROM PYTHON SOURCE LINES 280-299
 
 .. code-block:: Python
 
@@ -331,7 +341,7 @@ progression and facilitate convergency for the static solver, request
     output = mapdl.solve()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 290-305
+.. GENERATED FROM PYTHON SOURCE LINES 300-315
 
 Postprocessing
 ==============
@@ -349,7 +359,7 @@ The result for the other nodes are present at ``NMISC = 71,72,73``.
 You can retrieve the actual damage parameter nodal values from the
 solved model in form of a table (or an array).
 
-.. GENERATED FROM PYTHON SOURCE LINES 305-328
+.. GENERATED FROM PYTHON SOURCE LINES 315-338
 
 .. code-block:: Python
 
@@ -377,14 +387,14 @@ solved model in form of a table (or an array).
     damage_df = mapdl.pretab("damage").to_dataframe()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 329-333
+.. GENERATED FROM PYTHON SOURCE LINES 339-343
 
 Postprocessing results using PyDPF
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Use PyDPF to visualize the crack opening throughout the simulation as
 an animation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 333-429
+.. GENERATED FROM PYTHON SOURCE LINES 343-439
 
 .. code-block:: Python
 
@@ -485,11 +495,11 @@ an animation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 430-431
+.. GENERATED FROM PYTHON SOURCE LINES 440-441
 
 Plot the reaction force at the bottom nodes
 
-.. GENERATED FROM PYTHON SOURCE LINES 431-457
+.. GENERATED FROM PYTHON SOURCE LINES 441-467
 
 .. code-block:: Python
 
@@ -520,14 +530,14 @@ Plot the reaction force at the bottom nodes
     plt.show()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 458-462
+.. GENERATED FROM PYTHON SOURCE LINES 468-472
 
 Animate results using PyDPF with .animate() method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Use PyDPF method :func:`FieldsContainer.animate() <ansys.dpf.core.fields_container.FieldsContainer.animate>` to visualize the crack opening throughout the simulation as
 an animation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 462-470
+.. GENERATED FROM PYTHON SOURCE LINES 472-480
 
 .. code-block:: Python
 
@@ -540,11 +550,11 @@ an animation.
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 471-472
+.. GENERATED FROM PYTHON SOURCE LINES 481-482
 
 Exit MAPDL
 
-.. GENERATED FROM PYTHON SOURCE LINES 473-479
+.. GENERATED FROM PYTHON SOURCE LINES 483-489
 
 .. code-block:: Python
 
