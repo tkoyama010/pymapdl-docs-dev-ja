@@ -644,9 +644,9 @@ document.write(`
 <h1>ocdata<a class="headerlink" href="#ocdata" title="Link to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.ocdata">
-<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">ocdata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val14</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/ansys/pymapdl/blob/main/src/ansys/mapdl/core/_commands/solution/ocean.py#L25-L143"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ansys.mapdl.core.Mapdl.ocdata" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">ocdata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val4</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val5</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val6</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val7</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val8</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val9</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val10</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val11</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val12</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val13</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val14</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/ansys/pymapdl/blob/main/src/ansys/mapdl/core/_commands/solution/ocean.py#L25-L160"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ansys.mapdl.core.Mapdl.ocdata" title="Link to this definition">#</a></dt>
 <dd><p>Defines an ocean load using non-table data.</p>
-<p>APDL Command: OCDATA</p>
+<p>APDL Command: <code class="docutils literal notranslate"><span class="pre">OCDATA</span></code></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -656,35 +656,35 @@ document.write(`
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>The OCDATA command specifies non-table data that defines the ocean
+<p>The <code class="docutils literal notranslate"><span class="pre">OCDATA</span></code> command specifies non-table data that defines the ocean
 load, such as the depth of the ocean to the mud line, the ratio of
 added mass over added mass for a circular cross section, or the wave
 type to apply. The terms VAL1, VAL2, etc. are specialized according to
 the input set required for the given ocean load.</p>
-<p>The program interprets the data input via the OCDATA command within the
-context of the most recently issued OCTYPE command.</p>
+<p>The program interprets the data input via the <code class="docutils literal notranslate"><span class="pre">OCDATA</span></code> command within the
+context of the most recently issued <code class="docutils literal notranslate"><span class="pre">OCTYPE</span></code> command.</p>
 <p>Input values in the order indicated.</p>
 <p>This command is also valid in PREP7.</p>
 <p>You can define the following ocean data types:</p>
 <p>For a better understanding of how to set up a basic ocean type, see
 Figure: 5:: Basic Ocean Data Type Components .</p>
-<p>DEPTH -- The depth of the ocean (that is, the distance between the mean
+<p><code class="docutils literal notranslate"><span class="pre">DEPTH</span></code> -- The depth of the ocean (that is, the distance between the mean
 sea level and the mud line). The water surface is assumed to be level
 in the XY plane, with Z being positive upwards. This value is required
 and must be positive.</p>
-<p>MATOC -- The material number of the ocean. This value is required and
+<p><code class="docutils literal notranslate"><span class="pre">MATOC</span></code> -- The material number of the ocean. This value is required and
 is used to input the required density. It is also used to input the
-viscosity if the Reynolds number is used (OCTABLE).</p>
-<p>KFLOOD -- The inside-outside fluid-interaction key:</p>
-<p>For beam subtype CTUBE and HREC used with BEAM188 or BEAM189 and ocean
-loading, KFLOOD is always set to 1.</p>
+viscosity if the Reynolds number is used (<code class="docutils literal notranslate"><span class="pre">OCTABLE</span></code>).</p>
+<p><code class="docutils literal notranslate"><span class="pre">KFLOOD</span></code> -- The inside-outside fluid-interaction key:</p>
+<p>For beam subtype <code class="docutils literal notranslate"><span class="pre">CTUBE</span></code> and <code class="docutils literal notranslate"><span class="pre">HREC</span></code> used with BEAM188 or BEAM189 and ocean
+loading, <code class="docutils literal notranslate"><span class="pre">KFLOOD</span></code> is always set to 1.</p>
 <p>Cay -- The ratio of added mass of the external fluid over the mass of
 the fluid displaced by the element cross section in the y direction
 (normal). The added mass represents the mass of the external fluid
 (ocean water) that moves with the pipe, beam, or link element when the
 element moves in the element y direction during a dynamic analysis.</p>
 <p>If no value is specified, and the coefficient of inertia CMy is not
-specified (OCTABLE), both values default to 0.0.</p>
+specified (<code class="docutils literal notranslate"><span class="pre">OCTABLE</span></code>), both values default to 0.0.</p>
 <p>If no value is specified, but CMy is specified, this value defaults to
 Cay = CMy - 1.0.</p>
 <p>If this value should be 0.0, enter 0.0.</p>
@@ -696,7 +696,7 @@ direction during a dynamic analysis.</p>
 <p>If no value is specified, and Cay is specified, this value defaults to
 Cay.</p>
 <p>If no value is specified, and the coefficient of inertia CMz is not
-specified (OCTABLE), both values default to 0.0.</p>
+specified (<code class="docutils literal notranslate"><span class="pre">OCTABLE</span></code>), both values default to 0.0.</p>
 <p>If no value is specified, but CMz is specified, this value defaults to
 Cay = CMz - 1.0.</p>
 <p>If this value should be 0.0, enter 0.0.</p>
@@ -713,18 +713,18 @@ enter 0.0.</p>
 The default value is zero (meaning that the origin is located at the
 mean sea level).</p>
 <p>Two example cases for Zmsl are:</p>
-<p>A structure with its origin on the sea floor (Zmsl = DEPTH).</p>
-<p>A tidal change (tc) above the mean sea level (Zmsl = tc, and DEPTH
-becomes DEPTH + tc)</p>
-<p>Ktable -- The dependency of VAL1 on the OCTABLE command:</p>
-<p>KWAVE -- The incident wave type:</p>
-<p>THETA -- Angle of the wave direction θ from the global Cartesian X axis
+<p>A structure with its origin on the sea floor (Zmsl = <code class="docutils literal notranslate"><span class="pre">DEPTH</span></code>).</p>
+<p>A tidal change (tc) above the mean sea level (Zmsl = tc, and <code class="docutils literal notranslate"><span class="pre">DEPTH</span></code>
+becomes <code class="docutils literal notranslate"><span class="pre">DEPTH</span></code> + tc)</p>
+<p>Ktable -- The dependency of VAL1 on the <code class="docutils literal notranslate"><span class="pre">OCTABLE</span></code> command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">KWAVE</span></code> -- The incident wave type:</p>
+<p><code class="docutils literal notranslate"><span class="pre">THETA</span></code> -- Angle of the wave direction θ from the global Cartesian X axis
 toward the global Cartesian Y axis (in degrees).</p>
-<p>WAVELOC (valid when KWAVE = 0 through 3, and 101+) -- The wave location
+<p><code class="docutils literal notranslate"><span class="pre">WAVELOC</span></code> (valid when <code class="docutils literal notranslate"><span class="pre">KWAVE</span></code> = 0 through 3, and 101+) -- The wave location
 type:</p>
-<p>SPECTRUM (valid when KWAVE = 5 through 7) -- The wave spectrum type:</p>
-<p>KCRC -- The wave-current interaction key.</p>
-<p>Adjustments to the current profile are available via the KCRC constant
+<p><code class="docutils literal notranslate"><span class="pre">SPECTRUM</span></code> (valid when <code class="docutils literal notranslate"><span class="pre">KWAVE</span></code> = 5 through 7) -- The wave spectrum type:</p>
+<p><code class="docutils literal notranslate"><span class="pre">KCRC</span></code> -- The wave-current interaction key.</p>
+<p>Adjustments to the current profile are available via the <code class="docutils literal notranslate"><span class="pre">KCRC</span></code> constant
 of the water motion table. Typically, these options are used only when
 the wave amplitude is large relative to the water depth, such that
 significant wave-current interaction exists.</p>
