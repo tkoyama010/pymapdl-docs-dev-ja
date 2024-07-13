@@ -602,6 +602,8 @@ document.write(`
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">next</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.next_available.html">next_available</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.run_batch.html">run_batch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.wait_for_ready.html">wait_for_ready</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.ready.html">ready</a></li>
 </ul>
 </li>
 </ul>
@@ -687,7 +689,7 @@ document.write(`
 <h1>next<a class="headerlink" href="#next" title="Link to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.pool.MapdlPool.next">
-<span class="sig-prename descclassname"><span class="pre">MapdlPool.</span></span><span class="sig-name descname"><span class="pre">next</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">return_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/ansys/pymapdl/blob/main/src/ansys/mapdl/core/pool.py#L711-L727"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ansys.mapdl.core.pool.MapdlPool.next" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">MapdlPool.</span></span><span class="sig-name descname"><span class="pre">next</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">return_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/ansys/pymapdl/blob/main/src/ansys/mapdl/core/pool.py#L745-L761"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ansys.mapdl.core.pool.MapdlPool.next" title="Link to this definition">#</a></dt>
 <dd><p>Return a context manager that returns available instances.</p>
 <p>This method manages the instance state (<cite>locked</cite> and <cite>busy</cite>) when the code enters
 and exits the code block.</p>

@@ -29,9 +29,19 @@
       
       MapdlPool.run_batch
       
+      
+      MapdlPool.wait_for_ready
+      
    
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      MapdlPool.ready
    
    
