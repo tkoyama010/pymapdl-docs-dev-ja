@@ -68,7 +68,7 @@
     <script src="../_static/copybutton.js?v=49e1bf35"></script>
     <script src="../_static/js/table.js?v=b64f5182"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-    <script src="../_static/translations.js?v=4dbe4bdc"></script>
+    <script src="../_static/translations.js?v=91613774"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
@@ -676,7 +676,7 @@ transfer the geometry to Python to visualize it:</p>
 <li><p><a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.vplot.html#ansys.mapdl.core.Mapdl.vplot" title="ansys.mapdl.core.Mapdl.vplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.vplot()</span></code></a></p></li>
 <li><p><a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.eplot.html#ansys.mapdl.core.Mapdl.eplot" title="ansys.mapdl.core.Mapdl.eplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.eplot()</span></code></a>).</p></li>
 </ul>
-<p>These methods rely on the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a>
+<p>These methods rely on the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.plotting.MapdlPlotter.html#ansys.mapdl.core.plotting.MapdlPlotter" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.visualizer.MapdlPlotter</span></code></a>
 method. Combined with the MAPDL geometry commands, you can
 generate and visualize geometry from scratch without opening the GUI
 using the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.open_gui.html#ansys.mapdl.core.Mapdl.open_gui" title="ansys.mapdl.core.Mapdl.open_gui"><code class="xref py py-func docutils literal notranslate"><span class="pre">open_gui()</span></code></a> method.</p>
@@ -816,7 +816,7 @@ to view the XY plane with <code class="docutils literal notranslate"><span class
 </pre></div>
 </div>
 <p>For all general plotting options, see the
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a> method.</p>
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.plotting.MapdlPlotter.html#ansys.mapdl.core.plotting.MapdlPlotter" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.visualizer.MapdlPlotter</span></code></a> class.</p>
 </section>
 <section id="plotting-boundary-conditions">
 <h2>Plotting boundary conditions<a class="headerlink" href="#plotting-boundary-conditions" title="Link to this heading">#</a></h2>
@@ -931,7 +931,7 @@ only use <code class="docutils literal notranslate"><span class="pre">plot_bc</s
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
           0.16.6. and
-           <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+           <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.4.
           on <span id="date"></span>
         </p>
         <script>

@@ -68,7 +68,7 @@
     <script src="../../../_static/copybutton.js?v=49e1bf35"></script>
     <script src="../../../_static/js/table.js?v=b64f5182"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-    <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+    <script src="../../../_static/translations.js?v=91613774"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
@@ -711,6 +711,7 @@ PyMAPDL including direct mesh access through VTK.</p>
 
 <span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">core</span> <span class="k">as</span> <span class="n">pymapdl</span>
 <span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">examples</span>
+<span class="kn">from</span> <span class="nn">ansys.mapdl.core.plotting</span> <span class="kn">import</span> <span class="n">MapdlTheme</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">pymapdl</span><span class="o">.</span><span class="n">launch_mapdl</span><span class="p">()</span>
 </pre></div>
@@ -735,7 +736,7 @@ MAPDL.  Since <code class="docutils literal notranslate"><span class="pre">igesi
 remotable (with 2021R1 and newer) interactive plotting.  The common
 plotting methods (<code class="docutils literal notranslate"><span class="pre">kplot</span></code>, <code class="docutils literal notranslate"><span class="pre">lplot</span></code>, <code class="docutils literal notranslate"><span class="pre">aplot</span></code>, <code class="docutils literal notranslate"><span class="pre">eplot</span></code>, etc.)
 all have compatible commands that use the
-<a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.general_plotter()</span></code></a> function.  You can
+<a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.plotting.MapdlPlotter.html#ansys.mapdl.core.plotting.MapdlPlotter" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.mapdl.core.plotting.visualizer.MapdlPlotter</span></code></a> class.  You can
 configure this method with a variety of keyword arguments.  For example:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span>
     <span class="n">show_line_numbering</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -752,7 +753,7 @@ configure this method with a variety of keyword arguments.  For example:</p>
 <p>You can also configure a theme to enable consistent plotting across
 multiple plots.  These theme parameters override any unset keyword
 arguments.  For example:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">my_theme</span> <span class="o">=</span> <span class="n">pymapdl</span><span class="o">.</span><span class="n">MapdlTheme</span><span class="p">()</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">my_theme</span> <span class="o">=</span> <span class="n">MapdlTheme</span><span class="p">()</span>
 <span class="n">my_theme</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span>
 <span class="n">my_theme</span><span class="o">.</span><span class="n">cmap</span> <span class="o">=</span> <span class="s2">&quot;jet&quot;</span>  <span class="c1"># colormap</span>
 <span class="n">my_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">show</span> <span class="o">=</span> <span class="kc">False</span>
@@ -914,7 +915,7 @@ format and loaded again with <code class="docutils literal notranslate"><span cl
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
           0.16.6. and
-           <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+           <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.4.
           on <span id="date"></span>
         </p>
         <script>

@@ -68,7 +68,7 @@
     <script src="../../_static/copybutton.js?v=49e1bf35"></script>
     <script src="../../_static/js/table.js?v=b64f5182"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-    <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+    <script src="../../_static/translations.js?v=91613774"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
@@ -755,7 +755,7 @@ document.write(`
 <h1>plot_nodal_rotation<a class="headerlink" href="#plot-nodal-rotation" title="Link to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.post.PostProcessing.plot_nodal_rotation">
-<span class="sig-prename descclassname"><span class="pre">PostProcessing.</span></span><span class="sig-name descname"><span class="pre">plot_nodal_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_node_numbering</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/ansys/pymapdl/blob/main/src/ansys/mapdl/core/post.py#L1103-L1160"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ansys.mapdl.core.post.PostProcessing.plot_nodal_rotation" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">PostProcessing.</span></span><span class="sig-name descname"><span class="pre">plot_nodal_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_node_numbering</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="http://github.com/ansys/pymapdl/blob/main/src/ansys/mapdl/core/post.py#L1110-L1167"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ansys.mapdl.core.post.PostProcessing.plot_nodal_rotation" title="Link to this definition">#</a></dt>
 <dd><p>Plot nodal rotation.</p>
 <dl class="field-list">
 <dt class="field-odd">パラメーター<span class="colon">:</span></dt>
@@ -765,7 +765,7 @@ document.write(`
 </dd>
 <dt><strong>show_node_numbering</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Plot the node numbers of surface nodes.</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Keyword arguments passed to <a class="reference internal" href="ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">general_plotter</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Keyword arguments passed to <a class="reference internal" href="ansys.mapdl.core.plotting.MapdlPlotter.html#ansys.mapdl.core.plotting.MapdlPlotter" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlPlotter</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
@@ -785,9 +785,9 @@ Only when <code class="docutils literal notranslate"><span class="pre">return_pl
 </dl>
 <p class="rubric">Notes</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">vkt=True</span></code> (default), this function uses
-<a class="reference internal" href="ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">general_plotter</span></code></a>
+<a class="reference internal" href="ansys.mapdl.core.plotting.MapdlPlotter.html#ansys.mapdl.core.plotting.MapdlPlotter" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlPlotter</span></code></a>
 You can pass key arguments to
-<a class="reference internal" href="ansys.mapdl.core.plotting.general_plotter.html#ansys.mapdl.core.plotting.general_plotter" title="ansys.mapdl.core.plotting.general_plotter"><code class="xref py py-func docutils literal notranslate"><span class="pre">general_plotter</span></code></a> using
+<a class="reference internal" href="ansys.mapdl.core.plotting.MapdlPlotter.html#ansys.mapdl.core.plotting.MapdlPlotter" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlPlotter</span></code></a> using
 <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> argument. For example, <code class="docutils literal notranslate"><span class="pre">show_axes</span></code> , <code class="docutils literal notranslate"><span class="pre">background</span></code>, etc.</p>
 <p class="rubric">Examples</p>
 <p>Plot the x rotation without smooth shading with individual
@@ -868,7 +868,7 @@ node numbering.</p>
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
           0.16.6. and
-           <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+           <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.4.
           on <span id="date"></span>
         </p>
         <script>
