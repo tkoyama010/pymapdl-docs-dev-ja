@@ -160,3 +160,7 @@ Stop MAPDL
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: spotweld.py <spotweld.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: spotweld.zip <spotweld.zip>`

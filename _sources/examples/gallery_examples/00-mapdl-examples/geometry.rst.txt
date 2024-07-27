@@ -276,3 +276,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: geometry.py <geometry.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: geometry.zip <geometry.zip>`

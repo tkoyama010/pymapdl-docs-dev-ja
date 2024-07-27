@@ -168,3 +168,7 @@ Finally, exit MAPDL.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: cyclic_static.py <cyclic_static.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: cyclic_static.zip <cyclic_static.zip>`

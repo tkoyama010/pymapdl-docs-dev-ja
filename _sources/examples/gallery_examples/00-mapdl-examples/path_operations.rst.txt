@@ -277,3 +277,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: path_operations.py <path_operations.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: path_operations.zip <path_operations.zip>`

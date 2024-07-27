@@ -296,3 +296,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 2d_pressure_vessel.py <2d_pressure_vessel.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 2d_pressure_vessel.zip <2d_pressure_vessel.zip>`

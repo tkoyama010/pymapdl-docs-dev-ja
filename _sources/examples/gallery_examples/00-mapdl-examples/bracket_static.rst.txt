@@ -1075,3 +1075,7 @@ Exit Mechanical APDL once you have finished.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: bracket_static.py <bracket_static.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: bracket_static.zip <bracket_static.zip>`

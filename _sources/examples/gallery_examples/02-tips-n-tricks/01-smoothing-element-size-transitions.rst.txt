@@ -184,3 +184,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 01-smoothing-element-size-transitions.py <01-smoothing-element-size-transitions.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 01-smoothing-element-size-transitions.zip <01-smoothing-element-size-transitions.zip>`

@@ -198,3 +198,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 04-rotational-displacement.py <04-rotational-displacement.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 04-rotational-displacement.zip <04-rotational-displacement.zip>`

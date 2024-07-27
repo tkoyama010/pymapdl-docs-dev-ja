@@ -296,3 +296,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 00-keypoints.py <00-keypoints.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 00-keypoints.zip <00-keypoints.zip>`

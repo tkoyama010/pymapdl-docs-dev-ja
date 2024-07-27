@@ -241,3 +241,7 @@ Exit MAPDL instance
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: exhaust_manifold_thermal_stress.py <exhaust_manifold_thermal_stress.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: exhaust_manifold_thermal_stress.zip <exhaust_manifold_thermal_stress.zip>`

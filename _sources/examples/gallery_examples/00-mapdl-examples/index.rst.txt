@@ -16,7 +16,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to gather and plot results with material discontinuities across elements...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to gather and plot results with material discontinuities across elements (Power graphics style) versus the default full average results (Full graphics style).">
 
 .. only:: html
 
@@ -33,7 +33,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This tutorial shows how you can use PyMAPDL to determine and verify the &quot;stress concentration f...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This tutorial shows how you can use PyMAPDL to determine and verify the &quot;stress concentration factor&quot; when modeling using 2D plane elements and then verify this using 3D elements.">
 
 .. only:: html
 
@@ -67,7 +67,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This tutorial is the 3D corollary to the 2D plane example ref_plane_stress_concentration. Howev...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This tutorial is the 3D corollary to the 2D plane example ref_plane_stress_concentration. However, this example verifies the stress concentration factor K-t when modeling opposite single notches in a finite width thin plate.">
 
 .. only:: html
 
@@ -84,7 +84,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how you can use MAPDL to create a plate, impose thermal boundary cond...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how you can use MAPDL to create a plate, impose thermal boundary conditions, solve, and plot it all within PyMAPDL.">
 
 .. only:: html
 
@@ -118,7 +118,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example is adapted from Basic DPF-Core Usage Example and it shows how to open a result fil...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example is adapted from Basic DPF-Core Usage Example and it shows how to open a result file in DPF and do some basic postprocessing.">
 
 .. only:: html
 
@@ -135,7 +135,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is an example adapted from a classic Ansys APDL tutorial Static Analysis of a Corner Brack...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example adapted from a classic Ansys APDL tutorial Static Analysis of a Corner Bracket">
 
 .. only:: html
 
@@ -152,7 +152,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example is a classic double cantilever beam test commonly used to study mode I interfacial...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example is a classic double cantilever beam test commonly used to study mode I interfacial delamination of composite plates.">
 
 .. only:: html
 
@@ -186,7 +186,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example creates a bladed disc using parametric geometry of a cyclic sector and then runs a...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example creates a bladed disc using parametric geometry of a cyclic sector and then runs a modal analysis on that cyclic sector. We then post-process the results using the legacy MAPDL reader and finally generate another cyclic model using our parametric modeler.">
 
 .. only:: html
 
@@ -203,7 +203,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Run a static cyclic analysis of an example rotor sector using the imperial unit system at 1000 ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="Run a static cyclic analysis of an example rotor sector using the imperial unit system at 1000 RPM.">
 
 .. only:: html
 
@@ -220,7 +220,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrates how to map results from a CFD analysis and perform a Finite Element (F...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrates how to map results from a CFD analysis and perform a Finite Element (FE) analysis.">
 
 .. only:: html
 
@@ -271,7 +271,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is a simple example that loads an archive file containing a beam and then runs a modal ana...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is a simple example that loads an archive file containing a beam and then runs a modal analysis using the simplified modal_analysis method.">
 
 .. only:: html
 
@@ -288,7 +288,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is an example from the book &quot;Finite element analysis using ansys 11.0&quot; by Paletikrishna Ch...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example from the book &quot;Finite element analysis using ansys 11.0&quot; by Paletikrishna Chaitanya, Sambanarajesh Kumar, and Datti Srinivas. PHI Learning Pvt. Ltd., 1 Jan 2010.">
 
 .. only:: html
 
@@ -322,7 +322,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This tutorial shows how you can use pyansys and MAPDL to interpolate along a path for stress.  ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This tutorial shows how you can use pyansys and MAPDL to interpolate along a path for stress.  This shows some advanced features of the pyvista module to perform the interpolation.">
 
 .. only:: html
 
@@ -373,7 +373,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="The objective of this test is to demonstrate CFX pressure data mapping to structural 11 blade m...">
+    <div class="sphx-glr-thumbcontainer" tooltip="The objective of this test is to demonstrate CFX pressure data mapping to structural 11 blade model in PyMAPDL.">
 
 .. only:: html
 
@@ -390,7 +390,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This MAPDL example demonstrates how to model spot welding on three thin sheets of metal. Here, ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This MAPDL example demonstrates how to model spot welding on three thin sheets of metal. Here, the full input file is simply run using the PyMAPDL interface.">
 
 .. only:: html
 
@@ -407,7 +407,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This Ansys PyMAPDL script builds a bar and applies torque to it using SURF154 elements. This is...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This Ansys PyMAPDL script builds a bar and applies torque to it using SURF154 elements. This is a static analysis example.">
 
 .. only:: html
 
@@ -424,7 +424,7 @@ These examples demonstrate full examples using the PyMAPDL module.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how you can use PyMAPDL to input a time dependent temperature table to vary ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how you can use PyMAPDL to input a time dependent temperature table to vary the temperature at a beam. This uses convection loads with independently varying convection coefficient and bulk temperature.">
 
 .. only:: html
 

@@ -686,3 +686,7 @@ Finally, exit MAPDL.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: lathe_cutter.py <lathe_cutter.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: lathe_cutter.zip <lathe_cutter.zip>`

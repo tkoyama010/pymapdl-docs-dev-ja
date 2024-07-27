@@ -18,7 +18,7 @@ Python and MAPDL while emphasising Python libraries such as `matplotlib
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="A finite element machinery built for a quadrilateral element using an isoparametric formulation...">
+    <div class="sphx-glr-thumbcontainer" tooltip="A finite element machinery built for a quadrilateral element using an isoparametric formulation and validated with PyMAPDL.">
 
 .. only:: html
 

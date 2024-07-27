@@ -438,3 +438,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 03-volumes.py <03-volumes.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 03-volumes.zip <03-volumes.zip>`

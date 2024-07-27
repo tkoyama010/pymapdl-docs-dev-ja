@@ -155,3 +155,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 3d_plate_thermal.py <3d_plate_thermal.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 3d_plate_thermal.zip <3d_plate_thermal.zip>`

@@ -238,3 +238,7 @@ Stop MAPDL
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: modal_beam.py <modal_beam.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: modal_beam.zip <modal_beam.zip>`

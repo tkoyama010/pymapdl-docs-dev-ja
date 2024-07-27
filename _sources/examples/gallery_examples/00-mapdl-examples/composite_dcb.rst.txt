@@ -579,3 +579,7 @@ Exit MAPDL
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: composite_dcb.py <composite_dcb.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: composite_dcb.zip <composite_dcb.zip>`

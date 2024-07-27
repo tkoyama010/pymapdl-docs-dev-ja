@@ -430,3 +430,7 @@ for the 2nd nodal diameter of this example model.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: cyclic_analysis.py <cyclic_analysis.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: cyclic_analysis.zip <cyclic_analysis.zip>`

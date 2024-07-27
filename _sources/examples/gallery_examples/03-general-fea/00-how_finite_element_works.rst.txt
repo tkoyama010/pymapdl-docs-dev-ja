@@ -1142,3 +1142,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 00-how_finite_element_works.py <00-how_finite_element_works.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 00-how_finite_element_works.zip <00-how_finite_element_works.zip>`

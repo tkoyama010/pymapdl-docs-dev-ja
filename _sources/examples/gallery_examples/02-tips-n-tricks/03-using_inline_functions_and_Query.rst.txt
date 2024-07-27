@@ -199,3 +199,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 03-using_inline_functions_and_Query.py <03-using_inline_functions_and_Query.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 03-using_inline_functions_and_Query.zip <03-using_inline_functions_and_Query.zip>`

@@ -228,3 +228,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 05-explore_mapdl_files.py <05-explore_mapdl_files.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 05-explore_mapdl_files.zip <05-explore_mapdl_files.zip>`

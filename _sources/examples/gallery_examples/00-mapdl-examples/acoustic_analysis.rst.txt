@@ -245,3 +245,7 @@ Stop MAPDL
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: acoustic_analysis.py <acoustic_analysis.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: acoustic_analysis.zip <acoustic_analysis.zip>`

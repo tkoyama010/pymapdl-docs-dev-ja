@@ -139,3 +139,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: contact_elements.py <contact_elements.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: contact_elements.zip <contact_elements.zip>`

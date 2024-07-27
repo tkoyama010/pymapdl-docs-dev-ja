@@ -164,3 +164,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: pyvista_mesh.py <pyvista_mesh.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: pyvista_mesh.zip <pyvista_mesh.zip>`

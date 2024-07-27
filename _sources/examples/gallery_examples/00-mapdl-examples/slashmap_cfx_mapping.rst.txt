@@ -200,3 +200,7 @@ Stop MAPDL
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: slashmap_cfx_mapping.py <slashmap_cfx_mapping.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: slashmap_cfx_mapping.zip <slashmap_cfx_mapping.zip>`

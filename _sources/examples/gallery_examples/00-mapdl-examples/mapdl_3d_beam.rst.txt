@@ -149,3 +149,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: mapdl_3d_beam.py <mapdl_3d_beam.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: mapdl_3d_beam.zip <mapdl_3d_beam.zip>`

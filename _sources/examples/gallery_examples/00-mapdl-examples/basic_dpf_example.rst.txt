@@ -248,3 +248,7 @@ Stop MAPDL session.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: basic_dpf_example.py <basic_dpf_example.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: basic_dpf_example.zip <basic_dpf_example.zip>`

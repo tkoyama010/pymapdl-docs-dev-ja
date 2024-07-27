@@ -272,3 +272,7 @@ Stop MAPDL
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: torsional_load.py <torsional_load.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: torsional_load.zip <torsional_load.zip>`

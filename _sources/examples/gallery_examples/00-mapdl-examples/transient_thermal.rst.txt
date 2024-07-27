@@ -389,3 +389,7 @@ Stop mapdl
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: transient_thermal.py <transient_thermal.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: transient_thermal.zip <transient_thermal.zip>`

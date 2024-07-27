@@ -358,3 +358,7 @@ This block of code should be included always.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: 00-example-template.py <00-example-template.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: 00-example-template.zip <00-example-template.zip>`
