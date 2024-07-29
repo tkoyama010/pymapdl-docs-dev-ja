@@ -912,9 +912,9 @@ PyMAPDL</label><div class="sd-tab-content docutils">
 </div>
 <p>Note that some of the commands with <code class="docutils literal notranslate"><span class="pre">/</span></code> are not directly translated
 to functions and are instead run as &quot;classic&quot; commands like
-<code class="docutils literal notranslate"><span class="pre">mapdl.run('/COM')</span></code>. Also, note that the <code class="docutils literal notranslate"><span class="pre">*VWRITE</span></code> command
-requires a command immediately following it. This normally locks the
-interface, so it's implemented in the background as an input file
+<code class="docutils literal notranslate"><span class="pre">mapdl.run('/COM')</span></code>. Also, note that the <code class="docutils literal notranslate"><span class="pre">*VWRITE</span></code> and <code class="docutils literal notranslate"><span class="pre">*MWRITE</span></code> commands
+require a command immediately following it with the desire output format.
+This normally locks the interface, so it's implemented in the background as an input file
 using the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a>
 attribute.</p>
 <p>以下はその結果です:</p>
