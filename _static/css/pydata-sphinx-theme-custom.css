@@ -463,6 +463,7 @@ a > code {
 
 code.literal {
   color: var(--ast-color-inline-code);
+  font-family: "open sans", sans-serif;
 }
 
 nav.bd-links li > a:focus-visible,
@@ -705,4 +706,17 @@ button.btn.version-switcher__button:hover {
 .version-switcher__menu {
   filter: box-shadow(var(--ast-box-shadow-active));
   border: none;
+}
+
+/**
+* Article content (_article.scss)
+*/
+
+.bd-main .bd-content .bd-article-container {
+  padding: 8px;
+  width: 1000px;
+}
+
+.bd-sidebar-primary {
+  width: 20%;
 }
