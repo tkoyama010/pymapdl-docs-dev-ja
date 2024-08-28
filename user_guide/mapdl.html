@@ -1909,7 +1909,11 @@ are several versions availables.</p>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p><span class="target" id="index-8"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_MAX_MESSAGE_LENGTH</span></code></p></td>
+<tr class="row-odd"><td><p><span class="target" id="index-8"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_ON_SLURM</span></code></p></td>
+<td><p>With this environment variable set to <code class="docutils literal notranslate"><span class="pre">FALSE</span></code>, you can avoid
+PyMAPDL from detecting that it is running on a SLURM HPC cluster.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="target" id="index-9"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_MAX_MESSAGE_LENGTH</span></code></p></td>
 <td><p>Maximum gRPC message length. If your
 connection terminates when running
 PRNSOL or NLIST, raise this. In bytes,
