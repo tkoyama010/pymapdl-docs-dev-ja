@@ -937,7 +937,9 @@ This is to reduce the possibility of the function converging to a local minimal.
 <h3>Model assembly<a class="headerlink" href="#model-assembly" title="Link to this heading">#</a></h3>
 <p>Use the GA class to assemble all the parameters and functions
 created to run the simulation:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ga_instance</span> <span class="o">=</span> <span class="n">pygad</span><span class="o">.</span><span class="n">GA</span><span class="p">(</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygad</span>
+
+<span class="n">ga_instance</span> <span class="o">=</span> <span class="n">pygad</span><span class="o">.</span><span class="n">GA</span><span class="p">(</span>
     <span class="c1"># Main options</span>
     <span class="n">sol_per_pop</span><span class="o">=</span><span class="n">sol_per_pop</span><span class="p">,</span>
     <span class="n">num_generations</span><span class="o">=</span><span class="n">num_generations</span><span class="p">,</span>
@@ -961,6 +963,7 @@ created to run the simulation:</p>
     <span class="n">gene_type</span><span class="o">=</span><span class="n">gene_type</span><span class="p">,</span>
     <span class="n">init_range_low</span><span class="o">=</span><span class="n">init_range_low</span><span class="p">,</span>
     <span class="n">init_range_high</span><span class="o">=</span><span class="n">init_range_high</span><span class="p">,</span>
+    <span class="n">save_solutions</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">ga_instance</span><span class="o">.</span><span class="n">igen</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># To count the number of generations</span>
@@ -982,11 +985,15 @@ created to run the simulation:</p>
 </pre></div>
 </div>
 </section>
-<section id="plot-convergence">
-<h2>Plot convergence<a class="headerlink" href="#plot-convergence" title="Link to this heading">#</a></h2>
+<section id="plot-fitness-and-genes-values">
+<h2>Plot fitness and genes values<a class="headerlink" href="#plot-fitness-and-genes-values" title="Link to this heading">#</a></h2>
+<p>You can plot the solution fitness across generations and the evolution of gene
+values using the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
 <span class="n">ga_instance</span><span class="o">.</span><span class="n">plot_fitness</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Applied force&quot;</span><span class="p">],</span> <span class="n">save_dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+
+<span class="n">ga_instance</span><span class="o">.</span><span class="n">plot_genes</span><span class="p">(</span><span class="n">solutions</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
 
 <span class="n">solution</span><span class="p">,</span> <span class="n">solution_fitness</span><span class="p">,</span> <span class="n">solution_idx</span> <span class="o">=</span> <span class="n">ga_instance</span><span class="o">.</span><span class="n">best_solution</span><span class="p">(</span>
     <span class="n">ga_instance</span><span class="o">.</span><span class="n">last_generation_fitness</span>
@@ -996,6 +1003,18 @@ created to run the simulation:</p>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fitness value of the best solution = </span><span class="si">{</span><span class="n">solution_fitness</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<figure class="align-default" id="id5">
+<img alt="../../../_images/fitness_plot.png" src="../../../_images/fitness_plot.png" />
+<figcaption>
+<p><span class="caption-text">Fitness at each generation plot</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id6">
+<img alt="../../../_images/genes.png" src="../../../_images/genes.png" />
+<figcaption>
+<p><span class="caption-text">Evolution of genes values</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="model-storage">
 <h2>Model storage<a class="headerlink" href="#model-storage" title="Link to this heading">#</a></h2>
@@ -1109,7 +1128,7 @@ of MAPDL instances that the
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation">Simulation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-convergence">Plot convergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-fitness-and-genes-values">Plot fitness and genes values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-storage">Model storage</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation-on-an-hpc-cluster-using-slurm">Simulation on an HPC cluster using SLURM</a></li>
 </ul>
