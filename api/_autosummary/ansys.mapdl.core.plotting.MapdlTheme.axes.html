@@ -8,15 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
-
-    
-        
     <title>axes &#8212; PyMAPDL</title>
-    
-
-
-
 
   
   
@@ -755,16 +747,16 @@ document.write(`
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">MapdlTheme.</span></span><span class="sig-name descname"><span class="pre">axes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.plotting.themes._AxesConfig.html#pyvista.plotting.themes._AxesConfig" title="(in PyVista v0.44.1)"><span class="pre">_AxesConfig</span></a></em><a class="headerlink" href="#ansys.mapdl.core.plotting.MapdlTheme.axes" title="Link to this definition">#</a></dt>
 <dd><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">axes</span></code> configuration.</p>
 <p class="rubric">Examples</p>
-<p>Set the x axis color to black.</p>
+<p>Set the x-axis color to black.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pv</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">x_color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
 </pre></div>
 </div>
-<p>Show axes by default.</p>
+<p>Show the axes orientation widget by default.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pv</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">show</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p>Use the <code class="docutils literal notranslate"><span class="pre">vtk.vtkCubeAxesActor</span></code>.</p>
+<p>Use the <a class="reference external" href="https://docs.pyvista.org/api/plotting/_autosummary/pyvista.create_axes_orientation_box.html#pyvista.create_axes_orientation_box" title="(in PyVista v0.44.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">axes</span> <span class="pre">orientation</span> <span class="pre">box</span></code></a> as the orientation widget.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pv</span><span class="o">.</span><span class="n">global_theme</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
@@ -840,7 +832,7 @@ document.write(`
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.0.7. and
+          1.0.8. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
           on <span id="date"></span>
         </p>
