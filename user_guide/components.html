@@ -576,23 +576,35 @@ document.write(`
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mapdl.html">PyMAPDL language and usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="convert.html">Translate scripts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesh_geometry.html">Mesh and geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plotting.html">Interactive plotting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parameters.html">Setting and retrieving parameters</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Managing components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="post.html">Postprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshoot.html">PyMAPDLのトラブルシューティング</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Intermediate</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="cli.html">PyMAPDL コマンドラインインターフェイス.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convert.html">Translate scripts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="database.html">Access MAPDL database</a></li>
 <li class="toctree-l1"><a class="reference internal" href="math.html">PyAnsys Math overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pool.html">Create a pool of MAPDL instances</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hpc.html">High performance computing (HPC)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="xpl.html">File explorer overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="upf.html">Using Python to code UPF subroutines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="krylov.html">Harmonic analysis using the Krylov method</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshoot.html">PyMAPDLのトラブルシューティング</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="hpc/introduction.html">Introduction to SLURM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc/pymapdl.html">PyMAPDL on SLURM HPC clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc/troubleshooting.html">Troubleshooting</a></li>
 </ul>
 </div>
 </nav></div>
@@ -661,7 +673,7 @@ document.write(`
   <section id="managing-components">
 <span id="ref-components"></span><h1>Managing components<a class="headerlink" href="#managing-components" title="Link to this heading">#</a></h1>
 <p>MAPDL components can be retrieved and set using
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.components</span></code>.</p>
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.component.ComponentManager.html#ansys.mapdl.core.component.ComponentManager" title="ansys.mapdl.core.component.ComponentManager"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.components</span></code></a>.</p>
 <p>There are several ways to create a component in MAPDL.</p>
 <p>You can use the <a class="reference internal" href="../mapdl_commands/database/_autosummary/ansys.mapdl.core.Mapdl.cm.html#ansys.mapdl.core.Mapdl.cm" title="ansys.mapdl.core.Mapdl.cm"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.cm</span></code></a> method:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
@@ -688,7 +700,7 @@ specifying the type and items:</p>
 </pre></div>
 </div>
 <p>You can change the default type by changing
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.components.default_entity</span></code></p>
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.component.ComponentManager.default_entity.html#ansys.mapdl.core.component.ComponentManager.default_entity" title="ansys.mapdl.core.component.ComponentManager.default_entity"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.components.default_entity</span></code></a></p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">default_entity</span> <span class="o">=</span> <span class="s2">&quot;KP&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="s2">&quot;mycomp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="s2">&quot;mycomp&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">type</span>
@@ -716,10 +728,10 @@ the component needs to be selected using <a class="reference internal" href="../
 </div>
 <section id="component-object">
 <h2>Component object<a class="headerlink" href="#component-object" title="Link to this heading">#</a></h2>
-<p>The <cite>Component object &lt;ansys.mapdl.core.component.Component&gt;</cite> is the object returned by
+<p>The <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.component.Component.html#ansys.mapdl.core.component.Component" title="ansys.mapdl.core.component.Component"><code class="xref py py-class docutils literal notranslate"><span class="pre">Component</span> <span class="pre">object</span></code></a> is the object returned by
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">Mapdl.components</span></code> when you query it with a component name.
-This object has two main attributes: <cite>type &lt;Component.type&gt;</cite> and <cite>items &lt;Component.items&gt;</cite>.
-The former returns the component type (<cite>&quot;ELEM&quot;</cite>, <cite>&quot;NODE&quot;</cite>, <cite>&quot;KP&quot;</cite>, etc) and the later returns
+This object has two main attributes: <code class="xref py py-attr docutils literal notranslate"><span class="pre">type</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">items</span></code>.
+The former returns the component type (<code class="docutils literal notranslate"><span class="pre">&quot;ELEM&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;NODE&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;KP&quot;</span></code>, etc) and the later returns
 a tuple with the index of the entities which belong to that component.</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">comp</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="s2">&quot;mycomp3&quot;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">comp</span><span class="o">.</span><span class="n">type</span>

@@ -576,12 +576,14 @@ document.write(`
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Session</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="session/run_controls.html">Run controls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="session/processor_entry.html">Processor entry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="session/files.html">Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="session/list_controls.html">List controls</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Database</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="database/setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="database/selecting.html">Selecting</a></li>
@@ -590,6 +592,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="database/coord_sys.html">Coordinate system</a></li>
 <li class="toctree-l1"><a class="reference internal" href="database/picking.html">Picking</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Graphics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="graphics/setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphics/views.html">Views</a></li>
@@ -599,6 +602,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="graphics/graphs.html">Graphs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="graphics/annotation.html">Annotation</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">APDL</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="apdl/parameter_definition.html">Parameter definition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apdl/macro_files.html">Macro files</a></li>
@@ -607,6 +611,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="apdl/matrix_op.html">Matrix operations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apdl/process_controls.html">Process controls</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Preprocessing</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="prep7/database.html">Database</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prep7/element_type.html">Element type</a></li>
@@ -634,6 +639,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="prep7/artificially_matched_layers.html">Artificially matched layers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prep7/special_purpose.html">Special purpose</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="solution/analysis_options.html">Analysis options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solution/nonlinear_options.html">Nonlinear options</a></li>
@@ -666,6 +672,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="solution/multi_field_solver_convergence_controls.html">Multi-Field solver convergence controls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solution/multi_field_solver_interface_mapping.html">Multi-Field solver interface mapping</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">POST1</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="post1/setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="post1/controls.html">Controls</a></li>
@@ -682,6 +689,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="post1/status.html">Status</a></li>
 <li class="toctree-l1"><a class="reference internal" href="post1/failure_criteria.html">Failure criteria</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">POST26</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="post26/setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="post26/controls.html">Controls</a></li>
@@ -691,39 +699,49 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="post26/special.html">Special purpose</a></li>
 <li class="toctree-l1"><a class="reference internal" href="post26/status.html">Status</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AUX2</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="aux2/bin_dump.html">Binary file dump</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aux2/bin_manip.html">Binary file manipulation</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AUX3</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="aux3.html">Results files</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AUX12</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="aux12/general_radiation.html">General radiation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aux12/radiation_mat.html">Radiation matrix method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aux12/radiosity_solver.html">Radiosity solver</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AUX15</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="aux15.html">IGES</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MAP</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="map.html">Pressure mapping</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">DISPLAY</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="display/setup.html">Setup</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">REDUCED</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="reduced/setup.html">Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reduced/preparation.html">Preparation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reduced/generation.html">Generation pass</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reduced/use_pass.html">Use pass</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Connection</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="conn.html">Connection commands</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="misc.html">Miscellaneous</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Undocumented</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Undocumented inquire commands</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ndinqr.html">ndinqr</a></li>

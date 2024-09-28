@@ -89,7 +89,7 @@
     <link rel="icon" href="../../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
-    <link rel="next" title="Full examples using PyMAPDL" href="../../gallery_examples/00-mapdl-examples/index.html" />
+    <link rel="next" title="PyMAPDL Developer Portalの記事" href="../../devportal.html" />
     <link rel="prev" title="Create a GUI app in Python with PySide6" href="../gui/executable.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -578,9 +578,10 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../devportal.html">PyMAPDL Developer Portalの記事</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://examples.mapdl.docs.pyansys.com/verif-manual/index.html">Verification Manual</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://examples.mapdl.docs.pyansys.com/technology_showcase_examples/index.html">Technology Showcases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gallery_examples/00-mapdl-examples/index.html">Full examples using PyMAPDL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gallery_examples/01-geometry/index.html">Geometry examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gallery_examples/02-tips-n-tricks/index.html">Miscellaneous examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../gallery_examples/03-general-fea/index.html">Academic finite element examples</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Extended examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference external" href="http://cartpole.mapdl.docs.pyansys.com/ml-rl-notebook.html">Cart-Pole Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex_01-gmsh_example/ex_01-gmsh_example.html">Gmsh example</a></li>
@@ -592,12 +593,9 @@ document.write(`
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Genetic algorithms and PyMAPDL</a></li>
 </ul>
 </details></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../gallery_examples/00-mapdl-examples/index.html">Full examples using PyMAPDL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery_examples/01-geometry/index.html">Geometry examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery_examples/02-tips-n-tricks/index.html">Miscellaneous examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery_examples/03-general-fea/index.html">Academic finite element examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devportal.html">PyMAPDL Developer Portalの記事</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://examples.mapdl.docs.pyansys.com/verif-manual/index.html">Verification Manual</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://examples.mapdl.docs.pyansys.com/technology_showcase_examples/index.html">Technology Showcases</a></li>
 </ul>
 </div>
 </nav></div>
@@ -1038,7 +1036,7 @@ create a Python environment, install the packages, and then run
 this script.</p>
 <ol class="arabic">
 <li><p>Log into your HPC cluster.
-For more information, see <a class="reference internal" href="../../../user_guide/hpc.html#ref-hpc-login"><span class="std std-ref">Log into the cluster</span></a></p></li>
+For more information, see <a class="reference internal" href="../../../user_guide/hpc/introduction.html#ref-hpc-login"><span class="std std-ref">Log into the cluster</span></a></p></li>
 <li><p>Create a virtual environment that is accessible from
 the compute nodes.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>/home/user/.venv
@@ -1046,7 +1044,7 @@ the compute nodes.</p>
 </div>
 <p>If you have problems when creating the virtual environment
 or accessing it from the compute nodes,
-see <a class="reference internal" href="../../../user_guide/hpc.html#ref-hpc-pymapdl-job"><span class="std std-ref">Submit a PyMAPDL job</span></a>.</p>
+see <a class="reference internal" href="../../../user_guide/hpc/pymapdl.html#ref-hpc-pymapdl-job"><span class="std std-ref">Submit a PyMAPDL job</span></a>.</p>
 </li>
 <li><p>Install the requirements for this example from the
 <a class="reference download internal" download="" href="../../../_downloads/424fd68692afb7542a6ce338c426c225/requirements.txt"><code class="xref download docutils literal notranslate"><span class="pre">requirements.txt</span></code></a> file.</p></li>

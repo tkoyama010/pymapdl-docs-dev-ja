@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PyMAPDL examples repository &#8212; PyMAPDL</title>
+    <title>PyMAPDL on SLURM HPC clusters &#8212; PyMAPDL</title>
 
   
   
@@ -77,17 +77,19 @@
                 gtag('js', new Date());
                 gtag('config', 'G-JQJKPV6ZVB');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'examples/pymapdl_examples_repo/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/hpc/pymapdl';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://mapdl.docs.pyansys.com/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
-    <link rel="canonical" href="https://mapdl.docs.pyansys.com/version/stable/examples/pymapdl_examples_repo/index.html" />
+    <link rel="canonical" href="https://mapdl.docs.pyansys.com/version/stable/user_guide/hpc/pymapdl.html" />
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="Troubleshooting" href="troubleshooting.html" />
+    <link rel="prev" title="Introduction to SLURM" href="introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
   </head>
@@ -235,8 +237,8 @@
 </li>
 
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../user_guide/index.html">
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
     ユーザーガイド
   </a>
 </li>
@@ -257,7 +259,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../index.html">
+  <a class="nav-link nav-internal" href="../../examples/index.html">
     使用例
   </a>
 </li>
@@ -423,9 +425,7 @@ document.write(`
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -447,8 +447,8 @@ document.write(`
 </li>
 
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../user_guide/index.html">
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
     ユーザーガイド
   </a>
 </li>
@@ -469,7 +469,7 @@ document.write(`
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../index.html">
+  <a class="nav-link nav-internal" href="../../examples/index.html">
     使用例
   </a>
 </li>
@@ -571,6 +571,45 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mapdl.html">PyMAPDL language and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mesh_geometry.html">Mesh and geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plotting.html">Interactive plotting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../parameters.html">Setting and retrieving parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../components.html">Managing components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../post.html">Postprocessing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshoot.html">PyMAPDLのトラブルシューティング</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Intermediate</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">PyMAPDL コマンドラインインターフェイス.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../convert.html">Translate scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database.html">Access MAPDL database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../math.html">PyAnsys Math overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pool.html">Create a pool of MAPDL instances</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../xpl.html">File explorer overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upf.html">Using Python to code UPF subroutines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../krylov.html">Harmonic analysis using the Krylov method</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to SLURM</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">PyMAPDL on SLURM HPC clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -608,8 +647,12 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="../index.html" class="nav-link">ユーザーガイド</a>
+    </li>
       
-    <li class="breadcrumb-item active" aria-current="page">PyMAPDL examples repository</li>
+    <li class="breadcrumb-item active" aria-current="page">PyMAPDL on SLURM HPC clusters</li>
     
   </ul>
 </nav>
@@ -627,34 +670,162 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pymapdl-examples-repository">
-<span id="ref-pymapdl-examples-repository"></span><h1>PyMAPDL examples repository<a class="headerlink" href="#pymapdl-examples-repository" title="Link to this heading">#</a></h1>
-<p>The Verification Manual examples and the Technology Showcase examples
-are hosted in the  <a class="reference external" href="https://github.com/ansys/pymapdl-examples">PyMAPDL Examples repository</a>.</p>
-<p>The documentation to these examples can be found in the
-<a class="reference external" href="https://examples.mapdl.docs.pyansys.com/">PyMAPDL Examples documentation</a>.</p>
-<section id="verification-manual-examples">
-<h2>Verification manual examples<a class="headerlink" href="#verification-manual-examples" title="Link to this heading">#</a></h2>
-<p>The Verification Manual examples demonstrate a range of Mechanical APDL
-elements and capabilities in straightforward problems which have
-&quot;classical&quot; or readily obtainable theoretical solutions using PyMAPDL.</p>
-<p>These problems may then serve as the basis for additional validation
-and qualification of Mechanical APDL capabilities for specific
-applications that may be of interest.</p>
-<p>The documentation to these examples can be found in the
-<a class="reference external" href="https://examples.mapdl.docs.pyansys.com/verif-manual/index.html">Verification Manual</a> section.</p>
+  <section id="pymapdl-on-slurm-hpc-clusters">
+<span id="ref-hpc-pymapdl"></span><h1>PyMAPDL on SLURM HPC clusters<a class="headerlink" href="#pymapdl-on-slurm-hpc-clusters" title="Link to this heading">#</a></h1>
+<section id="submit-a-pymapdl-job">
+<span id="ref-hpc-pymapdl-job"></span><h2>Submit a PyMAPDL job<a class="headerlink" href="#submit-a-pymapdl-job" title="Link to this heading">#</a></h2>
+<p>Using PyMAPDL in an HPC environment managed by SLURM scheduler has certain requirements:</p>
+<ul class="simple">
+<li><p><strong>An Ansys installation must be accessible from all the compute nodes</strong>.
+This normally implies that the <code class="docutils literal notranslate"><span class="pre">ANSYS</span></code> installation directory is in a
+shared drive or directory. Your HPC cluster administrator
+should provide you with the path to the <code class="docutils literal notranslate"><span class="pre">ANSYS</span></code> directory.</p></li>
+<li><p><strong>A compatible Python installation must be accessible from all the compute nodes</strong>.
+For compatible Python versions, see <a class="reference internal" href="../../getting_started/install_pymapdl.html#ref-pymapdl-installation"><span class="std std-ref">PyMAPDLをインストールする.</span></a>.</p></li>
+</ul>
+<p>Additionally, you must perform a few key steps to ensure efficient job
+execution and resource utilization. Subsequent topics describe these steps.</p>
+<section id="check-the-python-installation">
+<h3>Check the Python installation<a class="headerlink" href="#check-the-python-installation" title="Link to this heading">#</a></h3>
+<p>The PyMAPDL Python package (<code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>) must be installed in a virtual
+environment that is accessible from the compute nodes.</p>
+<p>To see where your Python distribution is installed, use this code:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>which<span class="w"> </span>python3
+<span class="go">/usr/bin/python3</span>
+</pre></div>
+</div>
+<p>To print the version of Python you have available, use this code:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>python3<span class="w"> </span>--version
+<span class="go">Python 3.9.16</span>
+</pre></div>
+</div>
+<p>You should be aware that your machine might have installed other Python versions.
+To find out if those installations are already in the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable,
+you can press the <strong>Tab</strong> key to use autocomplete:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>which<span class="w"> </span>python3<span class="o">[</span>TAB<span class="o">]</span>
+<span class="go">python3             python3-intel64     python3.10-config   python3.11          python3.12          python3.8           python3.8-intel64   python3.9-config</span>
+<span class="go">python3-config      python3.10          python3.10-intel64  python3.11-config   python3.12-config   python3.8-config    python3.9</span>
+<span class="gp">$ </span>which<span class="w"> </span>python3.10
+<span class="go">/usr/bin/python3.10</span>
+</pre></div>
+</div>
+<p>You should use a Python version that is compatible with PyMAPDL.
+For more information, see <a class="reference internal" href="../../getting_started/install_pymapdl.html#ref-pymapdl-installation"><span class="std std-ref">PyMAPDLをインストールする.</span></a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">which</span></code> command returns the path where the Python executable is installed.
+You can use that executable to create your own Python virtual environment in a directory
+that is accessible from all the compute nodes.
+For most HPC clusters, the <code class="docutils literal notranslate"><span class="pre">/home/$user</span></code> directory is generally available to all nodes.
+You can then create the virtual environment in the <code class="docutils literal notranslate"><span class="pre">/home/user/.venv</span></code> directory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>/home/user/.venv
+</pre></div>
+</div>
+<p>After activating the virtual environment, you can install PyMAPDL.</p>
 </section>
-<section id="technology-showcase-examples">
-<h2>Technology showcase examples<a class="headerlink" href="#technology-showcase-examples" title="Link to this heading">#</a></h2>
-<p>The PyMAPDL technology showcase examples are more complex test cases than
-the ones preceding. They demonstrate how to use PyMAPDL to effectively
-and accurately solve interdisciplinary problems from a variety of industries
-and engineering fields.</p>
-<p>The examples initially come from the <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v231/en/ans_tec/tecintro.html">APDL Technology Showcase Manual</a> and are modeled with MAPDL files. Some of them have been
-reproduced in Python files using PyMAPDL with the <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>
-library.</p>
-<p>The documentation to these examples can be found in the
-<a class="reference external" href="https://examples.mapdl.docs.pyansys.com/technology_showcase_examples/index.html">Technology Showcases</a> section.</p>
+<section id="install-pymapdl">
+<h3>Install PyMAPDL<a class="headerlink" href="#install-pymapdl" title="Link to this heading">#</a></h3>
+<p>To install PyMAPDL on the activated virtual environment, run the following commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span><span class="nb">source</span><span class="w"> </span>/home/user/.venv/bin/activate
+<span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pip<span class="w"> </span>install<span class="w"> </span>ansys-mapdl-core
+<span class="go">Collecting ansys-mapdl-core</span>
+<span class="go">Downloading ansys_mapdl_core-0.68.1-py3-none-any.whl (26.9 MB)</span>
+<span class="go">    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 26.9/26.9 MB 37.3 MB/s eta 0:00:00</span>
+<span class="go">Collecting pexpect&gt;=4.8.0</span>
+<span class="go">Using cached pexpect-4.9.0-py2.py3-none-any.whl (63 kB)</span>
+<span class="go">Collecting click&gt;=8.1.3</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+<p>To test if this virtual environment is accessible from the compute nodes,
+run this <code class="docutils literal notranslate"><span class="pre">test.sh</span></code> bash script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=myjob</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --ntasks-per-node=4</span>
+<span class="c1">#SBATCH --time=01:00:00</span>
+
+<span class="c1"># Commands to run</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Testing Python!&quot;</span>
+<span class="nb">source</span><span class="w"> </span>/home/user/.venv/bin/activate
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from ansys.mapdl import core;print(f&#39;PyMAPDL version {core.__version__} was successfully imported.&#39;)&quot;</span>
+</pre></div>
+</div>
+<p>then you can run that script using:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>srun<span class="w"> </span>test.sh
+</pre></div>
+</div>
+<p>This command might take a minute or two to complete, depending on the amount of free
+resources available in the cluster.
+On the console, you should see this output:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Testing Python!
+PyMAPDL version 0.68.1 was successfully imported.
+</pre></div>
+</div>
+<p>If you see an error in the output, see <a class="reference internal" href="troubleshooting.html#ref-hpc-troubleshooting"><span class="std std-ref">Troubleshooting</span></a>, especially
+<a class="reference internal" href="troubleshooting.html#ref-python-venv-not-accesible"><span class="std std-ref">Python virtual environment is not accessible</span></a>.</p>
+</section>
+<section id="id1">
+<h3>Submit a PyMAPDL job<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>To submit a PyMAPDL job, you must create two files:</p>
+<ul class="simple">
+<li><p>Python script with the PyMAPDL code</p></li>
+<li><p>Bash script that activates the virtual environment and calls the Python script</p></li>
+</ul>
+<p><strong>Python script:</strong> <code class="docutils literal notranslate"><span class="pre">pymapdl_script.py</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+
+<span class="c1"># Number of processors must be lower than the</span>
+<span class="c1"># number of CPUs allocated for the job.</span>
+<span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">nproc</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
+<span class="n">n_proc</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;ACTIVE&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;NUMCPU&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of CPUs: </span><span class="si">{</span><span class="n">n_proc</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Bash script:</strong> <code class="docutils literal notranslate"><span class="pre">job.sh</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/home/user/.venv/bin/activate
+python<span class="w"> </span>pymapdl_script.py
+</pre></div>
+</div>
+<p>To start the simulation, you use this code:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>srun<span class="w"> </span>job.sh
+</pre></div>
+</div>
+<p>The bash script allows you to customize the environment before running the Python script.
+This bash script performs such tasks as creating environment variables, moving to
+different directories, and printing to ensure your configuration is correct. However,
+this bash script is not mandatory.
+You can avoid having the <code class="docutils literal notranslate"><span class="pre">job.sh</span></code> bash script if the virtual environment is activated
+and you pass all the environment variables to the job:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span><span class="nb">source</span><span class="w"> </span>/home/user/.venv/bin/activate
+<span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>srun<span class="w"> </span>python<span class="w"> </span>pymapdl_script.py<span class="w"> </span>--export<span class="o">=</span>ALL
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">--export=ALL</span></code> argument might not be needed, depending on the cluster configuration.
+Furthermore, you can omit the Python call in the preceding command if you include the
+Python shebang (<code class="docutils literal notranslate"><span class="pre">#!/usr/bin/python3</span></code>) in the first line of the <code class="docutils literal notranslate"><span class="pre">pymapdl_script.py</span></code> script.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span><span class="nb">source</span><span class="w"> </span>/home/user/.venv/bin/activate
+<span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>srun<span class="w"> </span>pymapdl_script.py<span class="w"> </span>--export<span class="o">=</span>ALL
+</pre></div>
+</div>
+<p>If you prefer to run the job in the background, you can use the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>
+command instead of the <code class="docutils literal notranslate"><span class="pre">srun</span></code> command. However, in this case, the Bash file is needed:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>sbatch<span class="w"> </span>job.sh
+<span class="go">Submitted batch job 1</span>
+</pre></div>
+</div>
+<p>Here is the expected output of the job:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Number of CPUs: 10.0
+</pre></div>
+</div>
+</section>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
+<p>For an example that uses a machine learning genetic algorithm in
+an HPC system managed by SLURM scheduler, see <a class="reference internal" href="../../examples/extended_examples/hpc/hpc_ml_ga.html#hpc-ml-ga-example"><span class="std std-ref">Genetic algorithms and PyMAPDL</span></a>.</p>
 </section>
 </section>
 
@@ -680,14 +851,19 @@ library.</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verification-manual-examples">Verification manual examples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technology-showcase-examples">Technology showcase examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-a-pymapdl-job">Submit a PyMAPDL job</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-python-installation">Check the Python installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-pymapdl">Install PyMAPDL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Submit a PyMAPDL job</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item"> 
 <div class="tocsection editthispage">
-  <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/examples/pymapdl_examples_repo/index.rst">
+  <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/user_guide/hpc/pymapdl.rst">
     <i class="fa-solid fa-pencil"></i>
        Edit
     on GitHub  
