@@ -8,6 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="pymapdl, mapdl, simulation, finite elements, python" name="keywords" translated="False" />
+<meta content="Welcome to PyMAPDL documentation." name="description" translated="False" />
 
     <title>Welcome to PyMAPDL &#8212; PyMAPDL</title>
 
@@ -634,7 +635,40 @@ document.write(`
 </a>
 <a class="only-light reference internal image-reference" href="_images/logo_light.png"><img alt="PyMAPDLのロゴ" class="only-light align-center" src="_images/logo_light.png" style="width: 800px;" />
 </a>
-<p><strong>どうしたい？ 私は...</strong></p>
+
+<script>
+// Injected using 'HideObject' directive
+document.addEventListener("DOMContentLoaded", function() {
+    var elements = document.getElementsByClassName("bd-sidebar-secondary bd-toc");
+    if (elements.length > 0) {
+
+        // Get the parent of the selected element
+        var parent = elements[0].parentNode;
+
+        // Remove the selected element from the DOM
+
+        for (var i = 0; i < elements.length; i++) {
+             if (true){
+                // remove element
+                elements[i].remove();
+            } else {
+                //Just hide
+                elements[0].style.visibility = "hidden";
+            }
+        }
+
+        // Loop through the remaining child elements (siblings)
+        if (true) {
+            var siblings = parent.children;
+            for (var i = 0; i < siblings.length; i++) {
+                // Apply margin: auto to each sibling
+                siblings[i].style.margin = 'auto';
+            }
+        }
+    }
+});
+</script>
+        <p><strong>どうしたい？ 私は...</strong></p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 sd-pt-1 sd-pb-2 sd-pl-3 sd-pr-3 docutils">
 <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-1 sd-g-xs-1 sd-g-sm-2 sd-g-md-3 sd-g-lg-3 docutils">
 <div class="sd-col sd-d-flex-row docutils">
