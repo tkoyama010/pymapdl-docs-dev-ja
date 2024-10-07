@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>full_screen &#8212; PyMAPDL</title>
-
+  
   
   
   
@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css?v=d2ac875c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css?v=e7c4c341" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -49,9 +49,10 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
- 
-<link href="../../_static/css/breadcrumbs.css" rel="stylesheet" />
 
+  
+    <link href="../../_static/css/breadcrumbs.css" rel="stylesheet" />
+  
     <script src="../../_static/documentation_options.js?v=7d205779"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -101,6 +102,7 @@
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
+  
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
@@ -119,77 +121,31 @@
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
-    <div class="search-button__search-container"><!-- Debugging: html_theme_options =  -->
-
-  
-  <!-- Include the MeiliSearch CSS stylesheet only if theme present -->
-  <link href="../../_static/css/meilisearch.css" rel="stylesheet" />
-  <!-- Create a search bar form with a text input and a dropdown selector for the search index -->
-  <form class="bd-search d-flex align-items-center"
-  action="../../search.html"
-  method="get">
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
-    class="form-control"
-    name="q"
-    placeholder="Search the docs ..."
-    aria-label="Search the docs ..."
-    autocomplete="off"
-    autocorrect="off"
-    autocapitalize="off"
-    spellcheck="false"/>
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-  <!-- Conditionally display the dropdown selector if there are multiple indices -->
-  
-  <!-- Include the MeiliSearch JavaScript library for the search bar -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
-  
-    
-  
-  <script>
-  var HOST_URL = "https://backend.search.pyansys.com/";
-  var API_KEY = "";
-  // Iterates of the dictionary of index_uids and index_names to get the first child dicts
-  // and then the first key of the child dict to get the index_uid
-  var indexUid = "pymapdl-vdev";
-
-  // Function to check if the MeiliSearch host URL is reachable
-  function checkMeiliSearchHost(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('HEAD', url, true);
-    xhr.onload = function () {
-      if (xhr.status === 404) {
-        callback(false);
-      } else {
-        callback(true);
-      }
-    };
-    xhr.onerror = function () {
-      callback(false);
-    };
-    xhr.send();
-  }
-
-  // Check the MeiliSearch host URL and load the appropriate search script
-  checkMeiliSearchHost(HOST_URL, function (isReachable) {
-    if (isReachable) {
-      var script = document.createElement('script');
-      script.src = "../../_static/js/meilisearch_theme_wrap.js";
-      document.head.appendChild(script);
-      // create an env value that the url is reachable to use in another script
-      const ACTIVE_MEILI_BACKEND = true;
-    }
-    });
-  </script>
-  </form>
-</div>
+</form></div>
   </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
-   
+  
+  
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
   <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
@@ -289,16 +245,19 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">検索</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<div class="search-bar" id="search-bar">
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+         aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+         autocapitalize="off" spellcheck="false"/>
+  <span class="search-button__kbd-shortcut">
+    <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+  </span>
+</form>
+<!-- Search results container -->
+<div id="results" class="results" style="display: none;" tabindex="0">
+</div>
         </div>
       
       
@@ -384,16 +343,19 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="検索" aria-label="検索" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">検索</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<div class="search-bar" id="search-bar">
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+         aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+         autocapitalize="off" spellcheck="false"/>
+  <span class="search-button__kbd-shortcut">
+    <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+  </span>
+</form>
+<!-- Search results container -->
+<div id="results" class="results" style="display: none;" tabindex="0">
+</div>
     </div>
   
 
@@ -405,6 +367,8 @@ document.write(`
 </div>
 
     </header>
+  
+  
     <div id="announcement_msg"></div>
 <script>
   fetch("announcement.html")
@@ -418,7 +382,9 @@ document.write(`
       (text) => (document.getElementById("announcement_msg").innerHTML = text),
     )
     .catch((error) => console.error(`Fetch problem: ${error.message}`));
-</script>  
+</script>
+  
+
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
@@ -744,7 +710,7 @@ document.write(`
 <h1>full_screen<a class="headerlink" href="#full-screen" title="Link to this heading">#</a></h1>
 <dl class="py property">
 <dt class="sig sig-object py" id="ansys.mapdl.core.plotting.MapdlTheme.full_screen">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">MapdlTheme.</span></span><span class="sig-name descname"><span class="pre">full_screen</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></em><a class="headerlink" href="#ansys.mapdl.core.plotting.MapdlTheme.full_screen" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">MapdlTheme.</span></span><span class="sig-name descname"><span class="pre">full_screen</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="headerlink" href="#ansys.mapdl.core.plotting.MapdlTheme.full_screen" title="Link to this definition">#</a></dt>
 <dd><p>Return if figures are shown in full screen.</p>
 <p class="rubric">Examples</p>
 <p>Set windows to be full screen by default.</p>
@@ -809,6 +775,28 @@ document.write(`
   <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
 <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
+<link rel="stylesheet" href="../../_static/css/fuse-search.css">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+var theme_static_search = JSON.parse('{"ignoreLocation": "False", "keys": ["title", "text"], "shouldSort": "True", "threshold": 0.5, "useExtendedSearch": "True"}');
+var theme_limit = "10";
+var min_chars_for_search = "1";
+var searchPath = "../../_static/search.json";
+
+</script>
+
+<script src="../../_static/js/fuse_search.js"></script>
+<script src="../../_static/js/fuse_extension.js"></script>
 <footer class="bd-footer" font-size="4px">
   <div class="bd-footer__inner bd-page-width">
     <div class="footer-items__start">
@@ -824,7 +812,7 @@ document.write(`
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.0.11. and
+          1.1.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
           on <span id="date"></span>
         </p>
