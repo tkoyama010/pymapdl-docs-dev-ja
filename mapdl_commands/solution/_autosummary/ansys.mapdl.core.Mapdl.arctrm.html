@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/ansys_sphinx_theme.css?v=e7c4c341" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/ansys_sphinx_theme.css?v=47841aec" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -246,17 +246,16 @@
         <div class="navbar-item navbar-persistent--container">
           
 <div class="search-bar" id="search-bar">
-<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
-         aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
-         autocapitalize="off" spellcheck="false"/>
-  <span class="search-button__kbd-shortcut">
-    <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
-  </span>
-</form>
-<!-- Search results container -->
-<div id="results" class="results" style="display: none;" tabindex="0">
+    <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+             aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+             autocapitalize="off" spellcheck="false"/>
+      <span class="search-button__kbd-shortcut">
+        <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+      </span>
+    </form>
+    <div id="search-results" class="search-results" style="display: none;" tabindex="0"></div>
 </div>
         </div>
       
@@ -344,17 +343,16 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 <div class="search-bar" id="search-bar">
-<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
-         aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
-         autocapitalize="off" spellcheck="false"/>
-  <span class="search-button__kbd-shortcut">
-    <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
-  </span>
-</form>
-<!-- Search results container -->
-<div id="results" class="results" style="display: none;" tabindex="0">
+    <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+             aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+             autocapitalize="off" spellcheck="false"/>
+      <span class="search-button__kbd-shortcut">
+        <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+      </span>
+    </form>
+    <div id="search-results" class="search-results" style="display: none;" tabindex="0"></div>
 </div>
     </div>
   
@@ -710,25 +708,16 @@ reached.</p>
 <link rel="stylesheet" href="../../../_static/css/fuse-search.css">
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
-
-
-
-
-
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
 
 <script>
-var theme_static_search = JSON.parse('{"ignoreLocation": "False", "keys": ["title", "text"], "shouldSort": "True", "threshold": 0.5, "useExtendedSearch": "True"}');
-var theme_limit = "10";
-var min_chars_for_search = "1";
-var searchPath = "../../../_static/search.json";
-
+// Passing the search options to the search.js file
+const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text"], "limit": 10, "threshold": 0.2}');
+const SEARCH_FILE = "../../../_static/search.json";
 </script>
 
-<script src="../../../_static/js/fuse_search.js"></script>
-<script src="../../../_static/js/fuse_extension.js"></script>
+
+<script src="../../../_static/js/search.js"></script>
 <footer class="bd-footer" font-size="4px">
   <div class="bd-footer__inner bd-page-width">
     <div class="footer-items__start">
@@ -744,8 +733,8 @@ var searchPath = "../../../_static/search.json";
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.1.2. and
-           <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.0.
+          1.1.6. and
+           <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
           on <span id="date"></span>
         </p>
         <script>
