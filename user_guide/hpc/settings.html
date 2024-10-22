@@ -89,7 +89,7 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="PyMAPDL on SLURM HPC clusters" href="pymapdl.html" />
+    <link rel="next" title="PyMAPDL on HPC Clusters" href="pymapdl.html" />
     <link rel="prev" title="Introduction to SLURM" href="introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -568,7 +568,7 @@ document.write(`
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to SLURM</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Setting PyMAPDL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pymapdl.html">PyMAPDL on SLURM HPC clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pymapdl.html">PyMAPDL on HPC Clusters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
 </ul>
@@ -640,13 +640,15 @@ document.write(`
 <span id="ref-setting-pymapdl-on-hpc"></span><h1>Setting PyMAPDL<a class="headerlink" href="#setting-pymapdl" title="Link to this heading">#</a></h1>
 <section id="requirements">
 <h2>必要条件<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
-<p>Using PyMAPDL in an HPC environment managed by SLURM scheduler has certain requirements:</p>
+<p>Using PyMAPDL in an HPC environment managed by SLURM scheduler has certain
+requirements:</p>
 <ul class="simple">
 <li><p><strong>An Ansys installation must be accessible from all the compute nodes</strong>.
 This normally implies that the <code class="docutils literal notranslate"><span class="pre">ANSYS</span></code> installation directory is in a
 shared drive or directory. Your HPC cluster administrator
 should provide you with the path to the <code class="docutils literal notranslate"><span class="pre">ANSYS</span></code> directory.</p></li>
-<li><p><strong>A compatible Python installation must be accessible from all the compute nodes</strong>.
+<li><p><strong>A compatible Python installation must be accessible from all the compute
+nodes</strong>.
 For compatible Python versions, see <a class="reference internal" href="../../getting_started/install_pymapdl.html#ref-pymapdl-installation"><span class="std std-ref">PyMAPDLをインストールする.</span></a>.</p></li>
 </ul>
 <p>Additionally, you must perform a few key steps to ensure efficient job
@@ -654,8 +656,8 @@ execution and resource utilization. Subsequent topics describe these steps.</p>
 </section>
 <section id="check-the-python-installation">
 <h2>Check the Python installation<a class="headerlink" href="#check-the-python-installation" title="Link to this heading">#</a></h2>
-<p>The PyMAPDL Python package (<code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>) must be installed in a virtual
-environment that is accessible from the compute nodes.</p>
+<p>The PyMAPDL Python package (<code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code>) must be installed in
+a virtual environment that is accessible from the compute nodes.</p>
 <p>To see where your Python distribution is installed, use this code:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>which<span class="w"> </span>python3
 <span class="go">/usr/bin/python3</span>
@@ -666,9 +668,10 @@ environment that is accessible from the compute nodes.</p>
 <span class="go">Python 3.9.16</span>
 </pre></div>
 </div>
-<p>You should be aware that your machine might have installed other Python versions.
-To find out if those installations are already in the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable,
-you can press the <strong>Tab</strong> key to use autocomplete:</p>
+<p>You should be aware that your machine might have other Python versions
+installed.
+To find out if those installations are already in the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment
+variable, you can press the <strong>Tab</strong> key to use autocomplete:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>which<span class="w"> </span>python3<span class="o">[</span>TAB<span class="o">]</span>
 <span class="go">python3             python3-intel64     python3.10-config   python3.11          python3.12          python3.8           python3.8-intel64   python3.9-config</span>
 <span class="go">python3-config      python3.10          python3.10-intel64  python3.11-config   python3.12-config   python3.8-config    python3.9</span>
@@ -678,19 +681,28 @@ you can press the <strong>Tab</strong> key to use autocomplete:</p>
 </div>
 <p>You should use a Python version that is compatible with PyMAPDL.
 For more information, see <a class="reference internal" href="../../getting_started/install_pymapdl.html#ref-pymapdl-installation"><span class="std std-ref">PyMAPDLをインストールする.</span></a>.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">which</span></code> command returns the path where the Python executable is installed.
-You can use that executable to create your own Python virtual environment in a directory
-that is accessible from all the compute nodes.
-For most HPC clusters, the <code class="docutils literal notranslate"><span class="pre">/home/$user</span></code> directory is generally available to all nodes.
-You can then create the virtual environment in the <code class="docutils literal notranslate"><span class="pre">/home/user/.venv</span></code> directory:</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>Contact your cluster administrator if you cannot find a Python version
+compatible with PyMAPDL.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">which</span></code> command returns the path where the Python executable is
+installed.
+You can use that executable to create your own Python virtual environment
+in a directory that is accessible from all the compute nodes.
+For most HPC clusters, the <code class="docutils literal notranslate"><span class="pre">/home/$user</span></code> directory is generally available
+to all nodes.
+You can then create the virtual environment in the <code class="docutils literal notranslate"><span class="pre">/home/user/.venv</span></code>
+directory:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>/home/user/.venv
 </pre></div>
 </div>
 <p>After activating the virtual environment, you can install PyMAPDL.</p>
 </section>
 <section id="install-pymapdl">
-<h2>Install PyMAPDL<a class="headerlink" href="#install-pymapdl" title="Link to this heading">#</a></h2>
-<p>To install PyMAPDL on the activated virtual environment, run the following commands:</p>
+<span id="ref-install-pymapdl-on-hpc"></span><h2>Install PyMAPDL<a class="headerlink" href="#install-pymapdl" title="Link to this heading">#</a></h2>
+<p>To install PyMAPDL on the activated virtual environment, run the following
+commands:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span><span class="nb">source</span><span class="w"> </span>/home/user/.venv/bin/activate
 <span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pip<span class="w"> </span>install<span class="w"> </span>ansys-mapdl-core
 <span class="go">Collecting ansys-mapdl-core</span>
@@ -720,15 +732,15 @@ python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;f
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>srun<span class="w"> </span>test.sh
 </pre></div>
 </div>
-<p>This command might take a minute or two to complete, depending on the amount of free
-resources available in the cluster.
+<p>This command might take a minute or two to complete, depending on the amount of
+free resources available in the cluster.
 On the console, you should see this output:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Testing Python!
 PyMAPDL version 0.68.1 was successfully imported.
 </pre></div>
 </div>
-<p>If you see an error in the output, see <a class="reference internal" href="troubleshooting.html#ref-hpc-troubleshooting"><span class="std std-ref">Troubleshooting</span></a>, especially
-<a class="reference internal" href="troubleshooting.html#ref-python-venv-not-accesible"><span class="std std-ref">Python virtual environment is not accessible</span></a>.</p>
+<p>If you see an error in the output, see <a class="reference internal" href="troubleshooting.html#ref-hpc-troubleshooting"><span class="std std-ref">Troubleshooting</span></a>,
+especially <a class="reference internal" href="troubleshooting.html#ref-python-venv-not-accesible"><span class="std std-ref">Python virtual environment is not accessible</span></a>.</p>
 </section>
 </section>
 
