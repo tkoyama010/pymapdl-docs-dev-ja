@@ -89,7 +89,7 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="PyMAPDL on HPC Clusters" href="pymapdl.html" />
+    <link rel="next" title="PyMAPDL on HPC clusters" href="pymapdl.html" />
     <link rel="prev" title="Introduction to SLURM" href="introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -568,7 +568,7 @@ document.write(`
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to SLURM</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Setting PyMAPDL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pymapdl.html">PyMAPDL on HPC Clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pymapdl.html">PyMAPDL on HPC clusters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
 </ul>
@@ -643,12 +643,12 @@ document.write(`
 <p>Using PyMAPDL in an HPC environment managed by SLURM scheduler has certain
 requirements:</p>
 <ul class="simple">
-<li><p><strong>An Ansys installation must be accessible from all the compute nodes</strong>.
+<li><p><strong>An Ansys installation must be accessible from all the compute nodes.</strong>
 This normally implies that the <code class="docutils literal notranslate"><span class="pre">ANSYS</span></code> installation directory is in a
 shared drive or directory. Your HPC cluster administrator
 should provide you with the path to the <code class="docutils literal notranslate"><span class="pre">ANSYS</span></code> directory.</p></li>
 <li><p><strong>A compatible Python installation must be accessible from all the compute
-nodes</strong>.
+nodes.</strong>
 For compatible Python versions, see <a class="reference internal" href="../../getting_started/install_pymapdl.html#ref-pymapdl-installation"><span class="std std-ref">PyMAPDLをインストールする.</span></a>.</p></li>
 </ul>
 <p>Additionally, you must perform a few key steps to ensure efficient job
@@ -733,8 +733,8 @@ python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;f
 </pre></div>
 </div>
 <p>This command might take a minute or two to complete, depending on the amount of
-free resources available in the cluster.
-On the console, you should see this output:</p>
+free resources available in the cluster.</p>
+<p>On the console, you should see this output:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Testing Python!
 PyMAPDL version 0.68.1 was successfully imported.
 </pre></div>

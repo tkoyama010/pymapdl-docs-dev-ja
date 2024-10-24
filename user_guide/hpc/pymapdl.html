@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PyMAPDL on HPC Clusters &#8212; PyMAPDL</title>
+    <title>PyMAPDL on HPC clusters &#8212; PyMAPDL</title>
   
   
   
@@ -568,7 +568,7 @@ document.write(`
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to SLURM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="settings.html">Setting PyMAPDL</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">PyMAPDL on HPC Clusters</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">PyMAPDL on HPC clusters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
 </ul>
@@ -618,7 +618,7 @@ document.write(`
       <a href="../index.html" class="nav-link">ユーザーガイド</a>
     </li>
       
-    <li class="breadcrumb-item active" aria-current="page">PyMAPDL on HPC Clusters</li>
+    <li class="breadcrumb-item active" aria-current="page">PyMAPDL on HPC clusters</li>
     
   </ul>
 </nav>
@@ -637,22 +637,19 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="pymapdl-on-hpc-clusters">
-<span id="ref-hpc-pymapdl-job"></span><h1>PyMAPDL on HPC Clusters<a class="headerlink" href="#pymapdl-on-hpc-clusters" title="Link to this heading">#</a></h1>
+<span id="ref-hpc-pymapdl-job"></span><h1>PyMAPDL on HPC clusters<a class="headerlink" href="#pymapdl-on-hpc-clusters" title="Link to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>PyMAPDL communicates with MAPDL using the gRPC protocol.
-This protocol offers many advantages and features, for more information
+This protocol offers the many advantages and features described in
 see <a class="reference internal" href="../../getting_started/project.html#ref-project-page"><span class="std std-ref">PyMAPDL プロジェクト</span></a>.
-One of these features is that it is not required to have both,
-PyMAPDL and MAPDL processes, running on the same machine.
-This possibility open the door to many configurations, depending
-on whether you run them both or not on the HPC compute nodes.
-Additionally, you might to be able interact with them (<code class="docutils literal notranslate"><span class="pre">interactive</span></code> mode)
+One of these features is that it is not required to have both
+PyMAPDL and MAPDL processes running on the same machine.
+This possibility opens the door to many configurations, depending
+on whether or not you run them both on the HPC compute nodes.
+Additionally, you might be able interact with them (<code class="docutils literal notranslate"><span class="pre">interactive</span></code> mode)
 or not (<code class="docutils literal notranslate"><span class="pre">batch</span></code> mode).</p>
-<p>Currently, the supported configurations are:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#ref-pymapdl-batch-in-cluster-hpc"><span class="std std-ref">Submit a PyMAPDL batch job to the cluster from the entrypoint node</span></a></p></li>
-</ul>
+<p>For information on supported configurations, see <a class="reference internal" href="#ref-pymapdl-batch-in-cluster-hpc"><span class="std std-ref">Submit a PyMAPDL batch job to the cluster from the entrypoint node</span></a>.</p>
 <p>Since v0.68.5, PyMAPDL can take advantage of the tight integration
 between the scheduler and MAPDL to read the job configuration and
 launch an MAPDL instance that can use all the resources allocated
@@ -660,21 +657,21 @@ to that job.
 For instance, if a SLURM job has allocated 8 nodes with 4 cores each,
 then PyMAPDL launches an MAPDL instance which uses 32 cores
 spawning across those 8 nodes.
-This behaviour can turn off if passing the environment variable
-<span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_ON_SLURM</span></code> or passing the argument <cite>detect_HPC=False</cite>
-to <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>.</p>
+This behavior can turn off if passing the <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_ON_SLURM</span></code>
+environment variable or passing the <code class="docutils literal notranslate"><span class="pre">detect_HPC=False</span></code> argument
+to the <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> function.</p>
 </section>
 <section id="submit-a-pymapdl-batch-job-to-the-cluster-from-the-entrypoint-node">
 <span id="ref-pymapdl-batch-in-cluster-hpc"></span><h2>Submit a PyMAPDL batch job to the cluster from the entrypoint node<a class="headerlink" href="#submit-a-pymapdl-batch-job-to-the-cluster-from-the-entrypoint-node" title="Link to this heading">#</a></h2>
-<p>Many HPC clusters allow their users to login in a machine using
-<code class="docutils literal notranslate"><span class="pre">ssh</span></code>, <code class="docutils literal notranslate"><span class="pre">vnc</span></code>, <code class="docutils literal notranslate"><span class="pre">rdp</span></code>, or similar technologies and submit a job
+<p>Many HPC clusters allow their users to log into a machine using
+<code class="docutils literal notranslate"><span class="pre">ssh</span></code>, <code class="docutils literal notranslate"><span class="pre">vnc</span></code>, <code class="docutils literal notranslate"><span class="pre">rdp</span></code>, or similar technologies and then submit a job
 to the cluster from there.
-This entrypoint machine, sometimes known as <em>head node</em> or <em>entrypoint node</em>,
+This entrypoint machine, sometimes known as the <em>head node</em> or <em>entrypoint node</em>,
 might be a virtual machine (VDI/VM).</p>
 <p>In such cases, once the Python virtual environment with PyMAPDL is already
 set and is accessible to all the compute nodes, launching a
-PyMAPDL job from the entrypoint is very easy to do using <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command.
-Using <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command, the PyMAPDL runs and launches an MAPDL instance in
+PyMAPDL job from the entrypoint node is very easy to do using the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command.
+When the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command is used, PyMAPDL runs and launches an MAPDL instance in
 the compute nodes.
 No changes are needed on a PyMAPDL script to run it on an SLURM cluster.</p>
 <p>First the virtual environment must be activated in the current terminal.</p>
@@ -682,9 +679,9 @@ No changes are needed on a PyMAPDL script to run it on an SLURM cluster.</p>
 <span class="gp">user@entrypoint-machine:~$ source $</span>VENV_PATH/bin/activate
 </pre></div>
 </div>
-<p>Once the virtual environment has been activated, you can launch any Python
-script if they do have the proper Python shebang (<code class="docutils literal notranslate"><span class="pre">#!/usr/bin/env</span> <span class="pre">python3</span></code>).</p>
-<p>For instance, to launch the following Python script <code class="docutils literal notranslate"><span class="pre">main.py</span></code>:</p>
+<p>Once the virtual environment is activated, you can launch any Python
+script that has the proper Python shebang (<code class="docutils literal notranslate"><span class="pre">#!/usr/bin/env</span> <span class="pre">python3</span></code>).</p>
+<p>For instance, assume that you want to launch the following <code class="docutils literal notranslate"><span class="pre">main.py</span></code> Python script:</p>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-text">main.py</span><a class="headerlink" href="#id4" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
@@ -700,17 +697,17 @@ script if they do have the proper Python shebang (<code class="docutils literal 
 </pre></div>
 </div>
 </div>
-<p>You can just run in your console:</p>
+<p>You can run this command in your console:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">user@entrypoint-machine:~$ </span>sbatch<span class="w"> </span>main.py
 </pre></div>
 </div>
-<p>Alternatively, you can remove the shebang from the python file and use a
+<p>Alternatively, you can remove the shebang from the Python file and use a
 Python executable call:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">user@entrypoint-machine:~$ </span>sbatch<span class="w"> </span>python<span class="w"> </span>main.py
 </pre></div>
 </div>
-<p>Additionally, you can change the amount of cores used in your
-job, by setting the <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_NPROC</span></code> to the desired value.</p>
+<p>Additionally, you can change the number of cores used in your
+job by setting the <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_NPROC</span></code> environment variable to the desired value.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">user@entrypoint-machine:~$ </span><span class="nv">PYMAPDL_NPROC</span><span class="o">=</span><span class="m">4</span><span class="w"> </span>sbatch<span class="w"> </span>main.py
 </pre></div>
 </div>
@@ -718,20 +715,20 @@ job, by setting the <span class="target" id="index-1"></span><code class="xref s
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">user@entrypoint-machine:~$ </span><span class="nv">PYMAPDL_NPROC</span><span class="o">=</span><span class="m">4</span><span class="w"> </span>sbatch<span class="w">  </span>main.py
 </pre></div>
 </div>
-<p>For instance, to launch a PyMAPDL job which start a four cores MAPDL instance
-on a 10 CPU SLURM job, you can use:</p>
+<p>For instance, to launch a PyMAPDL job that starts a four-core MAPDL instance
+on a 10-CPU SLURM job, you can run this command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">user@entrypoint-machine:~$ </span><span class="nv">PYMAPDL_NPROC</span><span class="o">=</span><span class="m">4</span><span class="w"> </span>sbatch<span class="w"> </span>--partition<span class="o">=</span>qsmall<span class="w"> </span>--nodes<span class="o">=</span><span class="m">10</span><span class="w"> </span>--ntasks-per-node<span class="o">=</span><span class="m">1</span><span class="w"> </span>main.py
 </pre></div>
 </div>
 <section id="using-a-submission-script">
 <h3>Using a submission script<a class="headerlink" href="#using-a-submission-script" title="Link to this heading">#</a></h3>
-<p>In case you need to customize more your job, you can create a SLURM
-submission script to submit a PyMAPDL job.
+<p>If you need to customize your PyMAPDL job further, you can create a SLURM
+submission script for submitting it.
 In this case, you must create two files:</p>
 <ul class="simple">
 <li><p>Python script with the PyMAPDL code</p></li>
 <li><p>Bash script that activates the virtual environment and calls the
-Python script.</p></li>
+Python script</p></li>
 </ul>
 <div class="literal-block-wrapper docutils container" id="id5">
 <div class="code-block-caption"><span class="caption-text">main.py</span><a class="headerlink" href="#id5" title="Link to this code">#</a></div>
@@ -762,9 +759,9 @@ Python script.</p></li>
 <span class="c1"># Set env vars</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">MY_ENV_VAR</span><span class="o">=</span>VALUE
 
-<span class="c1"># Activating Python virtual environment</span>
+<span class="c1"># Activate Python virtual environment</span>
 <span class="nb">source</span><span class="w"> </span>/home/user/.venv/bin/activate
-<span class="c1"># Calling Python script</span>
+<span class="c1"># Call Python script</span>
 python<span class="w"> </span>main.py
 </pre></div>
 </div>
@@ -775,7 +772,7 @@ python<span class="w"> </span>main.py
 </div>
 <p>In this case, the Python virtual environment does not need to be activated
 before submission since it is activated later in the script.</p>
-<p>The expected output of the job is</p>
+<p>The expected output of the job follows:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Number of CPU: 10.0
 </pre></div>
 </div>

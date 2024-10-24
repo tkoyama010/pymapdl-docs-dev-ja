@@ -568,7 +568,7 @@ document.write(`
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="hpc/introduction.html">Introduction to SLURM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hpc/settings.html">Setting PyMAPDL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hpc/pymapdl.html">PyMAPDL on HPC Clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpc/pymapdl.html">PyMAPDL on HPC clusters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hpc/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hpc/troubleshooting.html">Troubleshooting</a></li>
 </ul>
@@ -1814,17 +1814,16 @@ are unsupported.</p>
 <h2>Environment variables<a class="headerlink" href="#environment-variables" title="Link to this heading">#</a></h2>
 <p>There are several PyMAPDL-specific environment variables that can be
 used to control the default behavior of PyMAPDL or launching MAPDL.</p>
-<p>It should be mentioned that these environment variables do not have
+<p>These environment variables do not have
 priority over the arguments given in the corresponding functions.
-For instance:</p>
+Consider this command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">PYMAPDL_PORT</span><span class="o">=</span><span class="m">50052</span>
 <span class="gp">user@machine:~$ </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from ansys.mapdl.core import launch_mapdl; mapdl=launch_mapdl(port=60053)&quot;</span>
 </pre></div>
 </div>
-<p>The preceding command launches an MAPDL instance on the port 60053,
-because the argument <code class="docutils literal notranslate"><span class="pre">port</span></code> has priority over the environment
-variable <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_PORT</span></code>.</p>
-<p>These are described in the following table:</p>
+<p>This command launches an MAPDL instance on port 60053
+because the <code class="docutils literal notranslate"><span class="pre">port</span></code> argument has priority over the <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_PORT</span></code>
+environment variable. The following table describes all arguments.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
 <tr class="row-odd"><td><p><span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_START_INSTANCE</span></code></p></td>

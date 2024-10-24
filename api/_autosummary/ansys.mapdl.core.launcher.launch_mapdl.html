@@ -786,14 +786,14 @@ To retrieve the available installed versions, use the function
 </div>
 </div>
 </dd>
-<dt><strong>detect_HPC: bool, optional</strong></dt><dd><p>Whether detect if PyMAPDL is running on an HPC cluster or not. Currently
-only SLURM clusters are supported. By detaul, it is set to true.
-This option can be bypassed if the environment variable
-<code class="docutils literal notranslate"><span class="pre">PYMAPDL_ON_SLURM</span></code> is set to &quot;true&quot;. For more information visit
+<dt><strong>detect_HPC: bool, optional</strong></dt><dd><p>Whether detect if PyMAPDL is running on an HPC cluster. Currently
+only SLURM clusters are supported. By default, it is set to true.
+This option can be bypassed if the <code class="docutils literal notranslate"><span class="pre">PYMAPDL_ON_SLURM</span></code>
+environment variable is set to &quot;true&quot;. For more information, see
 <a class="reference internal" href="../../user_guide/hpc/introduction.html#ref-hpc-slurm"><span class="std std-ref">Introduction to SLURM</span></a>.</p>
 </dd>
-<dt><strong>kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>These keyword arguments are interface specific or for
-development purposes. See Notes for more details.</p>
+<dt><strong>kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>These keyword arguments are interface-specific or for
+development purposes. For more information, see Notes.</p>
 <dl>
 <dt>set_no_abort<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></dt><dd><p><em>(Development use only)</em>
 Sets MAPDL to not abort at the first error within /BATCH mode.

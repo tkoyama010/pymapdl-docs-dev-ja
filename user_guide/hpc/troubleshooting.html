@@ -568,7 +568,7 @@ document.write(`
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to SLURM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="settings.html">Setting PyMAPDL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pymapdl.html">PyMAPDL on HPC Clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pymapdl.html">PyMAPDL on HPC clusters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Troubleshooting</a></li>
 </ul>
@@ -641,8 +641,8 @@ document.write(`
 <section id="debugging-jobs">
 <h2>Debugging jobs<a class="headerlink" href="#debugging-jobs" title="Link to this heading">#</a></h2>
 <ul>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">--output</span></code> and <code class="docutils literal notranslate"><span class="pre">--error</span></code> directives in batch scripts to captures
-standard output and error messages to specific files.</p>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">--output</span></code> and <code class="docutils literal notranslate"><span class="pre">--error</span></code> directives in batch scripts to capture
+standard output and error messages to specific files:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --job-name=ansys_job            # Job name</span>
 <span class="c1">#SBATCH --partition=qsmall              # Specify the queue/partition name</span>
@@ -656,7 +656,8 @@ python<span class="w"> </span>/home/user/pymapdl.py
 </li>
 <li><p>Check SLURM logs for error messages and debugging information.</p></li>
 <li><p>It is also good idea to print the environment variables in your bash script, using
-<code class="docutils literal notranslate"><span class="pre">printenv</span></code>. Additionally, you can filter them using <code class="docutils literal notranslate"><span class="pre">grep</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">printenv</span></code> <em>bash</em> command.
+Additionally, you can filter its output using <code class="docutils literal notranslate"><span class="pre">grep</span></code> <em>bash</em> command.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --job-name=ansys_job            # Job name</span>
 <span class="c1">#SBATCH --partition=qsmall              # Specify the queue/partition name</span>
@@ -672,19 +673,19 @@ python<span class="w"> </span>/home/user/pymapdl.py
 </li>
 <li><p>Use PyMAPDL logging to printout valuable information. To activate this, see
 <a class="reference internal" href="../troubleshoot.html#ref-debug-pymapdl"><span class="std std-ref">Debug in PyMAPDL</span></a>.</p></li>
-<li><p>In case you need more help, visit <a class="reference internal" href="../troubleshoot.html#ref-troubleshooting"><span class="std std-ref">PyMAPDLのトラブルシューティング</span></a>.</p></li>
+<li><p>If you need more help, see <a class="reference internal" href="../troubleshoot.html#ref-troubleshooting"><span class="std std-ref">PyMAPDLのトラブルシューティング</span></a>.</p></li>
 </ul>
 </section>
 <section id="python-virtual-environment-is-not-accessible">
 <span id="ref-python-venv-not-accesible"></span><h2>Python virtual environment is not accessible<a class="headerlink" href="#python-virtual-environment-is-not-accessible" title="Link to this heading">#</a></h2>
 <p>If there is an error while testing the Python installation, it might mean
 that the Python environment is not accessible to the compute nodes.
-For example, given the following <em>bash</em> script <cite>test.sh</cite>:</p>
+For example, assume you have the following <cite>test.sh</cite> <em>bash</em> script:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/home/user/.venv/bin/activate
 python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;from ansys.mapdl import core as pymapdl; pymapdl.report()&quot;</span>
 </pre></div>
 </div>
-<p>The following output is shown after running in the terminal:</p>
+<p>The following output is shown after running this script in the terminal:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>srun<span class="w"> </span>test.sh
 
 <span class="go">Testing Python!</span>
@@ -693,17 +694,17 @@ python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;f
 <span class="go">ImportError: No module named ansys.mapdl</span>
 </pre></div>
 </div>
-<p>As the output shows, PyMAPDL could not be found, meaning that either:</p>
+<p>As the output shows, PyMAPDL could not be found, indicating one of the following problems:</p>
 <ul class="simple">
 <li><p>The virtual environment does not have PyMAPDL installed.
 See <a class="reference internal" href="settings.html#ref-install-pymapdl-on-hpc"><span class="std std-ref">Install PyMAPDL</span></a>.</p></li>
-<li><p>Or the script did not activate properly the virtual environment
+<li><p>The script did not properly activate the virtual environment
 (<code class="docutils literal notranslate"><span class="pre">/home/user/.venv</span></code>).</p></li>
 </ul>
-<p>For the second reason, there could be a number of reasons.
+<p>The second problem can occur due to a number of reasons.
 One of them is that the system Python distribution used to create
 the virtual environment is not accessible from the compute nodes
-due to one of these reasons:</p>
+because of one of these situations:</p>
 <ul>
 <li><p>The virtual environment has been created in a directory that is
 not accessible from the nodes. In this case, your terminal might
@@ -714,31 +715,29 @@ also show that the <code class="docutils literal notranslate"><span class="pre">
 </pre></div>
 </div>
 <p>Depending on your terminal configuration, the preceding error might be
-sufficient to exit the terminal process, or not.
-If not, the execution continues, and the subsequent <code class="docutils literal notranslate"><span class="pre">python</span></code> call is
-executed using the default python executable.
-It is very likely that the default <code class="docutils literal notranslate"><span class="pre">python</span></code> executable does not have
-PyMAPDL installed, hence the <code class="docutils literal notranslate"><span class="pre">ImportError</span></code> error showed preceding might
+sufficient to exit the terminal process. If it is not, the execution continues,
+and the subsequent <code class="docutils literal notranslate"><span class="pre">python</span></code> call is executed using the default Python executable.
+It is very likely that the default Python executable does not have
+PyMAPDL installed. Hence the <code class="docutils literal notranslate"><span class="pre">ImportError</span></code> error might
 appear too.</p>
 </li>
 <li><p>The virtual environment has been created from a Python executable that is
 not available to the compute nodes. Hence, the virtual environment is not
 activated.
-For example, you might be creating the virtual environment Using
+For example, you might be creating the virtual environment using
 Python 3.10, but only Python 3.8 is available from the compute nodes.
 You can test which Python executable the cluster is using by starting an
 interactive session in a compute node with this code to list all commands
-which starts with <code class="docutils literal notranslate"><span class="pre">python</span></code>:</p></li>
+that start with <code class="docutils literal notranslate"><span class="pre">python</span></code>:</p></li>
 </ul>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">user@machine:~$ </span>srun<span class="w"> </span>--pty<span class="w"> </span>/bin/bash
 <span class="gp">user@compute_node_01:~$ </span><span class="nb">compgen</span><span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>python
 </pre></div>
 </div>
-<p>It should be noticed the preceding approach assumes that all the nodes have similar
-configuration, hence all of them should have the same Python installations
+<p>It should be noted that the preceding approach assumes that all the nodes have similar
+configurations. Hence, all of them should have the same Python installations
 available.</p>
-<p>It is also convenient to be aware that environment variable modules can be
-used to activate Python installations.
+<p>You can also use environment variable modules to activate Python installations.
 For more information, see <a class="reference internal" href="#ref-envvar-modules-on-hpc"><span class="std std-ref">Using modules to load Python</span></a>.</p>
 </section>
 <section id="using-modules-to-load-python">
@@ -765,10 +764,10 @@ If this is not an option, see <a class="reference internal" href="#ref-ansys-pro
 version is limited for security reasons.
 In such cases, the Python distribution available in the Ansys installation
 can be used.
-This Python distribution is a customized Python (CPython) version for Ansys
-products use only.
-Its use is <strong>discouraged</strong> except for very advanced users and special use
-cases.</p>
+This Python distribution is a customized Python (CPython) version for use only by Ansys
+products.
+Its use is <strong>discouraged</strong> unless you are a very advanced user or have a special use
+case.</p>
 <p>This Python distribution is in the following directory, where
 <code class="docutils literal notranslate"><span class="pre">%MAPDL_VERSION%</span></code> is the three-digit Ansys version:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>/ansys_inc/v%MAPDL_VERSION%/commonfiles/CPython/3_10/linx64/Release/python
@@ -779,7 +778,7 @@ cases.</p>
 </pre></div>
 </div>
 <p>In Ansys 2024 R1 and later, the unified installer includes CPython 3.10.
-Earlier versions include CPython 3.7
+Earlier Ansys versions include CPython 3.7
 (<code class="docutils literal notranslate"><span class="pre">/commonfiles/CPython/3_7/linx64/Release/python</span></code>).</p>
 <p>Because the Ansys installation must be available to all
 the compute nodes to run simulations using them, this
