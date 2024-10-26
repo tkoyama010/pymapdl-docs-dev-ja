@@ -603,160 +603,34 @@ document.write(`
 <h1>cmwrite<a class="headerlink" href="#cmwrite" title="Link to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.cmwrite">
-<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">cmwrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fnamei</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exti</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.cmwrite" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">cmwrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.cmwrite" title="Link to this definition">#</a></dt>
 <dd><p>Writes node and element components and assemblies to a file.</p>
 <p>APDL Command: CMWRITE</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl>
-<dt><strong>option</strong></dt><dd><p>Selects which data to write:</p>
-<dl class="simple">
-<dt>ALL</dt><dd><p>Write all appropriate geometry, material property,
-load, and component data (default). Two files will
-be produced. <code class="docutils literal notranslate"><span class="pre">Fname.Ext</span></code> will contain all data items
-mentioned in &quot;Notes&quot;, except the solid model
-data. Fnamei.Exti will contain the solid model
-geometry and solid model loads data in the form of
-IGES commands. This option is not valid when
-CDOPT,ANF is active.</p>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>Fname</strong></dt><dd><p>File name and directory path (248 characters maximum, including the
+characters needed for the directory path). An unspecified directory
+path defaults to the working directory; in this case, you can use
+all 248 characters for the file name.
+The file name defaults to <code class="docutils literal notranslate"><span class="pre">Jobname</span></code>.</p>
 </dd>
-<dt>COMB</dt><dd><p>Write all data mentioned, but to a single file,
-<code class="docutils literal notranslate"><span class="pre">Fname.Ext</span></code>. Solid model geometry data will be
-written in either IGES or ANF format as specified
-in the CDOPT command, followed by the remainder of
-the data in the form of ANSYS commands. More
-information on these (IGES/ANF) file formats is
-provided in &quot;Notes&quot;.</p>
+<dt><strong>Ext</strong></dt><dd><p>Filename extension (eight-character maximum).
+The extension defaults to <code class="docutils literal notranslate"><span class="pre">CM</span></code> if <code class="docutils literal notranslate"><span class="pre">fname</span></code> is blank.</p>
 </dd>
-<dt>DB</dt><dd><p>Write all database information except the solid model
-and solid model loads to <code class="docutils literal notranslate"><span class="pre">Fname.Ext</span></code> in the form of
-ANSYS commands. This option is not valid when
-CDOPT,ANF is active.</p>
-</dd>
-<dt>SOLID</dt><dd><p>Write only the solid model geometry and solid
-model load data. This output will be in IGES or
-ANF format, as specified in the CDOPT
-command. More information on these (IGES/ANF) file
-formats is provided in &quot;Notes&quot;.</p>
-</dd>
-<dt>GEOM</dt><dd><p>Write only element and nodal geometry data. Neither
-solid model geometry nor element attribute data
-will be written. One file, <code class="docutils literal notranslate"><span class="pre">Fname.Ext</span></code>, will be
-produced. Use CDREAD,DB to read in a file written
-with this option. Element types [ET] compatible
-with the connectivity of the elements on the file
-must first be defined before reading the file in
-with CDREAD,DB.</p>
-</dd>
-<dt>CM</dt><dd><p>Write only node and element component and geometry
-data to <code class="docutils literal notranslate"><span class="pre">Fname.Ext</span></code>.</p>
-</dd>
-<dt>MAT</dt><dd><p>Write only material property data (both linear and
-nonlinear) to <code class="docutils literal notranslate"><span class="pre">Fname.Ext</span></code> .</p>
-</dd>
-<dt>LOAD</dt><dd><p>Write only loads for current load step to
-<code class="docutils literal notranslate"><span class="pre">Fname.Ext</span></code>.</p>
-</dd>
-<dt>SECT</dt><dd><p>Write only section data to <code class="docutils literal notranslate"><span class="pre">Fname.Ext</span></code>. Pretension
-sections are not included.</p>
-</dd>
-</dl>
-</dd>
-<dt><strong>fname</strong></dt><dd><p>File name and directory path (248 characters maximum,
-including the characters needed for the directory path).
-An unspecified directory path defaults to the working
-directory; in this case, you can use all 248 characters
-for the file name.</p>
-</dd>
-<dt><strong>ext</strong></dt><dd><p>Filename extension (eight-character maximum).  The
-extension defaults to CDB if Fname is blank.</p>
-</dd>
-<dt><strong>fnamei</strong></dt><dd><p>Name of the IGES file and its directory path (248
-characters maximum, including directory). If you do not
-specify a directory path, it will default to your working
-directory and you can use all 248 characters for the file
-name.</p>
-<p>The file name defaults to Fname. Used only if
-Option = ALL or SOLID. Previous data on this file, if any,
-is overwritten.</p>
-</dd>
-<dt><strong>Exti</strong></dt><dd><p>Filename extension (eight-character maximum).  The
-extension defaults to IGES in all cases, except when
-CDOPT,ANF is active and CDWRITE, Option = SOLID. In this
-case Exti = ANF.</p>
-</dd>
-<dt><strong>fmat</strong></dt><dd><p>Format of the output file (defaults to BLOCKED).</p>
-<dl class="simple">
-<dt>BLOCKED</dt><dd><p>Blocked format. This format allows faster
-reading of the output file. The time savings is
-most significant when BLOCKED is used to read
-.cdb files associated with very large models.</p>
-</dd>
-<dt>UNBLOCKED</dt><dd><p>Unblocked format.</p>
-</dd>
-</dl>
+<dt><strong>Fmat</strong></dt><dd><p>Format of the output file (defaults to <code class="docutils literal notranslate"><span class="pre">BLOCKED</span></code>).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BLOCKED</span></code>: Blocked format. This format allows faster
+reading of the file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">UNBLOCKED</span></code>: Unblocked format.</p></li>
+</ul>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></span></p>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
 </dd>
 </dl>
-<p class="rubric">Notes</p>
-<p>Load data includes the current load step only. Loads applied
-to the solid model (if any) are automatically transferred to
-the finite element model when this command is issued. <code class="docutils literal notranslate"><span class="pre">CDWRITE</span></code>
-writes out solid model loads for meshed models only. If the
-model is not meshed, the solid model loads cannot be
-saved. Component data include component definitions, but not
-assembly definitions. Appropriate <code class="docutils literal notranslate"><span class="pre">NUMOFF</span></code> commands are included
-at the beginning of the file; this is to avoid overlap of an
-existing database when the file is read in.</p>
-<p>Solution control commands are typically not written to the
-file unless you specifically change a default solution
-setting.</p>
-<p><code class="docutils literal notranslate"><span class="pre">CDWRITE</span></code> does not support the <code class="docutils literal notranslate"><span class="pre">GSBDATA</span></code> and <code class="docutils literal notranslate"><span class="pre">GSGDATA</span></code> commands, and
-these commands are not written to the file.</p>
-<p>The data may be reread (on a different machine, for example)
-with the <code class="docutils literal notranslate"><span class="pre">CDREAD</span></code> command. Caution: When the file is read in,
-the <code class="docutils literal notranslate"><span class="pre">NUMOFF,MAT</span></code> command may cause a mismatch between material
-definitions and material numbers referenced by certain loads
-and element real constants. See <code class="docutils literal notranslate"><span class="pre">NUMOFF</span></code> for details. Also, be
-aware that the files created by the <code class="docutils literal notranslate"><span class="pre">CDWRITE</span></code> command explicitly
-set the active coordinate system to Cartesian (CSYS,0).</p>
-<p>You should generally use the blocked format (Fmat = BLOCKED)
-when writing out model data with <code class="docutils literal notranslate"><span class="pre">CDWRITE</span></code>. This is a compressed
-data format that greatly reduces the time required to read
-large models through the CDREAD command. The blocked and
-unblocked formats are described in Chapter 3 of the Guide to
-Interfacing with ANSYS.</p>
-<p>If you use <code class="docutils literal notranslate"><span class="pre">CDWRITE</span></code> in any of the derived products (ANSYS
-Mechanical Pro, ANSYS Mechanical Premium), then before reading
-the file, you must edit the Jobname.cdb file to remove
-commands that are not available in the respective component
-product.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">CDWRITE</span></code> command writes PART information for any ANSYS
-LS-DYNA input file to the Jobname.cdb file via the EDPREAD
-command. (EDPREAD is not a documented command; it is written
-only when the <code class="docutils literal notranslate"><span class="pre">CDWRITE</span></code> command is issued.) The PART information
-can be automatically read in via the CDREAD command; however,
-if more than one Jobname.cdb file is read, the PART list from
-the last Jobname.cdb file overwrites the existing PART list of
-the total model. This behavior affects all PART-related
-commands contained in the Jobname.cdb file. You can join
-models, but not PART-related inputs, which you must modify
-using the newly-created PART numbers. In limited cases, an
-update of the PART list (EDWRITE,PUPDATE) is possible; doing
-so requires that no used combination of MAT/TYPE/REAL appears
-more than once in the list.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">CDWRITE</span></code> command does not support (for beam meshing) any
-line operation that relies on solid model associativity. For
-example, meshing the areas adjacent to the meshed line,
-plotting the line that contains the orientation nodes, or
-clearing the mesh from the line that contains orientation
-nodes may not work as expected. For more information about
-beam meshing, see Meshing Your Solid Model in the Modeling and
-Meshing Guide.</p>
 </dd></dl>
 
 </section>
@@ -842,7 +716,7 @@ const SEARCH_FILE = "../../../_static/search.json";
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.1.6. and
+          1.1.7. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
           on <span id="date"></span>
         </p>
