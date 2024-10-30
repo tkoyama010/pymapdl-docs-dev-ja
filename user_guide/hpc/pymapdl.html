@@ -649,28 +649,29 @@ This possibility opens the door to many configurations, depending
 on whether or not you run them both on the HPC compute nodes.
 Additionally, you might be able interact with them (<code class="docutils literal notranslate"><span class="pre">interactive</span></code> mode)
 or not (<code class="docutils literal notranslate"><span class="pre">batch</span></code> mode).</p>
-<p>For information on supported configurations, see <a class="reference internal" href="#ref-pymapdl-batch-in-cluster-hpc"><span class="std std-ref">Submit a PyMAPDL batch job to the cluster from the entrypoint node</span></a>.</p>
-<p>Since v0.68.5, PyMAPDL can take advantage of the tight integration
-between the scheduler and MAPDL to read the job configuration and
-launch an MAPDL instance that can use all the resources allocated
-to that job.
-For instance, if a SLURM job has allocated 8 nodes with 4 cores each,
-then PyMAPDL launches an MAPDL instance which uses 32 cores
-spawning across those 8 nodes.
-This behavior can turn off if passing the <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_ON_SLURM</span></code>
-environment variable or passing the <code class="docutils literal notranslate"><span class="pre">detect_HPC=False</span></code> argument
-to the <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> function.</p>
+<p>PyMAPDL takes advantage of HPC clusters to launch MAPDL instances
+with increased resources.
+PyMAPDL automatically sets these MAPDL instances to read the
+scheduler job configuration (which includes machines, number
+of CPUs, and memory), which allows MAPDL to use all the resources
+allocated to that job.
+For more information, see <a class="reference internal" href="#ref-tight-integration-hpc"><span class="std std-ref">Tight integration between MAPDL and the HPC scheduler</span></a>.</p>
+<p>The following configurations are supported:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#ref-pymapdl-batch-in-cluster-hpc"><span class="std std-ref">Batch job submission from the login node</span></a>.</p></li>
+<li><p><a class="reference internal" href="#ref-pymapdl-interactive-in-cluster-hpc-from-login"><span class="std std-ref">Interactive MAPDL instance launched from the login node</span></a></p></li>
+</ul>
 </section>
-<section id="submit-a-pymapdl-batch-job-to-the-cluster-from-the-entrypoint-node">
-<span id="ref-pymapdl-batch-in-cluster-hpc"></span><h2>Submit a PyMAPDL batch job to the cluster from the entrypoint node<a class="headerlink" href="#submit-a-pymapdl-batch-job-to-the-cluster-from-the-entrypoint-node" title="Link to this heading">#</a></h2>
+<section id="batch-job-submission-from-the-login-node">
+<span id="ref-pymapdl-batch-in-cluster-hpc"></span><h2>Batch job submission from the login node<a class="headerlink" href="#batch-job-submission-from-the-login-node" title="Link to this heading">#</a></h2>
 <p>Many HPC clusters allow their users to log into a machine using
 <code class="docutils literal notranslate"><span class="pre">ssh</span></code>, <code class="docutils literal notranslate"><span class="pre">vnc</span></code>, <code class="docutils literal notranslate"><span class="pre">rdp</span></code>, or similar technologies and then submit a job
 to the cluster from there.
-This entrypoint machine, sometimes known as the <em>head node</em> or <em>entrypoint node</em>,
+This login machine, sometimes known as the <em>head node</em> or <em>entrypoint node</em>,
 might be a virtual machine (VDI/VM).</p>
 <p>In such cases, once the Python virtual environment with PyMAPDL is already
 set and is accessible to all the compute nodes, launching a
-PyMAPDL job from the entrypoint node is very easy to do using the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command.
+PyMAPDL job from the login node is very easy to do using the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command.
 When the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command is used, PyMAPDL runs and launches an MAPDL instance in
 the compute nodes.
 No changes are needed on a PyMAPDL script to run it on an SLURM cluster.</p>
@@ -707,10 +708,11 @@ Python executable call:</p>
 </pre></div>
 </div>
 <p>Additionally, you can change the number of cores used in your
-job by setting the <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_NPROC</span></code> environment variable to the desired value.</p>
+job by setting the <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_NPROC</span></code> environment variable to the desired value.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">user@entrypoint-machine:~$ </span><span class="nv">PYMAPDL_NPROC</span><span class="o">=</span><span class="m">4</span><span class="w"> </span>sbatch<span class="w"> </span>main.py
 </pre></div>
 </div>
+<p>For more applicable environment variables, see <a class="reference internal" href="../mapdl.html#ref-environment-variables"><span class="std std-ref">Environment variables</span></a>.</p>
 <p>You can also add <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> options to the command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(venv)</span> <span class="gp">user@entrypoint-machine:~$ </span><span class="nv">PYMAPDL_NPROC</span><span class="o">=</span><span class="m">4</span><span class="w"> </span>sbatch<span class="w">  </span>main.py
 </pre></div>
@@ -783,6 +785,216 @@ moving files to different directories, and printing to ensure your
 configuration is correct.</p>
 </section>
 </section>
+<section id="interactive-mapdl-instance-launched-from-the-login-node">
+<span id="ref-pymapdl-interactive-in-cluster-hpc-from-login"></span><span id="ref-pymapdl-interactive-in-cluster-hpc"></span><h2>Interactive MAPDL instance launched from the login node<a class="headerlink" href="#interactive-mapdl-instance-launched-from-the-login-node" title="Link to this heading">#</a></h2>
+<section id="starting-the-instance">
+<h3>Starting the instance<a class="headerlink" href="#starting-the-instance" title="Link to this heading">#</a></h3>
+<p>If you are already logged in a login node, you can launch an MAPDL instance as a SLURM job and
+connect to it.
+To accomplish this, run these commands in your login node.</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">launch_on_hpc</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>PyMAPDL submits a job to the scheduler using the appropriate commands.
+In case of SLURM, it uses the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command with the <code class="docutils literal notranslate"><span class="pre">--wrap</span></code> argument
+to pass the MAPDL command line to start.
+Other scheduler arguments can be specified using the <code class="docutils literal notranslate"><span class="pre">scheduler_options</span></code>
+argument as a Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scheduler_options</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nodes&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;ntasks-per-node&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">launch_on_hpc</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nproc</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">scheduler_options</span><span class="o">=</span><span class="n">scheduler_options</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>PyMAPDL cannot infer the number of CPUs that you are requesting from the scheduler.
+Hence, you must specify this value using the <code class="docutils literal notranslate"><span class="pre">nproc</span></code> argument.</p>
+</div>
+<p>The double minus (<code class="docutils literal notranslate"><span class="pre">--</span></code>) common in the long version of some scheduler commands
+are added automatically if PyMAPDL detects it is missing and the specified
+command is long more than 1 character in length).
+For instance, the <code class="docutils literal notranslate"><span class="pre">ntasks-per-node</span></code> argument is submitted as <code class="docutils literal notranslate"><span class="pre">--ntasks-per-node</span></code>.</p>
+<p>Or, a single Python string (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) is submitted:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scheduler_options</span> <span class="o">=</span> <span class="s2">&quot;-N 10&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">launch_on_hpc</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">scheduler_options</span><span class="o">=</span><span class="n">scheduler_options</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>Because PyMAPDL is already using the <code class="docutils literal notranslate"><span class="pre">--wrap</span></code> argument, this argument
+cannot be used again.</p>
+</div>
+<p>The values of each scheduler argument are wrapped in single quotes (<cite>'</cite>).
+This might cause parsing issues that can cause the job to fail after successful
+submission.</p>
+<p>PyMAPDL passes all the environment variables of the
+user to the new job and to the MAPDL instance.
+This is usually convenient because many environmental variables are
+needed to run the job or MAPDL command.
+For instance, the license server is normally stored in the <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">ANSYSLMD_LICENSE_FILE</span></code> environment variable.
+If you prefer not to pass these environment variables to the job, use the SLURM argument
+<code class="docutils literal notranslate"><span class="pre">--export</span></code> to specify the desired environment variables.
+For more information, see <a class="reference external" href="https://slurm.schedmd.com">SLURM documentation</a>.</p>
+</section>
+<section id="working-with-the-instance">
+<h3>Working with the instance<a class="headerlink" href="#working-with-the-instance" title="Link to this heading">#</a></h3>
+<p>Once the <a class="reference internal" href="../../api/mapdl.html#ansys.mapdl.core.mapdl.MapdlBase" title="ansys.mapdl.core.mapdl.MapdlBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> object has been created,
+it does not differ from a normal <a class="reference internal" href="../../api/mapdl.html#ansys.mapdl.core.mapdl.MapdlBase" title="ansys.mapdl.core.mapdl.MapdlBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a>
+instance.
+You can retrieve the IP of the MAPDL instance as well as its hostname:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">ip</span>
+<span class="go">&#39;123.45.67.89&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">hostname</span>
+<span class="go">&#39;node0&#39;</span>
+</pre></div>
+</div>
+<p>You can also retrieve the SLURM job ID:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">jobid</span>
+<span class="go">10001</span>
+</pre></div>
+</div>
+<p>If you want to check whether the instance has been launched using a scheduler,
+you can use the <code class="xref py py-attr docutils literal notranslate"><span class="pre">mapdl_on_hpc</span></code>
+attribute:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mapdl_on_hpc</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<section id="sharing-files">
+<h4>Sharing files<a class="headerlink" href="#sharing-files" title="Link to this heading">#</a></h4>
+<p>Most of the HPC clusters share the login node filesystem with the compute nodes,
+which means that you do not need to do extra work to upload or download files to the MAPDL
+instance. You only need to copy them to the location where MAPDL is running.
+You can obtain this location with the
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">directory</span></code> attribute.</p>
+<p>If no location is specified in the <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>
+function, then a temporal location is selected.
+It is a good idea to set the <code class="docutils literal notranslate"><span class="pre">run_location</span></code> argument to a directory that is accessible
+from all the compute nodes.
+Normally anything under <code class="docutils literal notranslate"><span class="pre">/home/user</span></code> is available to all compute nodes.
+If you are unsure where you should launch MAPDL, contact your cluster administrator.</p>
+<p>Additionally, you can use methods like the <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.mapdl_grpc.MapdlGrpc.upload.html#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.upload" title="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.upload"><code class="xref py py-meth docutils literal notranslate"><span class="pre">upload</span></code></a>
+and <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download.html#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download" title="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download"><code class="xref py py-meth docutils literal notranslate"><span class="pre">download</span></code></a> to
+upload and download files to and from the MAPDL instance respectively.
+You do not need <code class="docutils literal notranslate"><span class="pre">ssh</span></code> or another similar connection.
+However, for large files, you might want to consider alternatives.</p>
+</section>
+</section>
+<section id="exiting-mapdl">
+<h3>Exiting MAPDL<a class="headerlink" href="#exiting-mapdl" title="Link to this heading">#</a></h3>
+<p>Exiting MAPDL, either intentionally or unintentionally, stops the job.
+This behavior occurs because MAPDL is the main process at the job. Thus, when finished,
+the scheduler considers the job done.</p>
+<p>To exit MAPDL, you can use the <a class="reference internal" href="../../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.exit.html#ansys.mapdl.core.Mapdl.exit" title="ansys.mapdl.core.Mapdl.exit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">exit()</span></code></a> method.
+This method exits MAPDL and sends a signal to the scheduler to cancel the job.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>When the Python process you are running PyMAPDL on finishes without errors, and you have not
+issued the <a class="reference internal" href="../../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.exit.html#ansys.mapdl.core.Mapdl.exit" title="ansys.mapdl.core.Mapdl.exit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">exit()</span></code></a> method, the garbage collector
+kills the MAPDL instance and its job. This is intended to save resources.</p>
+<p>If you prefer that the job is not killed, set the following attribute in the
+<a class="reference internal" href="../../api/mapdl.html#ansys.mapdl.core.mapdl.MapdlBase" title="ansys.mapdl.core.mapdl.MapdlBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">finish_job_on_exit</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>In this case, you should set a timeout in your job to avoid having the job
+running longer than needed.</p>
+<section id="handling-crashes-on-an-hpc">
+<h4>Handling crashes on an HPC<a class="headerlink" href="#handling-crashes-on-an-hpc" title="Link to this heading">#</a></h4>
+<p>If MAPDL crashes while running on an HPC, the job finishes right away.
+In this case, MAPDL disconnects from MAPDL.
+PyMAPDL retries to reconnect to the MAPDL instance up to 5 times, waiting
+for up to 5 seconds.
+If unsuccessful, you might get an error like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>MAPDL server connection terminated unexpectedly while running:
+/INQUIRE,,DIRECTORY,,
+called by:
+_send_command
+
+Suggestions:
+MAPDL *might* have died because it executed a not-allowed command or ran out of memory.
+Check the MAPDL command output for more details.
+Open an issue on GitHub if you need assistance: https://github.com/ansys/pymapdl/issues
+Error:
+failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50052: Failed to connect to remote host: connect: Connection refused (111)
+Full error:
+&lt;_InactiveRpcError of RPC that terminated with:
+status = StatusCode.UNAVAILABLE
+details = &quot;failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50052: Failed to connect to remote host: connect: Connection refused (111)&quot;
+debug_error_string = &quot;UNKNOWN:Error received from peer  {created_time:&quot;2024-10-24T08:25:04.054559811+00:00&quot;, grpc_status:14, grpc_message:&quot;failed to connect to all addresses; last error: UNKNOWN: ipv4:127.0.0.1:50052: Failed to connect to remote host: connect: Connection refused (111)&quot;}&quot;
+&gt;
+</pre></div>
+</div>
+<p>The data of that job is available at <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.Mapdl.directory.html#ansys.mapdl.core.Mapdl.directory" title="ansys.mapdl.core.Mapdl.directory"><code class="xref py py-attr docutils literal notranslate"><span class="pre">directory</span></code></a>.
+You should set the run location using the <code class="docutils literal notranslate"><span class="pre">run_location</span></code> argument.</p>
+<p>While handling this exception, PyMAPDL also cancels the job to avoid resources leaking.
+Therefore, the only option is to start a new instance by launching a new job using
+the <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> function.</p>
+</section>
+</section>
+<section id="user-case-on-a-slurm-cluster">
+<h3>User case on a SLURM cluster<a class="headerlink" href="#user-case-on-a-slurm-cluster" title="Link to this heading">#</a></h3>
+<p>Assume a user wants to start a remote MAPDL instance in an HPC cluster
+to interact with it.
+The user would like to request 10 nodes, and 1 task per node (to avoid clashes
+between MAPDL instances).
+The user would like to also request 64 GB of RAM.
+Because of administration logistics, the user must use the machines in
+the <code class="docutils literal notranslate"><span class="pre">supercluster01</span></code> partition.
+To make PyMAPDL launch an instance like that on SLURM, run the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="kn">from</span> <span class="nn">ansys.mapdl.core.examples</span> <span class="kn">import</span> <span class="n">vmfiles</span>
+
+<span class="n">scheduler_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;nodes&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s2">&quot;ntasks-per-node&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;partition&quot;</span><span class="p">:</span> <span class="s2">&quot;supercluster01&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;memory&quot;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">launch_on_hpc</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nproc</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scheduler_options</span><span class="o">=</span><span class="n">scheduler_options</span><span class="p">)</span>
+
+<span class="n">num_cpu</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;ACTIVE&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;NUMCPU&quot;</span><span class="p">)</span>  <span class="c1"># It should be equal to 10</span>
+
+<span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>  <span class="c1"># Not strictly needed.</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
+
+<span class="c1"># Run an MAPDL script</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="n">vmfiles</span><span class="p">[</span><span class="s2">&quot;vm1&quot;</span><span class="p">])</span>
+
+<span class="c1"># Let&#39;s solve again to get the solve printout</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">solution</span><span class="p">()</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+
+<span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>  <span class="c1"># Kill the MAPDL instance</span>
+</pre></div>
+</div>
+<p>PyMAPDL automatically sets MAPDL to read the job configuration (including machines,
+number of CPUs, and memory), which allows MAPDL to use all the resources allocated
+to that job.</p>
+</section>
+</section>
+<section id="tight-integration-between-mapdl-and-the-hpc-scheduler">
+<span id="ref-tight-integration-hpc"></span><h2>Tight integration between MAPDL and the HPC scheduler<a class="headerlink" href="#tight-integration-between-mapdl-and-the-hpc-scheduler" title="Link to this heading">#</a></h2>
+<p>Since v0.68.5, PyMAPDL can take advantage of the tight integration
+between the scheduler and MAPDL to read the job configuration and
+launch an MAPDL instance that can use all the resources allocated
+to that job.
+For instance, if a SLURM job has allocated 8 nodes with 4 cores each,
+then PyMAPDL launches an MAPDL instance that uses 32 cores
+spawning across those 8 nodes.</p>
+<p>This behavior can turn off by passing the
+<span class="target" id="index-2"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_RUNNING_ON_HPC</span></code> environment variable
+with a <code class="docutils literal notranslate"><span class="pre">'false'</span></code> value or passing the <code class="docutils literal notranslate"><span class="pre">detect_hpc=False</span></code> argument
+to the <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> function.</p>
+<p>Alternatively, you can override these settings by either specifying
+custom settings in the <a class="reference internal" href="../../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>
+function's arguments or using specific environment variables.
+For more information, see <a class="reference internal" href="../mapdl.html#ref-environment-variables"><span class="std std-ref">Environment variables</span></a>.</p>
+</section>
 </section>
 
 
@@ -808,10 +1020,24 @@ configuration is correct.</p>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-a-pymapdl-batch-job-to-the-cluster-from-the-entrypoint-node">Submit a PyMAPDL batch job to the cluster from the entrypoint node</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-job-submission-from-the-login-node">Batch job submission from the login node</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-a-submission-script">Using a submission script</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-mapdl-instance-launched-from-the-login-node">Interactive MAPDL instance launched from the login node</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-instance">Starting the instance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-the-instance">Working with the instance</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-files">Sharing files</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exiting-mapdl">Exiting MAPDL</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-crashes-on-an-hpc">Handling crashes on an HPC</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-case-on-a-slurm-cluster">User case on a SLURM cluster</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tight-integration-between-mapdl-and-the-hpc-scheduler">Tight integration between MAPDL and the HPC scheduler</a></li>
 </ul>
   </nav></div>
 

@@ -645,13 +645,7 @@ document.write(`
 </div>
 <section id="pymapdl-overview">
 <h2>PyMAPDLの概要<a class="headerlink" href="#pymapdl-overview" title="Link to this heading">#</a></h2>
-<p>The <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> function
-within the <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> library creates an instance of the
-<a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl.MapdlBase" title="ansys.mapdl.core.mapdl.MapdlBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class in the background and sends
-commands to that instance. Errors and warnings are processed
-Pythonically, letting you develop a script in real time, without
-worrying about it functioning correctly when deployed in batch
-mode.</p>
+<p><a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> 関数は <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> ライブラリの <a class="reference internal" href="../api/mapdl.html#ansys.mapdl.core.mapdl.MapdlBase" title="ansys.mapdl.core.mapdl.MapdlBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> クラスのインスタンスをバックグラウンドで作成し、そのインスタンスにコマンドを送信します。 エラーや警告は Python 上で処理されるため、バッチモードでデプロイしたときに正しく機能するかどうかを心配することなく、リアルタイムでスクリプトを開発することができます。</p>
 <p>MAPDL can be started from Python in gRPC mode using the
 <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> method. This starts
 MAPDL in a temporary directory by default. You can change this to
@@ -663,9 +657,7 @@ your current directory with this code:</p>
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">run_location</span><span class="o">=</span><span class="n">path</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>MAPDL is now active, and you can send commands to it as a genuine
-Python class. For example, if you wanted to create a surface using
-key points, you could run:</p>
+<p>これでMAPDLはアクティブになり、本物のPythonクラスとしてコマンドを送ることができます。 例えば、キーポイントを使ってサーフェスを作成したい場合、次のように実行できます:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/PREP7&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;K, 1, 0, 0, 0&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;K, 2, 1, 0, 0&quot;</span><span class="p">)</span>

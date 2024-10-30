@@ -643,21 +643,18 @@ document.write(`
 <h1>launch_mapdl<a class="headerlink" href="#launch-mapdl" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="ansys.mapdl.core.launcher.launch_mapdl">
-<span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.launcher.</span></span><span class="sig-name descname"><span class="pre">launch_mapdl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exec_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jobname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'file'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nproc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ram</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loglevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ERROR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_switches</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">45</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cleanup_on_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_instance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_on_connect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_apdl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_temp_dir_on_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license_server_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_com</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_env_vars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_env_vars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detect_HPC</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.launcher.launch_mapdl" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.launcher.</span></span><span class="sig-name descname"><span class="pre">launch_mapdl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exec_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jobname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'file'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nproc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ram</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loglevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'ERROR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_switches</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cleanup_on_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_instance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_on_connect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_apdl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_temp_dir_on_exit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license_server_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">license_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_com</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_env_vars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_env_vars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">running_on_hpc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">launch_on_hpc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.launcher.launch_mapdl" title="Link to this definition">#</a></dt>
 <dd><p>Start MAPDL locally.</p>
 <dl class="field-list">
 <dt class="field-odd">パラメーター<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>exec_file</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The location of the MAPDL executable.  Will use the cached
-location when left at the default <code class="docutils literal notranslate"><span class="pre">None</span></code> and no environment
+location when left at the default <code class="xref py py-class docutils literal notranslate"><span class="pre">None</span></code> and no environment
 variable is set.</p>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
 <p>The executable path can be also set through the environment variable
-<code class="docutils literal notranslate"><span class="pre">PYMAPDL_MAPDL_EXEC</span></code>. For example:</p>
+<span class="target" id="index-7"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_MAPDL_EXEC</span></code>. For example:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export PYMAPDL_MAPDL_EXEC=/ansys_inc/v211/ansys/bin/mapdl</span>
 </pre></div>
-</div>
 </div>
 </dd>
 <dt><strong>run_location</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>MAPDL working directory.  Defaults to a temporary working
@@ -665,12 +662,12 @@ directory.  If directory doesn't exist, one is created.</p>
 </dd>
 <dt><strong>jobname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>MAPDL jobname.  Defaults to <code class="docutils literal notranslate"><span class="pre">'file'</span></code>.</p>
 </dd>
-<dt><strong>nproc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of processors.  Defaults to 2. If running on an HPC cluster,
+<dt><strong>nproc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of processors.  Defaults to <code class="docutils literal notranslate"><span class="pre">2</span></code>. If running on an HPC cluster,
 this value is adjusted to the number of CPUs allocated to the job,
-unless <code class="docutils literal notranslate"><span class="pre">detect_HPC</span></code> is set to &quot;false&quot;.</p>
+unless the argument <code class="docutils literal notranslate"><span class="pre">running_on_hpc</span></code> is set to <code class="docutils literal notranslate"><span class="pre">&quot;false&quot;</span></code>.</p>
 </dd>
 <dt><strong>ram</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Total size in megabytes of the workspace (memory) used for the initial
-allocation. The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case 2 GB (2048 MB) is
+allocation. The default is <code class="xref py py-class docutils literal notranslate"><span class="pre">None</span></code>, in which case 2 GB (2048 MB) is
 used. To force a fixed size throughout the run, specify a negative
 number.</p>
 </dd>
@@ -703,36 +700,42 @@ academic research license, would be added with:</p>
 included to start up the MAPDL server.  See the notes
 section for additional details.</p>
 </dd>
-<dt><strong>start_timeout</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Maximum allowable time to connect to the MAPDL server.</p>
+<dt><strong>start_timeout</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Maximum allowable time to connect to the MAPDL server. By default it is
+45 seconds, however, it is increased to 90 seconds if running on HPC.</p>
 </dd>
 <dt><strong>port</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Port to launch MAPDL gRPC on.  Final port will be the first
 port available after (or including) this port.  Defaults to
-50052.  You can also override the port default with the
-environment variable <code class="docutils literal notranslate"><span class="pre">PYMAPDL_PORT=&lt;VALID</span> <span class="pre">PORT&gt;</span></code>
-This argument has priority over the environment variable.</p>
+<code class="docutils literal notranslate"><span class="pre">50052</span></code>. You can also provide this value through the environment variable
+<span class="target" id="index-8"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_PORT</span></code>. For instance <code class="docutils literal notranslate"><span class="pre">PYMAPDL_PORT=50053</span></code>.
+However the argument (if specified) has precedence over the environment
+variable. If this environment variable is empty, it is as it is not set.</p>
 </dd>
 <dt><strong>cleanup_on_exit</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Exit MAPDL when python exits or the mapdl Python instance is
 garbage collected.</p>
 </dd>
-<dt><strong>start_instance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>When False, connect to an existing MAPDL instance at <code class="docutils literal notranslate"><span class="pre">ip</span></code>
-and <code class="docutils literal notranslate"><span class="pre">port</span></code>, which default to ip <code class="docutils literal notranslate"><span class="pre">'127.0.0.1'</span></code> at port 50052.
-Otherwise, launch a local instance of MAPDL.  You can also
-override the default behavior of this keyword argument with
-the environment variable <code class="docutils literal notranslate"><span class="pre">PYMAPDL_START_INSTANCE=FALSE</span></code>.</p>
+<dt><strong>start_instance</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>When <code class="xref py py-class docutils literal notranslate"><span class="pre">False</span></code>, connect to an existing MAPDL instance at <code class="docutils literal notranslate"><span class="pre">ip</span></code>
+and <code class="docutils literal notranslate"><span class="pre">port</span></code>, which default to ip <code class="docutils literal notranslate"><span class="pre">'127.0.0.1'</span></code> at port <code class="docutils literal notranslate"><span class="pre">50052</span></code>.
+Otherwise, launch a local instance of MAPDL. You can also
+provide this value through the environment variable
+<span class="target" id="index-9"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_START_INSTANCE</span></code>.
+However the argument (if specified) has precedence over the environment
+variable. If this environment variable is empty, it is as it is not set.</p>
 </dd>
-<dt><strong>ip</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Used only when <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>. If provided,
-and <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> (or its correspondent environment variable
-<code class="docutils literal notranslate"><span class="pre">PYMAPDL_START_INSTANCE</span></code>) is <code class="docutils literal notranslate"><span class="pre">True</span></code> then, an exception is raised.
-Specify the IP address of the MAPDL instance to connect to.
+<dt><strong>ip</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Specify the IP address of the MAPDL instance to connect to.
 You can also provide a hostname as an alternative to an IP address.
-Defaults to <code class="docutils literal notranslate"><span class="pre">'127.0.0.1'</span></code>. You can also override the
-default behavior of this keyword argument with the
-environment variable <code class="docutils literal notranslate"><span class="pre">PYMAPDL_IP=&lt;IP&gt;</span></code>. If this environment variable
-is empty, it is as it is not set.</p>
+Defaults to <code class="docutils literal notranslate"><span class="pre">'127.0.0.1'</span></code>.
+Used only when <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> is <code class="xref py py-class docutils literal notranslate"><span class="pre">False</span></code>. If this argument
+is provided, and <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> (or its correspondent environment
+variable <span class="target" id="index-10"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_START_INSTANCE</span></code>) is <code class="xref py py-class docutils literal notranslate"><span class="pre">True</span></code> then, an
+exception is raised.
+You can also provide this value through the environment variable
+<span class="target" id="index-11"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_IP</span></code>. For instance <code class="docutils literal notranslate"><span class="pre">PYMAPDL_IP=123.45.67.89</span></code>.
+However the argument (if specified) has precedence over the environment
+variable. If this environment variable is empty, it is as it is not set.</p>
 </dd>
-<dt><strong>clear_on_connect</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>, giving you a fresh environment when
+<dt><strong>clear_on_connect</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Defaults to <code class="xref py py-class docutils literal notranslate"><span class="pre">True</span></code>, giving you a fresh environment when
 connecting to MAPDL. When if <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> is specified
-it defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+it defaults to <code class="xref py py-class docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
 <dt><strong>log_apdl</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Enables logging every APDL command to the local disk.  This
 can be used to &quot;record&quot; all the commands that are sent to
@@ -740,70 +743,80 @@ MAPDL via PyMAPDL so a script can be run within MAPDL without
 PyMAPDL. This argument is the path of the output file (e.g.
 <code class="docutils literal notranslate"><span class="pre">log_apdl='pymapdl_log.txt'</span></code>). By default this is disabled.</p>
 </dd>
-<dt><strong>remove_temp_dir_on_exit</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>When <code class="docutils literal notranslate"><span class="pre">run_location</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, this launcher creates a new MAPDL
+<dt><strong>remove_temp_dir_on_exit</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>When <code class="docutils literal notranslate"><span class="pre">run_location</span></code> is <code class="xref py py-class docutils literal notranslate"><span class="pre">None</span></code>, this launcher creates a new MAPDL
 working directory within the user temporary directory, obtainable with
 <code class="docutils literal notranslate"><span class="pre">tempfile.gettempdir()</span></code>. When this parameter is
-<code class="docutils literal notranslate"><span class="pre">True</span></code>, this directory will be deleted when MAPDL is exited. Default
-<code class="docutils literal notranslate"><span class="pre">False</span></code>.
+<code class="xref py py-class docutils literal notranslate"><span class="pre">True</span></code>, this directory will be deleted when MAPDL is exited.
+Default to <code class="xref py py-class docutils literal notranslate"><span class="pre">False</span></code>.
 If you change the working directory, PyMAPDL does not delete the original
 working directory nor the new one.</p>
 </dd>
 <dt><strong>license_server_check</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Check if the license server is available if MAPDL fails to
-start.  Only available on <code class="docutils literal notranslate"><span class="pre">mode='grpc'</span></code>. Defaults <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+start.  Only available on <code class="docutils literal notranslate"><span class="pre">mode='grpc'</span></code>. Defaults <code class="xref py py-class docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
 <dt><strong>license_type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Enable license type selection. You can input a string for its
 license name (for example <code class="docutils literal notranslate"><span class="pre">'meba'</span></code> or <code class="docutils literal notranslate"><span class="pre">'ansys'</span></code>) or its description
 (&quot;enterprise solver&quot; or &quot;enterprise&quot; respectively).
 You can also use legacy licenses (for example <code class="docutils literal notranslate"><span class="pre">'aa_t_a'</span></code>) but it will
-also raise a warning. If it is not used (<code class="docutils literal notranslate"><span class="pre">None</span></code>), no specific license
-will be requested, being up to the license server to provide a specific
-license type. Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+also raise a warning. If it is not used (<code class="xref py py-class docutils literal notranslate"><span class="pre">None</span></code>), no specific
+license will be requested, being up to the license server to provide a
+specific license type. Default is <code class="xref py py-class docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd>
 <dt><strong>print_com</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Print the command <code class="docutils literal notranslate"><span class="pre">/COM</span></code> arguments to the standard output.
-Default <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+Default <code class="xref py py-class docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
 <dt><strong>add_env_vars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The provided dictionary will be used to extend the MAPDL process
 environment variables. If you want to control all of the environment
-variables, use the argument <code class="docutils literal notranslate"><span class="pre">replace_env_vars</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+variables, use the argument <code class="docutils literal notranslate"><span class="pre">replace_env_vars</span></code>.
+Defaults to <code class="xref py py-class docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd>
 <dt><strong>replace_env_vars</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>The provided dictionary will be used to replace all the MAPDL process
 environment variables. It replace the system environment variables
 which otherwise would be used in the process.
 To just add some environment variables to the MAPDL
-process, use <code class="docutils literal notranslate"><span class="pre">add_env_vars</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+process, use <code class="docutils literal notranslate"><span class="pre">add_env_vars</span></code>. Defaults to <code class="xref py py-class docutils literal notranslate"><span class="pre">None</span></code>.</p>
 </dd>
-<dt><strong>version</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Version of MAPDL to launch. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the latest version is used.
+<dt><strong>version</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Version of MAPDL to launch. If <code class="xref py py-class docutils literal notranslate"><span class="pre">None</span></code>, the latest version is used.
 Versions can be provided as integers (i.e. <code class="docutils literal notranslate"><span class="pre">version=222</span></code>) or
 floats (i.e. <code class="docutils literal notranslate"><span class="pre">version=22.2</span></code>).
 To retrieve the available installed versions, use the function
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">ansys.tools.path.path.get_available_ansys_installations()</span></code>.</p>
-<div class="admonition note">
-<p class="admonition-title">注釈</p>
-<p>The default version can be also set through the environment variable
-<code class="docutils literal notranslate"><span class="pre">PYMAPDL_MAPDL_VERSION</span></code>. For example:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export PYMAPDL_MAPDL_VERSION=22.2</span>
-</pre></div>
-</div>
-</div>
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">ansys.tools.path.path.get_available_ansys_installations()</span></code>.
+You can also provide this value through the environment variable
+<span class="target" id="index-12"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_MAPDL_VERSION</span></code>.
+For instance <code class="docutils literal notranslate"><span class="pre">PYMAPDL_MAPDL_VERSION=22.2</span></code>.
+However the argument (if specified) has precedence over the environment
+variable. If this environment variable is empty, it is as it is not set.</p>
 </dd>
-<dt><strong>detect_HPC: bool, optional</strong></dt><dd><p>Whether detect if PyMAPDL is running on an HPC cluster. Currently
+<dt><strong>running_on_hpc: bool, optional</strong></dt><dd><p>Whether detect if PyMAPDL is running on an HPC cluster. Currently
 only SLURM clusters are supported. By default, it is set to true.
-This option can be bypassed if the <code class="docutils literal notranslate"><span class="pre">PYMAPDL_ON_SLURM</span></code>
-environment variable is set to &quot;true&quot;. For more information, see
-<a class="reference internal" href="../../user_guide/hpc/introduction.html#ref-hpc-slurm"><span class="std std-ref">Introduction to SLURM</span></a>.</p>
+This option can be bypassed if the <span class="target" id="index-13"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_RUNNING_ON_HPC</span></code>
+environment variable is set to <code class="xref py py-class docutils literal notranslate"><span class="pre">True</span></code>.
+For more information, see <a class="reference internal" href="../../user_guide/hpc/introduction.html#ref-hpc-slurm"><span class="std std-ref">Introduction to SLURM</span></a>.</p>
 </dd>
-<dt><strong>kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>These keyword arguments are interface-specific or for
+<dt><strong>launch_on_hpc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></span></dt><dd><p>If <code class="xref py py-class docutils literal notranslate"><span class="pre">True</span></code>, it uses the implemented scheduler (SLURM only) to launch
+an MAPDL instance on the HPC. In this case you can pass the
+'<cite>scheduler_options</cite>' argument to
+<a class="reference internal" href="#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>
+to specify the scheduler arguments as a string or as a dictionary.
+For more information, see <a class="reference internal" href="../../user_guide/hpc/introduction.html#ref-hpc-slurm"><span class="std std-ref">Introduction to SLURM</span></a>.</p>
+</dd>
+<dt><strong>kwargs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">Optional</span></code></span></dt><dd><p>These keyword arguments are interface-specific or for
 development purposes. For more information, see Notes.</p>
 <dl>
+<dt>scheduler_options<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Use it to specify options to the scheduler run command. It can be a
+string or a dictionary with arguments and its values (both as strings).
+For more information visit <a class="reference internal" href="../../user_guide/hpc/introduction.html#ref-hpc-slurm"><span class="std std-ref">Introduction to SLURM</span></a>.</p>
+</dd>
 <dt>set_no_abort<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></dt><dd><p><em>(Development use only)</em>
 Sets MAPDL to not abort at the first error within /BATCH mode.
-Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+Defaults to <code class="xref py py-class docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
 <dt>force_intel<span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></dt><dd><p><em>(Development use only)</em>
 Forces the use of Intel message pass interface (MPI) in versions between
-Ansys 2021R0 and 2022R2, where because of VPNs issues this MPI is deactivated
-by default. See <a class="reference internal" href="../../user_guide/troubleshoot.html#vpn-issues-troubleshooting"><span class="std std-ref">Virtual private network (VPN) issues</span></a> for more information.
-Defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+Ansys 2021R0 and 2022R2, where because of VPNs issues this MPI is
+deactivated by default.
+See <a class="reference internal" href="../../user_guide/troubleshoot.html#vpn-issues-troubleshooting"><span class="std std-ref">Virtual private network (VPN) issues</span></a> for more information.
+Defaults to <code class="xref py py-class docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
 </dl>
 </dd>
@@ -825,8 +838,8 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">False</
 shared-memory parallelism (SMP) mode unless another option is specified.</p>
 <p><strong>Additional switches</strong></p>
 <p>These are the MAPDL switch options as of 2020R2 applicable for
-running MAPDL as a service via gRPC.  Excluded switches such as
-<code class="docutils literal notranslate"><span class="pre">&quot;-j&quot;</span></code> either not applicable or are set via keyword arguments.</p>
+running MAPDL as a service via gRPC.  Excluded switches not applicable or
+are set via keyword arguments such as <code class="docutils literal notranslate"><span class="pre">&quot;-j&quot;</span></code> .</p>
 <dl class="simple">
 <dt>-acc &lt;device&gt;</dt><dd><p>Enables the use of GPU hardware.  See GPU
 Accelerator Capability in the Parallel Processing Guide for more
@@ -905,8 +918,9 @@ information.</p>
 See the Parallel Processing Guide for more information.</p>
 </dd>
 </dl>
+<p><strong>PyPIM</strong></p>
 <p>If the environment is configured to use <a class="reference external" href="https://pypim.docs.pyansys.com">PyPIM</a>
-and <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, then starting the instance will be delegated to PyPIM.
+and <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> is <code class="xref py py-class docutils literal notranslate"><span class="pre">True</span></code>, then starting the instance will be delegated to PyPIM.
 In this event, most of the options will be ignored and the server side configuration will
 be used.</p>
 <p class="rubric">Examples</p>
