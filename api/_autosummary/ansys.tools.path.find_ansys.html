@@ -238,16 +238,16 @@
         <div class="navbar-item navbar-persistent--container">
           
 <div class="search-bar pst-js-only" id="search-bar">
-    <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
-             aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
-             autocapitalize="off" spellcheck="false"/>
-      <span class="search-button__kbd-shortcut">
-        <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
-      </span>
-    </form>
-    <div id="search-results" class="search-results" style="display: none;" tabindex="0"></div>
+  <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
 </div>
         </div>
       
@@ -327,16 +327,16 @@
   
     <div class="navbar-persistent--mobile">
 <div class="search-bar pst-js-only" id="search-bar">
-    <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
-             aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
-             autocapitalize="off" spellcheck="false"/>
-      <span class="search-button__kbd-shortcut">
-        <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
-      </span>
-    </form>
-    <div id="search-results" class="search-results" style="display: none;" tabindex="0"></div>
+  <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
 </div>
     </div>
   
@@ -620,7 +620,7 @@
 <h1>find_ansys<a class="headerlink" href="#find-ansys" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="ansys.tools.path.find_ansys">
-<span class="sig-prename descclassname"><span class="pre">ansys.tools.path.</span></span><span class="sig-name descname"><span class="pre">find_ansys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">supported_versions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{191:</span> <span class="pre">'19.1',</span> <span class="pre">192:</span> <span class="pre">'19.2',</span> <span class="pre">193:</span> <span class="pre">'19.3',</span> <span class="pre">194:</span> <span class="pre">'19.4',</span> <span class="pre">195:</span> <span class="pre">'19.5',</span> <span class="pre">201:</span> <span class="pre">'2020R1',</span> <span class="pre">202:</span> <span class="pre">'2020R2',</span> <span class="pre">211:</span> <span class="pre">'2021R1',</span> <span class="pre">212:</span> <span class="pre">'2021R2',</span> <span class="pre">221:</span> <span class="pre">'2022R1',</span> <span class="pre">222:</span> <span class="pre">'2022R2',</span> <span class="pre">231:</span> <span class="pre">'2023R1',</span> <span class="pre">232:</span> <span class="pre">'2023R2',</span> <span class="pre">241:</span> <span class="pre">'2024R1',</span> <span class="pre">242:</span> <span class="pre">'2024R2',</span> <span class="pre">251:</span> <span class="pre">'2025R1'}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.tools.path.find_ansys" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ansys.tools.path.</span></span><span class="sig-name descname"><span class="pre">find_ansys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">supported_versions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{191:</span> <span class="pre">'19.1',</span> <span class="pre">192:</span> <span class="pre">'19.2',</span> <span class="pre">193:</span> <span class="pre">'19.3',</span> <span class="pre">194:</span> <span class="pre">'19.4',</span> <span class="pre">195:</span> <span class="pre">'19.5',</span> <span class="pre">201:</span> <span class="pre">'2020R1',</span> <span class="pre">202:</span> <span class="pre">'2020R2',</span> <span class="pre">211:</span> <span class="pre">'2021R1',</span> <span class="pre">212:</span> <span class="pre">'2021R2',</span> <span class="pre">221:</span> <span class="pre">'2022R1',</span> <span class="pre">222:</span> <span class="pre">'2022R2',</span> <span class="pre">231:</span> <span class="pre">'2023R1',</span> <span class="pre">232:</span> <span class="pre">'2023R2',</span> <span class="pre">241:</span> <span class="pre">'2024R1',</span> <span class="pre">242:</span> <span class="pre">'2024R2',</span> <span class="pre">251:</span> <span class="pre">'2025R1',</span> <span class="pre">252:</span> <span class="pre">'2025R2'}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.tools.path.find_ansys" title="Link to this definition">#</a></dt>
 <dd><p>Obsolete method, use find_mapdl.</p>
 <dl class="field-list simple">
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
@@ -713,7 +713,7 @@ const SEARCH_FILE = "../../_static/search.json";
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.2.0. and
+          1.2.1. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
           on <span id="date"></span>
         </p>
