@@ -1,6 +1,6 @@
-﻿mesh
+﻿name
 ====
 
 .. currentmodule:: ansys.mapdl.core
 
-.. autoproperty:: Mapdl.mesh
+.. autoproperty:: Mapdl.name

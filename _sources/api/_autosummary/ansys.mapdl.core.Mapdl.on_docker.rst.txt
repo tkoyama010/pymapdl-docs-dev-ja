@@ -1,6 +1,6 @@
-﻿parameters
+﻿on\_docker
 ==========
 
 .. currentmodule:: ansys.mapdl.core
 
-.. autoproperty:: Mapdl.parameters
+.. autoproperty:: Mapdl.on_docker

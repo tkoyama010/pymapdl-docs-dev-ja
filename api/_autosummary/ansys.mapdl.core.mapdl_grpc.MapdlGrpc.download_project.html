@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>mesh &#8212; PyMAPDL</title>
+    <title>download_project &#8212; PyMAPDL</title>
   
   
   
@@ -81,19 +81,19 @@
                 gtag('js', new Date());
                 gtag('config', 'G-JQJKPV6ZVB');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/_autosummary/ansys.mapdl.core.Mapdl.mesh';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/_autosummary/ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download_project';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://mapdl.docs.pyansys.com/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
-    <link rel="canonical" href="https://mapdl.docs.pyansys.com/version/stable/api/_autosummary/ansys.mapdl.core.Mapdl.mesh.html" />
+    <link rel="canonical" href="https://mapdl.docs.pyansys.com/version/stable/api/_autosummary/ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download_project.html" />
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="modal_analysis" href="ansys.mapdl.core.Mapdl.modal_analysis.html" />
-    <link rel="prev" title="load_table" href="ansys.mapdl.core.Mapdl.load_table.html" />
+    <link rel="next" title="download_result" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download_result.html" />
+    <link rel="prev" title="download" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
   <meta name="docsearch:version" content="0.69.dev0" />
@@ -523,65 +523,91 @@
 <li class="toctree-l1"><a class="reference internal" href="../database.html">Database</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../geometry.html">Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../helper.html">Helper functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../information.html"><code class="docutils literal notranslate"><span class="pre">Information</span></code> module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../inline.html">Inline functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../krylov.html"><code class="docutils literal notranslate"><span class="pre">KrylovSolver</span></code> module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../launcher.html">Launcher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../logging.html">Logging</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../mapdl.html"><code class="docutils literal notranslate"><span class="pre">Mapdl</span></code> module</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.add_file_handler.html">add_file_handler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.allow_ignore.html">allow_ignore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.busy.html">busy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.chain_commands.html">chain_commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.check_parameter_names.html">check_parameter_names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.default_file_type_for_plots.html">default_file_type_for_plots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.directory.html">directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.exited.html">exited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.exiting.html">exiting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.file_type_for_plots.html">file_type_for_plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.finish_job_on_exit.html">finish_job_on_exit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.force_output.html">force_output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.get.html">get</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.get_array.html">get_array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.get_esol.html">get_esol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.get_nodal_constrains.html">get_nodal_constrains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.get_nodal_loads.html">get_nodal_loads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.get_nsol.html">get_nsol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.get_value.html">get_value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.get_variable.html">get_variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.hostname.html">hostname</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.ignore_errors.html">ignore_errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.info.html">info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.input_strings.html">input_strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.is_alive.html">is_alive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.is_console.html">is_console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.is_corba.html">is_corba</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.is_grpc.html">is_grpc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.jobid.html">jobid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.jobname.html">jobname</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.kill_job.html">kill_job</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.last_response.html">last_response</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.launched.html">launched</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.list_error_file.html">list_error_file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.list_files.html">list_files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.load_array.html">load_array</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.load_table.html">load_table</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">mesh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.modal_analysis.html">modal_analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.locked.html">locked</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.logger.html">logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.mapdl_on_hpc.html">mapdl_on_hpc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.mute.html">mute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.name.html">name</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.non_interactive.html">non_interactive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.on_docker.html">on_docker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.open_apdl_log.html">open_apdl_log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.open_gui.html">open_gui</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.parameters.html">parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.platform.html">platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.print_com.html">print_com</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.process_is_alive.html">process_is_alive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.remove_file_handler.html">remove_file_handler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.remove_temp_dir_on_exit.html">remove_temp_dir_on_exit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.result.html">result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.result_file.html">result_file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.run.html">run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.run_as_routine.html">run_as_routine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.run_multiline.html">run_multiline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.input_strings.html">input_strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.save_selection.html">save_selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.scalar_param.html">scalar_param</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.screenshot.html">screenshot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.set_log_level.html">set_log_level</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.version.html">version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.thermal_result.html">thermal_result</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.use_vtk.html">use_vtk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.file_type_for_plots.html">file_type_for_plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.Mapdl.version.html">version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.plotting.ALLOWED_TARGETS.html">ALLOWED_TARGETS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.plotting.BCS.html">BCS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.channel_state.html">channel_state</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.check_status.html">check_status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.connection.html">connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download.html">download</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">download_project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download_result.html">download_result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.file.html">file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.ip.html">ip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.is_local.html">is_local</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.list_error_file.html">list_error_file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.list_files.html">list_files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.mute.html">mute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.port.html">port</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.upload.html">upload</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.product.html">product</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.mapdl_version.html">mapdl_version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.pymapdl_version.html">pymapdl_version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.products.html">products</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.preprocessing_capabilities.html">preprocessing_capabilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.aux_capabilities.html">aux_capabilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.solution_options.html">solution_options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.post_capabilities.html">post_capabilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.title.html">title</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.titles.html">titles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.stitles.html">stitles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.units.html">units</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.scratch_memory_status.html">scratch_memory_status</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.database_status.html">database_status</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.config_values.html">config_values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.global_status.html">global_status</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.job_information.html">job_information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.model_information.html">model_information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.boundary_condition_information.html">boundary_condition_information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.routine_information.html">routine_information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.solution_options_configuration.html">solution_options_configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.information.Information.load_step_options.html">load_step_options</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../mesh.html">Mesh</a></li>
@@ -643,7 +669,7 @@
       <a href="../mapdl.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">Mapdl</span></code> module</a>
     </li>
       
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">mesh</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">download_project</span></li>
     
   </ul>
 </nav>
@@ -661,53 +687,36 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="mesh">
-<h1>mesh<a class="headerlink" href="#mesh" title="Link to this heading">#</a></h1>
-<dl class="py property">
-<dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.mesh">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">mesh</span></span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.mesh" title="Link to this definition">#</a></dt>
-<dd><p>Mesh information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl.Mesh</span></code></dt><dd></dd>
-</dl>
+  <section id="download-project">
+<h1>download_project<a class="headerlink" href="#download-project" title="Link to this heading">#</a></h1>
+<dl class="py method">
+<dt class="sig sig-object py" id="ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download_project">
+<span class="sig-prename descclassname"><span class="pre">MapdlGrpc.</span></span><span class="sig-name descname"><span class="pre">download_project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extensions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download_project" title="Link to this definition">#</a></dt>
+<dd><p>Download all the project files located in the MAPDL working directory.</p>
+<dl class="field-list">
+<dt class="field-odd">パラメーター<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>extensions</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">Tuple</span></code>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>List of extensions to filter the files before downloading,
+by default None.</p>
+</dd>
+<dt><strong>target_dir</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Path to downloaded the files will to. The default is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd>
+<dt><strong>progress_bar</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Display a progress bar using
+<code class="docutils literal notranslate"><span class="pre">tqdm</span></code> when <code class="docutils literal notranslate"><span class="pre">True</span></code>.  Helpful for showing download
+progress. The default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
 </dl>
-<p class="rubric">Examples</p>
-<p>Return an array of the active nodes</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">nodes</span>
-<span class="go">array([[ 1.,  0.,  0.],</span>
-<span class="go">       [ 2.,  0.,  0.],</span>
-<span class="go">       [ 3.,  0.,  0.],</span>
-<span class="go">       [ 4.,  0.,  0.],</span>
-<span class="go">       [ 5.,  0.,  0.],</span>
-<span class="go">       [ 6.,  0.,  0.],</span>
-<span class="go">       [ 7.,  0.,  0.],</span>
-<span class="go">       [ 8.,  0.,  0.],</span>
-<span class="go">       [ 9.,  0.,  0.],</span>
-<span class="go">       [10.,  0.,  0.]])</span>
-</pre></div>
-</div>
-<p>Return an array of the node numbers of the active nodes</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">nnum</span>
-<span class="go">array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10], dtype=int32)</span>
-</pre></div>
-</div>
-<p>Simply query and print the geometry</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="p">)</span>
-<span class="go">  ANSYS Mapdl Mesh</span>
-<span class="go">  Number of Nodes:              321</span>
-<span class="go">  Number of Elements:           40</span>
-<span class="go">  Number of Element Types:      1</span>
-<span class="go">  Number of Node Components:    2</span>
-<span class="go">  Number of Element Components: 2</span>
-</pre></div>
-</div>
-<p>Access the geometry as a VTK object</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">grid</span>
-</pre></div>
-</div>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">Str</span></code>]</dt><dd><p>List of downloaded files.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</span></p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -735,13 +744,13 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ansys.mapdl.core.Mapdl.mesh"><code class="docutils literal notranslate"><span class="pre">Mapdl.mesh</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download_project"><code class="docutils literal notranslate"><span class="pre">MapdlGrpc.download_project()</span></code></a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item"> 
 <div class="tocsection editthispage">
-  <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/api/_autosummary/ansys.mapdl.core.Mapdl.mesh.rst">
+  <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/api/_autosummary/ansys.mapdl.core.mapdl_grpc.MapdlGrpc.download_project.rst">
     <i class="fa-solid fa-pencil"></i>
        Edit
     on GitHub  
