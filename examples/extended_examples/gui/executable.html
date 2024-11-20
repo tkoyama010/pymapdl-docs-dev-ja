@@ -608,156 +608,20 @@
   <section id="create-a-gui-app-in-python-with-pyside6">
 <span id="gui-example"></span><h1>Create a GUI app in Python with PySide6<a class="headerlink" href="#create-a-gui-app-in-python-with-pyside6" title="Link to this heading">#</a></h1>
 <p>This example shows how to create a graphical user interface (GUI) app in Python that uses PyMAPDL to compute the deflection of a square beam.</p>
-<section id="simulation-setup">
-<h2>Simulation setup<a class="headerlink" href="#simulation-setup" title="Link to this heading">#</a></h2>
-<p>The following script launches a graphical app using PySide6:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-
-<span class="kn">from</span> <span class="nn">PySide6</span> <span class="kn">import</span> <span class="n">QtWidgets</span>
-<span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
-<span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
-    <span class="n">QApplication</span><span class="p">,</span>
-    <span class="n">QGridLayout</span><span class="p">,</span>
-    <span class="n">QLabel</span><span class="p">,</span>
-    <span class="n">QLineEdit</span><span class="p">,</span>
-    <span class="n">QMainWindow</span><span class="p">,</span>
-    <span class="n">QPushButton</span><span class="p">,</span>
-    <span class="n">QSlider</span><span class="p">,</span>
-    <span class="n">QVBoxLayout</span><span class="p">,</span>
-    <span class="n">QWidget</span><span class="p">,</span>
-<span class="p">)</span>
-
-
-<span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_setup_ui</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">_setup_ui</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="c1"># General settings for the window</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;PyMAPDL example application&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-        <span class="c1"># Create the tabs</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tab_widget</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QTabWidget</span><span class="p">()</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tab_preprocessing</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tab_widget</span><span class="o">.</span><span class="n">addTab</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_tab_preprocessing</span><span class="p">,</span> <span class="s2">&quot;Preprocessing&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_setup_tab_preprocessing</span><span class="p">()</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tab_solver</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tab_widget</span><span class="o">.</span><span class="n">addTab</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_tab_solver</span><span class="p">,</span> <span class="s2">&quot;Solver&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_setup_tab_solver</span><span class="p">()</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tab_postprocessing</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tab_widget</span><span class="o">.</span><span class="n">addTab</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_tab_postprocessing</span><span class="p">,</span> <span class="s2">&quot;Postprocessing&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_setup_tab_postprocessing</span><span class="p">()</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_tab_widget</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_layout</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_widget</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_setup_tab_preprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">container_layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
-        <span class="n">max_qlineedit_width</span> <span class="o">=</span> <span class="mi">250</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tab_preprocessing</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">container_layout</span><span class="p">)</span>
-
-        <span class="c1"># Poisson&#39;s ration input</span>
-        <span class="n">poisson_ratio_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Poisson&#39;s ratio: &quot;</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">poisson_ratio_label</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_poisson_ratio_input</span> <span class="o">=</span> <span class="n">QLineEdit</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_poisson_ratio_input</span><span class="o">.</span><span class="n">setPlaceholderText</span><span class="p">(</span><span class="s2">&quot;Poisson&#39;s ratio (PRXY)&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_poisson_ratio_input</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;0.3&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_poisson_ratio_input</span><span class="o">.</span><span class="n">setMaximumWidth</span><span class="p">(</span><span class="n">max_qlineedit_width</span><span class="p">)</span>
-
-        <span class="c1"># Young modulus input</span>
-        <span class="n">young_modulus_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Young&#39;s modulus: &quot;</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">young_modulus_label</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_young_modulus_input</span> <span class="o">=</span> <span class="n">QLineEdit</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_young_modulus_input</span><span class="o">.</span><span class="n">setPlaceholderText</span><span class="p">(</span>
-            <span class="s2">&quot;Young&#39;s modulus in the x direction&quot;</span>
-        <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_young_modulus_input</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;210e3&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_young_modulus_input</span><span class="o">.</span><span class="n">setMaximumWidth</span><span class="p">(</span><span class="n">max_qlineedit_width</span><span class="p">)</span>
-
-        <span class="c1"># beam length input</span>
-        <span class="n">length_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Length: &quot;</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">length_label</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_length_input</span> <span class="o">=</span> <span class="n">QLineEdit</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_length_input</span><span class="o">.</span><span class="n">setPlaceholderText</span><span class="p">(</span><span class="s2">&quot;Length&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_length_input</span><span class="o">.</span><span class="n">setMaximumWidth</span><span class="p">(</span><span class="n">max_qlineedit_width</span><span class="p">)</span>
-
-        <span class="c1"># Input for the force exerced on the beam</span>
-        <span class="n">force_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Force: &quot;</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">force_label</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_force_input</span> <span class="o">=</span> <span class="n">QLineEdit</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_force_input</span><span class="o">.</span><span class="n">setPlaceholderText</span><span class="p">(</span><span class="s2">&quot;Load force&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_force_input</span><span class="o">.</span><span class="n">setMaximumWidth</span><span class="p">(</span><span class="n">max_qlineedit_width</span><span class="p">)</span>
-
-        <span class="c1"># Slider for the number of nodes (between 3 and 9)</span>
-        <span class="n">number_of_nodes_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Number of nodes: &quot;</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">number_of_nodes_label</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span> <span class="o">=</span> <span class="n">QSlider</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="n">Qt</span><span class="o">.</span><span class="n">Orientation</span><span class="o">.</span><span class="n">Horizontal</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span><span class="o">.</span><span class="n">setMinimum</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span><span class="o">.</span><span class="n">setMaximum</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span><span class="o">.</span><span class="n">setSingleStep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span><span class="o">.</span><span class="n">setPageStep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span><span class="o">.</span><span class="n">setMaximumWidth</span><span class="p">(</span><span class="n">max_qlineedit_width</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_node_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span><span class="o">.</span><span class="n">value</span><span class="p">()</span><span class="si">}</span><span class="s2"> nodes&quot;</span>
-        <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span><span class="o">.</span><span class="n">valueChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
-            <span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_node_label</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span><span class="o">.</span><span class="n">value</span><span class="p">()</span><span class="si">}</span><span class="s2"> nodes&quot;</span>
-            <span class="p">)</span>
-        <span class="p">)</span>
-
-        <span class="c1"># Button to run the preprocessor</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_run_preprocessor_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Run preprocessor&quot;</span><span class="p">)</span>
-
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_poisson_ratio_input</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_young_modulus_input</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_length_input</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_force_input</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_number_of_node_label</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_run_preprocessor_button</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_setup_tab_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">container_layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tab_solver</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">container_layout</span><span class="p">)</span>
-
-        <span class="c1"># Button to run the solver</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_solve_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Solve&quot;</span><span class="p">)</span>
-
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_solve_button</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_setup_tab_postprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">container_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tab_postprocessing</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">container_layout</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_deflection_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Deflection: &quot;</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deflection_label</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
-    <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
-    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">())</span>
-</pre></div>
-</div>
+<section id="application-layout">
+<h2>Application layout<a class="headerlink" href="#application-layout" title="Link to this heading">#</a></h2>
+<p>The <a class="reference download internal" download="" href="../../../_downloads/a4788ba7fbc222cff5e17483cd31ffa6/gui_app.py"><code class="xref download docutils literal notranslate"><span class="pre">gui_app.py</span></code></a> script launches a graphical app using PySide6.</p>
 <p>The <strong>Preprocessing</strong> tab contains input fields for Poisson's ratio, Young modulus, beam length, and a number of simulation nodes.</p>
-<img alt="../../../_images/base_app.png" src="../../../_images/base_app.png" />
+<img alt="../../../_images/final_app_preprocessing.png" src="../../../_images/final_app_preprocessing.png" />
+<p>The <strong>Postprocessing</strong> tab shows the deformation plot.</p>
+<img alt="../../../_images/final_app_postprocessing.png" src="../../../_images/final_app_postprocessing.png" />
 </section>
-<section id="add-a-pyvista-plotting-frame-in-the-window">
-<h2>Add a PyVista plotting frame in the window<a class="headerlink" href="#add-a-pyvista-plotting-frame-in-the-window" title="Link to this heading">#</a></h2>
+<section id="add-a-pyvista-plotting-frame-to-the-window">
+<h2>Add a PyVista plotting frame to the window<a class="headerlink" href="#add-a-pyvista-plotting-frame-to-the-window" title="Link to this heading">#</a></h2>
 <p>Start by importing the <a class="reference external" href="https://qtdocs.pyvista.org/api_reference.html#qtinteractor">QtInteractor</a>
-class from the <code class="docutils literal notranslate"><span class="pre">pyvistaqt</span></code> package and the <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.plotting.MapdlTheme.html#ansys.mapdl.core.plotting.MapdlTheme" title="ansys.mapdl.core.plotting.theme.MapdlTheme"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlTheme</span></code></a>
-class from the <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> package:</p>
+class from the <a class="reference external" href="https://github.com/pyvista/pyvistaqt">pyvistaqt</a> package and
+the <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.plotting.MapdlTheme.html#ansys.mapdl.core.plotting.MapdlTheme" title="ansys.mapdl.core.plotting.theme.MapdlTheme"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlTheme</span></code></a>
+class from the <a class="reference external" href="https://github.com/ansys/pymapdl">ansys-mapdl-core</a> package:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvistaqt</span> <span class="kn">import</span> <span class="n">QtInteractor</span>
 <span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">MapdlTheme</span>
 </pre></div>
@@ -765,8 +629,6 @@ class from the <code class="docutils literal notranslate"><span class="pre">ansy
 <p>Then, add a plotter on the first tab:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_setup_tab_preprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="o">...</span>
-    <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_run_preprocessor_button</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-
     <span class="c1"># PyVista frame in the window</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessing_plotter</span> <span class="o">=</span> <span class="n">QtInteractor</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="n">MapdlTheme</span><span class="p">())</span>
     <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_preprocessing_plotter</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
@@ -774,12 +636,21 @@ class from the <code class="docutils literal notranslate"><span class="pre">ansy
 </div>
 <p>Add another plotter on the second tab:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_setup_tab_postprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">container_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_tab_postprocessing</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">container_layout</span><span class="p">)</span>
+    <span class="o">...</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessing_plotter</span> <span class="o">=</span> <span class="n">QtInteractor</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="n">MapdlTheme</span><span class="p">())</span>
     <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_postprocessing_plotter</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_deflection_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Deflection: &quot;</span><span class="p">)</span>
-    <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deflection_label</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The plotter can be updated with a PyMAPDL plotter object as follow:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Getting PyMAPDL plotter object</span>
+<span class="n">nodal_disp_plotter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">plot_nodal_displacement</span><span class="p">(</span>
+    <span class="s2">&quot;norm&quot;</span><span class="p">,</span> <span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">return_plotter</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="c1"># Updating widget</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">_postprocessing_plotter</span><span class="o">.</span><span class="n">GetRenderWindow</span><span class="p">()</span><span class="o">.</span><span class="n">AddRenderer</span><span class="p">(</span>
+    <span class="n">nodal_disp_plotter</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">renderer</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 <p>Finally, make sure to correctly close the VTK widgets when closing the app:</p>
@@ -792,92 +663,29 @@ class from the <code class="docutils literal notranslate"><span class="pre">ansy
 </section>
 <section id="launch-an-mapdl-instance-in-your-window">
 <h2>Launch an MAPDL instance in your window<a class="headerlink" href="#launch-an-mapdl-instance-in-your-window" title="Link to this heading">#</a></h2>
-<p>Add an attribute to your MainWindow for the MAPDL instance and import the <code class="docutils literal notranslate"><span class="pre">launch_mapdl</span></code> package.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span>
-
-<span class="kn">import</span> <span class="nn">sys</span>
-
-<span class="kn">from</span> <span class="nn">PySide6</span> <span class="kn">import</span> <span class="n">QtWidgets</span>
-<span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
-
-        <span class="c1"># run postprocessing</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
+<p>In this example, the MAPDL instance is launched outside the <code class="docutils literal notranslate"><span class="pre">MainWindow</span></code> object,
+and it passed to it as an argument.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">(</span><span class="n">mapdl</span><span class="p">)</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">MainWindow</span></code> object stores the <a class="reference internal" href="../../../api/mapdl.html#ansys.mapdl.core.mapdl.MapdlBase" title="ansys.mapdl.core.mapdl.MapdlBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> object internally:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mapdl</span><span class="p">:</span> <span class="n">Mapdl</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span> <span class="o">=</span> <span class="n">mapdl</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_setup_ui</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
-<section id="develop-the-logic">
-<h2>Develop the logic<a class="headerlink" href="#develop-the-logic" title="Link to this heading">#</a></h2>
-<p>Connect each button to a function that contains the logic:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_setup_tab_preprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="o">...</span>
-    <span class="c1"># Button to run the preprocessor</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_run_preprocessor_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Run preprocessor&quot;</span><span class="p">)</span>
-<span class="hll">    <span class="bp">self</span><span class="o">.</span><span class="n">_run_preprocessor_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_run_preprocessor</span><span class="p">)</span>
-</span>    <span class="o">...</span>
-
-
-<span class="k">def</span> <span class="nf">_setup_tab_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">container_layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">_tab_solver</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">container_layout</span><span class="p">)</span>
-
-    <span class="bp">self</span><span class="o">.</span><span class="n">_solve_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Solve&quot;</span><span class="p">)</span>
-<span class="hll">    <span class="bp">self</span><span class="o">.</span><span class="n">_solve_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_run_solver</span><span class="p">)</span>
-</span>
-    <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_solve_button</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>You can now write the related functions:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_poisson_ratio_input</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_young_modulus_input</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_length_input</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_force_input</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_number_of_node_label</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_run_preprocessor_button</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-
-        <span class="c1"># PyVista frame in the window</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessing_plotter</span> <span class="o">=</span> <span class="n">QtInteractor</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="n">MapdlTheme</span><span class="p">())</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_preprocessing_plotter</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_setup_tab_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">container_layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tab_solver</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">container_layout</span><span class="p">)</span>
-
-        <span class="c1"># Button to run the solver</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_solve_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Solve&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_solve_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_run_solver</span><span class="p">)</span>
-
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_solve_button</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_setup_tab_postprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">container_layout</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QVBoxLayout</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_tab_postprocessing</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">container_layout</span><span class="p">)</span>
-        <span class="c1"># Add a PyVista frame</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessing_plotter</span> <span class="o">=</span> <span class="n">QtInteractor</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="n">MapdlTheme</span><span class="p">())</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_postprocessing_plotter</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_deflection_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Deflection: &quot;</span><span class="p">)</span>
-        <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deflection_label</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_run_preprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">poisson_ratio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_poisson_ratio_input</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
-            <span class="n">young_modulus</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_young_modulus_input</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
-            <span class="n">length</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_length_input</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
-            <span class="n">force</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_force_input</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
-        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-            <span class="n">msg_box</span> <span class="o">=</span> <span class="n">QMessageBox</span><span class="p">()</span>
-            <span class="n">msg_box</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;Expecting a number&quot;</span><span class="p">)</span>
-            <span class="n">msg_box</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
-            <span class="k">return</span>
-
-        <span class="n">poisson_ratio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_poisson_ratio_input</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
-        <span class="n">young_modulus</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_young_modulus_input</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
-        <span class="n">length</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_length_input</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
-        <span class="n">force</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_force_input</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
-
+<section id="simulation-setup">
+<h2>Simulation setup<a class="headerlink" href="#simulation-setup" title="Link to this heading">#</a></h2>
+<p>The model is built in <code class="docutils literal notranslate"><span class="pre">build_model</span></code> method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">build_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">poisson_ratio</span><span class="p">,</span> <span class="n">young_modulus</span><span class="p">,</span> <span class="n">nnodes</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">force</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">verify</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
@@ -891,43 +699,81 @@ class from the <code class="docutils literal notranslate"><span class="pre">ansy
         <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">sectype</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;BEAM&quot;</span><span class="p">,</span> <span class="s2">&quot;RECT&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">secdata</span><span class="p">(</span><span class="s2">&quot;10&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes_input</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
-
         <span class="c1"># Create the nodes</span>
-        <span class="k">for</span> <span class="n">node_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">n</span><span class="p">(</span>
-                <span class="n">node_num</span><span class="p">,</span> <span class="p">(</span><span class="n">node_num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">length</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-            <span class="p">)</span>
+        <span class="k">for</span> <span class="n">node_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nnodes</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="p">(</span><span class="n">node_num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">length</span> <span class="o">/</span> <span class="p">(</span><span class="n">nnodes</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
         <span class="c1"># Create the elements</span>
-        <span class="k">for</span> <span class="n">elem_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">elem_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nnodes</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">e</span><span class="p">(</span><span class="n">elem_num</span><span class="p">,</span> <span class="n">elem_num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 
         <span class="c1"># Fix beam ends</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="n">nnodes</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
 
         <span class="c1">#  Apply the force to the node in the middle</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_number_of_nodes</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s2">&quot;FY&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">force</span><span class="p">)</span>
-
-        <span class="c1"># Get the pv.Plotter object from mapdl.eplot function</span>
-        <span class="c1"># to plot in the window</span>
-        <span class="n">preprocessing_plotter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span>
-            <span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">return_plotter</span><span class="o">=</span><span class="kc">True</span>
-        <span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessing_plotter</span><span class="o">.</span><span class="n">GetRenderWindow</span><span class="p">()</span><span class="o">.</span><span class="n">AddRenderer</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="n">nnodes</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">lab</span><span class="o">=</span><span class="s2">&quot;FY&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">force</span><span class="p">)</span>
 </pre></div>
 </div>
-<img alt="../../../_images/final_app_preprocessing.png" src="../../../_images/final_app_preprocessing.png" />
-<img alt="../../../_images/final_app_solver.png" src="../../../_images/final_app_solver.png" />
-<img alt="../../../_images/final_app_postprocessing.png" src="../../../_images/final_app_postprocessing.png" />
+<p>And solved in <code class="docutils literal notranslate"><span class="pre">run_solver</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">run_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># solve</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+
+        <span class="c1"># run postprocessing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">post1</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">graphics</span><span class="p">(</span><span class="s2">&quot;power&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">eshape</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">rgb</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+
+        <span class="n">mapdl</span><span class="o">.</span><span class="n">upcoord</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">nodal_disp_plotter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">plot_nodal_displacement</span><span class="p">(</span>
+            <span class="s2">&quot;norm&quot;</span><span class="p">,</span> <span class="n">show_node_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">return_plotter</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessing_plotter</span><span class="o">.</span><span class="n">GetRenderWindow</span><span class="p">()</span><span class="o">.</span><span class="n">AddRenderer</span><span class="p">(</span>
+            <span class="n">nodal_disp_plotter</span><span class="o">.</span><span class="n">scene</span><span class="o">.</span><span class="n">renderer</span>
+        <span class="p">)</span>
+
+        <span class="n">nnodes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">nodes</span><span class="p">)</span>
+
+        <span class="n">mid_node_uy</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span>
+            <span class="n">entity</span><span class="o">=</span><span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="n">entnum</span><span class="o">=</span><span class="n">nnodes</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">item1</span><span class="o">=</span><span class="s2">&quot;u&quot;</span><span class="p">,</span> <span class="n">it1num</span><span class="o">=</span><span class="s2">&quot;y&quot;</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deflection_label</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deflection: </span><span class="si">{</span><span class="n">mid_node_uy</span><span class="si">:</span><span class="s2">.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="develop-the-logic">
+<h2>Develop the logic<a class="headerlink" href="#develop-the-logic" title="Link to this heading">#</a></h2>
+<p>Connect each button to a function that contains the logic:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_setup_tab_preprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="o">...</span>
+    <span class="c1"># Solve button</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_solve_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Solve&quot;</span><span class="p">)</span>
+<span class="hll">    <span class="bp">self</span><span class="o">.</span><span class="n">_solve_button</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">run_solver</span><span class="p">)</span>
+</span>    <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_solve_button</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+<section id="run-the-app">
+<h2>Run the app<a class="headerlink" href="#run-the-app" title="Link to this heading">#</a></h2>
+<p>You can run the app as a normal python script:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>gui_app.py
+</pre></div>
+</div>
 </section>
 <section id="additional-files">
 <h2>Additional files<a class="headerlink" href="#additional-files" title="Link to this heading">#</a></h2>
-<p>The example files can be downloaded using these links:</p>
+<p>The example files can be downloaded using this link:</p>
 <ul class="simple">
-<li><p>Original <a class="reference download internal" download="" href="../../../_downloads/a4788ba7fbc222cff5e17483cd31ffa6/gui_app.py"><code class="xref download docutils literal notranslate"><span class="pre">gui_app.py</span></code></a> script</p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/a4788ba7fbc222cff5e17483cd31ffa6/gui_app.py"><code class="xref download docutils literal notranslate"><span class="pre">gui_app.py</span></code></a>: Complete Python script.</p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/e339be7dae61827bddc5b709e8a4d7c8/requirements.txt"><code class="xref download docutils literal notranslate"><span class="pre">requirements.txt</span></code></a>: Python libraries requirements.</p></li>
 </ul>
 </section>
 </section>
@@ -955,10 +801,12 @@ class from the <code class="docutils literal notranslate"><span class="pre">ansy
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation-setup">Simulation setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-pyvista-plotting-frame-in-the-window">Add a PyVista plotting frame in the window</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-layout">Application layout</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-pyvista-plotting-frame-to-the-window">Add a PyVista plotting frame to the window</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-an-mapdl-instance-in-your-window">Launch an MAPDL instance in your window</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation-setup">Simulation setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#develop-the-logic">Develop the logic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-app">Run the app</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-files">Additional files</a></li>
 </ul>
   </nav></div>
