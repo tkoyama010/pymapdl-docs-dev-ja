@@ -1,6 +1,6 @@
-﻿find\_ansys
+﻿find\_mapdl
 ===========
 
 .. currentmodule:: ansys.tools.path
 
-.. autofunction:: find_ansys
+.. autofunction:: find_mapdl
