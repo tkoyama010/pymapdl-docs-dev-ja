@@ -789,14 +789,17 @@ MAPDL, which makes them integration tests. If your test
 requires a running MAPDL instance, you can use the PyMAPDL
 <a class="reference external" href="https://github.com/ansys/pymapdl/blob/fb5fb8b6201253f1bd56bdabee60a29abee8c7d8/tests/conftest.py#L254">mapdl</a> method in your function signature.
 It is executed upstream of each test and not within all tests.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_my_new_feature</span><span class="p">(</span><span class="n">mapdl</span><span class="p">):</span>  <span class="c1"># pass the &#39;mapdl&#39; fixture as an argument.</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_my_new_feature</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">cleared</span><span class="p">):</span>  <span class="c1"># pass the &#39;mapdl&#39; fixture as an argument.</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
     <span class="c1"># .... more code</span>
 
     <span class="k">return</span> <span class="kc">True</span>  <span class="c1"># if everything goes ok until here</span>
 </pre></div>
 </div>
-<p>MAPDLがローカルにインストールされていなくてもユニットテストを実行したい場合は、以下の環境変数を設定する必要があります。</p>
+<p>Passing the <code class="docutils literal notranslate"><span class="pre">cleared</span></code> fixture is also useful since it clears up the MAPDL database
+and configuration before performing the test.
+If you do not have MAPDL installed locally but still want to run the
+unit testing, you must set up the following environment variables.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-0">
