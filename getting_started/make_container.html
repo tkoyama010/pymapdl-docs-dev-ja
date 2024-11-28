@@ -618,7 +618,7 @@
 <section id="requirements">
 <h1>必要条件<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h1>
 <ul class="simple">
-<li><p>A linux machine, preferable with Ubuntu 18.04 or later.
+<li><p>A linux machine, preferable with Ubuntu 20.04 or later.
 CentOS Linux distribution is not supported anymore.
 This machine needs to have <a class="reference external" href="https://www.docker.com">Docker</a> installed.</p></li>
 <li><p>A valid Ansys account. Your Ansys reseller should have
@@ -675,8 +675,8 @@ cp<span class="w"> </span>./path-to-pymapdl/pymapdl/docker/Dockerfile
 cp<span class="w"> </span>./path-to-pymapdl/pymapdl/docker/.dockerignore
 
 <span class="c"># Creating env vars for the Dockerfile</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">VERSION</span><span class="o">=</span><span class="m">222</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">TAG</span><span class="o">=</span><span class="s2">&quot;V222&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">VERSION</span><span class="o">=</span><span class="m">242</span><span class="w">  </span>#<span class="w"> </span>MAPDL<span class="w"> </span>version
+<span class="nb">export</span><span class="w"> </span><span class="nv">TAG</span><span class="o">=</span><span class="s2">&quot;V242&quot;</span><span class="w">  </span>#<span class="w"> </span>docker<span class="w"> </span>container<span class="w"> </span>tag
 <span class="nb">export</span><span class="w"> </span><span class="nv">MAPDL_PATH</span><span class="o">=</span>/path_to_mapdl_installation/ansys_inc
 
 <span class="c"># Build Docker image</span>
