@@ -31,7 +31,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -649,11 +649,11 @@ However, this example verifies the
 stress concentration factor <span class="math notranslate nohighlight">\(K-t\)</span> when modeling opposite single
 notches in a finite width thin plate.</p>
 <p>First, start MAPDL as a service and disable all but error messages.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;ERROR&quot;</span><span class="p">)</span>
 </pre></div>
@@ -895,7 +895,7 @@ this example. Enable it by setting <code class="docutils literal notranslate"><s
 <span class="c1"># The function to compute the batch analysis is the following:</span>
 
 
-<span class="k">def</span> <span class="nf">compute_stress_con</span><span class="p">(</span><span class="n">ratio</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">compute_stress_con</span><span class="p">(</span><span class="n">ratio</span><span class="p">):</span>
     <span class="n">notch_depth</span> <span class="o">=</span> <span class="n">ratio</span> <span class="o">*</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span>
 
     <span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -1044,7 +1044,7 @@ C_4 &amp; -2.294 + 2.713 \sqrt{h/r} + 0.240 h/r &amp; 6.294 - 3.239 \sqrt{h/r} +
 </ul>
 <p>In this example the ratio is given as <span class="math notranslate nohighlight">\(2h/D\)</span>.</p>
 <p>These formulas are converted in the following function:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_teor_notch</span><span class="p">(</span><span class="n">ratio</span><span class="p">):</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calc_teor_notch</span><span class="p">(</span><span class="n">ratio</span><span class="p">):</span>
     <span class="n">notch_depth</span> <span class="o">=</span> <span class="n">ratio</span> <span class="o">*</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span>
     <span class="n">h</span> <span class="o">=</span> <span class="n">notch_depth</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">notch_radius</span>

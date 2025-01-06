@@ -31,7 +31,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -772,7 +772,7 @@ If you want to change the working directory, you can use the <code class="docuti
 <section id="launch-mapdl-in-the-windows-host-os">
 <h2>Launch MAPDL in the Windows host OS<a class="headerlink" href="#launch-mapdl-in-the-windows-host-os" title="Link to this heading">#</a></h2>
 <p>WindowsホストOSからMAPDLインストールを使用してMAPDLのインスタンスを起動できます。そのためには、次のコードを実行します:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span>
     <span class="n">exec_file</span><span class="o">=</span><span class="s2">&quot;/mnt/c/Program Files/ANSYS Inc/v241/ANSYS/bin/winx64/ANSYS241.exe&quot;</span><span class="p">,</span>
@@ -784,7 +784,7 @@ and WSL are connected with a virtual network where they both have different IP a
 PyMAPDL does its best to detect the IP address of the Windows host OS. For that, it parses
 the output given by the command <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">route</span></code> in WSL. However, if you find that this IP
 address is not correct, you can specify the IP address to connect to like this:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span>
     <span class="n">exec_file</span><span class="o">=</span><span class="s2">&quot;/mnt/c/Program Files/ANSYS Inc/v241/ANSYS/bin/winx64/ANSYS241.exe&quot;</span><span class="p">,</span>
@@ -803,7 +803,7 @@ or open a new issue in the <a class="reference external" href="https://github.co
 <h2>Connect to an MAPDL instance running in WSL<a class="headerlink" href="#connect-to-an-mapdl-instance-running-in-wsl" title="Link to this heading">#</a></h2>
 <p>To connect to the WSL instance that is running the MAPDL instance,
 you need to specify the IP address of the WSL instance:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">Mapdl</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">Mapdl</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">50053</span><span class="p">)</span>
 </pre></div>
 </div>

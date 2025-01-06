@@ -31,7 +31,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -638,8 +638,8 @@ generated from an external FEM tool or even modify the mass and stiffness matric
 within Python.</p>
 <p>First, solve the first 10 modes of a <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">x</span> <span class="pre">1</span> <span class="pre">x</span> <span class="pre">1</span></code> steel meter cube
 in MAPDL.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
 
@@ -672,7 +672,7 @@ in MAPDL.</p>
 <p>Next, load the mass and stiffness matrices that are stored by default
 in the <code class="file docutils literal notranslate"><span class="pre">&lt;jobname&gt;.full</span></code> file. First, create an instance of the
 <a class="reference external" href="https://math.docs.pyansys.com/version/stable/api/_autosummary/ansys.math.core.math.AnsMath.html#ansys.math.core.math.AnsMath" title="(in ansys-math-core v0.2.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlMath</span></code></a> class as <code class="docutils literal notranslate"><span class="pre">mm</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.math.core.math</span> <span class="kn">import</span> <span class="n">AnsMath</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.math.core.math</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnsMath</span>
 
 <span class="c1"># Importing and connecting PyAnsys Math to PyMAPDL</span>
 <span class="n">mm</span> <span class="o">=</span> <span class="n">AnsMath</span><span class="p">(</span><span class="n">mapdl</span><span class="p">)</span>

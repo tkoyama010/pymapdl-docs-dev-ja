@@ -31,7 +31,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -630,7 +630,7 @@ class for batch processing. This can be used for the batch processing of a
 set of input files, convergence analysis, or other batch related
 processes.</p>
 <p>This code creates a pool:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">MapdlPool</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapdlPool</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">MapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="go">&#39;MAPDL Pool with 10 active instances&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -639,7 +639,7 @@ processes.</p>
 <p>You can supply additional keyword arguments when creating the
 pool. This code creates several instances with one CPU each running
 at the current directory within their own isolated directories:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcmd</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">MapdlPool</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">nproc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">run_location</span><span class="o">=</span><span class="n">my_path</span><span class="p">)</span>
 <span class="go">Creating Pool: 100%|########| 10/10 [00:01&lt;00:00,  1.43it/s]</span>
@@ -648,7 +648,7 @@ at the current directory within their own isolated directories:</p>
 <p>Additionally, you can group already running MAPDL instances into an
 <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.pool.MapdlPool.html#ansys.mapdl.core.pool.MapdlPool" title="ansys.mapdl.core.pool.MapdlPool"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlPool</span></code></a> instance by specifying
 their ports when creating the pool.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">MapdlPool</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapdlPool</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span> <span class="o">=</span> <span class="n">MapdlPool</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="p">[</span><span class="mi">50082</span><span class="p">,</span> <span class="mi">50083</span><span class="p">,</span> <span class="mi">50084</span><span class="p">,</span> <span class="mi">50085</span><span class="p">,</span> <span class="mi">50086</span><span class="p">])</span>
 <span class="go">&#39;MAPDL Pool with 5 active instances&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pool</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -673,7 +673,7 @@ creating the pool.</p>
 <p>You can use the pool to run a set of pre-generated input files using the
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">MapdlPool.run_batch</span></code> method. For
 example, this code would run the first set of 20 verification files:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">examples</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">examples</span><span class="o">.</span><span class="n">vmfiles</span><span class="p">[</span><span class="s2">&quot;vm</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">)]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">outputs</span> <span class="o">=</span> <span class="n">pool</span><span class="o">.</span><span class="n">run_batch</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
@@ -692,7 +692,7 @@ output from MAPDL.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">completed_indices</span> <span class="o">=</span> <span class="p">[]</span>
 
 
-<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">input_file</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">input_file</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
     <span class="c1"># input_file, index = args</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">output</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="n">input_file</span><span class="p">)</span>
@@ -734,8 +734,8 @@ as follows:</p>
 is executing the block.
 Once the execution exits the context manager, the instance is set free or unlocked.
 This context manager is particularly interesting when using it with threads.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">MapdlPool</span>
-<span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapdlPool</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">threading</span><span class="w"> </span><span class="kn">import</span> <span class="n">Thread</span>
 
 <span class="n">loads</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1e6</span><span class="p">,</span> <span class="mf">2e6</span><span class="p">,</span> <span class="mf">3e6</span><span class="p">]</span>
 <span class="n">solutions</span> <span class="o">=</span> <span class="p">{</span><span class="n">each_load</span><span class="p">:</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">each_load</span> <span class="ow">in</span> <span class="n">loads</span><span class="p">}</span>
@@ -743,7 +743,7 @@ This context manager is particularly interesting when using it with threads.</p>
 <span class="n">pool</span> <span class="o">=</span> <span class="n">MapdlPool</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">calculate_model</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">load</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_model</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">load</span><span class="p">):</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;SOLID5&quot;</span><span class="p">)</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">block</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -776,7 +776,7 @@ This context manager is particularly interesting when using it with threads.</p>
     <span class="n">solutions</span><span class="p">[</span><span class="n">load</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">post_processing</span><span class="o">.</span><span class="n">nodal_displacement</span><span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 
 
-<span class="k">def</span> <span class="nf">threaded_function</span><span class="p">(</span><span class="n">load</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">threaded_function</span><span class="p">(</span><span class="n">load</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">pool</span><span class="o">.</span><span class="n">next</span><span class="p">()</span> <span class="k">as</span> <span class="n">mapdl</span><span class="p">:</span>
         <span class="n">value</span> <span class="o">=</span> <span class="n">calculate_model</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">load</span><span class="p">)</span>
 

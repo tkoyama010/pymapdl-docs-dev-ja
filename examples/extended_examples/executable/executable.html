@@ -31,7 +31,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -652,9 +652,9 @@ blades and a specific material configuration.</p>
 <span class="c1"># properties</span>
 
 <span class="c1"># Import packages</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="c1"># Launch MAPDL</span>
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
@@ -836,7 +836,7 @@ immediately before the function definition:</p>
 
 <span class="c1"># Script to calculate the first natural frequency of a rotor for a given set of</span>
 <span class="c1"># properties</span>
-<span class="kn">import</span> <span class="nn">click</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">click</span>
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -897,8 +897,8 @@ At the root of the project, execute the following command:</p>
 <p>Then, add the link to the <code class="docutils literal notranslate"><span class="pre">VERSION</span></code> file from the PyMAPDL package in the <code class="docutils literal notranslate"><span class="pre">cli_rotor.spec</span></code> file:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- mode: python ; coding: utf-8 -*-</span>
 
-<span class="hll"><span class="kn">import</span> <span class="nn">os</span>
-</span><span class="hll"><span class="kn">import</span> <span class="nn">importlib</span>
+<span class="hll"><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</span><span class="hll"><span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
 </span><span class="hll">
 </span><span class="hll"><span class="n">root</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="s2">&quot;ansys.api.mapdl&quot;</span><span class="p">)</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span>
 </span><span class="hll"><span class="c1"># The ``files_to_add`` list contains tuples that define the mapping between the original file paths and their corresponding paths within the executable folder.</span>

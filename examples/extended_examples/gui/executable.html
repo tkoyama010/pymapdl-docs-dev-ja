@@ -31,7 +31,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -630,12 +630,12 @@
 class from the <a class="reference external" href="https://github.com/pyvista/pyvistaqt">pyvistaqt</a> package and
 the <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.plotting.MapdlTheme.html#ansys.mapdl.core.plotting.MapdlTheme" title="ansys.mapdl.core.plotting.theme.MapdlTheme"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlTheme</span></code></a>
 class from the <a class="reference external" href="https://github.com/ansys/pymapdl">ansys-mapdl-core</a> package:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvistaqt</span> <span class="kn">import</span> <span class="n">QtInteractor</span>
-<span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">MapdlTheme</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pyvistaqt</span><span class="w"> </span><span class="kn">import</span> <span class="n">QtInteractor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapdlTheme</span>
 </pre></div>
 </div>
 <p>Then, add a plotter on the first tab:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_setup_tab_preprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">_setup_tab_preprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="o">...</span>
     <span class="c1"># PyVista frame in the window</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessing_plotter</span> <span class="o">=</span> <span class="n">QtInteractor</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="n">MapdlTheme</span><span class="p">())</span>
@@ -643,7 +643,7 @@ class from the <a class="reference external" href="https://github.com/ansys/pyma
 </pre></div>
 </div>
 <p>Add another plotter on the second tab:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_setup_tab_postprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">_setup_tab_postprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="o">...</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessing_plotter</span> <span class="o">=</span> <span class="n">QtInteractor</span><span class="p">(</span><span class="n">theme</span><span class="o">=</span><span class="n">MapdlTheme</span><span class="p">())</span>
     <span class="n">container_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_postprocessing_plotter</span><span class="p">)</span>
@@ -662,7 +662,7 @@ class from the <a class="reference external" href="https://github.com/ansys/pyma
 </pre></div>
 </div>
 <p>Finally, make sure to correctly close the VTK widgets when closing the app:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">closeEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">closeEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessing_plotter</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessing_plotter</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">event</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>  <span class="c1"># let the window close</span>
@@ -682,8 +682,8 @@ and it passed to it as an argument.</p>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">MainWindow</span></code> object stores the <a class="reference internal" href="../../../api/mapdl.html#ansys.mapdl.core.mapdl.MapdlBase" title="ansys.mapdl.core.mapdl.MapdlBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> object internally:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mapdl</span><span class="p">:</span> <span class="n">Mapdl</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mapdl</span><span class="p">:</span> <span class="n">Mapdl</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span> <span class="o">=</span> <span class="n">mapdl</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_setup_ui</span><span class="p">()</span>
@@ -693,7 +693,7 @@ and it passed to it as an argument.</p>
 <section id="simulation-setup">
 <h2>Simulation setup<a class="headerlink" href="#simulation-setup" title="Link to this heading">#</a></h2>
 <p>The model is built in <code class="docutils literal notranslate"><span class="pre">build_model</span></code> method:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">build_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">poisson_ratio</span><span class="p">,</span> <span class="n">young_modulus</span><span class="p">,</span> <span class="n">nnodes</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">force</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">build_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">poisson_ratio</span><span class="p">,</span> <span class="n">young_modulus</span><span class="p">,</span> <span class="n">nnodes</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">force</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">verify</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
@@ -724,7 +724,7 @@ and it passed to it as an argument.</p>
 </pre></div>
 </div>
 <p>And solved in <code class="docutils literal notranslate"><span class="pre">run_solver</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">run_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span><span class="w"> </span><span class="nf">run_solver</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="c1"># solve</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">slashsolu</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
@@ -759,7 +759,7 @@ and it passed to it as an argument.</p>
 <section id="develop-the-logic">
 <h2>Develop the logic<a class="headerlink" href="#develop-the-logic" title="Link to this heading">#</a></h2>
 <p>Connect each button to a function that contains the logic:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_setup_tab_preprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">_setup_tab_preprocessing</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="o">...</span>
     <span class="c1"># Solve button</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_solve_button</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Solve&quot;</span><span class="p">)</span>

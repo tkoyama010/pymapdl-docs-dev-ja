@@ -31,7 +31,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -797,7 +797,7 @@ MAPDL, which makes them integration tests. If your test
 requires a running MAPDL instance, you can use the PyMAPDL
 <a class="reference external" href="https://github.com/ansys/pymapdl/blob/fb5fb8b6201253f1bd56bdabee60a29abee8c7d8/tests/conftest.py#L254">mapdl</a> method in your function signature.
 It is executed upstream of each test and not within all tests.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_my_new_feature</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">cleared</span><span class="p">):</span>  <span class="c1"># pass the &#39;mapdl&#39; fixture as an argument.</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_my_new_feature</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">cleared</span><span class="p">):</span>  <span class="c1"># pass the &#39;mapdl&#39; fixture as an argument.</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
     <span class="c1"># .... more code</span>
 
@@ -852,12 +852,12 @@ the unit tests and integration tests for the
 <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.component.ComponentManager.html#ansys.mapdl.core.component.ComponentManager" title="ansys.mapdl.core.component.ComponentManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">ComponentManager</span></code></a> class.
 These tests are just some of the many in the <a class="reference external" href="https://github.com/ansys/pymapdl/tree/main/tests">test directory</a>.</p>
 <p>Here are some examples of how you use <code class="docutils literal notranslate"><span class="pre">pytest</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 
 
 <span class="c1"># &#39;cube_geom_and_mesh&#39; is another fixture defined in &#39;conftest.py&#39;</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="s2">&quot;function&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">basic_components</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">cube_geom_and_mesh</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">basic_components</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">cube_geom_and_mesh</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Given a model in &#39;cube_geom_and_mesh&#39;, define some components to work with later.&quot;&quot;&quot;</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="s2">&quot;mycomp1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="s2">&quot;mycomp2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;KP&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
@@ -866,15 +866,15 @@ These tests are just some of the many in the <a class="reference external" href=
     <span class="n">mapdl</span><span class="o">.</span><span class="n">cmsel</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;mycomp2&quot;</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">test_dunder_methods_keys</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">basic_components</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_dunder_methods_keys</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">basic_components</span><span class="p">):</span>
     <span class="k">assert</span> <span class="p">[</span><span class="s2">&quot;MYCOMP1&quot;</span><span class="p">,</span> <span class="s2">&quot;MYCOMP2&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">list</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">names</span><span class="p">())</span>
 
 
-<span class="k">def</span> <span class="nf">test_dunder_methods_types</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">basic_components</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_dunder_methods_types</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">basic_components</span><span class="p">):</span>
     <span class="k">assert</span> <span class="p">[</span><span class="s2">&quot;NODE&quot;</span><span class="p">,</span> <span class="s2">&quot;KP&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">list</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">types</span><span class="p">())</span>
 
 
-<span class="k">def</span> <span class="nf">test_dunder_methods_items</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">basic_components</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_dunder_methods_items</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">basic_components</span><span class="p">):</span>
     <span class="k">assert</span> <span class="p">[(</span><span class="s2">&quot;MYCOMP1&quot;</span><span class="p">,</span> <span class="s2">&quot;NODE&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;MYCOMP2&quot;</span><span class="p">,</span> <span class="s2">&quot;KP&quot;</span><span class="p">)]</span> <span class="o">==</span> <span class="nb">list</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -898,7 +898,7 @@ to merge code changes.</p>
 <p>To show how the coverage works, assume that you have
 this library:</p>
 <p><strong>Awesome library</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_report_colors</span><span class="p">(</span><span class="n">theme</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_report_colors</span><span class="p">(</span><span class="n">theme</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">theme</span> <span class="o">==</span> <span class="s2">&quot;weather&quot;</span><span class="p">:</span>
         <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span> <span class="s2">&quot;grey&quot;</span><span class="p">]</span>
     <span class="k">elif</span> <span class="n">theme</span> <span class="o">==</span> <span class="s2">&quot;traffic&quot;</span><span class="p">:</span>
@@ -911,22 +911,22 @@ this library:</p>
 </div>
 <p><strong>テスト</strong></p>
 <p>You can opt to run the tests with this configuration:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_get_report_colors</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_get_report_colors</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">get_report_colors</span><span class="p">(</span><span class="s2">&quot;weather&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span> <span class="s2">&quot;grey&quot;</span><span class="p">]</span>
     <span class="k">assert</span> <span class="n">get_report_colors</span><span class="p">(</span><span class="s2">&quot;traffic&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">]</span>
     <span class="k">assert</span> <span class="n">get_report_colors</span><span class="p">(</span><span class="s2">&quot;other&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Or, if a method is a bit more complex, you can split the case in different tests:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_get_report_colors_weather</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_get_report_colors_weather</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">get_report_colors</span><span class="p">(</span><span class="s2">&quot;weather&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span> <span class="s2">&quot;grey&quot;</span><span class="p">]</span>
 
 
-<span class="k">def</span> <span class="nf">test_get_report_colors_traffic</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_get_report_colors_traffic</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">get_report_colors</span><span class="p">(</span><span class="s2">&quot;traffic&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">]</span>
 
 
-<span class="k">def</span> <span class="nf">test_get_report_colors_other</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_get_report_colors_other</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">get_report_colors</span><span class="p">(</span><span class="s2">&quot;other&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -945,7 +945,7 @@ make the code more readable, and easier to reuse.</p>
         <span class="p">],</span>
     <span class="p">],</span>
 <span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_get_report_color</span><span class="p">(</span><span class="n">theme</span><span class="p">,</span> <span class="n">output</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_get_report_color</span><span class="p">(</span><span class="n">theme</span><span class="p">,</span> <span class="n">output</span><span class="p">):</span>
     <span class="k">assert</span> <span class="n">get_report_colors</span><span class="p">(</span><span class="n">theme</span><span class="p">)</span> <span class="o">==</span> <span class="n">output</span>
 </pre></div>
 </div>

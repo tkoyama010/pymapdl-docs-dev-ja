@@ -31,7 +31,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -629,7 +629,7 @@ on a remote machine.</p>
 <h2>ローカルのMAPDLインスタンスでPyMAPDLを起動する<a class="headerlink" href="#launch-pymapdl-with-a-local-mapdl-instance" title="Link to this heading">#</a></h2>
 <p>You can use the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>
 function to start MAPDL and automatically connect to it:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="p">)</span>
 <span class="go">Product:             Ansys Mechanical Enterprise</span>
@@ -703,14 +703,14 @@ For more information, see <a class="reference internal" href="../user_guide/cli.
 <span id="connect-grpc-madpl-session"></span><h3>Connect to the local MAPDL instance<a class="headerlink" href="#connect-to-the-local-mapdl-instance" title="Link to this heading">#</a></h3>
 <p>An MAPDL gRPC server can be connected to from the same host by using
 this code:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">Mapdl</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">Mapdl</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>The preceding code assumes that your MAPDL service is running locally on the default IP address
 (<code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code>) and on the default port (<code class="docutils literal notranslate"><span class="pre">50052</span></code>).</p>
 <p>You can also use the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> method to connect to an already launched MAPDL instance by setting the <code class="docutils literal notranslate"><span class="pre">start_instance</span></code> argument to <code class="docutils literal notranslate"><span class="pre">False</span></code>:</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">start_instance</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -744,7 +744,7 @@ When running for the first time, PyMAPDL requests the
 location of the MAPDL executable if it cannot automatically find it.</p>
 <p>You can test your installation of PyMAPDL and set it up by running
 the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> function:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">()</span>
 </pre></div>
@@ -773,7 +773,7 @@ are prompted for the location of the MAPDL executable.</p>
 <p>The settings file is stored locally, which means that you are not prompted
 to enter the path again. If you must change the default Ansys path
 (meaning change the default version of MAPDL), run this code:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl</span> <span class="kn">import</span> <span class="n">core</span> <span class="k">as</span> <span class="n">pymapdl</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl</span><span class="w"> </span><span class="kn">import</span> <span class="n">core</span> <span class="k">as</span> <span class="n">pymapdl</span>
 
 <span class="n">new_path</span> <span class="o">=</span> <span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Program Files</span><span class="se">\\</span><span class="s2">ANSYS Inc</span><span class="se">\\</span><span class="s2">v241</span><span class="se">\\</span><span class="s2">ANSYS</span><span class="se">\\</span><span class="s2">bin</span><span class="se">\\</span><span class="s2">winx64</span><span class="se">\\</span><span class="s2">ansys241.exe&quot;</span>
 <span class="n">pymapdl</span><span class="o">.</span><span class="n">change_default_ansys_path</span><span class="p">(</span><span class="n">new_path</span><span class="p">)</span>
@@ -785,7 +785,7 @@ to enter the path again. If you must change the default Ansys path
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 <label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-4">
 Windows</label><div class="sd-tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span>
     <span class="n">exec_file</span><span class="o">=</span><span class="s2">&quot;C://Program Files//ANSYS Inc//v241//ANSYS//bin//winx64//ansys241.exe&quot;</span>
@@ -796,7 +796,7 @@ Windows</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
 <label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-5">
 Linux</label><div class="sd-tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">exec_file</span><span class="o">=</span><span class="s2">&quot;/usr/ansys_inc/v241/ansys/bin/ansys241&quot;</span><span class="p">)</span>
 </pre></div>
@@ -809,7 +809,7 @@ keyword argument:</p>
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
 <label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-6">
 Windows</label><div class="sd-tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">custom_exec</span> <span class="o">=</span> <span class="s2">&quot;C://Program Files//ANSYS Inc//v241//ANSYS//bin//winx64//ansys241.exe&quot;</span>
 <span class="n">add_switch</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot; -custom </span><span class="si">{</span><span class="n">custom_exec</span><span class="si">}</span><span class="s2">&quot;</span>
@@ -820,7 +820,7 @@ Windows</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
 <label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-7">
 Linux</label><div class="sd-tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="n">custom_exec</span> <span class="o">=</span> <span class="s2">&quot;/usr/ansys_inc/v241/ansys/bin/ansys241t&quot;</span>
 <span class="n">add_switch</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot; -custom </span><span class="si">{</span><span class="n">custom_exec</span><span class="si">}</span><span class="s2">&quot;</span>

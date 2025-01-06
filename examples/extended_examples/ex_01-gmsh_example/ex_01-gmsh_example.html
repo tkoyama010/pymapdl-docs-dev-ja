@@ -31,7 +31,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -667,7 +667,7 @@ to a GIF file named <code class="docutils literal notranslate"><span class="pre"
 <span class="linenos">21</span><span class="c1"># SOFTWARE.</span>
 <span class="linenos">22</span>
 <span class="linenos">23</span><span class="sd">&quot;&quot;&quot;Using ``gmsh``, read the STEP file, mesh it, and save it as a MSH file.&quot;&quot;&quot;</span>
-<span class="linenos">24</span><span class="kn">import</span> <span class="nn">gmsh</span>
+<span class="linenos">24</span><span class="kn">import</span><span class="w"> </span><span class="nn">gmsh</span>
 <span class="linenos">25</span>
 <span class="linenos">26</span><span class="n">gmsh</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
 <span class="linenos">27</span><span class="n">gmsh</span><span class="o">.</span><span class="n">option</span><span class="o">.</span><span class="n">setNumber</span><span class="p">(</span><span class="s2">&quot;General.Terminal&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -721,8 +721,8 @@ to a GIF file named <code class="docutils literal notranslate"><span class="pre"
 <span class="linenos">24</span><span class="sd">This script convert the file in `gmsh` format to ANSYS `CDB` format.</span>
 <span class="linenos">25</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos">26</span>
-<span class="linenos">27</span><span class="kn">from</span> <span class="nn">ansys.mapdl.reader</span> <span class="kn">import</span> <span class="n">save_as_archive</span>
-<span class="linenos">28</span><span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="linenos">27</span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.reader</span><span class="w"> </span><span class="kn">import</span> <span class="n">save_as_archive</span>
+<span class="linenos">28</span><span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 <span class="linenos">29</span>
 <span class="linenos">30</span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;from_gmsh.msh&quot;</span>
 <span class="linenos">31</span><span class="n">mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">read_meshio</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
@@ -759,7 +759,7 @@ to a GIF file named <code class="docutils literal notranslate"><span class="pre"
 <span class="linenos">23</span><span class="sd">&quot;&quot;&quot;Import the CDB database, setup modal analysis and run it.&quot;&quot;&quot;</span>
 <span class="linenos">24</span>
 <span class="linenos">25</span>
-<span class="linenos">26</span><span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="linenos">26</span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="linenos">27</span>
 <span class="linenos">28</span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">override</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">additional_switches</span><span class="o">=</span><span class="s2">&quot;-smp&quot;</span><span class="p">)</span>
 <span class="linenos">29</span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;archive.cdb&quot;</span>

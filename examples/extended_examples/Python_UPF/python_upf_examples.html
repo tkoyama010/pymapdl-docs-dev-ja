@@ -31,7 +31,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -686,16 +686,16 @@ with the theoretical result.</p>
 </section>
 <section id="usermat-py-file">
 <h3><code class="docutils literal notranslate"><span class="pre">usermat.py</span></code> file<a class="headerlink" href="#usermat-py-file" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">grpc</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">mapdl</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">grpc</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mapdl</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 
-<span class="k">class</span> <span class="nc">MapdlUserService</span><span class="p">(</span><span class="n">MapdlUser_pb2_grpc</span><span class="o">.</span><span class="n">MapdlUserServiceServicer</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MapdlUserService</span><span class="p">(</span><span class="n">MapdlUser_pb2_grpc</span><span class="o">.</span><span class="n">MapdlUserServiceServicer</span><span class="p">):</span>
     <span class="c1">#   #################################################################</span>
-    <span class="k">def</span> <span class="nf">UserMat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">UserMat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
         <span class="n">ncomp</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">ncomp</span>
         <span class="n">nDirect</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">nDirect</span>
 
@@ -726,7 +726,7 @@ with the theoretical result.</p>
         <span class="k">return</span> <span class="n">response</span>
 
 
-<span class="k">def</span> <span class="nf">usermat3d</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">usermat3d</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
     <span class="n">ZERO</span> <span class="o">=</span> <span class="mf">0.0</span>
     <span class="n">HALF</span> <span class="o">=</span> <span class="mf">0.5</span>
     <span class="n">THIRD</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="mf">3.0</span>
@@ -922,16 +922,16 @@ temperature. The final stress is obtained to verify stress relaxation.</p>
 </section>
 <section id="usrshift-py-file">
 <h3><code class="docutils literal notranslate"><span class="pre">usrshift.py</span></code> file<a class="headerlink" href="#usrshift-py-file" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">grpc</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">from</span> <span class="nn">mapdl</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">grpc</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mapdl</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 
-<span class="k">class</span> <span class="nc">MapdlUserService</span><span class="p">(</span><span class="n">MapdlUser_pb2_grpc</span><span class="o">.</span><span class="n">MapdlUserServiceServicer</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MapdlUserService</span><span class="p">(</span><span class="n">MapdlUser_pb2_grpc</span><span class="o">.</span><span class="n">MapdlUserServiceServicer</span><span class="p">):</span>
     <span class="c1">#   #################################################################</span>
 
-    <span class="k">def</span> <span class="nf">UsrShift</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">UsrShift</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
         <span class="n">response</span> <span class="o">=</span> <span class="n">MapdlUser_pb2</span><span class="o">.</span><span class="n">UsrShiftResponse</span><span class="p">()</span>
         <span class="n">one</span> <span class="o">=</span> <span class="mf">1.0</span>
         <span class="n">half</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -1038,18 +1038,18 @@ the reference.</p>
 </section>
 <section id="userhyper-py-file">
 <h3><code class="docutils literal notranslate"><span class="pre">userhyper.py</span></code> file<a class="headerlink" href="#userhyper-py-file" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">grpc</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">mapdl</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">grpc</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mapdl</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">firstcall</span> <span class="o">=</span> <span class="mi">1</span>
 
 
-<span class="k">class</span> <span class="nc">MapdlUserService</span><span class="p">(</span><span class="n">MapdlUser_pb2_grpc</span><span class="o">.</span><span class="n">MapdlUserServiceServicer</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MapdlUserService</span><span class="p">(</span><span class="n">MapdlUser_pb2_grpc</span><span class="o">.</span><span class="n">MapdlUserServiceServicer</span><span class="p">):</span>
     <span class="c1">#   #################################################################</span>
-    <span class="k">def</span> <span class="nf">UserHyper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">UserHyper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
         <span class="k">global</span> <span class="n">firstcall</span>
         <span class="k">if</span> <span class="n">firstcall</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&gt;&gt; Using Python UserHyper function</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>

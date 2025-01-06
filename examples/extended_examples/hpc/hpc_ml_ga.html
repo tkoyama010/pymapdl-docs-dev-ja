@@ -31,7 +31,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -645,7 +645,7 @@ center.</p>
 It is made of <code class="docutils literal notranslate"><span class="pre">BEAM188</span></code> elements that span for 2.2 meters,
 and it fully clamped at both ends.</p>
 <p>The PyMAPDL beam model is defined in the <code class="docutils literal notranslate"><span class="pre">calculate_beam()</span></code> function as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_beam</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">force</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate_beam</span><span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">force</span><span class="p">):</span>
     <span class="c1"># Initialize</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
@@ -707,7 +707,7 @@ all the chromosomes across all the populations.
 For this reason, to speed up the process, it is desirable to have as many MAPDL instances as possible so that each one can calculate one chromosome fit function.</p>
 <p>To manage multiple MAPDL instances, the best approach is to use the <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.pool.MapdlPool.html#ansys.mapdl.core.pool.MapdlPool" title="ansys.mapdl.core.pool.MapdlPool"><code class="xref py py-class docutils literal notranslate"><span class="pre">MapdlPool</span></code></a> class.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importing packages</span>
-<span class="kn">from</span> <span class="nn">ansys.mapdl.core</span> <span class="kn">import</span> <span class="n">MapdlPool</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapdlPool</span>
 
 <span class="c1"># Start pool</span>
 <span class="c1"># Number of instances should be equal to number of CPUs</span>
@@ -786,11 +786,11 @@ equal to the number of instances.</p></li>
 <section id="helper-functions">
 <h3>Helper functions<a class="headerlink" href="#helper-functions" title="Link to this heading">#</a></h3>
 <p>Additionally, for printing purposes, several helper functions are defined:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 
 <span class="c1"># To calculate the fitness criteria model solution and target displacement</span>
-<span class="k">def</span> <span class="nf">calculate_fitness_criteria</span><span class="p">(</span><span class="n">model_output</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_fitness_criteria</span><span class="p">(</span><span class="n">model_output</span><span class="p">):</span>
     <span class="c1"># we add a constant (target/1E8) here to avoid dividing by zero</span>
     <span class="k">return</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span>
         <span class="mi">1</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">model_output</span> <span class="o">-</span> <span class="n">target_displacement</span><span class="p">)</span> <span class="o">+</span> <span class="n">target_displacement</span> <span class="o">/</span> <span class="mf">1e10</span><span class="p">)</span>
@@ -798,14 +798,14 @@ equal to the number of instances.</p></li>
 
 
 <span class="c1"># To calculate the error in the model solution with respect to the target displacement</span>
-<span class="k">def</span> <span class="nf">calculate_error</span><span class="p">(</span><span class="n">model_output</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_error</span><span class="p">(</span><span class="n">model_output</span><span class="p">):</span>
     <span class="c1"># Only for visualization purposes</span>
     <span class="k">return</span> <span class="mf">100.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">model_output</span> <span class="o">-</span> <span class="n">target_displacement</span><span class="p">)</span> <span class="o">/</span> <span class="n">target_displacement</span>
 
 
 <span class="c1"># This function is executed at the end of the fitness stage (all chromosomes are calculated),</span>
 <span class="c1"># and it is used to do some printing.</span>
-<span class="k">def</span> <span class="nf">on_fitness</span><span class="p">(</span><span class="n">pyga_instance</span><span class="p">,</span> <span class="n">solution</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_fitness</span><span class="p">(</span><span class="n">pyga_instance</span><span class="p">,</span> <span class="n">solution</span><span class="p">):</span>
     <span class="c1"># This attribute does not exist. It is created after the GA class has been initialized.</span>
     <span class="n">pyga_instance</span><span class="o">.</span><span class="n">igen</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">GENERATION </span><span class="si">{</span><span class="n">pyga_instance</span><span class="o">.</span><span class="n">igen</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -816,7 +816,7 @@ equal to the number of instances.</p></li>
 <section id="fitness-function">
 <h3>Fitness function<a class="headerlink" href="#fitness-function" title="Link to this heading">#</a></h3>
 <p>After all helper functions are defined, the fitness function can be defined:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fitness_func</span><span class="p">(</span><span class="n">ga_instance</span><span class="p">,</span> <span class="n">solution</span><span class="p">,</span> <span class="n">solution_idx</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fitness_func</span><span class="p">(</span><span class="n">ga_instance</span><span class="p">,</span> <span class="n">solution</span><span class="p">,</span> <span class="n">solution_idx</span><span class="p">):</span>
     <span class="c1"># Query a free MAPDL instance</span>
 
     <span class="k">with</span> <span class="n">pool</span><span class="o">.</span><span class="n">next</span><span class="p">(</span><span class="n">return_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="p">(</span><span class="n">mapdl</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
@@ -851,7 +851,7 @@ function.</p>
 population between -10% and 10%. The random chromosomes are selected independently.
 This is to reduce the possibility of the function converging to a local minimal.</p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mutation_func</span><span class="p">(</span><span class="n">offspring</span><span class="p">,</span> <span class="n">ga_instance</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mutation_func</span><span class="p">(</span><span class="n">offspring</span><span class="p">,</span> <span class="n">ga_instance</span><span class="p">):</span>
     <span class="n">average</span> <span class="o">=</span> <span class="n">offspring</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
     <span class="n">max_value</span> <span class="o">=</span> <span class="n">offspring</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">average</span>
     <span class="n">min_value</span> <span class="o">=</span> <span class="n">offspring</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="n">average</span>
@@ -874,7 +874,7 @@ This is to reduce the possibility of the function converging to a local minimal.
 <h3>Model assembly<a class="headerlink" href="#model-assembly" title="Link to this heading">#</a></h3>
 <p>Use the GA class to assemble all the parameters and functions
 created to run the simulation:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pygad</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pygad</span>
 
 <span class="n">ga_instance</span> <span class="o">=</span> <span class="n">pygad</span><span class="o">.</span><span class="n">GA</span><span class="p">(</span>
     <span class="c1"># Main options</span>
@@ -911,7 +911,7 @@ created to run the simulation:</p>
 <section id="simulation">
 <h2>Simulation<a class="headerlink" href="#simulation" title="Link to this heading">#</a></h2>
 <p>Once the model is set, use the <code class="docutils literal notranslate"><span class="pre">run()</span></code> method to start the simulation:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="n">t0</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
 
@@ -926,7 +926,7 @@ created to run the simulation:</p>
 <h2>Plot fitness and genes values<a class="headerlink" href="#plot-fitness-and-genes-values" title="Link to this heading">#</a></h2>
 <p>You can plot the solution fitness across generations and the evolution of gene
 values using the following code:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
 <span class="n">ga_instance</span><span class="o">.</span><span class="n">plot_fitness</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Applied force&quot;</span><span class="p">],</span> <span class="n">save_dir</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
 
@@ -957,7 +957,7 @@ values using the following code:</p>
 <h2>Model storage<a class="headerlink" href="#model-storage" title="Link to this heading">#</a></h2>
 <p>You can store the model in a file for later reuse:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># To save the model data:</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="c1"># Save the GA instance</span>
 <span class="c1"># In the filename to save the instance to, do not specify the extension.</span>
