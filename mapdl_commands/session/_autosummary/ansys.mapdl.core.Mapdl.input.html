@@ -644,13 +644,14 @@ chunk and less chunks, but if the command is short, will
 wait until time_step_stream is finished leading to a long
 execution time.</p>
 <p>Due to stability issues, the default time_step_stream is
-dependent on verbosity.  The defaults are:</p>
+dependent on the OS MAPDL is running on.  The defaults are:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">verbose=True</span></code>: <code class="docutils literal notranslate"><span class="pre">time_step_stream=500</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">verbose=False</span></code>: <code class="docutils literal notranslate"><span class="pre">time_step_stream=50</span></code></p></li>
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">time_step_stream=500</span></code></p></li>
+<li><p>Linux: <code class="docutils literal notranslate"><span class="pre">time_step_stream=100</span></code></p></li>
 </ul>
 <p>These defaults will be ignored if <code class="docutils literal notranslate"><span class="pre">time_step_stream</span></code> is
-manually set.</p>
+manually set. See the <em>Examples</em> section to learn how to change
+the default value globally.</p>
 </dd>
 <dt><strong>orig_cmd</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Original command. There are some cases, were input is
 used to send the file to the grpc server but then we want
@@ -697,6 +698,11 @@ Workbench.</p>
 <span class="go">&#39;inputtrigger.inp&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">non_interactive</span><span class="p">:</span>
 <span class="go">        mapdl.run(&quot;/input,inputtrigger,inp&quot;) # This inputs &#39;myinput.inp&#39;</span>
+</pre></div>
+</div>
+<p>You can also change them globably using:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">mapdl_grpc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl_grpc</span><span class="o">.</span><span class="n">DEFAULT_TIME_STEP_STREAM</span><span class="o">=</span><span class="mi">100</span> <span class="c1"># in milliseconds</span>
 </pre></div>
 </div>
 </dd></dl>
