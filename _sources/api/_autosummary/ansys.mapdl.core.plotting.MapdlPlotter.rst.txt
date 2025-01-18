@@ -54,6 +54,7 @@
    .. autosummary::
       :toctree:
    
+      MapdlPlotter.backend
       MapdlPlotter.meshes
       MapdlPlotter.scene
    
