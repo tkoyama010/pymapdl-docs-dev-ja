@@ -789,7 +789,7 @@ consists of generating a large number of <span class="math notranslate nohighlig
 distribution and for each of these samples solving the deterministic problem:</p>
 <div class="math notranslate nohighlight">
 \[\pmb{K}(\pmb{\xi}_{(i)})\pmb{U}(\pmb{\xi}_{(i)}) = \pmb{F}(\pmb{\xi}_{(i)})\]</div>
-<p>The next step is to collect the <span class="math notranslate nohighlight">\(N_{sim}\)</span> response vectors <span class="math notranslate nohighlight">\(\pmb{U} := \pmb{U}(\pmb{\xi}_{(i)})\)</span> and perform a statistical
+<p>The next step is to collect the <span class="math notranslate nohighlight">\(N_{sim}\)</span> response vectors <span class="math notranslate nohighlight">\(\pmb{U_i} := \pmb{U}(\pmb{\xi}_{(i)})\)</span> and perform a statistical
 postprocessing to extract useful information such as mean value, variance, histogram, and
 empirical PDF.</p>
 </section>
@@ -802,7 +802,7 @@ empirical PDF.</p>
 <p><span class="caption-text">A two-dimensional cantilever structure under a point load.</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p><span class="math notranslate nohighlight">\(P\)</span> is a random variable following the Gaussian distribution <span class="math notranslate nohighlight">\(\mathcal{N}(0,1)\)</span> (kN), and the modulus of elasticity is a
+<p><span class="math notranslate nohighlight">\(P\)</span> is a random variable following the Gaussian distribution <span class="math notranslate nohighlight">\(\mathcal{N}(10,2)\)</span> (kN), and the modulus of elasticity is a
 random field given by this expression:</p>
 <div class="math notranslate nohighlight">
 \[E(x) = 10^5(1+0.10f(x)) (kN/m^2)\]</div>
@@ -1244,8 +1244,8 @@ is then performed on these realizations.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot of ensemble variance</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ensemble_var_with_realization</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Actual variance&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">1e8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Computed variance&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ensemble_var_with_realization</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Computed variance&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">1e8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Actual variance&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;No of realizations&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Ensemble varianc of $E$&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
@@ -1284,7 +1284,37 @@ chosen for this implementation. The method chosen becomes insignificant with a f
 results.</p>
 </div>
 <p>This function implements the preceding steps:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Single-threaded approach</span>
+<span class="c1"># Function for running the simulations</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">run_simulations</span><span class="p">(</span>
+    <span class="n">length</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">height</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">thickness</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">mesh_size</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">no_of_simulations</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Run desired number of simulations to obtain response data.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    length : float</span>
+<span class="sd">        Length of the cantilever structure.</span>
+<span class="sd">    height : float</span>
+<span class="sd">        Height of the cantilever structure.</span>
+<span class="sd">    thickness : float</span>
+<span class="sd">        Thickness of the cantilever structure.</span>
+<span class="sd">    mesh_size : float</span>
+<span class="sd">        Desired mesh size.</span>
+<span class="sd">    no_of_simulations : int</span>
+<span class="sd">       Number of simulations to run.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    np.ndarray</span>
+<span class="sd">        Array containing simulation results.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 
     <span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 
