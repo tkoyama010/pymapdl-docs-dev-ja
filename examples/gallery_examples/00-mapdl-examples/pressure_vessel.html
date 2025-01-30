@@ -757,7 +757,7 @@ accessing the result file using the legacy file reader
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># access the result</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">result</span>
 
-<span class="c1"># Get the von Mises stess and show that this is equivalent to the</span>
+<span class="c1"># Get the von Mises stress and show that this is equivalent to the</span>
 <span class="c1"># stress obtained from MAPDL.</span>
 <span class="n">nnum</span><span class="p">,</span> <span class="n">stress</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">principal_nodal_stress</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">von_mises</span> <span class="o">=</span> <span class="n">stress</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># von-Mises stress is the right most column</span>
