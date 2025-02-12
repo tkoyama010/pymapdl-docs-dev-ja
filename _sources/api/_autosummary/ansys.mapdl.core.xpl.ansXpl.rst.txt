@@ -67,4 +67,11 @@
 
    
    
+   .. rubric:: Attributes
+
+   .. autosummary::
+      :toctree:
+   
+      ansXpl.opened
+   
    
