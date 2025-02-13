@@ -666,35 +666,44 @@
 <li><p><strong>Use branches</strong>: Create branches for different features, bug fixes, or
 experiments. This keeps changes isolated and facilitates parallel
 development. The CI/CD checks that the branch name is compliant. For example,
-the branch name must start with a prefix and a backslash.
+the branch name must start with a lower case prefix and a backslash.
 The allowed prefixes are:</p>
 <ul class="simple">
-<li><p><cite>fix/</cite> - Bug fixes.</p></li>
-<li><p><cite>feat/</cite> - Changes that introduce a new feature or significant addition.</p></li>
-<li><p><cite>maint/</cite> - General maintenance of the repository. For instance, improving the CI/CD workflows.</p></li>
-<li><p><cite>docs/</cite> - Improves documentation and examples.</p></li>
-<li><p><cite>no-ci/</cite> - (Not applicable to PyMAPDL) In some repositories, branches with this prefix do not trigger CI/CD.</p></li>
-<li><p><cite>test/</cite> - Improvements or changes to testing.</p></li>
-<li><p><cite>testing/</cite> - For testing and debugging. It should not be used for branches that are going to be merged to <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li>
-<li><p><cite>release/</cite> - Contains the released versions changes.</p></li>
+<li><p><cite>build/</cite> - Changes that affect the build system or external dependencies (such as to <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">make</span></code>).</p></li>
+<li><p><cite>ci/</cite> - Changes to the CI/CD configuration files and scripts.</p></li>
 <li><p><cite>dependabot/</cite> - Created by Dependabot.</p></li>
+<li><p><cite>docs/</cite> - Improves documentation and examples.</p></li>
+<li><p><cite>feat/</cite> - Changes that introduce a new feature or significant addition.</p></li>
+<li><p><cite>fix/</cite> - Bug fixes.</p></li>
 <li><p><cite>junk/</cite> - Other purposes. It should not be used for branches that are going to be merged to <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li>
+<li><p><cite>maint/</cite> - General maintenance of the repository.</p></li>
+<li><p><cite>no-ci/</cite> - (Not applicable to PyMAPDL) In some repositories, branches with this prefix do not trigger CI/CD.</p></li>
+<li><p><cite>perf/</cite> - A code change that improves performance.</p></li>
+<li><p><cite>refactor/</cite> - A code change that neither fixes a bug nor adds a feature.</p></li>
+<li><p><cite>release/</cite> - Contains the released versions changes.</p></li>
+<li><p><cite>revert/</cite> - Reverts a previous commit.</p></li>
+<li><p><cite>testing/</cite> - For testing and debugging. It can be used to add new tests.</p></li>
 </ul>
+<p><strong>Note</strong>: For more information, see <a class="reference internal" href="#table-prefix">Table of allowed prefix</a>.</p>
 </li>
 <li><p><strong>説明的なコミットメッセージを書く</strong>: 変更の目的と背景を説明する、明確で簡潔なコミットメッセージを書きましょう。 一貫したスタイルに従ってください。</p>
 <ul class="simple">
-<li><p><cite>fix:</cite> - Bug fixes.</p></li>
-<li><p><cite>feat:</cite> - Changes that introduce a new feature or significant addition.</p></li>
-<li><p><cite>docs:</cite> - Changes pertaining only to documentation.</p></li>
-<li><p><cite>style:</cite> - Changes that do not affect the meaning of the code (such as white space, formatting, and missing semicolons).</p></li>
-<li><p><cite>refactor:</cite> - A code change that neither fixes a bug nor adds a feature.</p></li>
-<li><p><cite>perf:</cite> - A code change that improves performance.</p></li>
-<li><p><cite>test:</cite> - Improvements or changes to testing.</p></li>
 <li><p><cite>build:</cite> - Changes that affect the build system or external dependencies (such as to <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">make</span></code>).</p></li>
+<li><p><cite>chore:</cite> - Other changes that don't modify the code. It can be used as a fall back general branch name.</p></li>
 <li><p><cite>ci:</cite> - Changes to the CI/CD configuration files and scripts.</p></li>
-<li><p><cite>chore:</cite> - Other changes that don't modify the code (such as releasing and versioning).</p></li>
+<li><p><cite>docs:</cite> - Improves documentation and examples.</p></li>
+<li><p><cite>feat:</cite> - Changes that introduce a new feature or significant addition.</p></li>
+<li><p><cite>fix:</cite> - Bug fixes.</p></li>
+<li><p><cite>maint:</cite> - General maintenance of the repository.</p></li>
+<li><p><cite>no-ci:</cite> - (Not applicable to PyMAPDL) In some repositories, branches with this prefix do not trigger CI/CD.</p></li>
+<li><p><cite>perf:</cite> - A code change that improves performance.</p></li>
+<li><p><cite>refactor:</cite> - A code change that neither fixes a bug nor adds a feature.</p></li>
+<li><p><cite>release:</cite> - Contains the released versions changes.</p></li>
 <li><p><cite>revert:</cite> - Reverts a previous commit.</p></li>
+<li><p><cite>style:</cite> - Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc).</p></li>
+<li><p><cite>testing:</cite> - For testing and debugging. It can be used to add new tests.</p></li>
 </ul>
+<p><strong>Note</strong>: For more information, see <a class="reference internal" href="#table-prefix">Table of allowed prefix</a>.</p>
 </li>
 <li><p><strong>頻繁にコミットする</strong>: 小さくて意味のあるコミットを頻繁に行う。1回のコミットで無関係な変更を大量に行うことは避けましょう。</p></li>
 <li><p><strong>プッシュする前にプルしてください</strong>: 競合を避けるため、自分の変更をプッシュする前に、常にリモートリポジトリの最新の変更でローカルブランチを更新してください。</p></li>
@@ -703,18 +712,19 @@ This allows for discussion and validation before merging into the main branch.
 Pull requests must follow the same convention as the commit messages.
 The following prefixes are allowed in the pull request names:</p>
 <ul class="simple">
-<li><p><cite>fix:</cite> - Bug fixes.</p></li>
-<li><p><cite>feat:</cite> - Changes that introduce a new feature or significant addition.</p></li>
-<li><p><cite>docs:</cite> - Changes pertaining only to documentation.</p></li>
-<li><p><cite>style:</cite> - Changes that do not affect the meaning of the code (such as white space, formatting, and missing semicolons).</p></li>
-<li><p><cite>refactor:</cite> - A code change that neither fixes a bug nor adds a feature.</p></li>
-<li><p><cite>perf:</cite> - A code change that improves performance.</p></li>
-<li><p><cite>test:</cite> - Improvements or changes to testing.</p></li>
 <li><p><cite>build:</cite> - Changes that affect the build system or external dependencies (such as to <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">make</span></code>).</p></li>
 <li><p><cite>ci:</cite> - Changes to the CI/CD configuration files and scripts.</p></li>
-<li><p><cite>chore:</cite> - Other changes that don't modify the code (such as releasing and versioning).</p></li>
-<li><p><cite>revert:</cite> - Reverts a previous pull request.</p></li>
+<li><p><cite>docs:</cite> - Improves documentation and examples.</p></li>
+<li><p><cite>feat:</cite> - Changes that introduce a new feature or significant addition.</p></li>
+<li><p><cite>fix:</cite> - Bug fixes.</p></li>
+<li><p><cite>maint:</cite> - General maintenance of the repository.</p></li>
+<li><p><cite>no-ci:</cite> - (Not applicable to PyMAPDL) In some repositories, branches with this prefix do not trigger CI/CD.</p></li>
+<li><p><cite>perf:</cite> - A code change that improves performance.</p></li>
+<li><p><cite>refactor:</cite> - A code change that neither fixes a bug nor adds a feature.</p></li>
+<li><p><cite>revert:</cite> - Reverts a previous commit.</p></li>
+<li><p><cite>testing:</cite> - For testing and debugging. It can be used to add new tests.</p></li>
 </ul>
+<p><strong>Note</strong>: For more information, see <a class="reference internal" href="#table-prefix">Table of allowed prefix</a>.</p>
 <p>The pull requests can also be labeled for easier repository maintenance.
 The CI/CD automatically labels each pull request based on the pull requests prefix and
 the modified files, but you can also add extra labels as long as they are already defined
@@ -739,6 +749,104 @@ so they they are notified.</p></li>
 </ol>
 <p>By following these guidelines, you can ensure smooth and organized code
 development within a repository, fostering collaboration, code quality, and feature enhancement.</p>
+<p><strong>Table of allowed prefix</strong></p>
+<div class="pst-scrollable-table-container"><table class="table" id="table-prefix">
+<thead>
+<tr class="row-odd"><th class="head"><p>Prefix</p></th>
+<th class="head"><p>Commit (<code class="docutils literal notranslate"><span class="pre">prefix:</span></code>)</p></th>
+<th class="head"><p>Branch (<code class="docutils literal notranslate"><span class="pre">prefix/</span></code>)</p></th>
+<th class="head"><p>Pull-request (<code class="docutils literal notranslate"><span class="pre">prefix:</span></code>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>build</cite></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>dependabot</cite></p></td>
+<td><p>❌</p></td>
+<td><p>✅</p></td>
+<td><p>❌</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>chore</cite></p></td>
+<td><p>✅</p></td>
+<td><p>❌</p></td>
+<td><p>❌</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>ci</cite></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>docs</cite></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>feat</cite></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>fix</cite></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>junk</cite></p></td>
+<td><p>❌</p></td>
+<td><p>✅</p></td>
+<td><p>❌</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>maint</cite></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>no-ci</cite></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>perf</cite></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>refactor</cite></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>release</cite></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>revert</cite></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>❌</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>style</cite></p></td>
+<td><p>✅</p></td>
+<td><p>❌</p></td>
+<td><p>❌</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>testing</cite></p></td>
+<td><p>✅</p></td>
+<td><p>✅</p></td>
+<td><p>❌</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p>✅ means that the prefix is allowed.</p></li>
+<li><p>❌ means that the prefix is not allowed.</p></li>
+</ul>
 </section>
 <section id="unit-testing">
 <span id="ref-unit-testing-contributing"></span><h2>ユニットテスト<a class="headerlink" href="#unit-testing" title="Link to this heading">#</a></h2>
