@@ -605,10 +605,14 @@
 </dd>
 </dl>
 <p class="rubric">Notes</p>
+<p>If Mapdl didn't start the instance, then this will be ignored unless
+<code class="docutils literal notranslate"><span class="pre">force=True</span></code>.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">PYMAPDL_START_INSTANCE</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False</span></code> (generally set in
 remote testing or documentation build), then this will be
 ignored. Override this behavior with <code class="docutils literal notranslate"><span class="pre">force=True</span></code> to always force
 exiting MAPDL regardless of your local environment.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">Mapdl.finish_job_on_exit</span></code> is set to <code class="docutils literal notranslate"><span class="pre">True</span></code> and there is a valid
+JobID in <code class="docutils literal notranslate"><span class="pre">Mapdl.jobid</span></code>, then the SLURM job will be canceled.</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
