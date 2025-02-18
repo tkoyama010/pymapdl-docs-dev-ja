@@ -18,6 +18,9 @@
       MapdlPool.exit
       
       
+      MapdlPool.is_initialized
+      
+      
       MapdlPool.map
       
       

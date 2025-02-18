@@ -542,6 +542,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../pool.html">MAPDL pool</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">MapdlPool</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.exit.html">exit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.is_initialized.html">is_initialized</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.map.html">map</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.next.html">next</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.next_available.html">next_available</a></li>
@@ -750,19 +751,22 @@ directory within their own isolated directories.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.exit.html#ansys.mapdl.core.pool.MapdlPool.exit" title="ansys.mapdl.core.pool.MapdlPool.exit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPool.exit</span></code></a>([block])</p></td>
 <td><p>Close out all instances in the pool.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.map.html#ansys.mapdl.core.pool.MapdlPool.map" title="ansys.mapdl.core.pool.MapdlPool.map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPool.map</span></code></a>(func[, iterable, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.is_initialized.html#ansys.mapdl.core.pool.MapdlPool.is_initialized" title="ansys.mapdl.core.pool.MapdlPool.is_initialized"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPool.is_initialized</span></code></a>(index)</p></td>
+<td><p>Check if the instance is initialized</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.map.html#ansys.mapdl.core.pool.MapdlPool.map" title="ansys.mapdl.core.pool.MapdlPool.map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPool.map</span></code></a>(func[, iterable, ...])</p></td>
 <td><p>Run a function for each instance of mapdl within the pool.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.next.html#ansys.mapdl.core.pool.MapdlPool.next" title="ansys.mapdl.core.pool.MapdlPool.next"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPool.next</span></code></a>([return_index])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.next.html#ansys.mapdl.core.pool.MapdlPool.next" title="ansys.mapdl.core.pool.MapdlPool.next"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPool.next</span></code></a>([return_index])</p></td>
 <td><p>Return a context manager that returns available instances.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.next_available.html#ansys.mapdl.core.pool.MapdlPool.next_available" title="ansys.mapdl.core.pool.MapdlPool.next_available"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPool.next_available</span></code></a>([return_index, as_ctx])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.next_available.html#ansys.mapdl.core.pool.MapdlPool.next_available" title="ansys.mapdl.core.pool.MapdlPool.next_available"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPool.next_available</span></code></a>([return_index, as_ctx])</p></td>
 <td><p>Wait until an instance of MAPDL is available and return that instance.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.run_batch.html#ansys.mapdl.core.pool.MapdlPool.run_batch" title="ansys.mapdl.core.pool.MapdlPool.run_batch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPool.run_batch</span></code></a>(files[, clear_at_start, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.run_batch.html#ansys.mapdl.core.pool.MapdlPool.run_batch" title="ansys.mapdl.core.pool.MapdlPool.run_batch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPool.run_batch</span></code></a>(files[, clear_at_start, ...])</p></td>
 <td><p>Run a batch of input files on the pool.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.wait_for_ready.html#ansys.mapdl.core.pool.MapdlPool.wait_for_ready" title="ansys.mapdl.core.pool.MapdlPool.wait_for_ready"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPool.wait_for_ready</span></code></a>([timeout])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.pool.MapdlPool.wait_for_ready.html#ansys.mapdl.core.pool.MapdlPool.wait_for_ready" title="ansys.mapdl.core.pool.MapdlPool.wait_for_ready"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPool.wait_for_ready</span></code></a>([timeout])</p></td>
 <td><p>Wait until pool is ready.</p></td>
 </tr>
 </tbody>
