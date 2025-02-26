@@ -577,6 +577,7 @@
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.logger.html">logger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mapdl_on_hpc.html">mapdl_on_hpc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mute.html">mute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.muted.html">muted</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.name.html">name</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html">non_interactive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.on_docker.html">on_docker</a></li>
@@ -836,70 +837,73 @@ You should always import a subclass of it like
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mute.html#ansys.mapdl.core.Mapdl.mute" title="ansys.mapdl.core.Mapdl.mute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mute</span></code></a></p></td>
 <td><p>Silence the response from all MAPDL functions unless explicitly set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.name.html#ansys.mapdl.core.Mapdl.name" title="ansys.mapdl.core.Mapdl.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.name</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.muted.html#ansys.mapdl.core.Mapdl.muted" title="ansys.mapdl.core.Mapdl.muted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.muted</span></code></a></p></td>
+<td><p>Context manager that suppress all output from MAPDL</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.name.html#ansys.mapdl.core.Mapdl.name" title="ansys.mapdl.core.Mapdl.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.name</span></code></a></p></td>
 <td><p>Instance unique identifier.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.non_interactive</span></code></a></p></td>
 <td><p>Non-interactive context manager.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.on_docker.html#ansys.mapdl.core.Mapdl.on_docker" title="ansys.mapdl.core.Mapdl.on_docker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.on_docker</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.on_docker.html#ansys.mapdl.core.Mapdl.on_docker" title="ansys.mapdl.core.Mapdl.on_docker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.on_docker</span></code></a></p></td>
 <td><p>Check if MAPDL is running on docker.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.open_apdl_log.html#ansys.mapdl.core.Mapdl.open_apdl_log" title="ansys.mapdl.core.Mapdl.open_apdl_log"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.open_apdl_log</span></code></a>(filename[, mode])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.open_apdl_log.html#ansys.mapdl.core.Mapdl.open_apdl_log" title="ansys.mapdl.core.Mapdl.open_apdl_log"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.open_apdl_log</span></code></a>(filename[, mode])</p></td>
 <td><p>Start writing all APDL commands to an MAPDL input file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.open_gui.html#ansys.mapdl.core.Mapdl.open_gui" title="ansys.mapdl.core.Mapdl.open_gui"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.open_gui</span></code></a>([include_result, inplace])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.open_gui.html#ansys.mapdl.core.Mapdl.open_gui" title="ansys.mapdl.core.Mapdl.open_gui"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.open_gui</span></code></a>([include_result, inplace])</p></td>
 <td><p>Save the existing database and open it up in the MAPDL GUI.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.platform.html#ansys.mapdl.core.Mapdl.platform" title="ansys.mapdl.core.Mapdl.platform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.platform</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.platform.html#ansys.mapdl.core.Mapdl.platform" title="ansys.mapdl.core.Mapdl.platform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.platform</span></code></a></p></td>
 <td><p>Return the platform where MAPDL is running.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.print_com.html#ansys.mapdl.core.Mapdl.print_com" title="ansys.mapdl.core.Mapdl.print_com"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.print_com</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.print_com.html#ansys.mapdl.core.Mapdl.print_com" title="ansys.mapdl.core.Mapdl.print_com"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.print_com</span></code></a></p></td>
 <td><p>Whether to print or not to the console the <a class="reference internal" href="../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.com.html#ansys.mapdl.core.Mapdl.com" title="ansys.mapdl.core.Mapdl.com"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.com</span> <span class="pre">(&quot;/COM&quot;)</span></code></a> calls.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.process_is_alive.html#ansys.mapdl.core.Mapdl.process_is_alive" title="ansys.mapdl.core.Mapdl.process_is_alive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.process_is_alive</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.process_is_alive.html#ansys.mapdl.core.Mapdl.process_is_alive" title="ansys.mapdl.core.Mapdl.process_is_alive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.process_is_alive</span></code></a></p></td>
 <td><p>Check if the MAPDL process is alive</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.remove_file_handler.html#ansys.mapdl.core.Mapdl.remove_file_handler" title="ansys.mapdl.core.Mapdl.remove_file_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.remove_file_handler</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.remove_file_handler.html#ansys.mapdl.core.Mapdl.remove_file_handler" title="ansys.mapdl.core.Mapdl.remove_file_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.remove_file_handler</span></code></a>()</p></td>
 <td><p>Removes the filehander from the log</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.remove_temp_dir_on_exit.html#ansys.mapdl.core.Mapdl.remove_temp_dir_on_exit" title="ansys.mapdl.core.Mapdl.remove_temp_dir_on_exit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.remove_temp_dir_on_exit</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.remove_temp_dir_on_exit.html#ansys.mapdl.core.Mapdl.remove_temp_dir_on_exit" title="ansys.mapdl.core.Mapdl.remove_temp_dir_on_exit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.remove_temp_dir_on_exit</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.result.html#ansys.mapdl.core.Mapdl.result" title="ansys.mapdl.core.Mapdl.result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.result</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.result.html#ansys.mapdl.core.Mapdl.result" title="ansys.mapdl.core.Mapdl.result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.result</span></code></a></p></td>
 <td><p>Binary interface to the result file using <code class="xref py py-class docutils literal notranslate"><span class="pre">ansys.mapdl.reader.rst.Result</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.result_file.html#ansys.mapdl.core.Mapdl.result_file" title="ansys.mapdl.core.Mapdl.result_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.result_file</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.result_file.html#ansys.mapdl.core.Mapdl.result_file" title="ansys.mapdl.core.Mapdl.result_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.result_file</span></code></a></p></td>
 <td><p>Return the RST file path.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.run</span></code></a>(command[, write_to_log, mute])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.run.html#ansys.mapdl.core.Mapdl.run" title="ansys.mapdl.core.Mapdl.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.run</span></code></a>(command[, write_to_log, mute])</p></td>
 <td><p>Run single APDL command.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.run_as_routine.html#ansys.mapdl.core.Mapdl.run_as_routine" title="ansys.mapdl.core.Mapdl.run_as_routine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.run_as_routine</span></code></a>(routine)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.run_as_routine.html#ansys.mapdl.core.Mapdl.run_as_routine" title="ansys.mapdl.core.Mapdl.run_as_routine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.run_as_routine</span></code></a>(routine)</p></td>
 <td><p>Runs a command or commands at a routine and then revert to the prior routine.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.run_multiline.html#ansys.mapdl.core.Mapdl.run_multiline" title="ansys.mapdl.core.Mapdl.run_multiline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.run_multiline</span></code></a>(commands)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.run_multiline.html#ansys.mapdl.core.Mapdl.run_multiline" title="ansys.mapdl.core.Mapdl.run_multiline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.run_multiline</span></code></a>(commands)</p></td>
 <td><p>Run several commands as a single block :rtype: <span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.save_selection.html#ansys.mapdl.core.Mapdl.save_selection" title="ansys.mapdl.core.Mapdl.save_selection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.save_selection</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.save_selection.html#ansys.mapdl.core.Mapdl.save_selection" title="ansys.mapdl.core.Mapdl.save_selection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.save_selection</span></code></a></p></td>
 <td><p>Save selection</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.scalar_param.html#ansys.mapdl.core.Mapdl.scalar_param" title="ansys.mapdl.core.Mapdl.scalar_param"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.scalar_param</span></code></a>(pname)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.scalar_param.html#ansys.mapdl.core.Mapdl.scalar_param" title="ansys.mapdl.core.Mapdl.scalar_param"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.scalar_param</span></code></a>(pname)</p></td>
 <td><p>Return a scalar parameter as a float.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.screenshot.html#ansys.mapdl.core.Mapdl.screenshot" title="ansys.mapdl.core.Mapdl.screenshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.screenshot</span></code></a>([savefig])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.screenshot.html#ansys.mapdl.core.Mapdl.screenshot" title="ansys.mapdl.core.Mapdl.screenshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.screenshot</span></code></a>([savefig])</p></td>
 <td><p>Take an MAPDL screenshot and show it in a popup window.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.set_log_level.html#ansys.mapdl.core.Mapdl.set_log_level" title="ansys.mapdl.core.Mapdl.set_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.set_log_level</span></code></a>(loglevel)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.set_log_level.html#ansys.mapdl.core.Mapdl.set_log_level" title="ansys.mapdl.core.Mapdl.set_log_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.set_log_level</span></code></a>(loglevel)</p></td>
 <td><p>Sets log level</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.thermal_result.html#ansys.mapdl.core.Mapdl.thermal_result" title="ansys.mapdl.core.Mapdl.thermal_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.thermal_result</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.thermal_result.html#ansys.mapdl.core.Mapdl.thermal_result" title="ansys.mapdl.core.Mapdl.thermal_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.thermal_result</span></code></a></p></td>
 <td><p>The thermal result object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.use_vtk.html#ansys.mapdl.core.Mapdl.use_vtk" title="ansys.mapdl.core.Mapdl.use_vtk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.use_vtk</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.use_vtk.html#ansys.mapdl.core.Mapdl.use_vtk" title="ansys.mapdl.core.Mapdl.use_vtk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.use_vtk</span></code></a></p></td>
 <td><p>Returns if using VTK by default or not.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.version.html#ansys.mapdl.core.Mapdl.version" title="ansys.mapdl.core.Mapdl.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.version</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.version.html#ansys.mapdl.core.Mapdl.version" title="ansys.mapdl.core.Mapdl.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.version</span></code></a></p></td>
 <td><p>MAPDL build version.</p></td>
 </tr>
 </tbody>
