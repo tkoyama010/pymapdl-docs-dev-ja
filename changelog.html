@@ -592,24 +592,103 @@
 <span id="ref-release-notes"></span><h1>リリースノート<a class="headerlink" href="#release-notes" title="Link to this heading">#</a></h1>
 <p>このドキュメントには、プロジェクトのリリースノートが含まれています。</p>
 <section id="id2">
-<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.2">0.69.2</a> - 2025-01-22<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.3">0.69.3</a> - 2025-02-27<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <section id="added">
 <h3>追加<a class="headerlink" href="#added" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>feat: add stochastic fem example <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3648">#3648</a></p></li>
+<li><p>feat: allow passing strings to the converter from the terminal <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3679">#3679</a></p></li>
+<li><p>feat: improving performance of save_selection <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3697">#3697</a></p></li>
+<li><p>feat: speed up <cite>requires_package</cite> using caching <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3705">#3705</a></p></li>
+<li><p>feat: avoiding reconnecting if MAPDL exited already <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3708">#3708</a></p></li>
+<li><p>feat: adding opened attribute <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3731">#3731</a></p></li>
+<li><p>feat: adding <cite>muted</cite> context manager <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3760">#3760</a></p></li>
+</ul>
+</section>
+<section id="fixed">
+<h3>修正<a class="headerlink" href="#fixed" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>fix: avoid MAPDL commands execution when gRPC connection fails. <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3686">#3686</a></p></li>
+<li><p>fix: using cached version for remove lock on exit <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3709">#3709</a></p></li>
+<li><p>fix: sfem example typo errors <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3711">#3711</a></p></li>
+<li><p>fix: allow numpy types for parameters <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3720">#3720</a></p></li>
+<li><p>fix: harfrq command <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3729">#3729</a></p></li>
+<li><p>fix: ram units <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3730">#3730</a></p></li>
+<li><p>fix: exiting on class deletion <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3738">#3738</a></p></li>
+<li><p>fix: problem with the load_table method <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3745">#3745</a></p></li>
+<li><p>fix: do all the cleaning commands before cleaning the database, so we avoid having to issue <cite>/POST1</cite>. <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3747">#3747</a></p></li>
+<li><p>fix: Bug located in VSEL using KSWP field <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3753">#3753</a></p></li>
+<li><p>fix: Improve error handling in GET method and enhance output logging <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3758">#3758</a></p></li>
+<li><p>fix: avoid returning output when using input grpc method <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3759">#3759</a></p></li>
+<li><p>fix: removig star from command name in changelog <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3769">#3769</a></p></li>
+</ul>
+</section>
+<section id="dependencies">
+<h3>依存関係<a class="headerlink" href="#dependencies" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>build: bump grpcio from 1.69.0 to 1.70.0 in the grpc-deps group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3699">#3699</a></p></li>
+<li><p>build: bump imageio from 2.36.1 to 2.37.0 in the documentation group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3700">#3700</a></p></li>
+<li><p>build: bump the documentation group across 1 directory with 3 updates <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3727">#3727</a></p></li>
+<li><p>build: update sphinx-autodoc-typehints to 3.0.1 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3733">#3733</a></p></li>
+<li><p>build: bump sphinx-gallery from 0.18.0 to 0.19.0 in the documentation group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3743">#3743</a></p></li>
+<li><p>build: bump pyansys-tools-report from 0.8.1 to 0.8.2 in the testing group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3744">#3744</a></p></li>
+<li><p>build: bump the core group across 1 directory with 2 updates <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3761">#3761</a></p></li>
+<li><p>build: bump the documentation group across 1 directory with 2 updates <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3766">#3766</a></p></li>
+<li><p>build: temporary avoid flit latest version <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3771">#3771</a></p></li>
+</ul>
+</section>
+<section id="miscellaneous">
+<h3>その他<a class="headerlink" href="#miscellaneous" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[pre-commit.ci] pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3330">#3330</a></p></li>
+</ul>
+</section>
+<section id="documentation">
+<h3>ドキュメンテーション<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>docs: homogenizing commit/branches/pull request prefix <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3737">#3737</a></p></li>
+</ul>
+</section>
+<section id="maintenance">
+<h3>Maintenance<a class="headerlink" href="#maintenance" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>chore: update CHANGELOG for v0.69.2 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3688">#3688</a></p></li>
+<li><p>ci: skipping non-student versions when running on remote <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3690">#3690</a></p></li>
+<li><p>ci: adding memory limitation to MAPDL command line <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3693">#3693</a></p></li>
+<li><p>build: bump numpy from 2.2.1 to 2.2.2 in the minimal group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3698">#3698</a></p></li>
+<li><p>refactor: make cli testing not depending on MAPDL. <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3678">#3678</a></p></li>
+<li><p>test: adding tests asserting None are translated to &quot;None&quot;. <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3694">#3694</a></p></li>
+<li><p>test: improving testing performance <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3703">#3703</a></p></li>
+<li><p>ci: pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3710">#3710</a>, <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3723">#3723</a></p></li>
+<li><p>ci: improving testing <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3716">#3716</a></p></li>
+<li><p>test: improving pool testing <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3736">#3736</a></p></li>
+<li><p>build: bump the minimal group with 2 updates <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3742">#3742</a></p></li>
+<li><p>ci: enhance CI testing by summarizing tests durations <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3754">#3754</a></p></li>
+<li><p>refactor: removing warnings <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3763">#3763</a></p></li>
+<li><p>ci: pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3749">#3749</a>, <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3765">#3765</a></p></li>
+<li><p>ci: using python3.12 as main testing python version <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3767">#3767</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id52">
+<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.2">0.69.2</a> - 2025-01-22<a class="headerlink" href="#id52" title="Link to this heading">#</a></h2>
+<section id="id53">
+<h3>追加<a class="headerlink" href="#id53" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>chore: update CHANGELOG for v0.69.1 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3643">#3643</a></p></li>
 <li><p>refactor: using test class in test_components.py <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3664">#3664</a></p></li>
 <li><p>test: making sure the full and rst files exists before running the tests <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3666">#3666</a></p></li>
 </ul>
 </section>
-<section id="fixed">
-<h3>修正<a class="headerlink" href="#fixed" title="Link to this heading">#</a></h3>
+<section id="id57">
+<h3>修正<a class="headerlink" href="#id57" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: parsing components when too many <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3662">#3662</a></p></li>
 <li><p>fix: avoid com logging if not in debug mode <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3665">#3665</a></p></li>
 </ul>
 </section>
-<section id="dependencies">
-<h3>依存関係<a class="headerlink" href="#dependencies" title="Link to this heading">#</a></h3>
+<section id="id60">
+<h3>依存関係<a class="headerlink" href="#id60" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump grpcio from 1.68.1 to 1.69.0 in the grpc-deps group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3645">#3645</a></p></li>
 <li><p>build: bump scipy from 1.14.1 to 1.15.0 in the core group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3646">#3646</a></p></li>
@@ -621,20 +700,20 @@
 <li><p>ci: adding-profiling-to-unit-tests <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3676">#3676</a></p></li>
 </ul>
 </section>
-<section id="miscellaneous">
-<h3>その他<a class="headerlink" href="#miscellaneous" title="Link to this heading">#</a></h3>
+<section id="id69">
+<h3>その他<a class="headerlink" href="#id69" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: adding __len__ to components <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3663">#3663</a></p></li>
 </ul>
 </section>
-<section id="documentation">
-<h3>ドキュメンテーション<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h3>
+<section id="id71">
+<h3>ドキュメンテーション<a class="headerlink" href="#id71" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>docs: fix post documentation <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3684">#3684</a></p></li>
 </ul>
 </section>
-<section id="maintenance">
-<h3>Maintenance<a class="headerlink" href="#maintenance" title="Link to this heading">#</a></h3>
+<section id="id73">
+<h3>Maintenance<a class="headerlink" href="#id73" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>ci: pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3657">#3657</a>, <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3681">#3681</a></p></li>
 <li><p>ci: pin ubuntu OS to 22.04. <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3659">#3659</a></p></li>
@@ -644,31 +723,31 @@
 </ul>
 </section>
 </section>
-<section id="id25">
-<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.1">0.69.1</a> - 2025-01-08<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
-<section id="id26">
-<h3>追加<a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
+<section id="id81">
+<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.1">0.69.1</a> - 2025-01-08<a class="headerlink" href="#id81" title="Link to this heading">#</a></h2>
+<section id="id82">
+<h3>追加<a class="headerlink" href="#id82" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>chore: update CHANGELOG for v0.69.0 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3641">#3641</a></p></li>
 </ul>
 </section>
-<section id="id28">
-<h3>修正<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
+<section id="id84">
+<h3>修正<a class="headerlink" href="#id84" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: timeout for file checking <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3642">#3642</a></p></li>
 </ul>
 </section>
-<section id="id30">
-<h3>その他<a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
+<section id="id86">
+<h3>その他<a class="headerlink" href="#id86" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: node/element selection commands returning selected ids <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3636">#3636</a></p></li>
 </ul>
 </section>
 </section>
-<section id="id33">
-<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.0">0.69.0</a> - 2025-01-08<a class="headerlink" href="#id33" title="Link to this heading">#</a></h2>
-<section id="id34">
-<h3>追加<a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
+<section id="id89">
+<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.0">0.69.0</a> - 2025-01-08<a class="headerlink" href="#id89" title="Link to this heading">#</a></h2>
+<section id="id90">
+<h3>追加<a class="headerlink" href="#id90" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>test: skip test <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3259">#3259</a></p></li>
 <li><p>refactor: modifying <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> calls and removing <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">except</span> <span class="pre">continue</span></code> statements <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3474">#3474</a></p></li>
@@ -712,8 +791,8 @@
 <li><p>build: bump certifi from 2024.2.2 to 2024.7.4 in /doc/source/examples/extended_examples/hpc <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3242">#3242</a></p></li>
 </ul>
 </section>
-<section id="id70">
-<h3>修正<a class="headerlink" href="#id70" title="Link to this heading">#</a></h3>
+<section id="id126">
+<h3>修正<a class="headerlink" href="#id126" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: using same labels everywhere <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3188">#3188</a></p></li>
 <li><p>ci: Fix missing labels format in dependabot file <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3204">#3204</a></p></li>
@@ -737,8 +816,8 @@
 <li><p>fix: changelog <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3640">#3640</a></p></li>
 </ul>
 </section>
-<section id="id91">
-<h3>依存関係<a class="headerlink" href="#id91" title="Link to this heading">#</a></h3>
+<section id="id147">
+<h3>依存関係<a class="headerlink" href="#id147" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump pyvista[trame] from 0.43.9 to 0.43.10 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3194">#3194</a></p></li>
 <li><p>build: bump the minimal group across 1 directory with 2 updates <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3197">#3197</a></p></li>
@@ -769,8 +848,8 @@
 <li><p>build: bump pyfakefs from 5.7.2 to 5.7.3 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3630">#3630</a></p></li>
 </ul>
 </section>
-<section id="id124">
-<h3>その他<a class="headerlink" href="#id124" title="Link to this heading">#</a></h3>
+<section id="id180">
+<h3>その他<a class="headerlink" href="#id180" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>ci: [pre-commit.ci] pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3206">#3206</a></p></li>
 <li><p>ci: Adding v251 CentOS based image to testing <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3210">#3210</a></p></li>
@@ -789,8 +868,8 @@
 <li><p>feat: avoid errors when retrieving invalid routine <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3606">#3606</a></p></li>
 </ul>
 </section>
-<section id="id141">
-<h3>ドキュメンテーション<a class="headerlink" href="#id141" title="Link to this heading">#</a></h3>
+<section id="id197">
+<h3>ドキュメンテーション<a class="headerlink" href="#id197" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>docs: documenting using pymapdl on clusters <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3466">#3466</a></p></li>
 <li><p>ci: avoiding linkcheck on changelog page <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3488">#3488</a></p></li>
@@ -808,8 +887,8 @@
 <li><p>feat: update copyright year <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3637">#3637</a></p></li>
 </ul>
 </section>
-<section id="id156">
-<h3>Maintenance<a class="headerlink" href="#id156" title="Link to this heading">#</a></h3>
+<section id="id212">
+<h3>Maintenance<a class="headerlink" href="#id212" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>ci: bump thollander/actions-comment-pull-request from 2 to 3 in the actions group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3481">#3481</a></p></li>
 <li><p>ci: pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3482">#3482</a>, <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3522">#3522</a>, <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3545">#3545</a>, <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3599">#3599</a></p></li>
@@ -830,17 +909,17 @@
 </ul>
 </section>
 </section>
-<section id="id177">
-<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.6">0.68.6</a> - 2024-10-11<a class="headerlink" href="#id177" title="Link to this heading">#</a></h2>
-<section id="id178">
-<h3>追加<a class="headerlink" href="#id178" title="Link to this heading">#</a></h3>
+<section id="id233">
+<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.6">0.68.6</a> - 2024-10-11<a class="headerlink" href="#id233" title="Link to this heading">#</a></h2>
+<section id="id234">
+<h3>追加<a class="headerlink" href="#id234" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>chore: update CHANGELOG for v0.68.5 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3455">#3455</a></p></li>
 <li><p>refactor: removing deprecated arguments <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3473">#3473</a></p></li>
 </ul>
 </section>
-<section id="id181">
-<h3>修正<a class="headerlink" href="#id181" title="Link to this heading">#</a></h3>
+<section id="id237">
+<h3>修正<a class="headerlink" href="#id237" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: contributors file <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3457">#3457</a></p></li>
 <li><p>fix: environment variables not being passed to MAPDL process <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3461">#3461</a></p></li>
@@ -848,8 +927,8 @@
 <li><p>fix: add <code class="docutils literal notranslate"><span class="pre">build</span> <span class="pre">cheatsheet</span></code> as env variable within doc-build <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3468">#3468</a></p></li>
 </ul>
 </section>
-<section id="id186">
-<h3>依存関係<a class="headerlink" href="#id186" title="Link to this heading">#</a></h3>
+<section id="id242">
+<h3>依存関係<a class="headerlink" href="#id242" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump grpcio from 1.66.1 to 1.66.2 in the grpc-deps group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3453">#3453</a></p></li>
 <li><p>build: bump sphinx-autobuild from 2024.9.19 to 2024.10.3 in the documentation group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3454">#3454</a></p></li>
@@ -857,21 +936,21 @@
 <li><p>build: bump the documentation group with 3 updates <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3478">#3478</a></p></li>
 </ul>
 </section>
-<section id="id191">
-<h3>その他<a class="headerlink" href="#id191" title="Link to this heading">#</a></h3>
+<section id="id247">
+<h3>その他<a class="headerlink" href="#id247" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: having two global flags. One for visualizer and one for pyvista <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3460">#3460</a></p></li>
 </ul>
 </section>
-<section id="id193">
-<h3>ドキュメンテーション<a class="headerlink" href="#id193" title="Link to this heading">#</a></h3>
+<section id="id249">
+<h3>ドキュメンテーション<a class="headerlink" href="#id249" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>docs: another hpc docs reorg <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3465">#3465</a></p></li>
 <li><p>docs: fix cheat sheet rendering <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3469">#3469</a></p></li>
 </ul>
 </section>
-<section id="id196">
-<h3>Maintenance<a class="headerlink" href="#id196" title="Link to this heading">#</a></h3>
+<section id="id252">
+<h3>Maintenance<a class="headerlink" href="#id252" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>ci: bump the actions group with 2 updates <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3470">#3470</a></p></li>
 <li><p>ci: pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3471">#3471</a></p></li>
@@ -880,10 +959,10 @@
 </ul>
 </section>
 </section>
-<section id="id202">
-<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.5">0.68.5</a> - 2024-10-04<a class="headerlink" href="#id202" title="Link to this heading">#</a></h2>
-<section id="id203">
-<h3>追加<a class="headerlink" href="#id203" title="Link to this heading">#</a></h3>
+<section id="id258">
+<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.5">0.68.5</a> - 2024-10-04<a class="headerlink" href="#id258" title="Link to this heading">#</a></h2>
+<section id="id259">
+<h3>追加<a class="headerlink" href="#id259" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: Adapt PyMAPDL to common plotter <a class="reference external" href="https://github.com/ansys/pymapdl/pull/2799">#2799</a></p></li>
 <li><p>refactor: clean mapdl inprocess and move mute to MapdlCore <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3220">#3220</a></p></li>
@@ -897,16 +976,16 @@
 <li><p>perf: reduce-testing-time <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3427">#3427</a></p></li>
 </ul>
 </section>
-<section id="id214">
-<h3>変更<a class="headerlink" href="#id214" title="Link to this heading">#</a></h3>
+<section id="id270">
+<h3>変更<a class="headerlink" href="#id270" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>ci: bump docker/login-action from 3.2.0 to 3.3.0 in the actions group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3306">#3306</a></p></li>
 <li><p>build: bump importlib-metadata from 8.0.0 to 8.2.0 in the minimal group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3309">#3309</a></p></li>
 <li><p>build: update pre-commit-hook <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3339">#3339</a></p></li>
 </ul>
 </section>
-<section id="id218">
-<h3>修正<a class="headerlink" href="#id218" title="Link to this heading">#</a></h3>
+<section id="id274">
+<h3>修正<a class="headerlink" href="#id274" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: removing io error when logging to closed streams <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3273">#3273</a></p></li>
 <li><p>fix: increasing timeout for local-min <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3282">#3282</a></p></li>
@@ -924,8 +1003,8 @@
 <li><p>fix: changelog <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3452">#3452</a></p></li>
 </ul>
 </section>
-<section id="id233">
-<h3>依存関係<a class="headerlink" href="#id233" title="Link to this heading">#</a></h3>
+<section id="id289">
+<h3>依存関係<a class="headerlink" href="#id289" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump numpy from 1.26.4 to 2.0.0 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3177">#3177</a></p></li>
 <li><p>build: bump sphinx from 7.3.7 to 7.4.4 in the documentation group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3283">#3283</a></p></li>
@@ -956,8 +1035,8 @@
 <li><p>build: bump pandas from 2.2.2 to 2.2.3 in the documentation group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3433">#3433</a></p></li>
 </ul>
 </section>
-<section id="id264">
-<h3>その他<a class="headerlink" href="#id264" title="Link to this heading">#</a></h3>
+<section id="id320">
+<h3>その他<a class="headerlink" href="#id320" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat/adding missing argument <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3293">#3293</a></p></li>
 <li><p>feat/adding preppost license to allowed <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3294">#3294</a></p></li>
@@ -974,8 +1053,8 @@
 <li><p>feat: removing-CDB-files <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3441">#3441</a></p></li>
 </ul>
 </section>
-<section id="id280">
-<h3>ドキュメンテーション<a class="headerlink" href="#id280" title="Link to this heading">#</a></h3>
+<section id="id336">
+<h3>ドキュメンテーション<a class="headerlink" href="#id336" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: Supporting SLURM env vars for launching MAPDL configuration <a class="reference external" href="https://github.com/ansys/pymapdl/pull/2754">#2754</a></p></li>
 <li><p>Docs/improving hpc documentation <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3379">#3379</a></p></li>
@@ -990,8 +1069,8 @@
 <li><p>docs: adding directive to hide elements <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3449">#3449</a></p></li>
 </ul>
 </section>
-<section id="id292">
-<h3>Maintenance<a class="headerlink" href="#id292" title="Link to this heading">#</a></h3>
+<section id="id348">
+<h3>Maintenance<a class="headerlink" href="#id348" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump pyansys-tools-versioning from 0.5.0 to 0.6.0 in the minimal group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3357">#3357</a></p></li>
 <li><p>build: bump importlib-metadata from 8.2.0 to 8.4.0 in the minimal group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3366">#3366</a></p></li>
@@ -1002,13 +1081,13 @@
 </ul>
 </section>
 </section>
-<section id="id301">
-<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.4">0.68.4</a> - 2024-07-15<a class="headerlink" href="#id301" title="Link to this heading">#</a></h2>
-<section id="id302">
-<h3>追加<a class="headerlink" href="#id302" title="Link to this heading">#</a></h3>
+<section id="id357">
+<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.4">0.68.4</a> - 2024-07-15<a class="headerlink" href="#id357" title="Link to this heading">#</a></h2>
+<section id="id358">
+<h3>追加<a class="headerlink" href="#id358" title="Link to this heading">#</a></h3>
 </section>
-<section id="id303">
-<h3>修正<a class="headerlink" href="#id303" title="Link to this heading">#</a></h3>
+<section id="id359">
+<h3>修正<a class="headerlink" href="#id359" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: missing arguments on <code class="docutils literal notranslate"><span class="pre">OCDATA</span></code> command <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3226">#3226</a></p></li>
 <li><p>fix: Raising <cite>ValueError</cite> when using ips within pool library <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3240">#3240</a></p></li>
@@ -1020,15 +1099,15 @@
 <li><p>fix: incorrect env vars section <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3252">#3252</a></p></li>
 </ul>
 </section>
-<section id="id312">
-<h3>ドキュメンテーション<a class="headerlink" href="#id312" title="Link to this heading">#</a></h3>
+<section id="id368">
+<h3>ドキュメンテーション<a class="headerlink" href="#id368" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>docs: adapt static images to dark/light themes <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3249">#3249</a></p></li>
 <li><p>docs: documenting new naming conventions for commits, branches and PRs. <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3228">#3228</a></p></li>
 </ul>
 </section>
-<section id="id315">
-<h3>依存関係<a class="headerlink" href="#id315" title="Link to this heading">#</a></h3>
+<section id="id371">
+<h3>依存関係<a class="headerlink" href="#id371" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump grpcio from 1.64.1 to 1.65.0 in the grpc-deps group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3270">#3270</a></p></li>
 <li><p>build: bump zipp from 3.17.0 to 3.19.1 in /doc/source/examples/extended_examples/hpc <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3261">#3261</a></p></li>
@@ -1051,8 +1130,8 @@
 <li><p>test: skip test <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3259">#3259</a></p></li>
 </ul>
 </section>
-<section id="id330">
-<h3>Maintenance<a class="headerlink" href="#id330" title="Link to this heading">#</a></h3>
+<section id="id386">
+<h3>Maintenance<a class="headerlink" href="#id386" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>[pre-commit.ci] pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3238">#3238</a>, <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3253">#3253</a></p></li>
 <li><p>ci: Fix missing labels format in dependabot file <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3204">#3204</a></p></li>
@@ -1069,26 +1148,26 @@
 <li><p>ci: run extended array based on the person who open the PR <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3256">#3256</a></p></li>
 </ul>
 </section>
-<section id="id345">
-<h3>その他<a class="headerlink" href="#id345" title="Link to this heading">#</a></h3>
+<section id="id401">
+<h3>その他<a class="headerlink" href="#id401" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>chore: update CHANGELOG for v0.68.2 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3183">#3183</a></p></li>
 </ul>
 </section>
 </section>
-<section id="id348">
-<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.3">0.68.3</a> - 2024-06-21<a class="headerlink" href="#id348" title="Link to this heading">#</a></h2>
-<section id="id349">
-<h3>追加<a class="headerlink" href="#id349" title="Link to this heading">#</a></h3>
+<section id="id404">
+<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.3">0.68.3</a> - 2024-06-21<a class="headerlink" href="#id404" title="Link to this heading">#</a></h2>
+<section id="id405">
+<h3>追加<a class="headerlink" href="#id405" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: Add an inprocess backend to pymapdl <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3198">#3198</a></p></li>
 </ul>
 </section>
 </section>
-<section id="id352">
-<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.2">0.68.2</a> - 2024-06-18<a class="headerlink" href="#id352" title="Link to this heading">#</a></h2>
-<section id="id353">
-<h3>追加<a class="headerlink" href="#id353" title="Link to this heading">#</a></h3>
+<section id="id408">
+<h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.2">0.68.2</a> - 2024-06-18<a class="headerlink" href="#id408" title="Link to this heading">#</a></h2>
+<section id="id409">
+<h3>追加<a class="headerlink" href="#id409" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: add a MAPDL version section in for bug issues <a class="reference external" href="https://github.com/ansys/pymapdl/pull/2982">#2982</a></p></li>
 <li><p>feat: adding some env var print to report <a class="reference external" href="https://github.com/ansys/pymapdl/pull/2999">#2999</a></p></li>
@@ -1104,22 +1183,22 @@
 <li><p>feat: making old API function discoverable when Click is not installed <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3086">#3086</a></p></li>
 </ul>
 </section>
-<section id="id366">
-<h3>変更<a class="headerlink" href="#id366" title="Link to this heading">#</a></h3>
+<section id="id422">
+<h3>変更<a class="headerlink" href="#id422" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>refactor: refactoring CLI <a class="reference external" href="https://github.com/ansys/pymapdl/pull/2960">#2960</a></p></li>
 </ul>
 </section>
-<section id="id368">
-<h3>修正<a class="headerlink" href="#id368" title="Link to this heading">#</a></h3>
+<section id="id424">
+<h3>修正<a class="headerlink" href="#id424" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: avoiding future sphinx warning <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3035">#3035</a></p></li>
 <li><p>fix: update the general files to align with PyAnsys standards <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3151">#3151</a></p></li>
 <li><p>fix: combine the <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> files <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3169">#3169</a></p></li>
 </ul>
 </section>
-<section id="id372">
-<h3>ドキュメンテーション<a class="headerlink" href="#id372" title="Link to this heading">#</a></h3>
+<section id="id428">
+<h3>ドキュメンテーション<a class="headerlink" href="#id428" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>docs: adding previous changes in <code class="docutils literal notranslate"><span class="pre">changelog.d</span></code> repository <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3182">#3182</a></p></li>
 <li><p>docs: clarifying MAPDL commands API section <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3071">#3071</a></p></li>
@@ -1131,16 +1210,16 @@
 <li><p>docs: update a minor typo in <cite>mapdl.rst</cite> <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3140">#3140</a></p></li>
 </ul>
 </section>
-<section id="id381">
-<h3>依存関係<a class="headerlink" href="#id381" title="Link to this heading">#</a></h3>
+<section id="id437">
+<h3>依存関係<a class="headerlink" href="#id437" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump autopep8 from 2.2.0 to 2.3.0 in the testing group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3179">#3179</a></p></li>
 <li><p>build: bump pyvista[trame] from 0.43.9 to 0.43.10 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3180">#3180</a></p></li>
 <li><p>build: bump ansys-sphinx-theme from 0.16.5 to 0.16.6 in the core group across 1 directory <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3181">#3181</a></p></li>
 </ul>
 </section>
-<section id="id385">
-<h3>その他<a class="headerlink" href="#id385" title="Link to this heading">#</a></h3>
+<section id="id441">
+<h3>その他<a class="headerlink" href="#id441" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>chore: removing cdb files <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3036">#3036</a></p></li>
 <li><p>ci: having only one set of Dependabot rules <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3107">#3107</a></p></li>
@@ -1175,7 +1254,7 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">0.69.2 - 2025-01-22</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">0.69.3 - 2025-02-27</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#added">追加</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed">修正</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">依存関係</a></li>
@@ -1184,62 +1263,71 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maintenance">Maintenance</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">0.69.1 - 2025-01-08</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">追加</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">修正</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">その他</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id52">0.69.2 - 2025-01-22</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">追加</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id57">修正</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id60">依存関係</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id69">その他</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id71">ドキュメンテーション</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id73">Maintenance</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">0.69.0 - 2025-01-08</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">追加</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id81">0.69.1 - 2025-01-08</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id82">追加</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id84">修正</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id86">その他</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id89">0.69.0 - 2025-01-08</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id90">追加</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changed">変更</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id70">修正</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id91">依存関係</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id124">その他</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id141">ドキュメンテーション</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id156">Maintenance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id126">修正</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id147">依存関係</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id180">その他</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id197">ドキュメンテーション</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id212">Maintenance</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id177">0.68.6 - 2024-10-11</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id178">追加</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id181">修正</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id186">依存関係</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id191">その他</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id193">ドキュメンテーション</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id196">Maintenance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id233">0.68.6 - 2024-10-11</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id234">追加</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id237">修正</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id242">依存関係</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id247">その他</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id249">ドキュメンテーション</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id252">Maintenance</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id202">0.68.5 - 2024-10-04</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id203">追加</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id214">変更</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id218">修正</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id233">依存関係</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id264">その他</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id280">ドキュメンテーション</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id292">Maintenance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id258">0.68.5 - 2024-10-04</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id259">追加</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id270">変更</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id274">修正</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id289">依存関係</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id320">その他</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id336">ドキュメンテーション</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id348">Maintenance</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id301">0.68.4 - 2024-07-15</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id302">追加</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id303">修正</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id312">ドキュメンテーション</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id315">依存関係</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id357">0.68.4 - 2024-07-15</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id358">追加</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id359">修正</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id368">ドキュメンテーション</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id371">依存関係</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tests">Tests</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id330">Maintenance</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id345">その他</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id386">Maintenance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id401">その他</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id348">0.68.3 - 2024-06-21</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id349">追加</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id404">0.68.3 - 2024-06-21</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id405">追加</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id352">0.68.2 - 2024-06-18</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id353">追加</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id366">変更</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id368">修正</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id372">ドキュメンテーション</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id381">依存関係</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id385">その他</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id408">0.68.2 - 2024-06-18</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id409">追加</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id422">変更</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id424">修正</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id428">ドキュメンテーション</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id437">依存関係</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id441">その他</a></li>
 </ul>
 </li>
 </ul>
