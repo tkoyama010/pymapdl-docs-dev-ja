@@ -598,7 +598,7 @@
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.screenshot.html">screenshot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.set_log_level.html">set_log_level</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.thermal_result.html">thermal_result</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.use_vtk.html">use_vtk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.graphics_backend.html">graphics_backend</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.version.html">version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.plotting.ALLOWED_TARGETS.html">ALLOWED_TARGETS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.plotting.BCS.html">BCS</a></li>
@@ -702,7 +702,7 @@
 <h2><code class="docutils literal notranslate"><span class="pre">Mapdl</span></code> methods and attributes<a class="headerlink" href="#mapdl-methods-and-attributes" title="Link to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="ansys.mapdl.core.mapdl.MapdlBase">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.mapdl.</span></span><span class="sig-name descname"><span class="pre">MapdlBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loglevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DEBUG'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_vtk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_apdl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_com</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type_for_plots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'PNG'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">start_parm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.mapdl.MapdlBase" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core.mapdl.</span></span><span class="sig-name descname"><span class="pre">MapdlBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.mapdl.MapdlBase" title="Link to this definition">#</a></dt>
 <dd><p>Base MAPDL class shared across all MAPDL subclasses.</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
@@ -900,8 +900,8 @@ You should always import a subclass of it like
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.thermal_result.html#ansys.mapdl.core.Mapdl.thermal_result" title="ansys.mapdl.core.Mapdl.thermal_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.thermal_result</span></code></a></p></td>
 <td><p>The thermal result object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.use_vtk.html#ansys.mapdl.core.Mapdl.use_vtk" title="ansys.mapdl.core.Mapdl.use_vtk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.use_vtk</span></code></a></p></td>
-<td><p>Returns if using VTK by default or not.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.graphics_backend.html#ansys.mapdl.core.Mapdl.graphics_backend" title="ansys.mapdl.core.Mapdl.graphics_backend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.graphics_backend</span></code></a></p></td>
+<td><p>Returns current graphics backend.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.version.html#ansys.mapdl.core.Mapdl.version" title="ansys.mapdl.core.Mapdl.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.version</span></code></a></p></td>
 <td><p>MAPDL build version.</p></td>

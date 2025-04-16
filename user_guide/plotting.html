@@ -713,7 +713,7 @@ some element types, performs meshing, and then displays the mesh:</p>
 <section id="plotting-non-interactively-using-mapdl">
 <h2>Plotting non-interactively using MAPDL<a class="headerlink" href="#plotting-non-interactively-using-mapdl" title="Link to this heading">#</a></h2>
 <p>You can also plot using MAPDL's native plotting tools. To use the
-native tools, pass <code class="docutils literal notranslate"><span class="pre">vtk=False</span></code> when running plotting commands such
+native tools, pass <code class="docutils literal notranslate"><span class="pre">graphics_backend=GraphicsBackend.MAPDL</span></code> when running plotting commands such
 as the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.aplot.html#ansys.mapdl.core.Mapdl.aplot" title="ansys.mapdl.core.Mapdl.aplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.aplot</span></code></a> and
 <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.eplot.html#ansys.mapdl.core.Mapdl.eplot" title="ansys.mapdl.core.Mapdl.eplot"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.eplot</span></code></a> methods. Plots are
 generated within MAPDL and then shown using
@@ -743,9 +743,10 @@ generated within MAPDL and then shown using
 </pre></div>
 </div>
 <p>Each of these creates a Matplotlib figure and pause execution.</p>
-<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">kplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core.plotting</span><span class="w"> </span><span class="kn">import</span> <span class="n">GraphicsBackend</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">graphics_backend</span><span class="o">=</span><span class="n">GraphicsBackend</span><span class="o">.</span><span class="n">MAPDL</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">graphics_backend</span><span class="o">=</span><span class="n">GraphicsBackend</span><span class="o">.</span><span class="n">MAPDL</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">kplot</span><span class="p">(</span><span class="n">graphics_backend</span><span class="o">=</span><span class="n">GraphicsBackend</span><span class="o">.</span><span class="n">MAPDL</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default" id="id7">
@@ -760,7 +761,7 @@ generated within MAPDL and then shown using
 </section>
 <section id="plotting-keyword-options">
 <h2>Plotting keyword options<a class="headerlink" href="#plotting-keyword-options" title="Link to this heading">#</a></h2>
-<p>When <code class="docutils literal notranslate"><span class="pre">vtk=True</span></code>, which is the default, all MAPDL plotting
+<p>When <code class="docutils literal notranslate"><span class="pre">graphics_backend=GraphicsBackend.PYVISTA</span></code>, which is the default, all MAPDL plotting
 methods allow you to enter in additional keyword arguments to better
 control the plot. For example, you can automatically generate a
 screenshot of an area plot or element plot with this code:</p>

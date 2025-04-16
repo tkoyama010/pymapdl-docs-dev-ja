@@ -84,7 +84,7 @@ Create nodes within MAPDL
     print(mapdl.mesh.nnum)
 
     # plot the nodes using VTK
-    mapdl.nplot(vtk=True, nnum=True, cpos="xy", show_bounds=True, point_size=10)
+    mapdl.nplot(nnum=True, cpos="xy", show_bounds=True, point_size=10)
 
 
 .. GENERATED FROM PYTHON SOURCE LINES 75-78

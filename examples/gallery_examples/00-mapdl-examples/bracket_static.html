@@ -811,7 +811,7 @@ its radius is <span class="math notranslate nohighlight">\(1\)</span>.</p>
 <span class="n">circle1_Y</span> <span class="o">=</span> <span class="p">(</span><span class="n">box1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">box1</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">cyl4</span><span class="p">(</span><span class="n">circle1_X</span><span class="p">,</span> <span class="n">circle1_Y</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
 
-<span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -825,7 +825,7 @@ its radius is <span class="math notranslate nohighlight">\(1\)</span>.</p>
 <p>Use these parameter values to create the new area with the same radius of <span class="math notranslate nohighlight">\(1\)</span>
 as the first circle area.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">cyl4</span><span class="p">(</span><span class="n">circle2_X</span><span class="p">,</span> <span class="n">circle2_Y</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -879,7 +879,7 @@ the <code class="docutils literal notranslate"><span class="pre">l2</span></code
 <span class="n">line3</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">lfillt</span><span class="p">(</span><span class="s2">&quot;line1&quot;</span><span class="p">,</span> <span class="n">l2</span><span class="p">,</span> <span class="n">fillet_radius</span><span class="p">)</span>
 
 <span class="n">mapdl</span><span class="o">.</span><span class="n">allsel</span><span class="p">()</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -909,7 +909,7 @@ Note the <code class="docutils literal notranslate"><span class="pre">'A'</span>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">lsel</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;LINE&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">line3</span><span class="p">)</span>
 
 <span class="c1"># plotting ares</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">show_line_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">show_line_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Then use <a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.al.html#ansys.mapdl.core.Mapdl.al" title="ansys.mapdl.core.Mapdl.al"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.al()</span></code></a> command to create the areas
@@ -926,7 +926,7 @@ from the lines.</p>
 Because you have only the two areas to combine, use the <code class="docutils literal notranslate"><span class="pre">'ALL'</span></code> argument.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add the area to the main area</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">aadd</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -974,7 +974,7 @@ the Boolean command to subtract areas, to remove the circles from the bracket.</
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove pin hole areas from bracket</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">asba</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">pinhole1</span><span class="p">)</span>
 <span class="n">bracket</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">asba</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">pinhole2</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">show_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -1050,7 +1050,6 @@ results during postprocessing.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">esize</span><span class="p">(</span><span class="n">element_size</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">amesh</span><span class="p">(</span><span class="n">bracket</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span>
-    <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span>
     <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">show_axes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -1142,7 +1141,7 @@ half of the second pinhole circle.</p>
 <p>Now repick from that selection the lines that are less than the X center of that pin hole.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">lsel</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;LOC&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pinhole2_X</span><span class="p">)</span>
 
-<span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Once you have the correct line, use
@@ -1158,7 +1157,6 @@ to load the line with the varying surface load.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lsel</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;LOC&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="n">pinhole2_X</span><span class="p">,</span> <span class="n">pinhole2_X</span> <span class="o">+</span> <span class="n">pinhole_radius</span><span class="p">)</span>
 
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span>
-    <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span>
     <span class="n">show_line_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>

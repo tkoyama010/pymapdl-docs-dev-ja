@@ -266,7 +266,7 @@ its radius is :math:`1`.
     circle1_Y = (box1[2] + box1[3]) / 2
     mapdl.cyl4(circle1_X, circle1_Y, radius)
 
-    mapdl.aplot(vtk=True, cpos="xy", show_lines=True)
+    mapdl.aplot(cpos="xy", show_lines=True)
 
 
 
@@ -298,7 +298,7 @@ as the first circle area.
 
 
     mapdl.cyl4(circle2_X, circle2_Y, radius)
-    mapdl.aplot(vtk=True, cpos="xy", show_lines=True)
+    mapdl.aplot(cpos="xy", show_lines=True)
 
 
 
@@ -392,7 +392,7 @@ Create fillet line using selected line (parameter names)
     line3 = mapdl.lfillt("line1", l2, fillet_radius)
 
     mapdl.allsel()
-    mapdl.lplot(vtk=True, cpos="xy")
+    mapdl.lplot(cpos="xy")
 
 
 .. GENERATED FROM PYTHON SOURCE LINES 305-321
@@ -441,7 +441,7 @@ Note the ``'A'`` to additionally select items.
     mapdl.lsel("A", "LINE", "", line3)
 
     # plotting ares
-    mapdl.lplot(vtk=True, cpos="xy", show_line_numbering=True)
+    mapdl.lplot(cpos="xy", show_line_numbering=True)
 
 
 .. GENERATED FROM PYTHON SOURCE LINES 340-343
@@ -476,7 +476,7 @@ Because you have only the two areas to combine, use the ``'ALL'`` argument.
 
     # Add the area to the main area
     mapdl.aadd("all")
-    mapdl.aplot(vtk=True, cpos="xy", show_lines=True)
+    mapdl.aplot(cpos="xy", show_lines=True)
 
 
 .. GENERATED FROM PYTHON SOURCE LINES 361-370
@@ -552,7 +552,7 @@ the Boolean command to subtract areas, to remove the circles from the bracket.
     # Remove pin hole areas from bracket
     mapdl.asba("all", pinhole1)
     bracket = mapdl.asba("all", pinhole2)
-    mapdl.aplot(vtk=True, show_lines=True, cpos="xy")
+    mapdl.aplot(show_lines=True, cpos="xy")
 
 
 .. GENERATED FROM PYTHON SOURCE LINES 416-424
@@ -668,7 +668,7 @@ results during postprocessing.
 
 Now you can use the :meth:`mapdl.eplot() <ansys.mapdl.core.Mapdl.eplot>` command to see the mesh.
 
-.. GENERATED FROM PYTHON SOURCE LINES 498-511
+.. GENERATED FROM PYTHON SOURCE LINES 498-510
 
 .. code-block:: Python
 
@@ -677,7 +677,6 @@ Now you can use the :meth:`mapdl.eplot() <ansys.mapdl.core.Mapdl.eplot>` command
     mapdl.esize(element_size)
     mapdl.amesh(bracket)
     mapdl.eplot(
-        vtk=True,
         cpos="xy",
         show_edges=True,
         show_axes=False,
@@ -686,7 +685,7 @@ Now you can use the :meth:`mapdl.eplot() <ansys.mapdl.core.Mapdl.eplot>` command
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 512-526
+.. GENERATED FROM PYTHON SOURCE LINES 511-525
 
 Boundary conditions
 ===================
@@ -703,7 +702,7 @@ command, or by using :meth:`mapdl.run("/solu") <ansys.mapdl.core.Mapdl.run>` to
 call the APDL ``/SOLU`` command.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 526-530
+.. GENERATED FROM PYTHON SOURCE LINES 525-529
 
 .. code-block:: Python
 
@@ -712,20 +711,20 @@ call the APDL ``/SOLU`` command.
     mapdl.solution()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 531-534
+.. GENERATED FROM PYTHON SOURCE LINES 530-533
 
 Set the analysis type with the
 :meth:`mapdl.antype() <ansys.mapdl.core.Mapdl.antype>` command.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 534-536
+.. GENERATED FROM PYTHON SOURCE LINES 533-535
 
 .. code-block:: Python
 
     mapdl.antype("STATIC")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 537-553
+.. GENERATED FROM PYTHON SOURCE LINES 536-552
 
 Apply displacement constraints
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -744,7 +743,7 @@ the :meth:`mapdl.lsel() <ansys.mapdl.core.Mapdl.lsel>` command and
 the ``pinehole1`` parameters.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 553-559
+.. GENERATED FROM PYTHON SOURCE LINES 552-558
 
 .. code-block:: Python
 
@@ -755,13 +754,13 @@ the ``pinehole1`` parameters.
     print(f"Number of lines selected : {len(bc1)}")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 560-563
+.. GENERATED FROM PYTHON SOURCE LINES 559-562
 
 Then for loading, select and apply the boundary condition to the nodes attached
 to those lines using the :meth:`mapdl.nsll() <ansys.mapdl.core.Mapdl.nsll>` command.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 563-566
+.. GENERATED FROM PYTHON SOURCE LINES 562-565
 
 .. code-block:: Python
 
@@ -769,13 +768,13 @@ to those lines using the :meth:`mapdl.nsll() <ansys.mapdl.core.Mapdl.nsll>` comm
     fixNodes = mapdl.nsll(type_="S")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 567-570
+.. GENERATED FROM PYTHON SOURCE LINES 566-569
 
 Next use the :meth:`mapdl.d() <ansys.mapdl.core.Mapdl.d>` command to set
 the displacement to zero (fixed constraint).
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 570-577
+.. GENERATED FROM PYTHON SOURCE LINES 569-576
 
 .. code-block:: Python
 
@@ -787,7 +786,7 @@ the displacement to zero (fixed constraint).
     mapdl.allsel()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 578-589
+.. GENERATED FROM PYTHON SOURCE LINES 577-588
 
 Apply pressure load
 ~~~~~~~~~~~~~~~~~~~
@@ -801,7 +800,7 @@ circle to a minimum value (50 psi) at the sides, apply pressure in two separate
 steps, with reverse tapering values for each line.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 589-593
+.. GENERATED FROM PYTHON SOURCE LINES 588-592
 
 .. code-block:: Python
 
@@ -810,7 +809,7 @@ steps, with reverse tapering values for each line.
     p2 = 500
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 594-606
+.. GENERATED FROM PYTHON SOURCE LINES 593-605
 
 The Mechanical APDL convention for pressure loading is that a positive load
 value represents pressure into the surface (compressive).
@@ -825,7 +824,7 @@ of the full circle. A method to select the lines would be to select the lower
 half of the second pinhole circle.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 606-609
+.. GENERATED FROM PYTHON SOURCE LINES 605-608
 
 .. code-block:: Python
 
@@ -833,28 +832,28 @@ half of the second pinhole circle.
     mapdl.lsel("S", "LOC", "Y", pinhole2_Y - pinhole_radius, pinhole2_Y)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 610-612
+.. GENERATED FROM PYTHON SOURCE LINES 609-611
 
 Now repick from that selection the lines that are less than the X center of that pin hole.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 613-617
+.. GENERATED FROM PYTHON SOURCE LINES 612-616
 
 .. code-block:: Python
 
     mapdl.lsel("R", "LOC", "X", 0, pinhole2_X)
 
-    mapdl.lplot(vtk=True, cpos="xy")
+    mapdl.lplot(cpos="xy")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 618-622
+.. GENERATED FROM PYTHON SOURCE LINES 617-621
 
 Once you have the correct line, use
 the :meth:`mapdl.sf() <ansys.mapdl.core.Mapdl.sf>` command
 to load the line with the varying surface load.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 623-628
+.. GENERATED FROM PYTHON SOURCE LINES 622-627
 
 .. code-block:: Python
 
@@ -864,12 +863,12 @@ to load the line with the varying surface load.
     mapdl.allsel()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 629-631
+.. GENERATED FROM PYTHON SOURCE LINES 628-630
 
 Repeat the procedure for the second pin hole.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 632-645
+.. GENERATED FROM PYTHON SOURCE LINES 631-643
 
 .. code-block:: Python
 
@@ -878,7 +877,6 @@ Repeat the procedure for the second pin hole.
     mapdl.lsel("R", "LOC", "X", pinhole2_X, pinhole2_X + pinhole_radius)
 
     mapdl.lplot(
-        vtk=True,
         cpos="xy",
         show_line_numbering=True,
     )
@@ -887,7 +885,7 @@ Repeat the procedure for the second pin hole.
     mapdl.allsel()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 646-657
+.. GENERATED FROM PYTHON SOURCE LINES 644-655
 
 Solution
 ========
@@ -901,7 +899,7 @@ The model is ready to be solved using the
 :meth:`mapdl.solve() <ansys.mapdl.core.Mapdl.solve>` command.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 657-662
+.. GENERATED FROM PYTHON SOURCE LINES 655-660
 
 .. code-block:: Python
 
@@ -911,7 +909,7 @@ The model is ready to be solved using the
     print(output)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 663-684
+.. GENERATED FROM PYTHON SOURCE LINES 661-682
 
 Mechanical APDL stores the results of this single-load-step problem in the
 database and in the results file, :file:`Jobname.RST` (or :file:`Jobname.RTH`
@@ -935,7 +933,7 @@ The Ansys APDL postprocessor is a separate processor called with the
 :meth:`mapdl.post1() <ansys.mapdl.core.Mapdl.post1>` command.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 684-687
+.. GENERATED FROM PYTHON SOURCE LINES 682-685
 
 .. code-block:: Python
 
@@ -943,7 +941,7 @@ The Ansys APDL postprocessor is a separate processor called with the
     mapdl.post1()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 688-693
+.. GENERATED FROM PYTHON SOURCE LINES 686-691
 
 Plot the deformed shape
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -951,7 +949,7 @@ Here :class:`mapdl.result <ansys.mapdl.core.Mapdl.result>` is used to retrieve
 the results and for plotting.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 693-706
+.. GENERATED FROM PYTHON SOURCE LINES 691-704
 
 .. code-block:: Python
 
@@ -969,7 +967,7 @@ the results and for plotting.
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 707-713
+.. GENERATED FROM PYTHON SOURCE LINES 705-711
 
 Plot the von Mises equivalent stress
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -978,7 +976,7 @@ You can also generate stress plots using
 the :meth:`mapdl.plot_principal_nodal_stress() <ansys.mapdl.core.Mapdl.plot_principal_nodal_stress>` command.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 713-725
+.. GENERATED FROM PYTHON SOURCE LINES 711-723
 
 .. code-block:: Python
 
@@ -995,12 +993,12 @@ the :meth:`mapdl.plot_principal_nodal_stress() <ansys.mapdl.core.Mapdl.plot_prin
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 726-728
+.. GENERATED FROM PYTHON SOURCE LINES 724-726
 
 Obtain von Mises stresses.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 729-736
+.. GENERATED FROM PYTHON SOURCE LINES 727-734
 
 .. code-block:: Python
 
@@ -1012,7 +1010,7 @@ Obtain von Mises stresses.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 737-746
+.. GENERATED FROM PYTHON SOURCE LINES 735-744
 
 List reaction solution
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -1024,7 +1022,7 @@ the constrained node reaction solution.
 You can use the :meth:`to_dataframe <ansys.mapdl.core.commands.CommandListingOutput>`
 command to convert the output to a dataframe for more static print:
 
-.. GENERATED FROM PYTHON SOURCE LINES 746-751
+.. GENERATED FROM PYTHON SOURCE LINES 744-749
 
 .. code-block:: Python
 
@@ -1034,21 +1032,21 @@ command to convert the output to a dataframe for more static print:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 752-756
+.. GENERATED FROM PYTHON SOURCE LINES 750-754
 
 The values shown are representative and may vary from the values that you obtain.
 Many other options are available for reviewing results in the general postprocessor.
 You can see some of these other options in other tutorials, such.
 as the `Ansys tutorial guide <ansys_tutorials_guide_>`_.
 
-.. GENERATED FROM PYTHON SOURCE LINES 759-763
+.. GENERATED FROM PYTHON SOURCE LINES 757-761
 
 Exit Mechanical APDL
 ~~~~~~~~~~~~~~~~~~~~
 Exit Mechanical APDL once you have finished.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 763-766
+.. GENERATED FROM PYTHON SOURCE LINES 761-764
 
 .. code-block:: Python
 
@@ -1056,7 +1054,7 @@ Exit Mechanical APDL once you have finished.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 767-769
+.. GENERATED FROM PYTHON SOURCE LINES 765-767
 
 .. _ref_static_analysis_bracket_end:
 

@@ -84,7 +84,7 @@ Step 1: Variables and launch
 
 Define variables and launch MAPDL.
 
-.. GENERATED FROM PYTHON SOURCE LINES 90-104
+.. GENERATED FROM PYTHON SOURCE LINES 90-105
 
 .. code-block:: Python
 
@@ -95,6 +95,7 @@ Define variables and launch MAPDL.
 
     from ansys.mapdl.core import launch_mapdl
     from ansys.mapdl.core.examples.downloads import download_example_data
+    from ansys.mapdl.core.plotting import GraphicsBackend
 
     # cwd = current working directory
     path = os.getcwd()
@@ -103,7 +104,7 @@ Define variables and launch MAPDL.
     NU = 0.27
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 105-120
+.. GENERATED FROM PYTHON SOURCE LINES 106-121
 
 Often used MAPDL command line options are exposed as Pythonic parameter names in
 :func:`ansys.mapdl.core.launcher.launch_mapdl`. For example, ``-dir``
@@ -121,7 +122,7 @@ Options without a Pythonic version can be accessed by the ``additional_switches`
 parameter.
 Here ``-smp`` is used only to keep the number of solver files to a minimum.
 
-.. GENERATED FROM PYTHON SOURCE LINES 120-123
+.. GENERATED FROM PYTHON SOURCE LINES 121-124
 
 .. code-block:: Python
 
@@ -129,7 +130,7 @@ Here ``-smp`` is used only to keep the number of solver files to a minimum.
     mapdl = launch_mapdl(additional_switches="-smp")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-130
+.. GENERATED FROM PYTHON SOURCE LINES 125-131
 
 Step 2: Geometry, mesh, and MAPDL parameters
 ============================================
@@ -138,7 +139,7 @@ Step 2: Geometry, mesh, and MAPDL parameters
 - Define material and mesh, and then create boundary conditions.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 130-134
+.. GENERATED FROM PYTHON SOURCE LINES 131-135
 
 .. code-block:: Python
 
@@ -147,11 +148,11 @@ Step 2: Geometry, mesh, and MAPDL parameters
     mapdl.clear()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 135-136
+.. GENERATED FROM PYTHON SOURCE LINES 136-137
 
 Import the geometry file and list any MAPDL parameters.
 
-.. GENERATED FROM PYTHON SOURCE LINES 136-141
+.. GENERATED FROM PYTHON SOURCE LINES 137-142
 
 .. code-block:: Python
 
@@ -161,11 +162,11 @@ Import the geometry file and list any MAPDL parameters.
     print(mapdl.parameters)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 142-143
+.. GENERATED FROM PYTHON SOURCE LINES 143-144
 
 Use pressure area per length in the load definition.
 
-.. GENERATED FROM PYTHON SOURCE LINES 143-147
+.. GENERATED FROM PYTHON SOURCE LINES 144-148
 
 .. code-block:: Python
 
@@ -174,11 +175,11 @@ Use pressure area per length in the load definition.
     print(mapdl.parameters)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-149
+.. GENERATED FROM PYTHON SOURCE LINES 149-150
 
 Change the units and title.
 
-.. GENERATED FROM PYTHON SOURCE LINES 149-152
+.. GENERATED FROM PYTHON SOURCE LINES 150-153
 
 .. code-block:: Python
 
@@ -186,11 +187,11 @@ Change the units and title.
     mapdl.title("Lathe Cutter")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 153-154
+.. GENERATED FROM PYTHON SOURCE LINES 154-155
 
 Set material properties.
 
-.. GENERATED FROM PYTHON SOURCE LINES 154-158
+.. GENERATED FROM PYTHON SOURCE LINES 155-159
 
 .. code-block:: Python
 
@@ -199,13 +200,13 @@ Set material properties.
     mapdl.mp("NUXY", 1, NU)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 159-162
+.. GENERATED FROM PYTHON SOURCE LINES 160-163
 
 The MAPDL element type ``SOLID285`` is used for demonstration purposes.
 Consider using an appropriate element type or mesh density for your actual
 application.
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-173
+.. GENERATED FROM PYTHON SOURCE LINES 163-174
 
 .. code-block:: Python
 
@@ -221,7 +222,7 @@ application.
     mapdl.da(10, "symm")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 174-181
+.. GENERATED FROM PYTHON SOURCE LINES 175-182
 
 Step 3: Coordinate system and load
 ==============================================
@@ -231,7 +232,7 @@ of local X.
 
 Local CS ID is 11
 
-.. GENERATED FROM PYTHON SOURCE LINES 181-193
+.. GENERATED FROM PYTHON SOURCE LINES 182-194
 
 .. code-block:: Python
 
@@ -248,21 +249,21 @@ Local CS ID is 11
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 194-197
+.. GENERATED FROM PYTHON SOURCE LINES 195-198
 
 VTK plots do not show MAPDL plot symbols.
 However, to use MAPDL plotting capabilities, you can set the keyword
-option ``vtk`` to ``False``.
+option ``backend`` to ``GraphicsBackend.MAPDL``.
 
-.. GENERATED FROM PYTHON SOURCE LINES 198-201
+.. GENERATED FROM PYTHON SOURCE LINES 199-202
 
 .. code-block:: Python
 
+    mapdl.set_graphics_backend(GraphicsBackend.MAPDL)
+    mapdl.lplot()
 
-    mapdl.lplot(vtk=False)
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 202-207
+.. GENERATED FROM PYTHON SOURCE LINES 203-208
 
 Step 4: Pressure load
 =================================
@@ -270,7 +271,7 @@ Step 4: Pressure load
 Create a pressure load, load it into MAPDL as a table array, verify the load,
 and solve.
 
-.. GENERATED FROM PYTHON SOURCE LINES 207-218
+.. GENERATED FROM PYTHON SOURCE LINES 208-219
 
 .. code-block:: Python
 
@@ -286,13 +287,13 @@ and solve.
     press = 10000 * (np.sin(PI * length_x / pressure_length))
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 219-222
+.. GENERATED FROM PYTHON SOURCE LINES 220-223
 
 ``length_x`` and ``press`` are vectors. To combine them into the correct
 form needed to define the MAPDL table array, you can use
 `numpy.stack <https://numpy.org/doc/stable/reference/generated/numpy.stack.html>`_.
 
-.. GENERATED FROM PYTHON SOURCE LINES 222-231
+.. GENERATED FROM PYTHON SOURCE LINES 223-232
 
 .. code-block:: Python
 
@@ -306,7 +307,7 @@ form needed to define the MAPDL table array, you can use
     mapdl.allsel()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 232-239
+.. GENERATED FROM PYTHON SOURCE LINES 233-240
 
 You can open the MAPDL GUI to check the model.
 
@@ -316,11 +317,11 @@ You can open the MAPDL GUI to check the model.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 241-242
+.. GENERATED FROM PYTHON SOURCE LINES 242-243
 
 Set up the solution.
 
-.. GENERATED FROM PYTHON SOURCE LINES 242-249
+.. GENERATED FROM PYTHON SOURCE LINES 243-250
 
 .. code-block:: Python
 
@@ -329,14 +330,14 @@ Set up the solution.
     mapdl.nlgeom("On")
     mapdl.psf("PRES", "NORM", 3, 0, 1)
     mapdl.view(1, -1, 1, 1)
-    mapdl.eplot(vtk=False)
+    mapdl.eplot()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 250-251
+.. GENERATED FROM PYTHON SOURCE LINES 251-252
 
 Solve the model.
 
-.. GENERATED FROM PYTHON SOURCE LINES 251-256
+.. GENERATED FROM PYTHON SOURCE LINES 252-257
 
 .. code-block:: Python
 
@@ -346,13 +347,13 @@ Solve the model.
         print("The solution has converged.")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 257-260
+.. GENERATED FROM PYTHON SOURCE LINES 258-261
 
 Step 5: Plotting
 ================
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 260-267
+.. GENERATED FROM PYTHON SOURCE LINES 261-268
 
 .. code-block:: Python
 
@@ -364,13 +365,13 @@ Step 5: Plotting
     mapdl.post_processing.plot_nodal_principal_stress("1", smooth_shading=False)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 268-271
+.. GENERATED FROM PYTHON SOURCE LINES 269-272
 
 Plotting - Part of Model
 ------------------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 271-280
+.. GENERATED FROM PYTHON SOURCE LINES 272-281
 
 .. code-block:: Python
 
@@ -384,13 +385,13 @@ Plotting - Part of Model
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 281-284
+.. GENERATED FROM PYTHON SOURCE LINES 282-285
 
 Plotting - Legend Options
 -------------------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 284-302
+.. GENERATED FROM PYTHON SOURCE LINES 285-303
 
 .. code-block:: Python
 
@@ -413,7 +414,7 @@ Plotting - Legend Options
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 303-311
+.. GENERATED FROM PYTHON SOURCE LINES 304-312
 
 Let's try out some scalar bar options from the
 `PyVista documentation <pyvista_docs_>`_.
@@ -424,7 +425,7 @@ method to using {key:value}'s.
 You can use the click-and drag method to reposition the scalar bar.
 Left-click it and hold down the left mouse button while moving the mouse.
 
-.. GENERATED FROM PYTHON SOURCE LINES 311-339
+.. GENERATED FROM PYTHON SOURCE LINES 312-340
 
 .. code-block:: Python
 
@@ -457,7 +458,7 @@ Left-click it and hold down the left mouse button while moving the mouse.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 340-347
+.. GENERATED FROM PYTHON SOURCE LINES 341-348
 
 Step 6: Postprocessing
 =======================
@@ -467,18 +468,18 @@ Results List
 
 Get all principal nodal stresses.
 
-.. GENERATED FROM PYTHON SOURCE LINES 347-349
+.. GENERATED FROM PYTHON SOURCE LINES 348-350
 
 .. code-block:: Python
 
     mapdl.post_processing.nodal_principal_stress("1")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 350-351
+.. GENERATED FROM PYTHON SOURCE LINES 351-352
 
 Get the principal nodal stresses of the node subset.
 
-.. GENERATED FROM PYTHON SOURCE LINES 351-361
+.. GENERATED FROM PYTHON SOURCE LINES 352-362
 
 .. code-block:: Python
 
@@ -493,24 +494,24 @@ Get the principal nodal stresses of the node subset.
     mapdl.post_processing.nodal_principal_stress("1")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 362-365
+.. GENERATED FROM PYTHON SOURCE LINES 363-366
 
 Results as lists, arrays, and DataFrames
 -----------------------------------------
 Using :meth:`mapdl.prnsol` to check
 
-.. GENERATED FROM PYTHON SOURCE LINES 365-367
+.. GENERATED FROM PYTHON SOURCE LINES 366-368
 
 .. code-block:: Python
 
     print(mapdl.prnsol("S", "PRIN"))
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 368-369
+.. GENERATED FROM PYTHON SOURCE LINES 369-370
 
 Use this command to obtain the data as a list.
 
-.. GENERATED FROM PYTHON SOURCE LINES 369-372
+.. GENERATED FROM PYTHON SOURCE LINES 370-373
 
 .. code-block:: Python
 
@@ -518,11 +519,11 @@ Use this command to obtain the data as a list.
     print(mapdl_s_1_list)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 373-374
+.. GENERATED FROM PYTHON SOURCE LINES 374-375
 
 Use this command to obtain the data as an array:
 
-.. GENERATED FROM PYTHON SOURCE LINES 374-377
+.. GENERATED FROM PYTHON SOURCE LINES 375-378
 
 .. code-block:: Python
 
@@ -530,11 +531,11 @@ Use this command to obtain the data as an array:
     print(mapdl_s_1_array)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 378-379
+.. GENERATED FROM PYTHON SOURCE LINES 379-380
 
 or as a DataFrame:
 
-.. GENERATED FROM PYTHON SOURCE LINES 379-382
+.. GENERATED FROM PYTHON SOURCE LINES 380-383
 
 .. code-block:: Python
 
@@ -542,14 +543,14 @@ or as a DataFrame:
     mapdl_s_1_df.head()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 383-387
+.. GENERATED FROM PYTHON SOURCE LINES 384-388
 
 Use this command to obtain the data as a DataFrame, which is a.
 `Pandas data type <https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html>`_.
 Because the Pandas module is imported, you can use its functions.
 For example, you can write principal stresses to a file.
 
-.. GENERATED FROM PYTHON SOURCE LINES 387-392
+.. GENERATED FROM PYTHON SOURCE LINES 388-393
 
 .. code-block:: Python
 
@@ -559,13 +560,13 @@ For example, you can write principal stresses to a file.
     mapdl_s_1_df.to_html(path + "\prin-stresses.html")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 393-396
+.. GENERATED FROM PYTHON SOURCE LINES 394-397
 
 Step 7: Advanced plotting
 =========================
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 396-400
+.. GENERATED FROM PYTHON SOURCE LINES 397-401
 
 .. code-block:: Python
 
@@ -574,11 +575,11 @@ Step 7: Advanced plotting
     principal_1 = mapdl.post_processing.nodal_principal_stress("1")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 401-402
+.. GENERATED FROM PYTHON SOURCE LINES 402-403
 
 Load this result into the VTK grid.
 
-.. GENERATED FROM PYTHON SOURCE LINES 402-412
+.. GENERATED FROM PYTHON SOURCE LINES 403-413
 
 .. code-block:: Python
 
@@ -593,7 +594,7 @@ Load this result into the VTK grid.
     }
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 413-418
+.. GENERATED FROM PYTHON SOURCE LINES 414-419
 
 Generate a single horizontal slice along the XY plane.
 
@@ -601,7 +602,7 @@ Generate a single horizontal slice along the XY plane.
    PyVista's ``eye_dome_lighting`` method is used here to enhance the plots of the slices.
    For more information, see`Eye Dome Lighting <pyvista_eye_dome_lighting_>`_.
 
-.. GENERATED FROM PYTHON SOURCE LINES 418-431
+.. GENERATED FROM PYTHON SOURCE LINES 419-432
 
 .. code-block:: Python
 
@@ -619,11 +620,11 @@ Generate a single horizontal slice along the XY plane.
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 432-433
+.. GENERATED FROM PYTHON SOURCE LINES 433-434
 
 Generate a plot with three slice planes.
 
-.. GENERATED FROM PYTHON SOURCE LINES 433-445
+.. GENERATED FROM PYTHON SOURCE LINES 434-446
 
 .. code-block:: Python
 
@@ -640,12 +641,12 @@ Generate a plot with three slice planes.
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 446-448
+.. GENERATED FROM PYTHON SOURCE LINES 447-449
 
 Generate a grid with multiple slices in the same plane.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 448-460
+.. GENERATED FROM PYTHON SOURCE LINES 449-461
 
 .. code-block:: Python
 
@@ -662,11 +663,11 @@ Generate a grid with multiple slices in the same plane.
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 461-462
+.. GENERATED FROM PYTHON SOURCE LINES 462-463
 
 Finally, exit MAPDL.
 
-.. GENERATED FROM PYTHON SOURCE LINES 462-463
+.. GENERATED FROM PYTHON SOURCE LINES 463-464
 
 .. code-block:: Python
 

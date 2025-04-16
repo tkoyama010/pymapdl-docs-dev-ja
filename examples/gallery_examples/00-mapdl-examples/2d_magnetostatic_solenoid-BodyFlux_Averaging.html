@@ -689,6 +689,7 @@ The Power Graphics style plot is then set up via PyVista.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pyvista</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pv</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core.plotting</span><span class="w"> </span><span class="kn">import</span> <span class="n">GraphicsBackend</span>
 </pre></div>
 </div>
 </section>
@@ -779,7 +780,7 @@ The model is built in centimeters and is then scaled to meters.</p>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">pnum</span><span class="p">(</span><span class="s2">&quot;MAT&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Turn material numbers on</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">allsel</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
 
-<span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">aplot</span><span class="p">(</span><span class="n">graphics_backend</span><span class="o">=</span><span class="n">GraphicsBackend</span><span class="o">.</span><span class="n">MAPDL</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Mesh</p>

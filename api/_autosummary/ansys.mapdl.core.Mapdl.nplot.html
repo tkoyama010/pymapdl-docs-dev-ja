@@ -632,12 +632,12 @@
 <h1>nplot<a class="headerlink" href="#nplot" title="Link to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.Mapdl.nplot">
-<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">nplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vtk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.nplot" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Mapdl.</span></span><span class="sig-name descname"><span class="pre">nplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graphics_backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.Mapdl.nplot" title="Link to this definition">#</a></dt>
 <dd><p>APDL Command: NPLOT</p>
 <p>Displays nodes.</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>PyMAPDL plotting commands with <code class="docutils literal notranslate"><span class="pre">vtk=True</span></code> ignore any
+<p>PyMAPDL plotting commands with <code class="docutils literal notranslate"><span class="pre">graphics_backend=GraphicsBackend.PYVISTA</span></code> ignore any
 values set with the <code class="docutils literal notranslate"><span class="pre">PNUM</span></code> command.</p>
 </div>
 <dl class="field-list">
@@ -650,11 +650,11 @@ values set with the <code class="docutils literal notranslate"><span class="pre"
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>This parameter is only valid when <code class="docutils literal notranslate"><span class="pre">vtk==True</span></code></p>
+<p>This parameter is only valid when <code class="docutils literal notranslate"><span class="pre">graphics_backend==GraphicsBackend.PYVISTA</span></code></p>
 </div>
 </dd>
-<dt><strong>vtk</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Plot the currently selected nodes using <code class="docutils literal notranslate"><span class="pre">pyvista</span></code>.
-Defaults to current <code class="docutils literal notranslate"><span class="pre">use_vtk</span></code> setting as set on the
+<dt><strong>graphics_backend</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GraphicsBackend</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Plot the currently selected nodes using an specific backend.
+Defaults to current <code class="docutils literal notranslate"><span class="pre">graphics_backend</span></code> setting as set on the
 initialization of MAPDL.</p>
 </dd>
 <dt><strong>plot_bc</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Activate the plotting of the boundary conditions.
@@ -715,7 +715,7 @@ By default it is 16.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">nplot</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="n">nnum</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="gp">... </span>    <span class="n">vtk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">graphics_backend</span><span class="o">=</span><span class="n">GraphicsBackend</span><span class="o">.</span><span class="n">PYVISTA</span><span class="p">,</span>
 <span class="gp">... </span>    <span class="n">background</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span>
 <span class="gp">... </span>    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
 <span class="gp">... </span>    <span class="n">show_bounds</span><span class="o">=</span><span class="kc">True</span>
@@ -727,7 +727,7 @@ By default it is 16.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">nplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">nplot</span><span class="p">(</span><span class="n">graphics_backend</span><span class="o">=</span><span class="n">GraphicsBackend</span><span class="o">.</span><span class="n">MAPDL</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Plot nodal boundary conditions.</p>

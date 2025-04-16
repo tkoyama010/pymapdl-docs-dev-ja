@@ -699,6 +699,7 @@ for additional postprocessing.</p></li>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core.examples.downloads</span><span class="w"> </span><span class="kn">import</span> <span class="n">download_example_data</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core.plotting</span><span class="w"> </span><span class="kn">import</span> <span class="n">GraphicsBackend</span>
 
 <span class="c1"># cwd = current working directory</span>
 <span class="n">path</span> <span class="o">=</span> <a href="https://docs.python.org/3/library/os.html#os.getcwd" title="os.getcwd" class="sphx-glr-backref-module-os sphx-glr-backref-type-py-function"><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span></a><span class="p">()</span>
@@ -791,8 +792,9 @@ of local X.</p>
 </div>
 <p>VTK plots do not show MAPDL plot symbols.
 However, to use MAPDL plotting capabilities, you can set the keyword
-option <code class="docutils literal notranslate"><span class="pre">vtk</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+option <code class="docutils literal notranslate"><span class="pre">backend</span></code> to <code class="docutils literal notranslate"><span class="pre">GraphicsBackend.MAPDL</span></code>.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">set_graphics_backend</span><span class="p">(</span><span class="n">GraphicsBackend</span><span class="o">.</span><span class="n">MAPDL</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
@@ -833,7 +835,7 @@ form needed to define the MAPDL table array, you can use
 <span class="n">mapdl</span><span class="o">.</span><span class="n">nlgeom</span><span class="p">(</span><span class="s2">&quot;On&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">psf</span><span class="p">(</span><span class="s2">&quot;PRES&quot;</span><span class="p">,</span> <span class="s2">&quot;NORM&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">(</span><span class="n">vtk</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">mapdl</span><span class="o">.</span><span class="n">eplot</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Solve the model.</p>
