@@ -25,14 +25,14 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           job_name: script
       - name: Checkout with submodule
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           repository: tkoyama010/pymapdl-doc-translations
           submodules: true
           path: pymapdl-doc-translations
       - name: Checkout other repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
           ref: "gh-pages"
