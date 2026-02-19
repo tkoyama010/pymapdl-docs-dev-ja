@@ -32,9 +32,10 @@ psi and Poission's ratio of 0.25) and unit thickness, providing a live
 implementation of the discussions in Daryl Logan's A First Course in the Finite
 Element Method (2nd Ed., PWS Publishing 1993).
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-46
+.. GENERATED FROM PYTHON SOURCE LINES 38-47
 
 .. code-block:: Python
+
 
     import itertools
 
@@ -45,7 +46,7 @@ Element Method (2nd Ed., PWS Publishing 1993).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 48-58
+.. GENERATED FROM PYTHON SOURCE LINES 49-59
 
 Deriving the stiffness matrix for a 2D linear rectangular element
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,7 +59,7 @@ Build a basic 2D element with the following coordinates:
    \end{matrix}
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 58-84
+.. GENERATED FROM PYTHON SOURCE LINES 59-85
 
 .. code-block:: Python
 
@@ -89,7 +90,7 @@ Build a basic 2D element with the following coordinates:
     plot_my_mesh(nodes)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-91
+.. GENERATED FROM PYTHON SOURCE LINES 86-92
 
 We will create an element class ``MyElementDemo`` to carry all the data and
 methods necessary for this demonstration.  Although we could program the
@@ -98,7 +99,7 @@ data and methods piecemeal so we can comment on their meaning.  We will
 create an instance of this class that we'll call ``my_elem`` to represent our
 specific element example
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-100
+.. GENERATED FROM PYTHON SOURCE LINES 92-101
 
 .. code-block:: Python
 
@@ -112,7 +113,7 @@ specific element example
     my_elem = MyElementDemo(nodes)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 101-134
+.. GENERATED FROM PYTHON SOURCE LINES 102-135
 
 Shape Functions
 ~~~~~~~~~~~~~~~
@@ -148,7 +149,7 @@ vanishes at all other nodes and their sum is 1 at all points in the domain.
 For fun, let's plot them to see what each of them contributes to the
 interpolation of the element
 
-.. GENERATED FROM PYTHON SOURCE LINES 136-164
+.. GENERATED FROM PYTHON SOURCE LINES 137-165
 
 .. code-block:: Python
 
@@ -181,11 +182,11 @@ interpolation of the element
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 165-166
+.. GENERATED FROM PYTHON SOURCE LINES 166-167
 
 Let's add the shape function method to our class
 
-.. GENERATED FROM PYTHON SOURCE LINES 166-182
+.. GENERATED FROM PYTHON SOURCE LINES 167-183
 
 .. code-block:: Python
 
@@ -206,7 +207,7 @@ Let's add the shape function method to our class
     MyElementDemo.shape_functions = shape_functions
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 183-202
+.. GENERATED FROM PYTHON SOURCE LINES 184-203
 
 To interpolate a quantity, e.g., position, from the nodes to
 arbitrary points throughout the element we use the following
@@ -228,7 +229,7 @@ operation.
 
    \mathbf{X}_{\text{throughout}} = \mathbf{N} \cdot \mathbf{X}_{\text{nodal}}
 
-.. GENERATED FROM PYTHON SOURCE LINES 202-217
+.. GENERATED FROM PYTHON SOURCE LINES 203-218
 
 .. code-block:: Python
 
@@ -248,14 +249,14 @@ operation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 218-222
+.. GENERATED FROM PYTHON SOURCE LINES 219-223
 
 To see how this is useful, let's interpolate some common points.
 The centroid of our isoparametric element was :math:`(s,t) = (0, 0)`.  Let's
 see how the interpolation obtains the equivalent point in our real
 element:
 
-.. GENERATED FROM PYTHON SOURCE LINES 222-233
+.. GENERATED FROM PYTHON SOURCE LINES 223-234
 
 .. code-block:: Python
 
@@ -271,11 +272,11 @@ element:
     my_points
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-235
+.. GENERATED FROM PYTHON SOURCE LINES 235-236
 
 Plotting the mesh.
 
-.. GENERATED FROM PYTHON SOURCE LINES 235-238
+.. GENERATED FROM PYTHON SOURCE LINES 236-239
 
 .. code-block:: Python
 
@@ -283,7 +284,7 @@ Plotting the mesh.
     plot_my_mesh(nodes, my_elem.interpolate_nodal_values(0, 0, nodes))
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 239-252
+.. GENERATED FROM PYTHON SOURCE LINES 240-253
 
 Gauss Quadrature
 ~~~~~~~~~~~~~~~~
@@ -299,7 +300,7 @@ isoparametric element, i.e., :math:`(s,t) \in {\rm I\!R}^2` with
 :math:`s \in [-1,1]` and :math:`t\in [-1,1]`, the optimal locations
 for 4 point-integration are:
 
-.. GENERATED FROM PYTHON SOURCE LINES 252-260
+.. GENERATED FROM PYTHON SOURCE LINES 253-261
 
 .. code-block:: Python
 
@@ -312,11 +313,11 @@ for 4 point-integration are:
     MyElementDemo.gauss_pts
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 261-262
+.. GENERATED FROM PYTHON SOURCE LINES 262-263
 
 Their locations in the element of interest
 
-.. GENERATED FROM PYTHON SOURCE LINES 262-272
+.. GENERATED FROM PYTHON SOURCE LINES 263-273
 
 .. code-block:: Python
 
@@ -331,7 +332,7 @@ Their locations in the element of interest
     plot_my_mesh(nodes, gauss_pt_locs)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 273-307
+.. GENERATED FROM PYTHON SOURCE LINES 274-308
 
 Strain calculation
 ~~~~~~~~~~~~~~~~~~
@@ -368,7 +369,7 @@ and infer the operator as follows:
    \end{bmatrix}
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 309-328
+.. GENERATED FROM PYTHON SOURCE LINES 310-329
 
 We recall the displacements :math:`\begin{bmatrix}u_x &
 u_y\end{bmatrix}^T` are known throughout the element thanks to the
@@ -390,7 +391,7 @@ shape functions.  Thus
 
    \mathbf{u}_{\text{throughout}} = \mathbf{N} \cdot \mathbf{u}_{\text{nodal}}
 
-.. GENERATED FROM PYTHON SOURCE LINES 330-390
+.. GENERATED FROM PYTHON SOURCE LINES 331-391
 
 To incorporate the shape functions into the expressions of strain
 above we need to replace the differential operator relative to
@@ -453,7 +454,7 @@ and
    \frac{\partial x}{\partial t} & \frac{\partial y}{\partial t}
    \end{bmatrix}
 
-.. GENERATED FROM PYTHON SOURCE LINES 392-423
+.. GENERATED FROM PYTHON SOURCE LINES 393-424
 
 Implementation: Jacobians
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -487,11 +488,11 @@ to be equivalent to the following bilinear form:
    \mathbf{Y_{\text{locs}}}
    \end{aligned}
 
-.. GENERATED FROM PYTHON SOURCE LINES 425-426
+.. GENERATED FROM PYTHON SOURCE LINES 426-427
 
 We are now ready to implement it into our element
 
-.. GENERATED FROM PYTHON SOURCE LINES 426-445
+.. GENERATED FROM PYTHON SOURCE LINES 427-446
 
 .. code-block:: Python
 
@@ -515,12 +516,12 @@ We are now ready to implement it into our element
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 446-448
+.. GENERATED FROM PYTHON SOURCE LINES 447-449
 
 Next, we investigate how the Jacobians vary within the element.
 First for our subject element:
 
-.. GENERATED FROM PYTHON SOURCE LINES 448-452
+.. GENERATED FROM PYTHON SOURCE LINES 449-453
 
 .. code-block:: Python
 
@@ -529,7 +530,7 @@ First for our subject element:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 453-507
+.. GENERATED FROM PYTHON SOURCE LINES 454-508
 
 Implementation: B Matrix
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -586,7 +587,7 @@ for
 
    \mathbf{T} = \begin{bmatrix} t - 1 \\ -(t-1) \\ t+1 \\ -(s+1) \end{bmatrix}
 
-.. GENERATED FROM PYTHON SOURCE LINES 507-546
+.. GENERATED FROM PYTHON SOURCE LINES 508-547
 
 .. code-block:: Python
 
@@ -630,7 +631,7 @@ for
     my_elem.B(0, 0)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 547-574
+.. GENERATED FROM PYTHON SOURCE LINES 548-575
 
 Stress Calculation
 ~~~~~~~~~~~~~~~~~~
@@ -660,7 +661,7 @@ stresses according to the following matrix:
    \varepsilon_x \\ \varepsilon_y \\ \gamma_{xy}
    \end{bmatrix}
 
-.. GENERATED FROM PYTHON SOURCE LINES 574-592
+.. GENERATED FROM PYTHON SOURCE LINES 575-593
 
 .. code-block:: Python
 
@@ -683,7 +684,7 @@ stresses according to the following matrix:
     isotropic = Isotropic(30e6, 0.25)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 593-618
+.. GENERATED FROM PYTHON SOURCE LINES 594-619
 
 Stiffness Calculation
 
@@ -711,7 +712,7 @@ thus:
 
    E = -\mathbf{F}_{\text{nodal}} \cdot \mathbf{u}_{\text{nodal}} + \frac{1}{2} \iiint_V{} \mathbf{u}_{\text{nodal}}^T \cdot \mathbf{B}^T \cdot \mathbf{C} \cdot \mathbf{B} \cdot \mathbf{u}_{\text{nodal}} \,dV
 
-.. GENERATED FROM PYTHON SOURCE LINES 620-646
+.. GENERATED FROM PYTHON SOURCE LINES 621-647
 
 Our assumed linear shape functions are not as rich as the true functions
 governing the actual deformation of the structure in real life.  Imagine a
@@ -740,7 +741,7 @@ Thus, we've unlocked the Hooke's law stiffness hidden in the integral:
 
    \mathbf{K} = \iiint_V{} \mathbf{B}^T \cdot \mathbf{C} \cdot \mathbf{B} \,dV
 
-.. GENERATED FROM PYTHON SOURCE LINES 648-665
+.. GENERATED FROM PYTHON SOURCE LINES 649-666
 
 For our planar element, assumed to have constant thickness :math:`h` and area
 :math:`A`:
@@ -760,7 +761,7 @@ Thus the use of an isoparametric formulation allowed us to make this
 integration easy, since the domain of integration is constant, regardless of
 the shape of the 2D quadrilateral at hand.
 
-.. GENERATED FROM PYTHON SOURCE LINES 666-682
+.. GENERATED FROM PYTHON SOURCE LINES 667-683
 
 .. code-block:: Python
 
@@ -781,7 +782,7 @@ the shape of the 2D quadrilateral at hand.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 683-688
+.. GENERATED FROM PYTHON SOURCE LINES 684-689
 
 .. code-block:: Python
 
@@ -791,7 +792,7 @@ the shape of the 2D quadrilateral at hand.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 689-694
+.. GENERATED FROM PYTHON SOURCE LINES 690-695
 
 .. code-block:: Python
 
@@ -801,14 +802,14 @@ the shape of the 2D quadrilateral at hand.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 695-699
+.. GENERATED FROM PYTHON SOURCE LINES 696-700
 
 Putting it all together
 ~~~~~~~~~~~~~~~~~~~~~~~
 Creating `Elem2D` class.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 699-792
+.. GENERATED FROM PYTHON SOURCE LINES 700-793
 
 .. code-block:: Python
 
@@ -906,11 +907,11 @@ Creating `Elem2D` class.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 793-794
+.. GENERATED FROM PYTHON SOURCE LINES 794-795
 
 Isotropic class definition
 
-.. GENERATED FROM PYTHON SOURCE LINES 794-810
+.. GENERATED FROM PYTHON SOURCE LINES 795-811
 
 .. code-block:: Python
 
@@ -931,11 +932,11 @@ Isotropic class definition
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 811-812
+.. GENERATED FROM PYTHON SOURCE LINES 812-813
 
 Applying the created classes.
 
-.. GENERATED FROM PYTHON SOURCE LINES 812-822
+.. GENERATED FROM PYTHON SOURCE LINES 813-823
 
 .. code-block:: Python
 
@@ -950,7 +951,7 @@ Applying the created classes.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 823-828
+.. GENERATED FROM PYTHON SOURCE LINES 824-829
 
 Element in PyMAPDL
 ~~~~~~~~~~~~~~~~~~
@@ -958,7 +959,7 @@ Now let's obtain the same stiffness matrix from MAPDL
 
 launch PyMAPDL
 
-.. GENERATED FROM PYTHON SOURCE LINES 828-835
+.. GENERATED FROM PYTHON SOURCE LINES 829-836
 
 .. code-block:: Python
 
@@ -970,12 +971,12 @@ launch PyMAPDL
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 836-838
+.. GENERATED FROM PYTHON SOURCE LINES 837-839
 
 Create a use a 2-D 4-Node Structural Solid element with matching material
 properties.
 
-.. GENERATED FROM PYTHON SOURCE LINES 838-847
+.. GENERATED FROM PYTHON SOURCE LINES 839-848
 
 .. code-block:: Python
 
@@ -989,11 +990,11 @@ properties.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 848-849
+.. GENERATED FROM PYTHON SOURCE LINES 849-850
 
 Create the nodes at the same locations as above.
 
-.. GENERATED FROM PYTHON SOURCE LINES 849-854
+.. GENERATED FROM PYTHON SOURCE LINES 850-855
 
 .. code-block:: Python
 
@@ -1003,11 +1004,11 @@ Create the nodes at the same locations as above.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 855-856
+.. GENERATED FROM PYTHON SOURCE LINES 856-857
 
 Setup our element with the corresponding material properties.
 
-.. GENERATED FROM PYTHON SOURCE LINES 856-860
+.. GENERATED FROM PYTHON SOURCE LINES 857-861
 
 .. code-block:: Python
 
@@ -1016,11 +1017,11 @@ Setup our element with the corresponding material properties.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 861-862
+.. GENERATED FROM PYTHON SOURCE LINES 862-863
 
 Setup the static analysis.
 
-.. GENERATED FROM PYTHON SOURCE LINES 862-867
+.. GENERATED FROM PYTHON SOURCE LINES 863-868
 
 .. code-block:: Python
 
@@ -1030,11 +1031,11 @@ Setup the static analysis.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 868-869
+.. GENERATED FROM PYTHON SOURCE LINES 869-870
 
 Solve and permit one degree of freedom of each mode to be free per solution.
 
-.. GENERATED FROM PYTHON SOURCE LINES 869-879
+.. GENERATED FROM PYTHON SOURCE LINES 870-880
 
 .. code-block:: Python
 
@@ -1049,11 +1050,11 @@ Solve and permit one degree of freedom of each mode to be free per solution.
     mapdl.finish()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 880-881
+.. GENERATED FROM PYTHON SOURCE LINES 881-882
 
 The columns of the stiffness matrix appear as nodal force reactions
 
-.. GENERATED FROM PYTHON SOURCE LINES 881-895
+.. GENERATED FROM PYTHON SOURCE LINES 882-896
 
 .. code-block:: Python
 
@@ -1072,11 +1073,11 @@ The columns of the stiffness matrix appear as nodal force reactions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 896-897
+.. GENERATED FROM PYTHON SOURCE LINES 897-898
 
 Now, apply this to the whole matrix and output it.
 
-.. GENERATED FROM PYTHON SOURCE LINES 897-904
+.. GENERATED FROM PYTHON SOURCE LINES 898-905
 
 .. code-block:: Python
 
@@ -1088,12 +1089,12 @@ Now, apply this to the whole matrix and output it.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 905-907
+.. GENERATED FROM PYTHON SOURCE LINES 906-908
 
 Which is identical to the stiffness matrix obtained from our
 academic formulation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 907-911
+.. GENERATED FROM PYTHON SOURCE LINES 908-912
 
 .. code-block:: Python
 
@@ -1102,11 +1103,11 @@ academic formulation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 912-913
+.. GENERATED FROM PYTHON SOURCE LINES 913-914
 
 Show that the stiffness matrix in MAPDL matches what we derived.
 
-.. GENERATED FROM PYTHON SOURCE LINES 913-918
+.. GENERATED FROM PYTHON SOURCE LINES 914-919
 
 .. code-block:: Python
 
@@ -1116,13 +1117,13 @@ Show that the stiffness matrix in MAPDL matches what we derived.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 919-922
+.. GENERATED FROM PYTHON SOURCE LINES 920-923
 
 Stop mapdl
 ~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 922-923
+.. GENERATED FROM PYTHON SOURCE LINES 923-924
 
 .. code-block:: Python
 

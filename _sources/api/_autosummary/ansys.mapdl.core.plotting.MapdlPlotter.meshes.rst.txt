@@ -1,6 +1,0 @@
-meshes
-======
-
-.. currentmodule:: ansys.mapdl.core.plotting
-
-.. autoproperty:: MapdlPlotter.meshes

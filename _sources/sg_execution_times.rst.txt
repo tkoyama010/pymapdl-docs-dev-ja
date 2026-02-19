@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.000** total execution time for 35 files **from all galleries**:
+**00:00.000** total execution time for 39 files **from all galleries**:
 
 .. container::
 
@@ -53,7 +53,13 @@ Computation times
    * - :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_basic_dpf_example.py` (``../../examples/00-mapdl-examples/basic_dpf_example.py``)
      - 00:00.000
      - 0.0
+   * - :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_beam_with_report.py` (``../../examples/00-mapdl-examples/beam_with_report.py``)
+     - 00:00.000
+     - 0.0
    * - :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_bracket_static.py` (``../../examples/00-mapdl-examples/bracket_static.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_composite_dcb.py` (``../../examples/00-mapdl-examples/composite_dcb.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_contact_elements.py` (``../../examples/00-mapdl-examples/contact_elements.py``)
@@ -87,6 +93,9 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_pressure_vessel.py` (``../../examples/00-mapdl-examples/pressure_vessel.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_psd-vm203.py` (``../../examples/00-mapdl-examples/psd-vm203.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_pyvista_mesh.py` (``../../examples/00-mapdl-examples/pyvista_mesh.py``)
@@ -132,6 +141,9 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_examples_gallery_examples_02-tips-n-tricks_05-explore_mapdl_files.py` (``../../examples/02-tips-n-tricks/05-explore_mapdl_files.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_examples_gallery_examples_02-tips-n-tricks_06-convert-apdl-to-pymapdl.py` (``../../examples/02-tips-n-tricks/06-convert-apdl-to-pymapdl.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_examples_gallery_examples_03-general-fea_00-how_finite_element_works.py` (``../../examples/03-general-fea/00-how_finite_element_works.py``)

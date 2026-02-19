@@ -74,9 +74,10 @@ In addition to the usual libraries, Matplotlib and PyVista are imported.
 The MAPDL default contour color style is used so Matplotlib is imported.
 The Power Graphics style plot is then set up via PyVista.
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-88
+.. GENERATED FROM PYTHON SOURCE LINES 81-89
 
 .. code-block:: Python
+
 
 
     import numpy as np
@@ -86,13 +87,13 @@ The Power Graphics style plot is then set up via PyVista.
     from ansys.mapdl.core.plotting import GraphicsBackend
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 90-93
+.. GENERATED FROM PYTHON SOURCE LINES 91-94
 
 Launch MAPDL service
 ====================
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 93-99
+.. GENERATED FROM PYTHON SOURCE LINES 94-100
 
 .. code-block:: Python
 
@@ -103,7 +104,7 @@ Launch MAPDL service
     mapdl.title("2-D Solenoid Actuator Static Analysis")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 100-107
+.. GENERATED FROM PYTHON SOURCE LINES 101-108
 
 Set up the FE model
 ===================
@@ -113,7 +114,7 @@ The model is built in centimeters and is then scaled to meters.
 
 The element type 'Plane233' is used for 2D magnetostatic analysis.
 
-.. GENERATED FROM PYTHON SOURCE LINES 107-112
+.. GENERATED FROM PYTHON SOURCE LINES 108-113
 
 .. code-block:: Python
 
@@ -123,7 +124,7 @@ The element type 'Plane233' is used for 2D magnetostatic analysis.
     mapdl.keyopt(1, 7, 1)  # Condense forces at the corner nodes
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 113-118
+.. GENERATED FROM PYTHON SOURCE LINES 114-119
 
 Set material properties
 -----------------------
@@ -131,7 +132,7 @@ Set material properties
 Units are in the international unit system.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 118-123
+.. GENERATED FROM PYTHON SOURCE LINES 119-124
 
 .. code-block:: Python
 
@@ -141,14 +142,14 @@ Units are in the international unit system.
     mapdl.mp("MURX", 4, 2000)  # Permeability of armature
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-128
+.. GENERATED FROM PYTHON SOURCE LINES 125-129
 
 Set parameters
 --------------
 
 Set parameters for geometry design.
 
-.. GENERATED FROM PYTHON SOURCE LINES 128-149
+.. GENERATED FROM PYTHON SOURCE LINES 129-150
 
 .. code-block:: Python
 
@@ -174,14 +175,14 @@ Set parameters for geometry design.
     smart_size = 4  # Smart Size Level for Meshing
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 150-154
+.. GENERATED FROM PYTHON SOURCE LINES 151-155
 
 Create geometry
 ---------------
 
 Create the model geometry.
 
-.. GENERATED FROM PYTHON SOURCE LINES 154-166
+.. GENERATED FROM PYTHON SOURCE LINES 155-167
 
 .. code-block:: Python
 
@@ -198,14 +199,14 @@ Create the model geometry.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 167-171
+.. GENERATED FROM PYTHON SOURCE LINES 168-172
 
 Mesh
 ----
 
 Set the model mesh.
 
-.. GENERATED FROM PYTHON SOURCE LINES 171-188
+.. GENERATED FROM PYTHON SOURCE LINES 172-189
 
 .. code-block:: Python
 
@@ -227,12 +228,12 @@ Set the model mesh.
     mapdl.aplot(graphics_backend=GraphicsBackend.MAPDL)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 189-191
+.. GENERATED FROM PYTHON SOURCE LINES 190-192
 
 Mesh
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 191-195
+.. GENERATED FROM PYTHON SOURCE LINES 192-196
 
 .. code-block:: Python
 
@@ -241,14 +242,14 @@ Mesh
     mapdl.amesh("ALL")  # Mesh all areas
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 196-200
+.. GENERATED FROM PYTHON SOURCE LINES 197-201
 
 Scale mesh to meters
 --------------------
 
 Scale the model to be one meter in size.
 
-.. GENERATED FROM PYTHON SOURCE LINES 200-207
+.. GENERATED FROM PYTHON SOURCE LINES 201-208
 
 .. code-block:: Python
 
@@ -260,14 +261,14 @@ Scale the model to be one meter in size.
     mapdl.finish()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 208-212
+.. GENERATED FROM PYTHON SOURCE LINES 209-213
 
 Loads and boundary conditions
 ------------------------------
 
 Define loads and boundary conditions.
 
-.. GENERATED FROM PYTHON SOURCE LINES 212-223
+.. GENERATED FROM PYTHON SOURCE LINES 213-224
 
 .. code-block:: Python
 
@@ -283,14 +284,14 @@ Define loads and boundary conditions.
     mapdl.d("ALL", "AZ", 0)  # Set potentials to zero (flux-parallel)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 224-228
+.. GENERATED FROM PYTHON SOURCE LINES 225-229
 
 Solve the model
 ===============
 
 Solve the magnetostatic analysis.
 
-.. GENERATED FROM PYTHON SOURCE LINES 228-233
+.. GENERATED FROM PYTHON SOURCE LINES 229-234
 
 .. code-block:: Python
 
@@ -300,14 +301,14 @@ Solve the magnetostatic analysis.
     mapdl.finish()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-238
+.. GENERATED FROM PYTHON SOURCE LINES 235-239
 
 Postprocessing
 ==============
 
 Open the result file and read in the last set of results
 
-.. GENERATED FROM PYTHON SOURCE LINES 238-243
+.. GENERATED FROM PYTHON SOURCE LINES 239-244
 
 .. code-block:: Python
 
@@ -317,12 +318,12 @@ Open the result file and read in the last set of results
     mapdl.set("last")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 244-246
+.. GENERATED FROM PYTHON SOURCE LINES 245-247
 
 Print the nodal values
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 247-250
+.. GENERATED FROM PYTHON SOURCE LINES 248-251
 
 .. code-block:: Python
 
@@ -330,7 +331,7 @@ Print the nodal values
     print(mapdl.post_processing.nodal_values("b", "x"))
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 251-256
+.. GENERATED FROM PYTHON SOURCE LINES 252-257
 
 Create an MAPDL Power Graphics plot of the X-direction magnetic flux
 --------------------------------------------------------------------
@@ -338,7 +339,7 @@ Create an MAPDL Power Graphics plot of the X-direction magnetic flux
 The MAPDL colors are reversed via the ``rgb`` command so that the background is
 white with black text and element edges.
 
-.. GENERATED FROM PYTHON SOURCE LINES 256-270
+.. GENERATED FROM PYTHON SOURCE LINES 257-271
 
 .. code-block:: Python
 
@@ -357,14 +358,14 @@ white with black text and element edges.
     mapdl.show("")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 271-275
+.. GENERATED FROM PYTHON SOURCE LINES 272-276
 
 Obtain grid and scalar data
 ---------------------------
 
 First, obtain the set of unique material IDs in the model
 
-.. GENERATED FROM PYTHON SOURCE LINES 275-279
+.. GENERATED FROM PYTHON SOURCE LINES 276-280
 
 .. code-block:: Python
 
@@ -373,14 +374,14 @@ First, obtain the set of unique material IDs in the model
     np.unique(elem_mats)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 280-284
+.. GENERATED FROM PYTHON SOURCE LINES 281-285
 
 For each unique material ID, the elements and their nodes are selected.
 The ``grids`` list is appended with the mesh information of just those
 elements, and the ``scalars`` list is appended with the nodal X-direction magnetic
 flux.
 
-.. GENERATED FROM PYTHON SOURCE LINES 284-294
+.. GENERATED FROM PYTHON SOURCE LINES 285-295
 
 .. code-block:: Python
 
@@ -395,12 +396,12 @@ flux.
     mapdl.allsel()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 295-297
+.. GENERATED FROM PYTHON SOURCE LINES 296-298
 
 If interested print the grids list and perhaps compare to a print of
 mapdl.mesh.grid
 
-.. GENERATED FROM PYTHON SOURCE LINES 297-302
+.. GENERATED FROM PYTHON SOURCE LINES 298-303
 
 .. code-block:: Python
 
@@ -410,7 +411,7 @@ mapdl.mesh.grid
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 303-315
+.. GENERATED FROM PYTHON SOURCE LINES 304-316
 
 Color map and result plot
 -------------------------
@@ -425,7 +426,7 @@ legend.
 
 The plot is then shown and it recreates the native plot quite well.
 
-.. GENERATED FROM PYTHON SOURCE LINES 315-340
+.. GENERATED FROM PYTHON SOURCE LINES 316-341
 
 .. code-block:: Python
 
@@ -455,12 +456,12 @@ The plot is then shown and it recreates the native plot quite well.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 341-343
+.. GENERATED FROM PYTHON SOURCE LINES 342-344
 
 Exiting MAPDL
 =============
 
-.. GENERATED FROM PYTHON SOURCE LINES 343-345
+.. GENERATED FROM PYTHON SOURCE LINES 344-346
 
 .. code-block:: Python
 

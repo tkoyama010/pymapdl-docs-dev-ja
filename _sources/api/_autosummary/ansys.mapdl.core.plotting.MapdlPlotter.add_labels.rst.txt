@@ -1,6 +1,0 @@
-add\_labels
-===========
-
-.. currentmodule:: ansys.mapdl.core.plotting
-
-.. automethod:: MapdlPlotter.add_labels

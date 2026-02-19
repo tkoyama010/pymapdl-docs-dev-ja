@@ -1,6 +1,0 @@
-﻿save\_ansys\_path
-=================
-
-.. currentmodule:: ansys.tools.path
-
-.. autofunction:: save_ansys_path

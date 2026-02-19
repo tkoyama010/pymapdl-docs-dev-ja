@@ -15,7 +15,13 @@
    
       
       
+      MapdlPool.add
+      
+      
       MapdlPool.exit
+      
+      
+      MapdlPool.increase
       
       
       MapdlPool.is_initialized
@@ -28,6 +34,9 @@
       
       
       MapdlPool.next_available
+      
+      
+      MapdlPool.reduce
       
       
       MapdlPool.run_batch

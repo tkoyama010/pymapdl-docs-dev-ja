@@ -32,9 +32,10 @@ plotting functionality.
 This example also demonstrates some of the more advanced features of
 PyMAPDL including direct mesh access through VTK.
 
-.. GENERATED FROM PYTHON SOURCE LINES 39-49
+.. GENERATED FROM PYTHON SOURCE LINES 39-50
 
 .. code-block:: Python
+
 
 
     import numpy as np
@@ -47,14 +48,14 @@ PyMAPDL including direct mesh access through VTK.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 51-55
+.. GENERATED FROM PYTHON SOURCE LINES 52-56
 
 Load Geometry
 ~~~~~~~~~~~~~
 Here we download a simple example bracket IGES file and load it into
 MAPDL.  Since ``igesin`` must be in the AUX15 process
 
-.. GENERATED FROM PYTHON SOURCE LINES 55-65
+.. GENERATED FROM PYTHON SOURCE LINES 56-66
 
 .. code-block:: Python
 
@@ -69,7 +70,7 @@ MAPDL.  Since ``igesin`` must be in the AUX15 process
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 66-74
+.. GENERATED FROM PYTHON SOURCE LINES 67-75
 
 Plotting
 ~~~~~~~~
@@ -80,7 +81,7 @@ all have compatible commands that use the
 :class:`ansys.mapdl.core.plotting.visualizer.MapdlPlotter` class.  You can
 configure this method with a variety of keyword arguments.  For example:
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-87
+.. GENERATED FROM PYTHON SOURCE LINES 75-88
 
 .. code-block:: Python
 
@@ -98,13 +99,13 @@ configure this method with a variety of keyword arguments.  For example:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 88-91
+.. GENERATED FROM PYTHON SOURCE LINES 89-92
 
 You can also configure a theme to enable consistent plotting across
 multiple plots.  These theme parameters override any unset keyword
 arguments.  For example:
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-101
+.. GENERATED FROM PYTHON SOURCE LINES 92-102
 
 .. code-block:: Python
 
@@ -119,7 +120,7 @@ arguments.  For example:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 102-107
+.. GENERATED FROM PYTHON SOURCE LINES 103-108
 
 Accessesing Element and Nodes Pythonically
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,7 +128,7 @@ PyMAPDL also supports element and nodal plotting using ``eplot`` and
 ``nplot``.  First, mesh the bracket using SOLID187 elements.  These
 are well suited to this geometry and the static structural analyses.
 
-.. GENERATED FROM PYTHON SOURCE LINES 107-118
+.. GENERATED FROM PYTHON SOURCE LINES 108-119
 
 .. code-block:: Python
 
@@ -143,12 +144,12 @@ are well suited to this geometry and the static structural analyses.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 119-121
+.. GENERATED FROM PYTHON SOURCE LINES 120-122
 
 You can access the underlying finite element mesh as a VTK grid
 through the ``mesh.grid`` attribute.
 
-.. GENERATED FROM PYTHON SOURCE LINES 121-126
+.. GENERATED FROM PYTHON SOURCE LINES 122-127
 
 .. code-block:: Python
 
@@ -158,14 +159,14 @@ through the ``mesh.grid`` attribute.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 127-131
+.. GENERATED FROM PYTHON SOURCE LINES 128-132
 
 This UnstructuredGrid contains a powerful API, including the ability
 to access the nodes, elements, original node numbers, all with the
 ability to plot the mesh and add new attributes and data to the
 grid.
 
-.. GENERATED FROM PYTHON SOURCE LINES 131-135
+.. GENERATED FROM PYTHON SOURCE LINES 132-136
 
 .. code-block:: Python
 
@@ -174,11 +175,11 @@ grid.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 136-137
+.. GENERATED FROM PYTHON SOURCE LINES 137-138
 
 cell representation in VTK format
 
-.. GENERATED FROM PYTHON SOURCE LINES 137-141
+.. GENERATED FROM PYTHON SOURCE LINES 138-142
 
 .. code-block:: Python
 
@@ -187,11 +188,11 @@ cell representation in VTK format
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 142-143
+.. GENERATED FROM PYTHON SOURCE LINES 143-144
 
 Obtain node numbers of the grid
 
-.. GENERATED FROM PYTHON SOURCE LINES 143-147
+.. GENERATED FROM PYTHON SOURCE LINES 144-148
 
 .. code-block:: Python
 
@@ -200,11 +201,11 @@ Obtain node numbers of the grid
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-149
+.. GENERATED FROM PYTHON SOURCE LINES 149-150
 
 Save arbitrary data to the grid
 
-.. GENERATED FROM PYTHON SOURCE LINES 149-155
+.. GENERATED FROM PYTHON SOURCE LINES 150-156
 
 .. code-block:: Python
 
@@ -215,12 +216,12 @@ Save arbitrary data to the grid
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 156-158
+.. GENERATED FROM PYTHON SOURCE LINES 157-159
 
 Plot this mesh with scalars of your choosing.  You can apply the
 same MapdlTheme when plotting as it's compatible with the grid plotter.
 
-.. GENERATED FROM PYTHON SOURCE LINES 158-172
+.. GENERATED FROM PYTHON SOURCE LINES 159-173
 
 .. code-block:: Python
 
@@ -239,7 +240,7 @@ same MapdlTheme when plotting as it's compatible with the grid plotter.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 173-181
+.. GENERATED FROM PYTHON SOURCE LINES 174-182
 
 This grid can be also saved to disk in the compact cross-platform VTK
 format and loaded again with ``pyvista`` or ParaView.
@@ -250,13 +251,13 @@ format and loaded again with ``pyvista`` or ParaView.
     >>> import pyvista
     >>> imported_mesh = pyvista.read('my_mesh.vtk')
 
-.. GENERATED FROM PYTHON SOURCE LINES 183-186
+.. GENERATED FROM PYTHON SOURCE LINES 184-187
 
 Stop mapdl
 ~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 186-187
+.. GENERATED FROM PYTHON SOURCE LINES 187-188
 
 .. code-block:: Python
 

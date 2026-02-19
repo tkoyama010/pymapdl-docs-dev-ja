@@ -10,6 +10,1239 @@ This document contains the release notes for the project.
 .. towncrier release notes start
 
 
+.. _v0.72.0:
+
+`0.72.0 <https://github.com/ansys/pymapdl/releases/tag/v0.72.0>`_ - January 27, 2026
+===================================================================================================
+
+.. tab-set::
+
+
+  .. tab-item:: Added
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Add support for ANSYS version 2026R2
+          - `#4342 <https://github.com/ansys/pymapdl/pull/4342>`_
+
+        * - Update license to 2026
+          - `#4353 <https://github.com/ansys/pymapdl/pull/4353>`_
+
+        * - Implement new gRPC transports
+          - `#4354 <https://github.com/ansys/pymapdl/pull/4354>`_
+
+        * - Adding more hooks
+          - `#4359 <https://github.com/ansys/pymapdl/pull/4359>`_
+
+        * - Add support for 'html-noexamples' target in make.bat
+          - `#4360 <https://github.com/ansys/pymapdl/pull/4360>`_
+
+
+  .. tab-item:: Fixed
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Replace deprecated numpy in1d with isin for array comparison
+          - `#4356 <https://github.com/ansys/pymapdl/pull/4356>`_
+
+        * - Security zizmor issues
+          - `#4357 <https://github.com/ansys/pymapdl/pull/4357>`_
+
+
+  .. tab-item:: Dependencies
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Bump the testing group with 2 updates
+          - `#4344 <https://github.com/ansys/pymapdl/pull/4344>`_
+
+        * - Bump the core group with 2 updates
+          - `#4348 <https://github.com/ansys/pymapdl/pull/4348>`_
+
+        * - Bump the documentation group with 3 updates
+          - `#4349 <https://github.com/ansys/pymapdl/pull/4349>`_
+
+        * - Bump pyfakefs from 5.10.2 to 6.0.0
+          - `#4352 <https://github.com/ansys/pymapdl/pull/4352>`_
+
+        * - Bump the minimal group across 1 directory with 2 updates
+          - `#4358 <https://github.com/ansys/pymapdl/pull/4358>`_
+
+        * - Bump the pip group across 2 directories with 2 updates
+          - `#4365 <https://github.com/ansys/pymapdl/pull/4365>`_
+
+        * - Bump psutil from 7.2.0 to 7.2.1 in the minimal group
+          - `#4366 <https://github.com/ansys/pymapdl/pull/4366>`_
+
+        * - Bump ansys-mapdl-reader from 0.55.1 to 0.55.2 in the core group
+          - `#4367 <https://github.com/ansys/pymapdl/pull/4367>`_
+
+        * - Bump plotly from 6.5.0 to 6.5.1 in the documentation group
+          - `#4370 <https://github.com/ansys/pymapdl/pull/4370>`_
+
+        * - Remove pyansys-tools-versioning from requirements
+          - `#4372 <https://github.com/ansys/pymapdl/pull/4372>`_
+
+        * - Bump plotly from 6.5.1 to 6.5.2 in the documentation group
+          - `#4374 <https://github.com/ansys/pymapdl/pull/4374>`_
+
+        * - Remove mentions of deprecated pyansys-tools-versioning package
+          - `#4380 <https://github.com/ansys/pymapdl/pull/4380>`_
+
+
+  .. tab-item:: Miscellaneous
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Docker directory structure
+          - `#4306 <https://github.com/ansys/pymapdl/pull/4306>`_
+
+
+  .. tab-item:: Maintenance
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Pre-commit autoupdate
+          - `#4337 <https://github.com/ansys/pymapdl/pull/4337>`_, `#4346 <https://github.com/ansys/pymapdl/pull/4346>`_
+
+        * - Update CHANGELOG for v0.71.3
+          - `#4341 <https://github.com/ansys/pymapdl/pull/4341>`_
+
+        * - Adding more precommit hooks
+          - `#4345 <https://github.com/ansys/pymapdl/pull/4345>`_
+
+        * - Bump the actions group across 1 directory with 9 updates
+          - `#4351 <https://github.com/ansys/pymapdl/pull/4351>`_
+
+        * - Temporarily disabling the \`local-min\` tests
+          - `#4377 <https://github.com/ansys/pymapdl/pull/4377>`_
+
+        * - Bump actions/checkout from 6.0.1 to 6.0.2 in the actions group
+          - `#4379 <https://github.com/ansys/pymapdl/pull/4379>`_
+
+
+.. _v0.71.3:
+
+`0.71.3 <https://github.com/ansys/pymapdl/releases/tag/v0.71.3>`_ - December 11, 2025
+====================================================================================================
+
+.. tab-set::
+
+
+  .. tab-item:: Fixed
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Check access process on windows
+          - `#4293 <https://github.com/ansys/pymapdl/pull/4293>`_
+
+        * - Mypy type checking issues across core modules
+          - `#4309 <https://github.com/ansys/pymapdl/pull/4309>`_
+
+
+  .. tab-item:: Dependencies
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Bump grpcio from 1.75.1 to 1.76.0 in the grpc-deps group
+          - `#4294 <https://github.com/ansys/pymapdl/pull/4294>`_
+
+        * - Bump pyfakefs from 5.10.0 to 5.10.2
+          - `#4304 <https://github.com/ansys/pymapdl/pull/4304>`_
+
+        * - Bump plotly from 6.4.0 to 6.5.0 in the documentation group
+          - `#4327 <https://github.com/ansys/pymapdl/pull/4327>`_
+
+        * - Bump the testing group with 3 updates
+          - `#4328 <https://github.com/ansys/pymapdl/pull/4328>`_
+
+
+  .. tab-item:: Miscellaneous
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - List_instances
+          - `#4329 <https://github.com/ansys/pymapdl/pull/4329>`_
+
+
+  .. tab-item:: Maintenance
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Pre-commit autoupdate
+          - `#4295 <https://github.com/ansys/pymapdl/pull/4295>`_, `#4333 <https://github.com/ansys/pymapdl/pull/4333>`_
+
+        * - Bump the actions group across 1 directory with 3 updates
+          - `#4308 <https://github.com/ansys/pymapdl/pull/4308>`_
+
+        * - Update CHANGELOG for v0.71.2
+          - `#4325 <https://github.com/ansys/pymapdl/pull/4325>`_
+
+        * - Update missing or outdated files
+          - `#4330 <https://github.com/ansys/pymapdl/pull/4330>`_
+
+        * - Bump actions/checkout from 5.0.0 to 6.0.0 in the actions group
+          - `#4334 <https://github.com/ansys/pymapdl/pull/4334>`_
+
+        * - Update vtk version to 9.5.2 in requirements and pyproject.toml
+          - `#4340 <https://github.com/ansys/pymapdl/pull/4340>`_
+
+
+.. _v0.71.2:
+
+`0.71.2 <https://github.com/ansys/pymapdl/releases/tag/v0.71.2>`_ - November 26, 2025
+====================================================================================================
+
+.. tab-set::
+
+
+  .. tab-item:: Fixed
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Relax stdout check for gRPC server startup
+          - `#4299 <https://github.com/ansys/pymapdl/pull/4299>`_
+
+        * - Cicd mpi issue and adding conditional encrypted log uploads
+          - `#4319 <https://github.com/ansys/pymapdl/pull/4319>`_
+
+        * - Update pytest arguments for consistency and clarity in local and remote workflows
+          - `#4322 <https://github.com/ansys/pymapdl/pull/4322>`_
+
+
+  .. tab-item:: Dependencies
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Update pyvista requirement from <=0.46.3 to <=0.46.4
+          - `#4303 <https://github.com/ansys/pymapdl/pull/4303>`_
+
+        * - Bump the documentation group across 1 directory with 3 updates
+          - `#4315 <https://github.com/ansys/pymapdl/pull/4315>`_
+
+
+  .. tab-item:: Documentation
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Update \`\`CONTRIBUTORS.md\`\` with the latest contributors
+          - `#4289 <https://github.com/ansys/pymapdl/pull/4289>`_
+
+
+  .. tab-item:: Maintenance
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Update CHANGELOG for v0.71.1
+          - `#4286 <https://github.com/ansys/pymapdl/pull/4286>`_
+
+        * - Migrate ansys-tools-path -> ansys-tools-common
+          - `#4307 <https://github.com/ansys/pymapdl/pull/4307>`_
+
+
+.. _v0.71.1:
+
+`0.71.1 <https://github.com/ansys/pymapdl/releases/tag/v0.71.1>`_ - October 30, 2025
+===================================================================================================
+
+.. tab-set::
+
+
+  .. tab-item:: Added
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Adding plvar to plot commands
+          - `#4196 <https://github.com/ansys/pymapdl/pull/4196>`_
+
+        * - Adding PLVAR to plot commands
+          - `#4204 <https://github.com/ansys/pymapdl/pull/4204>`_
+
+        * - Add STATUS enum for MAPDL state management
+          - `#4221 <https://github.com/ansys/pymapdl/pull/4221>`_
+
+        * - Enhance array loading to handle negative values and floats
+          - `#4236 <https://github.com/ansys/pymapdl/pull/4236>`_
+
+
+  .. tab-item:: Fixed
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Removing artifacts
+          - `#4248 <https://github.com/ansys/pymapdl/pull/4248>`_
+
+        * - Filter non-numeric values when parsing item list
+          - `#4257 <https://github.com/ansys/pymapdl/pull/4257>`_
+
+        * - Make get_slurm_options astype optional and preserve default type.
+          - `#4267 <https://github.com/ansys/pymapdl/pull/4267>`_
+
+        * - Open gui not working
+          - `#4270 <https://github.com/ansys/pymapdl/pull/4270>`_
+
+        * - \"update_coordinates\" not found in dcb composite example
+          - `#4272 <https://github.com/ansys/pymapdl/pull/4272>`_
+
+        * - Issue 4206
+          - `#4279 <https://github.com/ansys/pymapdl/pull/4279>`_
+
+        * - Skip processes owned by other users and handle AccessDenied when stopping MAPDL
+          - `#4281 <https://github.com/ansys/pymapdl/pull/4281>`_
+
+
+  .. tab-item:: Dependencies
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Bump the documentation group with 2 updates
+          - `#4205 <https://github.com/ansys/pymapdl/pull/4205>`_
+
+        * - Bump matplotlib from 3.10.5 to 3.10.6 in the core group
+          - `#4211 <https://github.com/ansys/pymapdl/pull/4211>`_
+
+        * - Bump pyfakefs from 5.9.2 to 5.9.3
+          - `#4213 <https://github.com/ansys/pymapdl/pull/4213>`_
+
+        * - Bump platformdirs from 4.3.8 to 4.4.0 in the minimal group
+          - `#4217 <https://github.com/ansys/pymapdl/pull/4217>`_
+
+        * - Bump ansys-sphinx-theme from 1.5.3 to 1.6.0 in the core group
+          - `#4218 <https://github.com/ansys/pymapdl/pull/4218>`_
+
+        * - Bump the testing group with 2 updates
+          - `#4219 <https://github.com/ansys/pymapdl/pull/4219>`_
+
+        * - Update pyvista requirement from <=0.45.3 to <=0.46.3
+          - `#4220 <https://github.com/ansys/pymapdl/pull/4220>`_
+
+        * - Bump ansys-sphinx-theme from 1.6.0 to 1.6.1 in the core group
+          - `#4227 <https://github.com/ansys/pymapdl/pull/4227>`_
+
+        * - Bump the testing group with 3 updates
+          - `#4228 <https://github.com/ansys/pymapdl/pull/4228>`_
+
+        * - Bump pytest-cov from 6.3.0 to 7.0.0 in the testing group
+          - `#4231 <https://github.com/ansys/pymapdl/pull/4231>`_
+
+        * - Bump psutil from 7.0.0 to 7.1.0 in the minimal group
+          - `#4240 <https://github.com/ansys/pymapdl/pull/4240>`_
+
+        * - Bump grpcio from 1.74.0 to 1.75.0 in the grpc-deps group
+          - `#4241 <https://github.com/ansys/pymapdl/pull/4241>`_
+
+        * - Bump pandas from 2.3.2 to 2.3.3 in the documentation group
+          - `#4242 <https://github.com/ansys/pymapdl/pull/4242>`_
+
+        * - Bump grpcio from 1.75.0 to 1.75.1 in the grpc-deps group
+          - `#4253 <https://github.com/ansys/pymapdl/pull/4253>`_
+
+        * - Bump ansys-tools-visualization-interface from 0.11.0 to 0.12.1 in the core group
+          - `#4254 <https://github.com/ansys/pymapdl/pull/4254>`_
+
+        * - Bump plotly from 6.3.0 to 6.3.1 in the documentation group
+          - `#4255 <https://github.com/ansys/pymapdl/pull/4255>`_
+
+        * - Bump the core group with 2 updates
+          - `#4263 <https://github.com/ansys/pymapdl/pull/4263>`_
+
+        * - Bump pytest-pyvista from 0.2.0 to 0.3.1 in the testing group
+          - `#4264 <https://github.com/ansys/pymapdl/pull/4264>`_
+
+        * - Bump the minimal group with 2 updates
+          - `#4275 <https://github.com/ansys/pymapdl/pull/4275>`_
+
+        * - Bump pytest-rerunfailures from 16.0.1 to 16.1 in the testing group
+          - `#4276 <https://github.com/ansys/pymapdl/pull/4276>`_
+
+        * - Bump pyfakefs from 5.9.3 to 5.10.0
+          - `#4277 <https://github.com/ansys/pymapdl/pull/4277>`_
+
+
+  .. tab-item:: Documentation
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Update ``html_context`` with PyAnsys tags
+          - `#4202 <https://github.com/ansys/pymapdl/pull/4202>`_
+
+        * - Fix typos and improve testing documentation
+          - `#4273 <https://github.com/ansys/pymapdl/pull/4273>`_
+
+        * - Expand MAPDL error-handling docs and add PDF download link
+          - `#4282 <https://github.com/ansys/pymapdl/pull/4282>`_
+
+
+  .. tab-item:: Miscellaneous
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Fix: improve code quality and numpydoc documentation
+          - `#4125 <https://github.com/ansys/pymapdl/pull/4125>`_
+
+        * - Feat: Add wrinqr access to mapdl_inprocess class
+          - `#4179 <https://github.com/ansys/pymapdl/pull/4179>`_
+
+        * - Chore: update CHANGELOG for v0.71.0
+          - `#4192 <https://github.com/ansys/pymapdl/pull/4192>`_
+
+        * - Ci: remove unused stale issue and release configuration files
+          - `#4195 <https://github.com/ansys/pymapdl/pull/4195>`_
+
+        * - Use screenshot to show plots
+          - `#4196 <https://github.com/ansys/pymapdl/pull/4196>`_
+
+
+  .. tab-item:: Maintenance
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Add InProcess testing module
+          - `#4185 <https://github.com/ansys/pymapdl/pull/4185>`_
+
+        * - Fix release notes PR classification
+          - `#4194 <https://github.com/ansys/pymapdl/pull/4194>`_
+
+        * - Remove Python UPF examples and related documentation
+          - `#4197 <https://github.com/ansys/pymapdl/pull/4197>`_
+
+        * - Bump actions/checkout from 4 to 5 in the actions group
+          - `#4199 <https://github.com/ansys/pymapdl/pull/4199>`_
+
+        * - Update condition to include pre-commit-ci bot in organization member check
+          - `#4203 <https://github.com/ansys/pymapdl/pull/4203>`_
+
+        * - Bump ansys/actions from 10.0.14 to 10.0.15 in the actions group
+          - `#4209 <https://github.com/ansys/pymapdl/pull/4209>`_
+
+        * - Pre-commit autoupdate
+          - `#4215 <https://github.com/ansys/pymapdl/pull/4215>`_, `#4222 <https://github.com/ansys/pymapdl/pull/4222>`_, `#4229 <https://github.com/ansys/pymapdl/pull/4229>`_, `#4244 <https://github.com/ansys/pymapdl/pull/4244>`_, `#4258 <https://github.com/ansys/pymapdl/pull/4258>`_
+
+        * - Bump ansys/actions from 10.0.15 to 10.0.20 in the actions group
+          - `#4216 <https://github.com/ansys/pymapdl/pull/4216>`_
+
+        * - Bump the actions group with 5 updates
+          - `#4223 <https://github.com/ansys/pymapdl/pull/4223>`_
+
+        * - Bump ansys/actions from 10.1.0 to 10.1.3 in the actions group
+          - `#4230 <https://github.com/ansys/pymapdl/pull/4230>`_
+
+        * - Comment out log upload steps in workflow files
+          - `#4239 <https://github.com/ansys/pymapdl/pull/4239>`_
+
+        * - Bump ansys/actions from 10.1.3 to 10.1.4 in the actions group
+          - `#4245 <https://github.com/ansys/pymapdl/pull/4245>`_
+
+        * - Bump the actions group with 2 updates
+          - `#4259 <https://github.com/ansys/pymapdl/pull/4259>`_, `#4271 <https://github.com/ansys/pymapdl/pull/4271>`_
+
+        * - Add actions-security job to audit GitHub Actions usage
+          - `#4260 <https://github.com/ansys/pymapdl/pull/4260>`_
+
+        * - Reducing secret exposure
+          - `#4261 <https://github.com/ansys/pymapdl/pull/4261>`_
+
+        * - Enable persist-credentials for actions/checkout to allow pushes
+          - `#4278 <https://github.com/ansys/pymapdl/pull/4278>`_
+
+
+  .. tab-item:: Test
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Skip database tests based on TEST_DB environment variable
+          - `#4250 <https://github.com/ansys/pymapdl/pull/4250>`_
+
+
+.. _v0.71.0:
+
+`0.71.0 <https://github.com/ansys/pymapdl/releases/tag/v0.71.0>`_ - August 22, 2025
+==================================================================================================
+
+.. tab-set::
+
+
+  .. tab-item:: Added
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Feat: using dpf instead of reader in "results" module
+          - `#1300 <https://github.com/ansys/pymapdl/pull/1300>`_
+
+        * - feat: exposing a reconnection method
+          - `#3933 <https://github.com/ansys/pymapdl/pull/3933>`_
+
+        * - feat: enhance error handling with color support and additional notes in exceptions.
+          - `#3964 <https://github.com/ansys/pymapdl/pull/3964>`_
+
+        * - feat: enhance error handling from terminal output for MAPDL launch
+          - `#3969 <https://github.com/ansys/pymapdl/pull/3969>`_
+
+        * - feat: add invopt method to enable or disable inverse solving for load steps
+          - `#3979 <https://github.com/ansys/pymapdl/pull/3979>`_
+
+        * - Fix: (migrated pr 4027): added missing kwargs to the dmpoption command.
+          - `#4030 <https://github.com/ansys/pymapdl/pull/4030>`_
+
+        * - Feat: improving inquire
+          - `#4035 <https://github.com/ansys/pymapdl/pull/4035>`_
+
+        * - Feat: enhance ci scripts for improved logging and dpf-reader support
+          - `#4040 <https://github.com/ansys/pymapdl/pull/4040>`_
+
+        * - Feat: implement platform-specific path handling in mapdl.directory
+          - `#4079 <https://github.com/ansys/pymapdl/pull/4079>`_
+
+        * - Feat: using entrypoint to start mapdl
+          - `#4098 <https://github.com/ansys/pymapdl/pull/4098>`_
+
+        * - Feat: parameterize tests for element and volume selection in post-processing
+          - `#4110 <https://github.com/ansys/pymapdl/pull/4110>`_
+
+        * - Feat: update logo images in readme and index files
+          - `#4112 <https://github.com/ansys/pymapdl/pull/4112>`_
+
+        * - Feat: add rpsd method to mapdlgrpc for variable retrieval as an array
+          - `#4114 <https://github.com/ansys/pymapdl/pull/4114>`_
+
+        * - Feat: allow psd plots to show
+          - `#4116 <https://github.com/ansys/pymapdl/pull/4116>`_
+
+        * - Feat: add tbpl command to plot_commands list
+          - `#4119 <https://github.com/ansys/pymapdl/pull/4119>`_
+
+        * - Feat: add secp command to plot_commands list
+          - `#4129 <https://github.com/ansys/pymapdl/pull/4129>`_
+
+        * - Feat: (pr 4122) adding osresult command to the misc loads
+          - `#4131 <https://github.com/ansys/pymapdl/pull/4131>`_
+
+  .. tab-item:: Fixed
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - fix: add Stack Overflow links to linkcheck ignore list
+          - `#3922 <https://github.com/ansys/pymapdl/pull/3922>`_
+
+        * - fix: MapdlRuntimeError message in ``cwd``
+          - `#3938 <https://github.com/ansys/pymapdl/pull/3938>`_
+
+        * - fix: update Dockerfiles and docker-compose files to use v25.2-ubuntu-cicd and streamline environment variables
+          - `#3962 <https://github.com/ansys/pymapdl/pull/3962>`_
+
+        * - fix: eqslv not being properly converted.
+          - `#3978 <https://github.com/ansys/pymapdl/pull/3978>`_
+
+        * - fix: plotly on docs
+          - `#3980 <https://github.com/ansys/pymapdl/pull/3980>`_
+
+        * - Fix: selection on non-interactive
+          - `#3998 <https://github.com/ansys/pymapdl/pull/3998>`_
+
+        * - Fix: migrator secret escaping
+          - `#4012 <https://github.com/ansys/pymapdl/pull/4012>`_
+
+        * - Fix: update article links
+          - `#4013 <https://github.com/ansys/pymapdl/pull/4013>`_
+
+        * - Fix: migrator syntax problem
+          - `#4031 <https://github.com/ansys/pymapdl/pull/4031>`_
+
+        * - Fix: typo in post
+          - `#4036 <https://github.com/ansys/pymapdl/pull/4036>`_
+
+        * - Fix: update import paths and add verification files to examples
+          - `#4038 <https://github.com/ansys/pymapdl/pull/4038>`_
+
+        * - Fix: disable quarto cheatsheet build
+          - `#4062 <https://github.com/ansys/pymapdl/pull/4062>`_
+
+        * - Fix: add curl installation to fix codecov upload
+          - `#4070 <https://github.com/ansys/pymapdl/pull/4070>`_
+
+        * - Fix: improve restarting mapdl during testing
+          - `#4077 <https://github.com/ansys/pymapdl/pull/4077>`_
+
+        * - Fix: handle root directory case in test
+          - `#4087 <https://github.com/ansys/pymapdl/pull/4087>`_
+
+        * - Fix: (migrated pr 4094): fix socket.gethostbyaddr(ip) error when no reverse dns available.
+          - `#4095 <https://github.com/ansys/pymapdl/pull/4095>`_
+
+        * - Fix: some typos in the success migrator comment.
+          - `#4096 <https://github.com/ansys/pymapdl/pull/4096>`_
+
+        * - Fix: remove restriction on spaces in string values for mapdl parameters
+          - `#4109 <https://github.com/ansys/pymapdl/pull/4109>`_
+
+        * - Fix: update mpwrite and mpread methods to enforce 'lib' as the only valid lib argument
+          - `#4123 <https://github.com/ansys/pymapdl/pull/4123>`_
+
+        * - Fix: improve code quality with docstring fix and better exception handling
+          - `#4124 <https://github.com/ansys/pymapdl/pull/4124>`_
+
+        * - Fix: command conversion
+          - `#4126 <https://github.com/ansys/pymapdl/pull/4126>`_
+
+        * - Fix: remove unused image files from image_cache_dir
+          - `#4128 <https://github.com/ansys/pymapdl/pull/4128>`_
+
+        * - Fix: doc build workflow by using two containers: mapdl and dpf
+          - `#4132 <https://github.com/ansys/pymapdl/pull/4132>`_
+
+        * - Fix: update ansys-tools-visualization-interface version constraints in pyproject.toml
+          - `#4137 <https://github.com/ansys/pymapdl/pull/4137>`_
+
+        * - Fix: ensure version is checked if exec_file is provided
+          - `#4138 <https://github.com/ansys/pymapdl/pull/4138>`_
+
+        * - Fix: migrated (PR 4146): Set _post as a property so it's initialized when needed
+          - `#4147 <https://github.com/ansys/pymapdl/pull/4147>`_
+
+        * - Fix: pyvista version
+          - `#4158 <https://github.com/ansys/pymapdl/pull/4158>`_
+
+        * - Fix: Added scalar_param method to MapdlInProcess class
+          - `#4161 <https://github.com/ansys/pymapdl/pull/4161>`_
+
+  .. tab-item:: Dependencies
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - build: bump ansys-mapdl-reader from 0.55.0 to 0.55.1 in the core group
+          - `#3927 <https://github.com/ansys/pymapdl/pull/3927>`_
+
+        * - build: bump plotly from 6.0.1 to 6.1.1 in the documentation group
+          - `#3945 <https://github.com/ansys/pymapdl/pull/3945>`_
+
+        * - build: bump ansys-sphinx-theme from 1.4.4 to 1.5.0 in the core group
+          - `#3974 <https://github.com/ansys/pymapdl/pull/3974>`_
+
+        * - build: bump plotly from 6.1.1 to 6.1.2 in the documentation group
+          - `#3975 <https://github.com/ansys/pymapdl/pull/3975>`_
+
+        * - Build: bump grpcio from 1.70.0 to 1.72.1 in the grpc-deps group
+          - `#3984 <https://github.com/ansys/pymapdl/pull/3984>`_
+
+        * - Build: bump the core group with 2 updates
+          - `#3985 <https://github.com/ansys/pymapdl/pull/3985>`_
+
+        * - Build: bump pandas from 2.2.3 to 2.3.0 in the documentation group
+          - `#3986 <https://github.com/ansys/pymapdl/pull/3986>`_
+
+        * - Build: bump pytest from 8.3.5 to 8.4.0 in the testing group
+          - `#3987 <https://github.com/ansys/pymapdl/pull/3987>`_
+
+        * - Build: bump grpcio from 1.72.1 to 1.73.0 in the grpc-deps group
+          - `#4004 <https://github.com/ansys/pymapdl/pull/4004>`_
+
+        * - Build: bump pytest-cov from 6.1.1 to 6.2.1 in the testing group
+          - `#4005 <https://github.com/ansys/pymapdl/pull/4005>`_
+
+        * - Build: bump the pip group across 2 directories with 2 updates
+          - `#4015 <https://github.com/ansys/pymapdl/pull/4015>`_
+
+        * - Build: bump the pip group across 2 directories with 1 update
+          - `#4021 <https://github.com/ansys/pymapdl/pull/4021>`_
+
+        * - Build: bump pytest from 8.4.0 to 8.4.1 in the testing group
+          - `#4023 <https://github.com/ansys/pymapdl/pull/4023>`_
+
+        * - Build: bump pyiges[full] from 0.3.1 to 0.3.2
+          - `#4024 <https://github.com/ansys/pymapdl/pull/4024>`_
+
+        * - Build: restrict vtk version to <9.5.0 for compatibility
+          - `#4034 <https://github.com/ansys/pymapdl/pull/4034>`_
+
+        * - Build: bump grpcio from 1.73.0 to 1.73.1 in the grpc-deps group
+          - `#4045 <https://github.com/ansys/pymapdl/pull/4045>`_
+
+        * - Build: bump the documentation group with 2 updates
+          - `#4047 <https://github.com/ansys/pymapdl/pull/4047>`_
+
+        * - Build: bump pytest-random-order from 1.1.1 to 1.2.0 in the testing group
+          - `#4048 <https://github.com/ansys/pymapdl/pull/4048>`_
+
+        * - Build: bump pyfakefs from 5.8.0 to 5.9.1
+          - `#4049 <https://github.com/ansys/pymapdl/pull/4049>`_
+
+        * - Build: add support for ansys version 2026r1
+          - `#4050 <https://github.com/ansys/pymapdl/pull/4050>`_
+
+        * - Build: add cooldown settings for actions and dependencies updates
+          - `#4051 <https://github.com/ansys/pymapdl/pull/4051>`_
+
+        * - Build: bump ansys-tools-visualization-interface from 0.9.2 to 0.11.0 in the core group
+          - `#4073 <https://github.com/ansys/pymapdl/pull/4073>`_
+
+        * - Build: bump pandas from 2.3.0 to 2.3.1 in the documentation group
+          - `#4091 <https://github.com/ansys/pymapdl/pull/4091>`_
+
+        * - Build: bump ansys-sphinx-theme from 1.5.2 to 1.5.3 in the core group across 1 directory
+          - `#4092 <https://github.com/ansys/pymapdl/pull/4092>`_
+
+        * - Build: bump aiohttp from 3.11.2 to 3.12.14 in /doc/source/examples/extended_examples/gui in the pip group across 1 directory
+          - `#4103 <https://github.com/ansys/pymapdl/pull/4103>`_
+
+        * - Build: bump pytest-pyvista from 0.1.9 to 0.2.0 in the testing group
+          - `#4106 <https://github.com/ansys/pymapdl/pull/4106>`_
+
+        * - Build: bump grpcio from 1.73.1 to 1.74.0 in the grpc-deps group
+          - `#4163 <https://github.com/ansys/pymapdl/pull/4163>`_
+
+        * - Build: bump matplotlib from 3.10.3 to 3.10.5 in the core group
+          - `#4164 <https://github.com/ansys/pymapdl/pull/4164>`_
+
+        * - Build: bump pyfakefs from 5.9.1 to 5.9.2
+          - `#4165 <https://github.com/ansys/pymapdl/pull/4165>`_
+
+        * - Build: update pyvista requirement from <=0.45.2 to <=0.45.3
+          - `#4166 <https://github.com/ansys/pymapdl/pull/4166>`_
+
+        * - build: bump numpy from 2.2.5 to 2.2.6 in the minimal group
+          - `#3944 <https://github.com/ansys/pymapdl/pull/3944>`_
+
+
+  .. tab-item:: Miscellaneous
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Ci: use ubuntu-latest github image
+          - `#3814 <https://github.com/ansys/pymapdl/pull/3814>`_
+
+        * - ci: use own DPF standalone Docker image reference in workflows
+          - `#3882 <https://github.com/ansys/pymapdl/pull/3882>`_
+
+        * - chore: update CHANGELOG for v0.70.1
+          - `#3923 <https://github.com/ansys/pymapdl/pull/3923>`_
+
+        * - refactor: update geometry tests
+          - `#3930 <https://github.com/ansys/pymapdl/pull/3930>`_
+
+        * - ci: using strict markers on pytest
+          - `#3934 <https://github.com/ansys/pymapdl/pull/3934>`_
+
+        * - ci: adding mypy support
+          - `#3940 <https://github.com/ansys/pymapdl/pull/3940>`_
+
+        * - refactor: enhance error reporting in pytest output for better debugging
+          - `#3943 <https://github.com/ansys/pymapdl/pull/3943>`_
+
+        * - refactor: update MyReporter to display passed tests before failed tests
+          - `#3947 <https://github.com/ansys/pymapdl/pull/3947>`_
+
+        * - chore: migrated PR 3968
+          - `#3971 <https://github.com/ansys/pymapdl/pull/3971>`_
+
+        * - Ci: bump the actions group with 2 updates
+          - `#3995 <https://github.com/ansys/pymapdl/pull/3995>`_, `#4183 <https://github.com/ansys/pymapdl/pull/4183>`_
+
+        * - Ci: allow starting dpf on same container
+          - `#4008 <https://github.com/ansys/pymapdl/pull/4008>`_
+
+        * - Ci: bump ansys/actions from 10.0.8 to 10.0.11 in the actions group
+          - `#4014 <https://github.com/ansys/pymapdl/pull/4014>`_
+
+        * - Build: add shellcheck hook
+          - `#4026 <https://github.com/ansys/pymapdl/pull/4026>`_
+
+        * - Ci: pre-commit autoupdate
+          - `#4032 <https://github.com/ansys/pymapdl/pull/4032>`_, `#4061 <https://github.com/ansys/pymapdl/pull/4061>`_, `#4083 <https://github.com/ansys/pymapdl/pull/4083>`_, `#4117 <https://github.com/ansys/pymapdl/pull/4117>`_, `#4142 <https://github.com/ansys/pymapdl/pull/4142>`_, `#4170 <https://github.com/ansys/pymapdl/pull/4170>`_, `#4180 <https://github.com/ansys/pymapdl/pull/4180>`_, `#3981 <https://github.com/ansys/pymapdl/pull/3981>`_
+
+        * - Ci: improving pytest reporting
+          - `#4037 <https://github.com/ansys/pymapdl/pull/4037>`_
+
+        * - Refactor: moving parse_ip_route to misc
+          - `#4039 <https://github.com/ansys/pymapdl/pull/4039>`_
+
+        * - Chore: update changelog for v0.70.2
+          - `#4044 <https://github.com/ansys/pymapdl/pull/4044>`_
+
+        * - Ci: bump ansys/actions from 10.0.11 to 10.0.12 in the actions group
+          - `#4053 <https://github.com/ansys/pymapdl/pull/4053>`_
+
+        * - Chore: add security.md with vulnerability reporting guidelines and supported versions
+          - `#4059 <https://github.com/ansys/pymapdl/pull/4059>`_
+
+        * - Build: remove deprecated ubuntu-student versions from build matrix
+          - `#4064 <https://github.com/ansys/pymapdl/pull/4064>`_
+
+        * - Ci: disabling dpf test because flaky
+          - `#4065 <https://github.com/ansys/pymapdl/pull/4065>`_
+
+        * - Fix: inquire returning short env vars
+          - `#4074 <https://github.com/ansys/pymapdl/pull/4074>`_
+
+        * - Refactor: formatting webserver scripts
+          - `#4086 <https://github.com/ansys/pymapdl/pull/4086>`_
+
+        * - Test: enhance testing logging
+          - `#4097 <https://github.com/ansys/pymapdl/pull/4097>`_
+
+        * - Refactor: enhance sys method type hints and clean up return value
+          - `#4099 <https://github.com/ansys/pymapdl/pull/4099>`_
+
+        * - Refactor: using path method for joining paths.
+          - `#4101 <https://github.com/ansys/pymapdl/pull/4101>`_
+
+        * - Refactor: move methods from mapdlgrpc class to core and extended
+          - `#4108 <https://github.com/ansys/pymapdl/pull/4108>`_
+
+        * - Refactor: adding type hints to result.py
+          - `#4133 <https://github.com/ansys/pymapdl/pull/4133>`_
+
+        * - Ci: bump ansys/actions from 10.0.12 to 10.0.13 in the actions group
+          - `#4143 <https://github.com/ansys/pymapdl/pull/4143>`_
+
+        * - Refactor: splitting result file
+          - `#4144 <https://github.com/ansys/pymapdl/pull/4144>`_
+
+        * - Refactor: update supported versions section in SECURITY.md for clarity
+          - `#4152 <https://github.com/ansys/pymapdl/pull/4152>`_
+
+        * - Test: update test_deprecated_params to include make_block fixture to avoid plotting empty meshes error
+          - `#4168 <https://github.com/ansys/pymapdl/pull/4168>`_
+
+        * - Ci: bump ansys/actions from 10.0.13 to 10.0.14 in the actions group
+          - `#4171 <https://github.com/ansys/pymapdl/pull/4171>`_
+
+        * - Ci: adding pr docs preview action
+          - `#4173 <https://github.com/ansys/pymapdl/pull/4173>`_
+
+        * - Ci: adding auto assignee
+          - `#4174 <https://github.com/ansys/pymapdl/pull/4174>`_
+
+        * - Fix: reducing the amount of gRPC calls in get and add test for get command
+          - `#4184 <https://github.com/ansys/pymapdl/pull/4184>`_
+
+
+  .. tab-item:: Documentation
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - docs: adding plottly support to gallery examples
+          - `#2346 <https://github.com/ansys/pymapdl/pull/2346>`_
+
+        * - docs: Update ``CONTRIBUTORS.md`` with the latest contributors
+          - `#3946 <https://github.com/ansys/pymapdl/pull/3946>`_, `#3970 <https://github.com/ansys/pymapdl/pull/3970>`_
+
+        * - Docs: update ``contributors.md`` with the latest contributors
+          - `#3992 <https://github.com/ansys/pymapdl/pull/3992>`_, `#4029 <https://github.com/ansys/pymapdl/pull/4029>`_, `#4057 <https://github.com/ansys/pymapdl/pull/4057>`_, `#4107 <https://github.com/ansys/pymapdl/pull/4107>`_
+
+        * - Revert: "test: removing composite example"
+          - `#4000 <https://github.com/ansys/pymapdl/pull/4000>`_
+
+        * - Chore: (migrated pr #4009) docs: static rom training data generation example
+          - `#4011 <https://github.com/ansys/pymapdl/pull/4011>`_
+
+        * - Docs: update documentation to ``2023r2``
+          - `#4060 <https://github.com/ansys/pymapdl/pull/4060>`_
+
+        * - Docs: add new apdl resource link to learning and update external links
+          - `#4067 <https://github.com/ansys/pymapdl/pull/4067>`_
+
+        * - Docs: adding a psd example
+          - `#4115 <https://github.com/ansys/pymapdl/pull/4115>`_
+
+        * - Docs: adding reporting example
+          - `#4127 <https://github.com/ansys/pymapdl/pull/4127>`_
+
+        * - Docs: Update ``CONTRIBUTORS.md`` with the latest contributors
+          - `#4169 <https://github.com/ansys/pymapdl/pull/4169>`_
+
+  .. tab-item:: Maintenance
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - ci: implementing migrator workflow
+          - `#3878 <https://github.com/ansys/pymapdl/pull/3878>`_
+
+        * - ci: annotating launcher, convert and commands files
+          - `#3935 <https://github.com/ansys/pymapdl/pull/3935>`_
+
+        * - ci: bump ansys/actions from 9.0.9 to 9.0.12 in the actions group
+          - `#3957 <https://github.com/ansys/pymapdl/pull/3957>`_
+
+        * - Chore: update ci workflows to ansys/actions v10
+          - `#3959 <https://github.com/ansys/pymapdl/pull/3959>`_
+
+        * - ci: update branch in migrator
+          - `#3973 <https://github.com/ansys/pymapdl/pull/3973>`_
+
+        * - ci: bump ansys/actions from 9.0.12 to 9.0.13 in the actions group
+          - `#3982 <https://github.com/ansys/pymapdl/pull/3982>`_
+
+        * - Refactor: streamline environment variable usage in migrator workflow
+          - `#4141 <https://github.com/ansys/pymapdl/pull/4141>`_
+
+
+.. _v0.70.2:
+
+`0.70.2 <https://github.com/ansys/pymapdl/releases/tag/v0.70.2>`_ - June 26, 2025
+================================================================================================
+
+.. tab-set::
+
+
+  .. tab-item:: Fixed
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Fix: restrict ansys-tools-visualization-interface version range
+          - `#4042 <https://github.com/ansys/pymapdl/pull/4042>`_
+
+
+  .. tab-item:: Miscellaneous
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - Fix: patch in testing
+          - `#4010 <https://github.com/ansys/pymapdl/pull/4010>`_
+
+
+.. _v0.70.1:
+
+`0.70.1 <https://github.com/ansys/pymapdl/releases/tag/v0.70.1>`_ - May 12, 2025
+===============================================================================================
+
+.. tab-set::
+
+
+  .. tab-item:: Added
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - chore: update version to 0.70.dev0 in pyproject.toml
+          - `#3907 <https://github.com/ansys/pymapdl/pull/3907>`_
+
+        * - chore: update CHANGELOG for v0.70.0
+          - `#3913 <https://github.com/ansys/pymapdl/pull/3913>`_
+
+
+  .. tab-item:: Fixed
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - fix: Change the mapdl_inprocess graphics backend
+          - `#3915 <https://github.com/ansys/pymapdl/pull/3915>`_
+
+        * - fix: documentation html looks
+          - `#3918 <https://github.com/ansys/pymapdl/pull/3918>`_
+
+
+  .. tab-item:: Dependencies
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - build: bump the core group with 2 updates
+          - `#3910 <https://github.com/ansys/pymapdl/pull/3910>`_
+
+        * - build: bump the testing group with 2 updates
+          - `#3911 <https://github.com/ansys/pymapdl/pull/3911>`_
+
+
+  .. tab-item:: Maintenance
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - feat: add artifact upload steps for JSONL logs in local and remote test workflows
+          - `#3905 <https://github.com/ansys/pymapdl/pull/3905>`_
+
+        * - build: bump platformdirs from 4.3.7 to 4.3.8 in the minimal group
+          - `#3909 <https://github.com/ansys/pymapdl/pull/3909>`_
+
+        * - build: update action versions in CI workflows to latest stable releases
+          - `#3920 <https://github.com/ansys/pymapdl/pull/3920>`_
+
+
+.. _v0.70.0:
+
+`0.70.0 <https://github.com/ansys/pymapdl/releases/tag/v0.70.0>`_ - May 09, 2025
+===============================================================================================
+
+.. tab-set::
+
+
+  .. tab-item:: Added
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - chore: active support for Python 3.13
+          - `#3605 <https://github.com/ansys/pymapdl/pull/3605>`_
+
+        * - chore: update CHANGELOG for v0.69.3
+          - `#3772 <https://github.com/ansys/pymapdl/pull/3772>`_
+
+        * - perf: using MAPDL calls only to get the nodes in coordinate systems
+          - `#3792 <https://github.com/ansys/pymapdl/pull/3792>`_
+
+        * - refactor: using Python client library instead
+          - `#3797 <https://github.com/ansys/pymapdl/pull/3797>`_
+
+        * - refactor: do not import ansys.tools.visualizer by default when importing ansys.mapdl.core
+          - `#3887 <https://github.com/ansys/pymapdl/pull/3887>`_
+
+        * - chore: remove xfail markers from most flaky tests
+          - `#3899 <https://github.com/ansys/pymapdl/pull/3899>`_
+
+
+  .. tab-item:: Fixed
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - fix(plotting): Improve interface of the plotting class.
+          - `#3702 <https://github.com/ansys/pymapdl/pull/3702>`_
+
+        * - fix: missing pool name in test
+          - `#3773 <https://github.com/ansys/pymapdl/pull/3773>`_
+
+        * - fix: improve element and node selection handling in post-processing
+          - `#3784 <https://github.com/ansys/pymapdl/pull/3784>`_
+
+        * - fix: adding console testing
+          - `#3791 <https://github.com/ansys/pymapdl/pull/3791>`_
+
+        * - fix: aborting MAPDL
+          - `#3812 <https://github.com/ansys/pymapdl/pull/3812>`_
+
+        * - feat: Add optional graphical target and rework graphics backend selection
+          - `#3820 <https://github.com/ansys/pymapdl/pull/3820>`_
+
+        * - fix: remove exceptions on mapdl object deletion
+          - `#3826 <https://github.com/ansys/pymapdl/pull/3826>`_
+
+        * - fix: Allow jupyter_backend manual selection
+          - `#3838 <https://github.com/ansys/pymapdl/pull/3838>`_
+
+        * - fix: linkchecker
+          - `#3850 <https://github.com/ansys/pymapdl/pull/3850>`_
+
+        * - fix: add check for artifacts directory before processing files
+          - `#3851 <https://github.com/ansys/pymapdl/pull/3851>`_
+
+        * - fix: specify type for click options in convert.py
+          - `#3854 <https://github.com/ansys/pymapdl/pull/3854>`_
+
+        * - fix: annotate launch_mapdl and better docstring
+          - `#3855 <https://github.com/ansys/pymapdl/pull/3855>`_
+
+        * - fix: remove duplicated lines
+          - `#3858 <https://github.com/ansys/pymapdl/pull/3858>`_
+
+        * - fix: update Dockerfile and docker-compose for MAPDL 2025R1 compatibility
+          - `#3860 <https://github.com/ansys/pymapdl/pull/3860>`_
+
+        * - fix: remove assignees from dependabot configuration
+          - `#3861 <https://github.com/ansys/pymapdl/pull/3861>`_
+
+        * - fix: pin quarto version
+          - `#3876 <https://github.com/ansys/pymapdl/pull/3876>`_
+
+        * - fix: update ansys-mapdl-reader version to 0.55.0 in documentation dependencies
+          - `#3898 <https://github.com/ansys/pymapdl/pull/3898>`_
+
+        * - fix: reducing space consumption in GitHub runners
+          - `#3900 <https://github.com/ansys/pymapdl/pull/3900>`_
+
+        * - fix: update ansys-sphinx-theme version to 1.4.4 in requirements files
+          - `#3904 <https://github.com/ansys/pymapdl/pull/3904>`_
+
+        * - fix: update changelog title format to include 'v' prefix for version
+          - `#3908 <https://github.com/ansys/pymapdl/pull/3908>`_
+
+
+  .. tab-item:: Dependencies
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - build: bump matplotlib from 3.10.0 to 3.10.1 in the core group
+          - `#3774 <https://github.com/ansys/pymapdl/pull/3774>`_
+
+        * - build: bump sphinx from 8.2.1 to 8.2.3 in the documentation group
+          - `#3788 <https://github.com/ansys/pymapdl/pull/3788>`_
+
+        * - build: bump pytest from 8.3.4 to 8.3.5 in the testing group
+          - `#3789 <https://github.com/ansys/pymapdl/pull/3789>`_
+
+        * - build: bump pyfakefs from 5.7.4 to 5.8.0
+          - `#3800 <https://github.com/ansys/pymapdl/pull/3800>`_
+
+        * - build: bump the documentation group across 1 directory with 2 updates
+          - `#3815 <https://github.com/ansys/pymapdl/pull/3815>`_
+
+        * - build: bump pytest-cov from 6.0.0 to 6.1.0 in the testing group
+          - `#3823 <https://github.com/ansys/pymapdl/pull/3823>`_
+
+        * - build: bump pytest-cov from 6.1.0 to 6.1.1 in the testing group
+          - `#3833 <https://github.com/ansys/pymapdl/pull/3833>`_
+
+        * - build: bump ansys-tools-visualization-interface from 0.8.3 to 0.9.0 in the core group
+          - `#3848 <https://github.com/ansys/pymapdl/pull/3848>`_
+
+        * - ci: adding dpf testing to cicd
+          - `#3852 <https://github.com/ansys/pymapdl/pull/3852>`_
+
+        * - build: bump ansys-tools-visualization-interface from 0.9.0 to 0.9.1 in the core group
+          - `#3864 <https://github.com/ansys/pymapdl/pull/3864>`_
+
+
+  .. tab-item:: Miscellaneous
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - feat: implement ignore cache reset context
+          - `#3778 <https://github.com/ansys/pymapdl/pull/3778>`_
+
+        * - feat: inject additional MAPDL command line arguments through an env var
+          - `#3817 <https://github.com/ansys/pymapdl/pull/3817>`_
+
+        * - hold the bc settings per plotter instance
+          - `#3897 <https://github.com/ansys/pymapdl/pull/3897>`_
+
+
+  .. tab-item:: Documentation
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - docs: update towncrier template
+          - `#3786 <https://github.com/ansys/pymapdl/pull/3786>`_
+
+        * - docs: adding reference to tags
+          - `#3795 <https://github.com/ansys/pymapdl/pull/3795>`_
+
+        * - docs: update supported versions table for Ansys 2023-2025
+          - `#3808 <https://github.com/ansys/pymapdl/pull/3808>`_
+
+        * - docs: Update ``CONTRIBUTORS.md`` with the latest contributors
+          - `#3825 <https://github.com/ansys/pymapdl/pull/3825>`_, `#3836 <https://github.com/ansys/pymapdl/pull/3836>`_, `#3873 <https://github.com/ansys/pymapdl/pull/3873>`_
+
+        * - docs: create self-contained apdl/pymapdl conversion example
+          - `#3840 <https://github.com/ansys/pymapdl/pull/3840>`_
+
+        * - docs: enhance parameter retrieval examples in user guide
+          - `#3853 <https://github.com/ansys/pymapdl/pull/3853>`_
+
+
+  .. tab-item:: Maintenance
+
+    .. list-table::
+        :header-rows: 0
+        :widths: auto
+
+        * - ci: pre-commit autoupdate
+          - `#3781 <https://github.com/ansys/pymapdl/pull/3781>`_, `#3793 <https://github.com/ansys/pymapdl/pull/3793>`_, `#3819 <https://github.com/ansys/pymapdl/pull/3819>`_, `#3842 <https://github.com/ansys/pymapdl/pull/3842>`_
+
+        * - ci: using reusable workflows
+          - `#3787 <https://github.com/ansys/pymapdl/pull/3787>`_
+
+        * - ci: bump docker/login-action from 3.3.0 to 3.4.0 in the actions group
+          - `#3804 <https://github.com/ansys/pymapdl/pull/3804>`_
+
+        * - ci: adapting workflow for new docker container
+          - `#3805 <https://github.com/ansys/pymapdl/pull/3805>`_
+
+        * - build: bump the minimal group with 2 updates
+          - `#3806 <https://github.com/ansys/pymapdl/pull/3806>`_
+
+        * - feat: update Dockerfiles and requirements for improved library support and version upgrades
+          - `#3822 <https://github.com/ansys/pymapdl/pull/3822>`_
+
+        * - ci: update action versions to v9 in CI workflows
+          - `#3834 <https://github.com/ansys/pymapdl/pull/3834>`_
+
+        * - feat: update CI workflow to release to PyPI using trusted publisher
+          - `#3837 <https://github.com/ansys/pymapdl/pull/3837>`_
+
+        * - ci: bump actions/download-artifact from 4.1.9 to 4.2.1 in the actions group
+          - `#3843 <https://github.com/ansys/pymapdl/pull/3843>`_
+
+        * - build: bump numpy from 2.2.4 to 2.2.5 in the minimal group
+          - `#3863 <https://github.com/ansys/pymapdl/pull/3863>`_
+
+        * - feat: add GitHub Actions workflow to recreate PRs in main repository
+          - `#3869 <https://github.com/ansys/pymapdl/pull/3869>`_
+
+        * - ci: bump the actions group with 2 updates
+          - `#3877 <https://github.com/ansys/pymapdl/pull/3877>`_
+
+        * - feat: add CodeQL analysis workflow for Python
+          - `#3902 <https://github.com/ansys/pymapdl/pull/3902>`_
+
+
 .. _v0.69.3:
 
 `0.69.3 <https://github.com/ansys/pymapdl/releases/tag/v0.69.3>`_ - 2025-02-27

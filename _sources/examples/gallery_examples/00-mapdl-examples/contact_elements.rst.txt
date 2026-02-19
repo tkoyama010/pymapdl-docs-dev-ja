@@ -28,22 +28,23 @@ contact.
 
 Begin by launching MAPDL.
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-39
+.. GENERATED FROM PYTHON SOURCE LINES 35-40
 
 .. code-block:: Python
+
 
     from ansys.mapdl import core as pymapdl
 
     mapdl = pymapdl.launch_mapdl()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-43
+.. GENERATED FROM PYTHON SOURCE LINES 41-44
 
 Enter the pre-processor, create a block and mesh it with tetrahedral
 elements.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-53
+.. GENERATED FROM PYTHON SOURCE LINES 44-54
 
 .. code-block:: Python
 
@@ -58,7 +59,7 @@ elements.
     mapdl.eplot()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 54-59
+.. GENERATED FROM PYTHON SOURCE LINES 55-60
 
 Second a volume block above the existing block and mesh it with
 quadratic hexahedral elements.  Ensure that these blocks do not
@@ -66,7 +67,7 @@ touch by starting it slightly higher than the existing block.
 
 Note how these two blocks do not touch and the mesh is non-conformal.
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-68
+.. GENERATED FROM PYTHON SOURCE LINES 60-69
 
 .. code-block:: Python
 
@@ -80,12 +81,12 @@ Note how these two blocks do not touch and the mesh is non-conformal.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-71
+.. GENERATED FROM PYTHON SOURCE LINES 70-72
 
 Select all the elements at the intersection between the two blocks
 and generate contact elements.
 
-.. GENERATED FROM PYTHON SOURCE LINES 71-77
+.. GENERATED FROM PYTHON SOURCE LINES 72-78
 
 .. code-block:: Python
 
@@ -96,7 +97,7 @@ and generate contact elements.
     print(output)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-83
+.. GENERATED FROM PYTHON SOURCE LINES 79-84
 
 Plot the contact element pairs.  Note from the command output above
 that the section IDs are 5 and 6.
@@ -104,7 +105,7 @@ that the section IDs are 5 and 6.
 Here, we plot the element mesh as a wire-frame to show that the
 contact pairs overlap.
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-87
+.. GENERATED FROM PYTHON SOURCE LINES 84-88
 
 .. code-block:: Python
 
@@ -113,13 +114,13 @@ contact pairs overlap.
     mapdl.eplot(style="wireframe", line_width=3)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 88-91
+.. GENERATED FROM PYTHON SOURCE LINES 89-92
 
 Stop mapdl
 ~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-92
+.. GENERATED FROM PYTHON SOURCE LINES 92-93
 
 .. code-block:: Python
 

@@ -32,6 +32,7 @@
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -40,11 +41,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/ansys_sphinx_theme.css?v=0909a4fa" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=91007d66" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cb9002b8" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
   <!-- So that users can add custom icons -->
@@ -61,7 +62,7 @@
   
     <link href="../_static/css/breadcrumbs.css" rel="stylesheet" />
   
-    <script src="../_static/documentation_options.js?v=7d205779"></script>
+    <script src="../_static/documentation_options.js?v=36e1650e"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/thebelab-helper.js"></script>
@@ -99,9 +100,12 @@
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="よくあるご質問" href="faq.html" />
     <link rel="prev" title="PyMAPDL を起動する" href="launcher.html" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
-  <meta name="docsearch:version" content="0.69.dev0" />
+  <meta name="docsearch:version" content="0.72.dev0" />
+  <meta property="og:site_name" content="PyAnsys" />
+  <meta name="physics" content="Structures" />
   </head>
   
   
@@ -180,9 +184,15 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
+
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../index.html" title="PyMAPDL home">Home</a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="index.html">
     使い始める
@@ -210,13 +220,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../examples/index.html">
-    使用例
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -225,6 +228,13 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../examples/index.html">
+    使用例
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../changelog.html">
     リリースノート
@@ -235,15 +245,16 @@
             </li>
             
   </ul>
-</nav></div>
+</nav>
+</div>
       
     </div>
     
     
     <div class="navbar-header-items__end">
       
-        <div class="navbar-item navbar-persistent--container">
-          
+      
+        <div class="navbar-item">
 <div class="search-bar pst-js-only" id="search-bar">
   <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
     <i class="fa-solid fa-magnifying-glass"></i>
@@ -254,10 +265,10 @@
       <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
     </span>
   </form>
+  
   <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
-</div>
-        </div>
-      
+  
+</div></div>
       
         <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -332,45 +343,40 @@
   </div>
   
   
-    <div class="navbar-persistent--mobile">
-<div class="search-bar pst-js-only" id="search-bar">
-  <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
-      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
-      autocapitalize="off" spellcheck="false" />
-    <span class="search-button__kbd-shortcut">
-      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
-    </span>
-  </form>
-  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
-</div>
-    </div>
-  
 
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="このページでは">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
   
 </div>
 
     </header>
   
   
-    <div id="announcement_msg"></div>
+    
+<!--
+  Announcement Version Loader
+  Dynamically loads the announcement.html content into the announcement_msg div.
+-->
+<div id="announcement_msg" aria-live="polite"></div>
 <script>
+  // Fetch and inject the announcement HTML content
   fetch("announcement.html")
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`HTTP error: ${response.status}`);
+        throw new Error(`HTTP error: ${response.status} Announcement.html file not found, Please ignore this, if you are in dev/stable documentation`);
       }
       return response.text();
     })
-    .then(
-      (text) => (document.getElementById("announcement_msg").innerHTML = text),
-    )
-    .catch((error) => console.error(`Fetch problem: ${error.message}`));
+    .then((text) => {
+      var msgDiv = document.getElementById("announcement_msg");
+      if (msgDiv) {
+        msgDiv.innerHTML = text;
+      }
+    })
+    .catch((error) => {
+      // Log only unexpected fetch errors
+      if (!(error.message && error.message.startsWith("HTTP error: 404"))) {
+        console.error(`Fetch problem: ${error.message} Announcement.html could not be loaded.`);
+      }
+    });
 </script>
   
 
@@ -393,9 +399,15 @@
           
           
             <div class="navbar-item">
+
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../index.html" title="PyMAPDL home">Home</a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="index.html">
     使い始める
@@ -438,7 +450,8 @@
 </li>
 
   </ul>
-</nav></div>
+</nav>
+</div>
           
         
       </div>
@@ -446,6 +459,22 @@
     
     
       <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="search-bar pst-js-only" id="search-bar">
+  <form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
+  
+</div></div>
         
           <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -557,12 +586,21 @@
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
+
+
+  
+  <nav class="tocsection editthispage" aria-label="Edit this page">
+    <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/getting_started/learning.rst" rel="noopener noreferrer">
+      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+      
+      
+        
+          GitHub の編集
+        
+      
+    </a>
+  </nav>
+</div>
   </div>
 
 
@@ -648,6 +686,8 @@ regarding number of nodes, elements, etc.</p></li>
 to help you to learn PyMAPDL.</p></li>
 </ul>
 <ul class="simple">
+<li><p>Download the complete <a class="reference external" href="https://github.com/ansys/pymapdl/releases/download/v0.72.dev0.0/pymapdl-Documentation-0.72.dev0.0.pdf">PyMAPDL documentation as PDF</a>
+from the latest GitHub release for offline access.</p></li>
 <li><p>Visit <a class="reference internal" href="../examples/index.html#ref-examples"><span class="std std-ref">使用例</span></a> to learn how PyMAPDL can be used to solve different real problems.</p></li>
 </ul>
 </section>
@@ -774,12 +814,14 @@ In this website, you can find a summary of the available resources for MAPDL and
 <li><p>ANSYS in a Python Web App, Part 1: Post Processing with PyDPF:
 <em>Integrating PyAnsys with Plotly's Dash and the Dash-VTK component to build an
 Ansys structural analysis post-processing web application</em>.
-<a class="reference external" href="https://towardsdatascience.com/ansys-in-a-python-web-app-part-1-post-processing-with-pydpf-44d2fbaa6135">Link to 'Towards Data Science' article in Medium</a>.</p></li>
+<a class="reference external" href="https://medium.com/data-science/ansys-in-a-python-web-app-part-1-post-processing-with-pydpf-44d2fbaa6135">Link to 'Towards Data Science' article in Medium</a>.</p></li>
 <li><p>ANSYS in a Python Web App, Part 2: Pre Processing &amp; Solving with PyMAPDL:
 <em>ANSYS in a Python Web App, Part 2: Pre Processing &amp; Solving with PyMAPDL</em>.
-<a class="reference external" href="https://towardsdatascience.com/ansys-in-a-python-web-app-part-2-pre-processing-solving-with-pymapdl-50428c18f8e7">Link to 'Towards Data Science' article in Medium</a>.</p></li>
+<a class="reference external" href="https://medium.com/data-science/ansys-in-a-python-web-app-part-2-pre-processing-solving-with-pymapdl-50428c18f8e7">Link to 'Towards Data Science' article in Medium</a>.</p></li>
 <li><p>Paraview: Reading ANSYS APDL (RST) results in Paraview.
 <a class="reference external" href="https://discourse.paraview.org/t/reading-ansys-apdl-rst-results-in-paraview/9706">Link to 'Paraview Forum' question</a>.</p></li>
+<li><p>APDL: The Language of Simulation.
+<a class="reference external" href="https://www.ansys.com/blog/what-is-apdl">Link to 'What is APDL?' article in Ansys Blog</a>.</p></li>
 </ul>
 <p>Feel free to share any educational or learning resources by <a class="reference external" href="https://github.com/ansys/pymapdl/issues">opening an issue</a>
 or <a class="reference external" href="https://github.com/ansys/PyMAPDL/discussions">starting a discussion</a> on GitHub.</p>
@@ -796,55 +838,6 @@ or <a class="reference external" href="https://github.com/ansys/PyMAPDL/discussi
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> このページでは
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">イントロダクション</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloads">ダウンロード</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#courses">コース</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-to-python">Intro to Python</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#course-content">Course content</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started-with-pymapdl">PyMAPDLを使い始める</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Course content</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-to-ansys-mechanical-apdl-scripting">Intro to Ansys Mechanical APDL scripting</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Course content</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ansys-innovation-space">Ansys Innovation Space</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ansys-help">Ansys help</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional resources</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-articles">Recommended articles</a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item"> 
-<div class="tocsection editthispage">
-  <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/getting_started/learning.rst">
-    <i class="fa-solid fa-pencil"></i>
-       Edit
-    on GitHub  
-  </a>
-</div>
-
-</div>
-
-</div></div>
               
             
           </div>
@@ -868,19 +861,22 @@ or <a class="reference external" href="https://github.com/ansys/PyMAPDL/discussi
 
 <script>
 // Passing the search options to the search.js file
-const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text"], "limit": 10, "threshold": 0.2}');
+const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text", "objectID"], "limit": 10, "threshold": 0.2}');
 const SEARCH_FILE = "../_static/search.json";
+const ADVANCE_SEARCH_PATH = "../search.html";
+const EXTRA_SOURCES = JSON.parse('""');
 </script>
 
 
 <script src="../_static/js/search.js"></script>
+
   
 <footer class="bd-footer" font-size="4px">
   <div class="bd-footer__inner bd-page-width">
     <div class="footer-items__start">
       <div class="footer-item">
         <p class="copyright">
-          PyMAPDL 0.69.dev0 © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
+          PyMAPDL 0.72.dev0 © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
           <br>
         </p>
       </div>
@@ -890,7 +886,7 @@ const SEARCH_FILE = "../_static/search.json";
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.3.1. and
+          1.7.0. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
           on <span id="date"></span>
         </p>

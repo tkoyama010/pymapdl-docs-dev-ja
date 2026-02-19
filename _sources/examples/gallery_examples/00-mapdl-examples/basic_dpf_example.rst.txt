@@ -35,9 +35,10 @@ are required for postprocessing Ansys files.
 First, import the DPF-Core module as ``dpf_core`` and import the
 included examples file.
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-50
+.. GENERATED FROM PYTHON SOURCE LINES 43-51
 
 .. code-block:: Python
+
 
     import tempfile
 
@@ -47,7 +48,7 @@ included examples file.
     from ansys.mapdl.core.examples import vmfiles
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 51-56
+.. GENERATED FROM PYTHON SOURCE LINES 52-57
 
 Create model
 ~~~~~~~~~~~~~~
@@ -55,7 +56,7 @@ Create model
 Running an example from the MAPDL verification manual
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 56-69
+.. GENERATED FROM PYTHON SOURCE LINES 57-70
 
 .. code-block:: Python
 
@@ -73,7 +74,7 @@ Running an example from the MAPDL verification manual
     rst_path = mapdl.download_result(temp_directory)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 70-83
+.. GENERATED FROM PYTHON SOURCE LINES 71-84
 
 Next, open the generated RST file and print out the
 :class:`Model <ansys.dpf.core.model.Model>` object.
@@ -89,13 +90,13 @@ Printing the model displays:
 - Size of the mesh
 - Number of results
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-88
+.. GENERATED FROM PYTHON SOURCE LINES 86-89
 
 If you are working with a remote server, you might need to upload the ``RST``
 file before working with it.
 Then you can create the :class:`DPF Model <ansys.dpf.core.model.Model>`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 88-99
+.. GENERATED FROM PYTHON SOURCE LINES 89-100
 
 .. code-block:: Python
 
@@ -111,7 +112,7 @@ Then you can create the :class:`DPF Model <ansys.dpf.core.model.Model>`.
     print(model)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 100-106
+.. GENERATED FROM PYTHON SOURCE LINES 101-107
 
 Model Metadata
 ~~~~~~~~~~~~~~
@@ -120,7 +121,7 @@ model's :attr:`metadata <ansys.dpf.core.model.Model.metadata>`
 property.  For example, to print only the
 :attr:`result_info <ansys.dpf.core.model.Metadata.result_info>`:
 
-.. GENERATED FROM PYTHON SOURCE LINES 106-110
+.. GENERATED FROM PYTHON SOURCE LINES 107-111
 
 .. code-block:: Python
 
@@ -129,11 +130,11 @@ property.  For example, to print only the
     print(metadata.result_info)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 111-112
+.. GENERATED FROM PYTHON SOURCE LINES 112-113
 
 To print the :class:`mesh region<ansys.dpf.core.meshed_region.MeshedRegion>`:
 
-.. GENERATED FROM PYTHON SOURCE LINES 112-115
+.. GENERATED FROM PYTHON SOURCE LINES 113-116
 
 .. code-block:: Python
 
@@ -141,12 +142,12 @@ To print the :class:`mesh region<ansys.dpf.core.meshed_region.MeshedRegion>`:
     print(metadata.meshed_region)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 116-118
+.. GENERATED FROM PYTHON SOURCE LINES 117-119
 
 To print the time or frequency of the results use
 :class:`time_freq_support <ansys.dpf.core.time_freq_support.TimeFreqSupport>`:
 
-.. GENERATED FROM PYTHON SOURCE LINES 118-121
+.. GENERATED FROM PYTHON SOURCE LINES 119-122
 
 .. code-block:: Python
 
@@ -154,7 +155,7 @@ To print the time or frequency of the results use
     print(metadata.time_freq_support)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 122-138
+.. GENERATED FROM PYTHON SOURCE LINES 123-139
 
 Extracting Displacement Results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -173,7 +174,7 @@ By default, the :class:`displacement <ansys.dpf.core.operators.result.displaceme
 operator is connected to the first result set,
 which for this static result is the only result.
 
-.. GENERATED FROM PYTHON SOURCE LINES 138-147
+.. GENERATED FROM PYTHON SOURCE LINES 139-148
 
 .. code-block:: Python
 
@@ -187,14 +188,14 @@ which for this static result is the only result.
     disp
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-152
+.. GENERATED FROM PYTHON SOURCE LINES 149-153
 
 Plot displacements
 ~~~~~~~~~~~~~~~~~~
 
 You can plot the previous displacement field using:
 
-.. GENERATED FROM PYTHON SOURCE LINES 152-155
+.. GENERATED FROM PYTHON SOURCE LINES 153-156
 
 .. code-block:: Python
 
@@ -202,12 +203,12 @@ You can plot the previous displacement field using:
     model.metadata.meshed_region.plot(fields, cpos="xy")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 156-158
+.. GENERATED FROM PYTHON SOURCE LINES 157-159
 
 Or using
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 158-161
+.. GENERATED FROM PYTHON SOURCE LINES 159-162
 
 .. code-block:: Python
 
@@ -215,12 +216,12 @@ Or using
     fields[0].plot(cpos="xy")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-164
+.. GENERATED FROM PYTHON SOURCE LINES 163-165
 
 This way is particularly useful if you have used :class:`ansys.dpf.core.scoping.Scoping`
 on the mesh or results.
 
-.. GENERATED FROM PYTHON SOURCE LINES 167-172
+.. GENERATED FROM PYTHON SOURCE LINES 168-173
 
 Close session
 ~~~~~~~~~~~~~~
@@ -228,7 +229,7 @@ Close session
 Stop MAPDL session.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-173
+.. GENERATED FROM PYTHON SOURCE LINES 173-174
 
 .. code-block:: Python
 

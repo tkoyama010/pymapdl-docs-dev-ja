@@ -18,13 +18,13 @@
    changelog
 
 
-.. image:: ../source/_static/logo_dark.png
+.. image:: ../source/_static/pymapdl_dark_logo_large.png
     :class: only-dark
     :width: 800
     :alt: PyMAPDL Logo
     :align: center
 
-.. image:: ../source/_static/logo_light.png
+.. image:: ../source/_static/pymapdl_light_logo_large.png
     :class: only-light
     :width: 800
     :alt: PyMAPDL Logo
@@ -33,15 +33,7 @@
 
 .. vale off
 
-.. let's hide the `Edit on GitHub` link in this page...
-.. and the whole sidebar with it.
-.. hideobject::
-    :class: bd-sidebar-secondary bd-toc
-    :remove: true
-    :adjustmargin: true
-
-
-.. title is given using the 
+.. title is given using the
 
 **What do you want to do? I want to...**
 
@@ -88,7 +80,7 @@
 
         Check our :ref:`ref_user_guide` chapter.
         Don't miss the right side bar with the table content.
- 
+
     .. grid-item-card:: :fa:`question` Help with PyMAPDL
         :link: ref_troubleshooting
         :link-type: ref

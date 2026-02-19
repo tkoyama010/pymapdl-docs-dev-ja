@@ -33,9 +33,10 @@ https://www.simutechgroup.com/tips-and-tricks/fea-articles/97-fea-tips-tricks-th
 
 Thanks SimuTech!
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-64
+.. GENERATED FROM PYTHON SOURCE LINES 40-65
 
 .. code-block:: Python
+
 
 
     import matplotlib.pyplot as plt
@@ -62,13 +63,13 @@ Thanks SimuTech!
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 66-69
+.. GENERATED FROM PYTHON SOURCE LINES 67-70
 
 Geometry and Mesh
 ~~~~~~~~~~~~~~~~~
 Create a block 5x1x1 inches in size and mesh it
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-78
+.. GENERATED FROM PYTHON SOURCE LINES 70-79
 
 .. code-block:: Python
 
@@ -82,7 +83,7 @@ Create a block 5x1x1 inches in size and mesh it
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 79-92
+.. GENERATED FROM PYTHON SOURCE LINES 80-93
 
 Setup the Solution
 ~~~~~~~~~~~~~~~~~~
@@ -98,7 +99,7 @@ A Table Array is used for the time-dependent Convection Coefficient
 values. Times go in the Zeroth column, while associated Convection
 Coefficients go in the First column.
 
-.. GENERATED FROM PYTHON SOURCE LINES 92-137
+.. GENERATED FROM PYTHON SOURCE LINES 93-138
 
 .. code-block:: Python
 
@@ -148,7 +149,7 @@ Coefficients go in the First column.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 138-179
+.. GENERATED FROM PYTHON SOURCE LINES 139-180
 
 The Transient Thermal Solve
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -192,7 +193,7 @@ for convection and bulk temperature that were developed above. The
 Table Array names are surrounded with percent signs (%).  A SOLVE is
 then performed.
 
-.. GENERATED FROM PYTHON SOURCE LINES 179-198
+.. GENERATED FROM PYTHON SOURCE LINES 180-199
 
 .. code-block:: Python
 
@@ -216,28 +217,28 @@ then performed.
     mapdl.solve()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 199-203
+.. GENERATED FROM PYTHON SOURCE LINES 200-204
 
 Post-Processing
 ~~~~~~~~~~~~~~~
 Open up the result file using ``ansys.mapdl.reader``
 result = mapdl.thermal_result
 
-.. GENERATED FROM PYTHON SOURCE LINES 203-205
+.. GENERATED FROM PYTHON SOURCE LINES 204-206
 
 .. code-block:: Python
 
     mapdl.post1()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 206-210
+.. GENERATED FROM PYTHON SOURCE LINES 207-211
 
 Visualize a Slice
 ~~~~~~~~~~~~~~~~~
 Visualize a slice through the dataset using ``pyvista``
 for more details visit `PyVista documentation <pyvista_docs_>`_.
 
-.. GENERATED FROM PYTHON SOURCE LINES 210-224
+.. GENERATED FROM PYTHON SOURCE LINES 211-225
 
 .. code-block:: Python
 
@@ -256,13 +257,13 @@ for more details visit `PyVista documentation <pyvista_docs_>`_.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 225-228
+.. GENERATED FROM PYTHON SOURCE LINES 226-229
 
 Visualize Several Slices
 ~~~~~~~~~~~~~~~~~~~~~~~~
 This shows how you can visualize a series of slices through a dataset
 
-.. GENERATED FROM PYTHON SOURCE LINES 228-242
+.. GENERATED FROM PYTHON SOURCE LINES 229-243
 
 .. code-block:: Python
 
@@ -281,7 +282,7 @@ This shows how you can visualize a series of slices through a dataset
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 243-251
+.. GENERATED FROM PYTHON SOURCE LINES 244-252
 
 Temperature at a Single Point
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -292,7 +293,7 @@ Here, we use the ``get_value`` command which is very similar to the
 ``*GET`` command, except it immediately returns the value as a
 python accessible variable, rather than storing it to a MAPDL value.
 
-.. GENERATED FROM PYTHON SOURCE LINES 251-258
+.. GENERATED FROM PYTHON SOURCE LINES 252-259
 
 .. code-block:: Python
 
@@ -304,11 +305,11 @@ python accessible variable, rather than storing it to a MAPDL value.
     # See the MAPDL reference for all the items you can obtain using *GET
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 259-260
+.. GENERATED FROM PYTHON SOURCE LINES 260-261
 
 Here, we extract the temperature of the node across for each solution
 
-.. GENERATED FROM PYTHON SOURCE LINES 260-269
+.. GENERATED FROM PYTHON SOURCE LINES 261-270
 
 .. code-block:: Python
 
@@ -322,13 +323,13 @@ Here, we extract the temperature of the node across for each solution
     node_temp[:10]
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 270-273
+.. GENERATED FROM PYTHON SOURCE LINES 271-274
 
 Alternatively, you can simply grab the data for the node from the
 entire response.  This is less efficient as the entire data set is
 sent back for each result.
 
-.. GENERATED FROM PYTHON SOURCE LINES 273-286
+.. GENERATED FROM PYTHON SOURCE LINES 274-287
 
 .. code-block:: Python
 
@@ -346,11 +347,11 @@ sent back for each result.
     node_temp_from_post[:10]
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 287-288
+.. GENERATED FROM PYTHON SOURCE LINES 288-289
 
 Plot the temperature as a function of time
 
-.. GENERATED FROM PYTHON SOURCE LINES 288-296
+.. GENERATED FROM PYTHON SOURCE LINES 289-297
 
 .. code-block:: Python
 
@@ -359,17 +360,17 @@ Plot the temperature as a function of time
     plt.plot(my_bulk[:, 0], my_bulk[:, 1], ":", label="Input")
     plt.legend()
     plt.xlabel("Time (seconds)")
-    plt.ylabel("Temperature ($^\circ$F)")
+    plt.ylabel(r"Temperature ($^\circ$F)")
     plt.show()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 297-300
+.. GENERATED FROM PYTHON SOURCE LINES 298-301
 
 Stop mapdl
 ~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 300-301
+.. GENERATED FROM PYTHON SOURCE LINES 301-302
 
 .. code-block:: Python
 

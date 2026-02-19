@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.000** total execution time for 5 files **from examples/gallery_examples/02-tips-n-tricks**:
+**00:00.000** total execution time for 6 files **from examples/gallery_examples/02-tips-n-tricks**:
 
 .. container::
 
@@ -45,5 +45,8 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_examples_gallery_examples_02-tips-n-tricks_05-explore_mapdl_files.py` (``05-explore_mapdl_files.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_examples_gallery_examples_02-tips-n-tricks_06-convert-apdl-to-pymapdl.py` (``06-convert-apdl-to-pymapdl.py``)
      - 00:00.000
      - 0.0

@@ -23,7 +23,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_2d_magnetostatic_solenoid-BodyFlux_Averaging_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_2d_magnetostatic_solenoid-BodyFlux_Averaging.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/2d_magnetostatic_solenoid-BodyFlux_Averaging`
 
 .. raw:: html
 
@@ -40,7 +40,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_2d_plate_with_a_hole_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_2d_plate_with_a_hole.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/2d_plate_with_a_hole`
 
 .. raw:: html
 
@@ -57,7 +57,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_2d_pressure_vessel_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_2d_pressure_vessel.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/2d_pressure_vessel`
 
 .. raw:: html
 
@@ -74,7 +74,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_3d_notch_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_3d_notch.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/3d_notch`
 
 .. raw:: html
 
@@ -91,7 +91,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_3d_plate_thermal_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_3d_plate_thermal.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/3d_plate_thermal`
 
 .. raw:: html
 
@@ -108,7 +108,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_acoustic_analysis_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_acoustic_analysis.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/acoustic_analysis`
 
 .. raw:: html
 
@@ -125,11 +125,28 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_basic_dpf_example_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_basic_dpf_example.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/basic_dpf_example`
 
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Basic DPF-Core Usage with PyMAPDL</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates a comprehensive structural analysis of a fully constrained I-beam using PyMAPDL. The script creates a parameterized I-beam model, applies loads, solves for structural response, and generates a detailed engineering report in both Markdown and Microsoft Word formats.">
+
+.. only:: html
+
+  .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_beam_with_report_thumb.png
+    :alt:
+
+  :doc:`/examples/gallery_examples/00-mapdl-examples/beam_with_report`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">I-Beam Analysis with Automated Report Generation</div>
     </div>
 
 
@@ -142,11 +159,28 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_bracket_static_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_bracket_static.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/bracket_static`
 
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Static analysis of a corner bracket</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example is a classic double cantilever beam test commonly used to study mode I interfacial delamination of composite plates.">
+
+.. only:: html
+
+  .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_composite_dcb_thumb.png
+    :alt:
+
+  :doc:`/examples/gallery_examples/00-mapdl-examples/composite_dcb`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Static simulation of double cantilever beam test via cohesive elements</div>
     </div>
 
 
@@ -159,7 +193,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_contact_elements_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_contact_elements.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/contact_elements`
 
 .. raw:: html
 
@@ -176,7 +210,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_cyclic_analysis_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_cyclic_analysis.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/cyclic_analysis`
 
 .. raw:: html
 
@@ -193,7 +227,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_cyclic_static_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_cyclic_static.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/cyclic_static`
 
 .. raw:: html
 
@@ -210,7 +244,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_exhaust_manifold_thermal_stress_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_exhaust_manifold_thermal_stress.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/exhaust_manifold_thermal_stress`
 
 .. raw:: html
 
@@ -227,7 +261,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_geometry_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_geometry.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/geometry`
 
 .. raw:: html
 
@@ -244,7 +278,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_lathe_cutter_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_lathe_cutter.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/lathe_cutter`
 
 .. raw:: html
 
@@ -261,7 +295,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_mapdl_3d_beam_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_mapdl_3d_beam.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/mapdl_3d_beam`
 
 .. raw:: html
 
@@ -278,7 +312,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_mapdl_beam_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_mapdl_beam.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/mapdl_beam`
 
 .. raw:: html
 
@@ -295,7 +329,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_modal_beam_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_modal_beam.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/modal_beam`
 
 .. raw:: html
 
@@ -312,7 +346,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_path_operations_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_path_operations.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/path_operations`
 
 .. raw:: html
 
@@ -329,11 +363,28 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_pressure_vessel_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_pressure_vessel.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/pressure_vessel`
 
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Pressure Vessel</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how to perform a random vibration analysis using PyMAPDL.">
+
+.. only:: html
+
+  .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_psd-vm203_thumb.png
+    :alt:
+
+  :doc:`/examples/gallery_examples/00-mapdl-examples/psd-vm203`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Dynamic Load Effect on a Supported Thick Plate</div>
     </div>
 
 
@@ -346,7 +397,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_pyvista_mesh_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_pyvista_mesh.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/pyvista_mesh`
 
 .. raw:: html
 
@@ -363,7 +414,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_slashmap_cfx_mapping_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_slashmap_cfx_mapping.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/slashmap_cfx_mapping`
 
 .. raw:: html
 
@@ -380,7 +431,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_spotweld_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_spotweld.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/spotweld`
 
 .. raw:: html
 
@@ -397,7 +448,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_torsional_load_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_torsional_load.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/torsional_load`
 
 .. raw:: html
 
@@ -414,7 +465,7 @@ These examples demonstrate full examples using the PyMAPDL module.
   .. image:: /examples/gallery_examples/00-mapdl-examples/images/thumb/sphx_glr_transient_thermal_thumb.png
     :alt:
 
-  :ref:`sphx_glr_examples_gallery_examples_00-mapdl-examples_transient_thermal.py`
+  :doc:`/examples/gallery_examples/00-mapdl-examples/transient_thermal`
 
 .. raw:: html
 
@@ -439,7 +490,9 @@ These examples demonstrate full examples using the PyMAPDL module.
    /examples/gallery_examples/00-mapdl-examples/3d_plate_thermal
    /examples/gallery_examples/00-mapdl-examples/acoustic_analysis
    /examples/gallery_examples/00-mapdl-examples/basic_dpf_example
+   /examples/gallery_examples/00-mapdl-examples/beam_with_report
    /examples/gallery_examples/00-mapdl-examples/bracket_static
+   /examples/gallery_examples/00-mapdl-examples/composite_dcb
    /examples/gallery_examples/00-mapdl-examples/contact_elements
    /examples/gallery_examples/00-mapdl-examples/cyclic_analysis
    /examples/gallery_examples/00-mapdl-examples/cyclic_static
@@ -451,6 +504,7 @@ These examples demonstrate full examples using the PyMAPDL module.
    /examples/gallery_examples/00-mapdl-examples/modal_beam
    /examples/gallery_examples/00-mapdl-examples/path_operations
    /examples/gallery_examples/00-mapdl-examples/pressure_vessel
+   /examples/gallery_examples/00-mapdl-examples/psd-vm203
    /examples/gallery_examples/00-mapdl-examples/pyvista_mesh
    /examples/gallery_examples/00-mapdl-examples/slashmap_cfx_mapping
    /examples/gallery_examples/00-mapdl-examples/spotweld

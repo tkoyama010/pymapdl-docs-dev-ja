@@ -1,6 +1,0 @@
-plot\_iter
-==========
-
-.. currentmodule:: ansys.mapdl.core.plotting
-
-.. automethod:: MapdlPlotter.plot_iter

@@ -1,6 +1,0 @@
-bc\_nodes\_plot
-===============
-
-.. currentmodule:: ansys.mapdl.core.plotting
-
-.. automethod:: MapdlPlotter.bc_nodes_plot

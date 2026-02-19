@@ -34,9 +34,10 @@ Our first task is to create a simple cyclic model with 7 sectors.
 
 First, start MAPDL as a service.
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-50
+.. GENERATED FROM PYTHON SOURCE LINES 41-51
 
 .. code-block:: Python
+
 
 
     import numpy as np
@@ -48,14 +49,14 @@ First, start MAPDL as a service.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 52-56
+.. GENERATED FROM PYTHON SOURCE LINES 53-57
 
 Create the Cyclic Sector
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Create a single "sector" of our cyclic model.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 56-126
+.. GENERATED FROM PYTHON SOURCE LINES 57-127
 
 .. code-block:: Python
 
@@ -130,7 +131,7 @@ Create a single "sector" of our cyclic model.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 127-132
+.. GENERATED FROM PYTHON SOURCE LINES 128-133
 
 Make the Model Cyclic
 ~~~~~~~~~~~~~~~~~~~~~
@@ -138,7 +139,7 @@ Make the model cyclic by running :func:`Mapdl.cyclic`
 
 Note how the number of sectors matches
 
-.. GENERATED FROM PYTHON SOURCE LINES 132-138
+.. GENERATED FROM PYTHON SOURCE LINES 133-139
 
 .. code-block:: Python
 
@@ -149,13 +150,13 @@ Note how the number of sectors matches
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 139-142
+.. GENERATED FROM PYTHON SOURCE LINES 140-143
 
 Generate the mesh
 ~~~~~~~~~~~~~~~~~
 Generate the finite element mesh using quadritic hexahedrals, SOLID186.
 
-.. GENERATED FROM PYTHON SOURCE LINES 142-154
+.. GENERATED FROM PYTHON SOURCE LINES 143-155
 
 .. code-block:: Python
 
@@ -172,12 +173,12 @@ Generate the finite element mesh using quadritic hexahedrals, SOLID186.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 155-157
+.. GENERATED FROM PYTHON SOURCE LINES 156-158
 
 Apply Material Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. GENERATED FROM PYTHON SOURCE LINES 157-167
+.. GENERATED FROM PYTHON SOURCE LINES 158-168
 
 .. code-block:: Python
 
@@ -192,14 +193,14 @@ Apply Material Properties
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 168-172
+.. GENERATED FROM PYTHON SOURCE LINES 169-173
 
 Run the Modal Analysis
 ~~~~~~~~~~~~~~~~~~~~~~
 Let's get the first 10 modes. Note that this will actually compute
 ``(sectors/2)*nmode`` based on the cyclic boundary conditions.
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-177
+.. GENERATED FROM PYTHON SOURCE LINES 173-178
 
 .. code-block:: Python
 
@@ -209,7 +210,7 @@ Let's get the first 10 modes. Note that this will actually compute
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 178-195
+.. GENERATED FROM PYTHON SOURCE LINES 179-196
 
 Get the Results of the Cyclic Modal Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -229,7 +230,7 @@ For more details regarding cyclic result post processing, see:
 - `Understanding Nodal Diameters from a Cyclic Model Analysis <https://reader.docs.pyansys.com/version/stable/examples/01-cyclic_results/academic_sector_nd.html>`_
 - `Cyclic symmetry examples <https://dpf.docs.pyansys.com/version/stable/examples/11-cyclic-symmetry/index.html>`_
 
-.. GENERATED FROM PYTHON SOURCE LINES 195-201
+.. GENERATED FROM PYTHON SOURCE LINES 196-202
 
 .. code-block:: Python
 
@@ -240,14 +241,14 @@ For more details regarding cyclic result post processing, see:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 202-206
+.. GENERATED FROM PYTHON SOURCE LINES 203-207
 
 List the Table of Harmonic Indices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This is the table of harmonic indices. This table provides the corresponding
 harmonic index for each cumulative mode.
 
-.. GENERATED FROM PYTHON SOURCE LINES 206-211
+.. GENERATED FROM PYTHON SOURCE LINES 207-212
 
 .. code-block:: Python
 
@@ -257,7 +258,7 @@ harmonic index for each cumulative mode.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 212-221
+.. GENERATED FROM PYTHON SOURCE LINES 213-222
 
 Generate an Animation of a Traveling Wave
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -269,7 +270,7 @@ diameter 1 with:
 ``mode_num = np.nonzero(result.harmonic_indices == 1)[0][0]``
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 221-236
+.. GENERATED FROM PYTHON SOURCE LINES 222-237
 
 .. code-block:: Python
 
@@ -289,11 +290,11 @@ diameter 1 with:
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 237-238
+.. GENERATED FROM PYTHON SOURCE LINES 238-239
 
 And here's 1st torsional for nodal diameter 3.
 
-.. GENERATED FROM PYTHON SOURCE LINES 238-252
+.. GENERATED FROM PYTHON SOURCE LINES 239-253
 
 .. code-block:: Python
 
@@ -312,7 +313,7 @@ And here's 1st torsional for nodal diameter 3.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 253-259
+.. GENERATED FROM PYTHON SOURCE LINES 254-260
 
 Parametric Geometry
 ~~~~~~~~~~~~~~~~~~~
@@ -321,7 +322,7 @@ number of "sectors". Let's make a more interesting one with 20 sectors.
 
 First, be sure to clear MAPDL so we start from scratch.
 
-.. GENERATED FROM PYTHON SOURCE LINES 259-289
+.. GENERATED FROM PYTHON SOURCE LINES 260-290
 
 .. code-block:: Python
 
@@ -356,14 +357,14 @@ First, be sure to clear MAPDL so we start from scratch.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 290-294
+.. GENERATED FROM PYTHON SOURCE LINES 291-295
 
 List the Table of Harmonic Indices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Note how the harmonic indices of these modes goes up to 10, or N/2 where N is
 the number of sectors.
 
-.. GENERATED FROM PYTHON SOURCE LINES 294-300
+.. GENERATED FROM PYTHON SOURCE LINES 295-301
 
 .. code-block:: Python
 
@@ -374,14 +375,14 @@ the number of sectors.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 301-305
+.. GENERATED FROM PYTHON SOURCE LINES 302-306
 
 Plot First Bend for Nodal Diameter 2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Note how you can clearly see two nodal lines for this mode shape since it's
 nodal diameter 2.
 
-.. GENERATED FROM PYTHON SOURCE LINES 305-311
+.. GENERATED FROM PYTHON SOURCE LINES 306-312
 
 .. code-block:: Python
 
@@ -392,14 +393,14 @@ nodal diameter 2.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 312-316
+.. GENERATED FROM PYTHON SOURCE LINES 313-317
 
 Animate First Bend for Nodal Diameter 2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Let's end this example by animating mode 12, which corresponds to first bend
 for the 2nd nodal diameter of this example model.
 
-.. GENERATED FROM PYTHON SOURCE LINES 316-328
+.. GENERATED FROM PYTHON SOURCE LINES 317-329
 
 .. code-block:: Python
 

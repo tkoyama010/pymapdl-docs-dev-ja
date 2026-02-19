@@ -33,9 +33,10 @@ reduce this effect using a simple geometry.
 
 First, start MAPDL as a service.
 
-.. GENERATED FROM PYTHON SOURCE LINES 39-45
+.. GENERATED FROM PYTHON SOURCE LINES 39-46
 
 .. code-block:: Python
+
 
 
     from ansys.mapdl.core import launch_mapdl
@@ -44,7 +45,7 @@ First, start MAPDL as a service.
     print(mapdl)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-54
+.. GENERATED FROM PYTHON SOURCE LINES 48-55
 
 The Geometry (a box)
 ~~~~~~~~~~~~~~~~~~~~
@@ -54,7 +55,7 @@ dimensions are 5 x 5 x 1. We create this using 8 keypoints and then
 building 4 areas.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 54-73
+.. GENERATED FROM PYTHON SOURCE LINES 55-74
 
 .. code-block:: Python
 
@@ -78,7 +79,7 @@ building 4 areas.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-84
+.. GENERATED FROM PYTHON SOURCE LINES 75-85
 
 Mesh size
 ~~~~~~~~~
@@ -91,7 +92,7 @@ This is purely to demonstrate the effect. This will work just as well
 for a quadrilateral mesh.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 84-93
+.. GENERATED FROM PYTHON SOURCE LINES 85-94
 
 .. code-block:: Python
 
@@ -105,7 +106,7 @@ for a quadrilateral mesh.
     mapdl.eplot(show_edges=True, show_axes=False, line_width=2, background="w")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-110
+.. GENERATED FROM PYTHON SOURCE LINES 95-111
 
 Smoothing the transition
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -124,7 +125,7 @@ kesize to set the keypoint element sizes, and finally we remesh. The results
 are self-evident.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-117
+.. GENERATED FROM PYTHON SOURCE LINES 111-118
 
 .. code-block:: Python
 
@@ -136,7 +137,7 @@ are self-evident.
     mapdl.eplot(show_edges=True, show_axes=False, line_width=2, background="w")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 118-124
+.. GENERATED FROM PYTHON SOURCE LINES 119-125
 
 Smoothing the transition into a2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -145,7 +146,7 @@ could set the keypoint element sizes to be an intermediate value, which would
 shift the main location of the size transition to within the face of ``a2``.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-132
+.. GENERATED FROM PYTHON SOURCE LINES 125-133
 
 .. code-block:: Python
 
@@ -158,13 +159,13 @@ shift the main location of the size transition to within the face of ``a2``.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 133-136
+.. GENERATED FROM PYTHON SOURCE LINES 134-137
 
 Stop mapdl
 ~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 136-137
+.. GENERATED FROM PYTHON SOURCE LINES 137-138
 
 .. code-block:: Python
 

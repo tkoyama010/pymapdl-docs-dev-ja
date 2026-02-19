@@ -80,6 +80,7 @@
       MapdlTheme.point_size
       MapdlTheme.render_lines_as_tubes
       MapdlTheme.render_points_as_spheres
+      MapdlTheme.resample_environment_texture
       MapdlTheme.return_cpos
       MapdlTheme.sharp_edges_feature_angle
       MapdlTheme.show_edges

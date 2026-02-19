@@ -32,6 +32,7 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -40,11 +41,11 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css?v=0909a4fa" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=91007d66" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cb9002b8" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
   <!-- So that users can add custom icons -->
@@ -61,7 +62,7 @@
   
     <link href="../../_static/css/breadcrumbs.css" rel="stylesheet" />
   
-    <script src="../../_static/documentation_options.js?v=7d205779"></script>
+    <script src="../../_static/documentation_options.js?v=36e1650e"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/thebelab-helper.js"></script>
@@ -97,11 +98,14 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="ancntr" href="_autosummary/ansys.mapdl.core.Mapdl.ancntr.html" />
-    <link rel="prev" title="priter" href="_autosummary/ansys.mapdl.core.Mapdl.priter.html" />
+    <link rel="next" title="ancntr" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.ancntr.html" />
+    <link rel="prev" title="Post1" href="index.html" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
-  <meta name="docsearch:version" content="0.69.dev0" />
+  <meta name="docsearch:version" content="0.72.dev0" />
+  <meta property="og:site_name" content="PyAnsys" />
+  <meta name="physics" content="Structures" />
   </head>
   
   
@@ -180,9 +184,15 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
+
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html" title="PyMAPDL home">Home</a>
+</li>
+
+
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting_started/index.html">
     使い始める
@@ -210,13 +220,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../examples/index.html">
-    使用例
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -225,6 +228,13 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../examples/index.html">
+    使用例
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../../changelog.html">
     リリースノート
@@ -235,15 +245,16 @@
             </li>
             
   </ul>
-</nav></div>
+</nav>
+</div>
       
     </div>
     
     
     <div class="navbar-header-items__end">
       
-        <div class="navbar-item navbar-persistent--container">
-          
+      
+        <div class="navbar-item">
 <div class="search-bar pst-js-only" id="search-bar">
   <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
     <i class="fa-solid fa-magnifying-glass"></i>
@@ -254,10 +265,10 @@
       <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
     </span>
   </form>
+  
   <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
-</div>
-        </div>
-      
+  
+</div></div>
       
         <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -332,45 +343,40 @@
   </div>
   
   
-    <div class="navbar-persistent--mobile">
-<div class="search-bar pst-js-only" id="search-bar">
-  <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
-      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
-      autocapitalize="off" spellcheck="false" />
-    <span class="search-button__kbd-shortcut">
-      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
-    </span>
-  </form>
-  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
-</div>
-    </div>
-  
 
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="このページでは">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
   
 </div>
 
     </header>
   
   
-    <div id="announcement_msg"></div>
+    
+<!--
+  Announcement Version Loader
+  Dynamically loads the announcement.html content into the announcement_msg div.
+-->
+<div id="announcement_msg" aria-live="polite"></div>
 <script>
+  // Fetch and inject the announcement HTML content
   fetch("announcement.html")
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`HTTP error: ${response.status}`);
+        throw new Error(`HTTP error: ${response.status} Announcement.html file not found, Please ignore this, if you are in dev/stable documentation`);
       }
       return response.text();
     })
-    .then(
-      (text) => (document.getElementById("announcement_msg").innerHTML = text),
-    )
-    .catch((error) => console.error(`Fetch problem: ${error.message}`));
+    .then((text) => {
+      var msgDiv = document.getElementById("announcement_msg");
+      if (msgDiv) {
+        msgDiv.innerHTML = text;
+      }
+    })
+    .catch((error) => {
+      // Log only unexpected fetch errors
+      if (!(error.message && error.message.startsWith("HTTP error: 404"))) {
+        console.error(`Fetch problem: ${error.message} Announcement.html could not be loaded.`);
+      }
+    });
 </script>
   
 
@@ -381,7 +387,7 @@
       
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -393,9 +399,15 @@
           
           
             <div class="navbar-item">
+
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html" title="PyMAPDL home">Home</a>
+</li>
+
+
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting_started/index.html">
     使い始める
@@ -438,7 +450,8 @@
 </li>
 
   </ul>
-</nav></div>
+</nav>
+</div>
           
         
       </div>
@@ -446,6 +459,22 @@
     
     
       <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="search-bar pst-js-only" id="search-bar">
+  <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
+  
+</div></div>
         
           <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -519,15 +548,190 @@
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="セクションナビゲーション">
+  <p class="bd-links__title" role="heading" aria-level="1">セクションナビゲーション</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Session</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session/index.html">Session</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Database</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Database</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Graphics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../graphics/index.html">Graphics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">APDL</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../apdl/abbreviations.html">Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apdl/parameter_definition.html">ParameterDefinition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apdl/matrix_operations.html">MatrixOperations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apdl/macro_files.html">MacroFiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apdl/encryption_decryption.html">EncryptionDecryption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apdl/array_parameters.html">ArrayParameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apdl/process_controls.html">ProcessControls</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Preprocessing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../prep7/database.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/element_type.html">Element type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/real_constants.html">Real constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/material_data_tables.html">Material data tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/primitives.html">Primitives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/keypoints.html">Keypoints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/hard_points.html">Hard points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/lines.html">Lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/areas.html">Areas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/volumes.html">Volumes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/booleans.html">Booleans</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/meshing.html">Meshing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/elements.html">Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/superelements.html">Superelements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/digitizing.html">Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/coupled_dof.html">Coupled degrees of freedom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/constraint_equations.html">Constraint equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/status.html">Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/explicit_dynamics.html">Explicit dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/sections.html">Sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/morphing.html">Morphing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/artificially_matched_layers.html">Artificially matched layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/special_purpose.html">Special purpose</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../solution/analysis_options.html">Analysis options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/nonlinear_options.html">Nonlinear options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/dynamic_options.html">Dynamic options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/spectrum_options.html">Spectrum options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/load_step_options.html">Load step options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/solid_constraints.html">Solid constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/solid_forces.html">Solid forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/solid_surface_loads.html">Solid surface loads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/solid_body_loads.html">Solid body loads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/inertia.html">Inertia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/miscellaneous_loads.html">Miscellaneous loads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/load_step_operations.html">Load step operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/master_dof.html">Master degrees of freedom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/gap_conditions.html">Gap conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/rezoning.html">Rezoning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/2d_to_3d_analysis.html">2D to 3D analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/birth_and_death.html">Birth and death</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/fe_constraints.html">FE constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/fe_forces.html">FE forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/fe_surface_loads.html">FE surface loads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/fe_body_loads.html">FE body loads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/ocean.html">Ocean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/solution_status.html">Solution status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/radiosity.html">Radiosity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/multi_field_solver_definition_commands.html">Multi-Field solver definition commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/multi_field_solver_global_controls.html">Multi-Field solver global controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/multi_field_solver_time_controls.html">Multi-Field solver time controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/multi_field_solver_load_transfer.html">Multi-Field solver load transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/multi_field_solver_convergence_controls.html">Multi-Field solver convergence controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solution/multi_field_solver_interface_mapping.html">Multi-Field solver interface mapping</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">POST1</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Post1</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Animation</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.ancntr.html">ancntr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.ancut.html">ancut</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.ancyc.html">ancyc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.andata.html">andata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.andscl.html">andscl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.andyna.html">andyna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.anfile.html">anfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.anflow.html">anflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.anharm.html">anharm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.anim.html">anim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.anisos.html">anisos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.anmode.html">anmode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.antime.html">antime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.trtime.html">trtime</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="set_up.html">SetUp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controls.html">Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="special_purpose.html">SpecialPurpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="magnetics_calculations.html">MagneticsCalculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="element_table.html">ElementTable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="failure_criteria.html">FailureCriteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_fatigue.html">Fatigue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="listing.html">Listing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="path_operations.html">PathOperations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_special_purpose.html">SpecialPurpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_case_calculations.html">LoadCaseCalculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="results.html">Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trace_points.html">TracePoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="surface_operations.html">SurfaceOperations</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">POST26</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../post26/index.html">Post26</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AUX2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../aux2/index.html">Aux2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AUX3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../aux3/index.html">Aux3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AUX12</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../aux12/index.html">Aux12</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AUX15</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../aux15/index.html">Aux15</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MAP</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../map/index.html">Map</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Connection</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../conn.html">Connection commands</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc.html">Miscellaneous</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Undocumented</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../inqfun.html">Undocumented inquire commands</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
+
+
+  
+  <nav class="tocsection editthispage" aria-label="Edit this page">
+    <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/mapdl_commands/post1/animation.rst" rel="noopener noreferrer">
+      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+      
+      
+        
+          GitHub の編集
+        
+      
+    </a>
+  </nav>
+</div>
   </div>
 
 
@@ -565,6 +769,10 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Post1</a>
+    </li>
       
     <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Animation</span></li>
     
@@ -585,54 +793,55 @@
                 <article class="bd-article">
                   
   <section id="animation">
-<span id="ref-animation-api"></span><h1>Animation<a class="headerlink" href="#animation" title="Link to this heading">#</a></h1>
-<p>These POST1 commands are used to animate results.</p>
+<span id="ref-animation"></span><h1>Animation<a class="headerlink" href="#animation" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.post1.animation.Animation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.post1.animation.</span></span><span class="sig-name descname"><span class="pre">Animation</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.post1.animation.Animation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ancntr.html#ansys.mapdl.core.Mapdl.ancntr" title="ansys.mapdl.core.Mapdl.ancntr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ancntr</span></code></a>([nfram, delay, ncycl])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.ancntr.html#ansys.mapdl.core._commands.post1.animation.Animation.ancntr" title="ansys.mapdl.core._commands.post1.animation.Animation.ancntr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.ancntr</span></code></a>([nfram, delay, ncycl])</p></td>
 <td><p>Produces an animated sequence of a contoured deformed shape.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ancut.html#ansys.mapdl.core.Mapdl.ancut" title="ansys.mapdl.core.Mapdl.ancut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ancut</span></code></a>([nfram, delay, ncycl, qoff, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.ancut.html#ansys.mapdl.core._commands.post1.animation.Animation.ancut" title="ansys.mapdl.core._commands.post1.animation.Animation.ancut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.ancut</span></code></a>([nfram, delay, ncycl, qoff, ...])</p></td>
 <td><p>Produces an animated sequence of Q-slices.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.andata.html#ansys.mapdl.core.Mapdl.andata" title="ansys.mapdl.core.Mapdl.andata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.andata</span></code></a>([delay, ncycl, rsltdat, min_, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.ancyc.html#ansys.mapdl.core._commands.post1.animation.Animation.ancyc" title="ansys.mapdl.core._commands.post1.animation.Animation.ancyc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.ancyc</span></code></a>([numframes, kcycl, delay])</p></td>
+<td><p>Applies a traveling wave animation to graphics data in a modal cyclic symmetry analysis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.andata.html#ansys.mapdl.core._commands.post1.animation.Animation.andata" title="ansys.mapdl.core._commands.post1.animation.Animation.andata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.andata</span></code></a>([delay, ncycl, rsltdat, ...])</p></td>
 <td><p>Displays animated graphics data for nonlinear problems.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.andscl.html#ansys.mapdl.core.Mapdl.andscl" title="ansys.mapdl.core.Mapdl.andscl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.andscl</span></code></a>([nfram, delay, ncycl])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.andscl.html#ansys.mapdl.core._commands.post1.animation.Animation.andscl" title="ansys.mapdl.core._commands.post1.animation.Animation.andscl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.andscl</span></code></a>([nfram, delay, ncycl])</p></td>
 <td><p>Produces an animated sequence of a deformed shape.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ancyc.html#ansys.mapdl.core.Mapdl.ancyc" title="ansys.mapdl.core.Mapdl.ancyc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ancyc</span></code></a>([numframes, kcycl, delay])</p></td>
-<td><p>Applies a traveling wave animation to graphics data in a modal cyclic</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.andyna.html#ansys.mapdl.core.Mapdl.andyna" title="ansys.mapdl.core.Mapdl.andyna"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.andyna</span></code></a>([delay, ncycl, start, end, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.andyna.html#ansys.mapdl.core._commands.post1.animation.Animation.andyna" title="ansys.mapdl.core._commands.post1.animation.Animation.andyna"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.andyna</span></code></a>([delay, ncycl, start, end, ...])</p></td>
 <td><p>Produces an animated sequence of contour values through substeps.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.anfile.html#ansys.mapdl.core.Mapdl.anfile" title="ansys.mapdl.core.Mapdl.anfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.anfile</span></code></a>([lab, fname, ext])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.anfile.html#ansys.mapdl.core._commands.post1.animation.Animation.anfile" title="ansys.mapdl.core._commands.post1.animation.Animation.anfile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.anfile</span></code></a>([lab, fname, ext])</p></td>
 <td><p>Saves or resumes an animation sequence to or from a file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.anflow.html#ansys.mapdl.core.Mapdl.anflow" title="ansys.mapdl.core.Mapdl.anflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.anflow</span></code></a>([nfram, delay, ncycl, time, ...])</p></td>
-<td><p>Produces an animated sequence of particle flow in a flowing fluid or a charged particle traveling in an electric or magnetic field.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.anflow.html#ansys.mapdl.core._commands.post1.animation.Animation.anflow" title="ansys.mapdl.core._commands.post1.animation.Animation.anflow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.anflow</span></code></a>([nfram, delay, ncycl, ...])</p></td>
+<td><p>Produces an animated sequence of a charged particle traveling in an electric or magnetic field.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.anharm.html#ansys.mapdl.core.Mapdl.anharm" title="ansys.mapdl.core.Mapdl.anharm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.anharm</span></code></a>([nfram, delay, ncycl, nperiod, ...])</p></td>
-<td><p>Produces an animated sequence of time-harmonic results or complex mode</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.anharm.html#ansys.mapdl.core._commands.post1.animation.Animation.anharm" title="ansys.mapdl.core._commands.post1.animation.Animation.anharm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.anharm</span></code></a>([nfram, delay, ncycl, ...])</p></td>
+<td><p>Produces an animated sequence of time-harmonic results or complex mode shapes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.anim.html#ansys.mapdl.core.Mapdl.anim" title="ansys.mapdl.core.Mapdl.anim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.anim</span></code></a>([ncycl, kcycl, delay])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.anim.html#ansys.mapdl.core._commands.post1.animation.Animation.anim" title="ansys.mapdl.core._commands.post1.animation.Animation.anim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.anim</span></code></a>([ncycl, kcycl, delay])</p></td>
 <td><p>Displays animated graphics data for linear problems.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.anisos.html#ansys.mapdl.core.Mapdl.anisos" title="ansys.mapdl.core.Mapdl.anisos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.anisos</span></code></a>([nfram, delay, ncycl])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.anisos.html#ansys.mapdl.core._commands.post1.animation.Animation.anisos" title="ansys.mapdl.core._commands.post1.animation.Animation.anisos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.anisos</span></code></a>([nfram, delay, ncycl])</p></td>
 <td><p>Produces an animated sequence of an isosurface.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.anmode.html#ansys.mapdl.core.Mapdl.anmode" title="ansys.mapdl.core.Mapdl.anmode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.anmode</span></code></a>([nfram, delay, ncycl, kaccel])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.anmode.html#ansys.mapdl.core._commands.post1.animation.Animation.anmode" title="ansys.mapdl.core._commands.post1.animation.Animation.anmode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.anmode</span></code></a>([nfram, delay, ncycl, kaccel])</p></td>
 <td><p>Produces an animated sequence of a mode shape.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.anmres.html#ansys.mapdl.core.Mapdl.anmres" title="ansys.mapdl.core.Mapdl.anmres"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.anmres</span></code></a>([delay, min_, max_, inc, ...])</p></td>
-<td><p>Performs animation of results over multiple results files in an</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.antime.html#ansys.mapdl.core._commands.post1.animation.Animation.antime" title="ansys.mapdl.core._commands.post1.animation.Animation.antime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.antime</span></code></a>([nfram, delay, ncycl, ...])</p></td>
+<td><p>Generates a sequential contour animation over a range of time.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.antime.html#ansys.mapdl.core.Mapdl.antime" title="ansys.mapdl.core.Mapdl.antime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.antime</span></code></a>([nfram, delay, ncycl, ...])</p></td>
-<td><p>Produces a  sequential contour animation over a range of time.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.trtime.html#ansys.mapdl.core.Mapdl.trtime" title="ansys.mapdl.core.Mapdl.trtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.trtime</span></code></a>([time, spacing, offset, size, ...])</p></td>
-<td><p>Defines the options used for the PLTRAC (particle flow or charged</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.animation.Animation.trtime.html#ansys.mapdl.core._commands.post1.animation.Animation.trtime" title="ansys.mapdl.core._commands.post1.animation.Animation.trtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Animation.trtime</span></code></a>([time, spacing, offset, ...])</p></td>
+<td><p>Defines the options used for the <span class="xref std std-ref">pltrac</span> (charged particle trace) command.</p></td>
 </tr>
 </tbody>
 </table>
@@ -649,23 +858,6 @@
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item"> 
-<div class="tocsection editthispage">
-  <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/mapdl_commands/post1/animation.rst">
-    <i class="fa-solid fa-pencil"></i>
-       Edit
-    on GitHub  
-  </a>
-</div>
-
-</div>
-
-</div></div>
               
             
           </div>
@@ -689,19 +881,22 @@
 
 <script>
 // Passing the search options to the search.js file
-const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text"], "limit": 10, "threshold": 0.2}');
+const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text", "objectID"], "limit": 10, "threshold": 0.2}');
 const SEARCH_FILE = "../../_static/search.json";
+const ADVANCE_SEARCH_PATH = "../../search.html";
+const EXTRA_SOURCES = JSON.parse('""');
 </script>
 
 
 <script src="../../_static/js/search.js"></script>
+
   
 <footer class="bd-footer" font-size="4px">
   <div class="bd-footer__inner bd-page-width">
     <div class="footer-items__start">
       <div class="footer-item">
         <p class="copyright">
-          PyMAPDL 0.69.dev0 © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
+          PyMAPDL 0.72.dev0 © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
           <br>
         </p>
       </div>
@@ -711,7 +906,7 @@ const SEARCH_FILE = "../../_static/search.json";
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.3.1. and
+          1.7.0. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
           on <span id="date"></span>
         </p>

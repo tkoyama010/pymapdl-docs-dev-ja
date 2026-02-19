@@ -1,4 +1,4 @@
-# Copyright (C) 2016 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2016 - 2026 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -37,6 +37,7 @@ https://www.simutechgroup.com/tips-and-tricks/fea-articles/97-fea-tips-tricks-th
 Thanks SimuTech!
 
 """
+
 # sphinx_gallery_thumbnail_number = 4
 
 import matplotlib.pyplot as plt
@@ -290,7 +291,7 @@ plt.plot(time_values, node_temp, label="Node 12")
 plt.plot(my_bulk[:, 0], my_bulk[:, 1], ":", label="Input")
 plt.legend()
 plt.xlabel("Time (seconds)")
-plt.ylabel("Temperature ($^\circ$F)")
+plt.ylabel(r"Temperature ($^\circ$F)")
 plt.show()
 
 ###############################################################################

@@ -557,7 +557,7 @@ For example, you can write principal stresses to a file.
 
     # mapdl_s_1_df.to_csv(path + '\prin-stresses.csv')
     # mapdl_s_1_df.to_json(path + '\prin-stresses.json')
-    mapdl_s_1_df.to_html(path + "\prin-stresses.html")
+    mapdl_s_1_df.to_html(path + "\\prin-stresses.html")
 
 
 .. GENERATED FROM PYTHON SOURCE LINES 394-397

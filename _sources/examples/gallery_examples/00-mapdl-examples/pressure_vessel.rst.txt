@@ -31,9 +31,10 @@ Also shown here:
 - Comparison between PRNSOL, VGET (efficient wrapping), and the legacy reader.
 - Notes regarding FULL vs. POWER graphics when using PRNSOL.
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-52
+.. GENERATED FROM PYTHON SOURCE LINES 38-53
 
 .. code-block:: Python
+
 
     import numpy as np
 
@@ -50,11 +51,11 @@ Also shown here:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-54
+.. GENERATED FROM PYTHON SOURCE LINES 54-55
 
 Set the materials and element type
 
-.. GENERATED FROM PYTHON SOURCE LINES 54-62
+.. GENERATED FROM PYTHON SOURCE LINES 55-63
 
 .. code-block:: Python
 
@@ -67,11 +68,11 @@ Set the materials and element type
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-64
+.. GENERATED FROM PYTHON SOURCE LINES 64-65
 
 Create the Geometry
 
-.. GENERATED FROM PYTHON SOURCE LINES 64-81
+.. GENERATED FROM PYTHON SOURCE LINES 65-82
 
 .. code-block:: Python
 
@@ -93,11 +94,11 @@ Create the Geometry
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 82-83
+.. GENERATED FROM PYTHON SOURCE LINES 83-84
 
 Create the mesh
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-91
+.. GENERATED FROM PYTHON SOURCE LINES 84-92
 
 .. code-block:: Python
 
@@ -110,11 +111,11 @@ Create the mesh
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 92-93
+.. GENERATED FROM PYTHON SOURCE LINES 93-94
 
 Solve
 
-.. GENERATED FROM PYTHON SOURCE LINES 93-113
+.. GENERATED FROM PYTHON SOURCE LINES 94-114
 
 .. code-block:: Python
 
@@ -139,7 +140,7 @@ Solve
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-120
+.. GENERATED FROM PYTHON SOURCE LINES 115-121
 
 Post-Processing
 ~~~~~~~~~~~~~~~
@@ -148,7 +149,7 @@ von-mises stress for the single static solution. Here, we use MAPDL
 directly to obtain the results using a wrapper around the VGET
 method to efficiently obtain results without outputting to disk.
 
-.. GENERATED FROM PYTHON SOURCE LINES 120-145
+.. GENERATED FROM PYTHON SOURCE LINES 121-146
 
 .. code-block:: Python
 
@@ -178,11 +179,11 @@ method to efficiently obtain results without outputting to disk.
     print(f"{node_num:<5d} {stress_value:.3f}")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 146-147
+.. GENERATED FROM PYTHON SOURCE LINES 147-148
 
 Plot the results
 
-.. GENERATED FROM PYTHON SOURCE LINES 147-151
+.. GENERATED FROM PYTHON SOURCE LINES 148-152
 
 .. code-block:: Python
 
@@ -191,13 +192,13 @@ Plot the results
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 152-155
+.. GENERATED FROM PYTHON SOURCE LINES 153-156
 
 We could, alternatively, get the exact same results by directly
 accessing the result file using the legacy file reader
 `ansys-mapdl-reader <https://github.com/ansys/pymapdl-reader>`_.
 
-.. GENERATED FROM PYTHON SOURCE LINES 155-166
+.. GENERATED FROM PYTHON SOURCE LINES 156-167
 
 .. code-block:: Python
 
@@ -213,7 +214,7 @@ accessing the result file using the legacy file reader
     print("All close:", np.allclose(von_mises, von_mises_mapdl))
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 167-172
+.. GENERATED FROM PYTHON SOURCE LINES 168-173
 
 That these results are equivalent to results from PRNSOL.
 
@@ -221,7 +222,7 @@ That these results are equivalent to results from PRNSOL.
    Enabling POWER GRAPHICS with ``mapdl.graphics('POWER')`` will
    change the averaging scheme.
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-186
+.. GENERATED FROM PYTHON SOURCE LINES 173-187
 
 .. code-block:: Python
 
@@ -240,13 +241,13 @@ That these results are equivalent to results from PRNSOL.
     print(f"PRNSOL MAPDL Min:                 {prnsol_eqv.max()}")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 187-190
+.. GENERATED FROM PYTHON SOURCE LINES 188-191
 
 Stop mapdl
 ~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 190-191
+.. GENERATED FROM PYTHON SOURCE LINES 191-192
 
 .. code-block:: Python
 

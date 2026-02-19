@@ -25,9 +25,10 @@ PyVista Mesh Integration
 
 Run a modal analysis on a mesh generated from pyvista within MAPDL.
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-48
+.. GENERATED FROM PYTHON SOURCE LINES 32-49
 
 .. code-block:: Python
+
 
 
     import os
@@ -46,11 +47,11 @@ Run a modal analysis on a mesh generated from pyvista within MAPDL.
     mesh.plot(color="w", show_edges=True)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 50-51
+.. GENERATED FROM PYTHON SOURCE LINES 51-52
 
 Write the mesh to a temporary file
 
-.. GENERATED FROM PYTHON SOURCE LINES 51-83
+.. GENERATED FROM PYTHON SOURCE LINES 52-84
 
 .. code-block:: Python
 
@@ -87,11 +88,11 @@ Write the mesh to a temporary file
     # mapdl.solve()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 84-85
+.. GENERATED FROM PYTHON SOURCE LINES 85-86
 
 Load the result file within ``pyansys`` and plot the 8th mode.
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-90
+.. GENERATED FROM PYTHON SOURCE LINES 86-91
 
 .. code-block:: Python
 
@@ -101,11 +102,11 @@ Load the result file within ``pyansys`` and plot the 8th mode.
     result.plot_nodal_displacement(7, show_displacement=True, displacement_factor=0.4)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-92
+.. GENERATED FROM PYTHON SOURCE LINES 92-93
 
 plot the 1st mode using contours
 
-.. GENERATED FROM PYTHON SOURCE LINES 92-96
+.. GENERATED FROM PYTHON SOURCE LINES 93-97
 
 .. code-block:: Python
 
@@ -114,14 +115,14 @@ plot the 1st mode using contours
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 97-101
+.. GENERATED FROM PYTHON SOURCE LINES 98-102
 
 Animate a high frequency mode
 
 Get a smoother plot by disabling movie_filename and increasing ``n_frames``.
 Enable a continuous plot looping with ```loop=True```.
 
-.. GENERATED FROM PYTHON SOURCE LINES 101-113
+.. GENERATED FROM PYTHON SOURCE LINES 102-114
 
 .. code-block:: Python
 
@@ -138,13 +139,13 @@ Enable a continuous plot looping with ```loop=True```.
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-117
+.. GENERATED FROM PYTHON SOURCE LINES 115-118
 
 Stop mapdl
 ~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 117-118
+.. GENERATED FROM PYTHON SOURCE LINES 118-119
 
 .. code-block:: Python
 

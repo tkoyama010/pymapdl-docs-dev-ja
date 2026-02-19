@@ -32,6 +32,7 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -40,11 +41,11 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css?v=0909a4fa" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=91007d66" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cb9002b8" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
   <!-- So that users can add custom icons -->
@@ -61,7 +62,7 @@
   
     <link href="../../_static/css/breadcrumbs.css" rel="stylesheet" />
   
-    <script src="../../_static/documentation_options.js?v=7d205779"></script>
+    <script src="../../_static/documentation_options.js?v=36e1650e"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/thebelab-helper.js"></script>
@@ -99,9 +100,12 @@
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="split_sharp_edges" href="ansys.mapdl.core.plotting.MapdlTheme.split_sharp_edges.html" />
     <link rel="prev" title="slider_styles" href="ansys.mapdl.core.plotting.MapdlTheme.slider_styles.html" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
-  <meta name="docsearch:version" content="0.69.dev0" />
+  <meta name="docsearch:version" content="0.72.dev0" />
+  <meta property="og:site_name" content="PyAnsys" />
+  <meta name="physics" content="Structures" />
   </head>
   
   
@@ -180,9 +184,15 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
+
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html" title="PyMAPDL home">Home</a>
+</li>
+
+
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting_started/index.html">
     使い始める
@@ -210,13 +220,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../examples/index.html">
-    使用例
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -225,6 +228,13 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../examples/index.html">
+    使用例
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../../changelog.html">
     リリースノート
@@ -235,15 +245,16 @@
             </li>
             
   </ul>
-</nav></div>
+</nav>
+</div>
       
     </div>
     
     
     <div class="navbar-header-items__end">
       
-        <div class="navbar-item navbar-persistent--container">
-          
+      
+        <div class="navbar-item">
 <div class="search-bar pst-js-only" id="search-bar">
   <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
     <i class="fa-solid fa-magnifying-glass"></i>
@@ -254,10 +265,10 @@
       <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
     </span>
   </form>
+  
   <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
-</div>
-        </div>
-      
+  
+</div></div>
       
         <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -332,45 +343,40 @@
   </div>
   
   
-    <div class="navbar-persistent--mobile">
-<div class="search-bar pst-js-only" id="search-bar">
-  <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
-      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
-      autocapitalize="off" spellcheck="false" />
-    <span class="search-button__kbd-shortcut">
-      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
-    </span>
-  </form>
-  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
-</div>
-    </div>
-  
 
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="このページでは">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
   
 </div>
 
     </header>
   
   
-    <div id="announcement_msg"></div>
+    
+<!--
+  Announcement Version Loader
+  Dynamically loads the announcement.html content into the announcement_msg div.
+-->
+<div id="announcement_msg" aria-live="polite"></div>
 <script>
+  // Fetch and inject the announcement HTML content
   fetch("announcement.html")
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`HTTP error: ${response.status}`);
+        throw new Error(`HTTP error: ${response.status} Announcement.html file not found, Please ignore this, if you are in dev/stable documentation`);
       }
       return response.text();
     })
-    .then(
-      (text) => (document.getElementById("announcement_msg").innerHTML = text),
-    )
-    .catch((error) => console.error(`Fetch problem: ${error.message}`));
+    .then((text) => {
+      var msgDiv = document.getElementById("announcement_msg");
+      if (msgDiv) {
+        msgDiv.innerHTML = text;
+      }
+    })
+    .catch((error) => {
+      // Log only unexpected fetch errors
+      if (!(error.message && error.message.startsWith("HTTP error: 404"))) {
+        console.error(`Fetch problem: ${error.message} Announcement.html could not be loaded.`);
+      }
+    });
 </script>
   
 
@@ -393,9 +399,15 @@
           
           
             <div class="navbar-item">
+
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html" title="PyMAPDL home">Home</a>
+</li>
+
+
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting_started/index.html">
     使い始める
@@ -438,7 +450,8 @@
 </li>
 
   </ul>
-</nav></div>
+</nav>
+</div>
           
         
       </div>
@@ -446,6 +459,22 @@
     
     
       <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="search-bar pst-js-only" id="search-bar">
+  <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
+  
+</div></div>
         
           <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -539,7 +568,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../mesh.html">Mesh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../parameters.html">パラメーター</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../plotting.html">Plotting</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlPlotter.html">MapdlPlotter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.html">MapdlPlotter</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.html">MapdlTheme</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.from_dict.html">from_dict</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.load_theme.html">load_theme</a></li>
@@ -587,6 +616,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.point_size.html">point_size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.render_lines_as_tubes.html">render_lines_as_tubes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.render_points_as_spheres.html">render_points_as_spheres</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.resample_environment_texture.html">resample_environment_texture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.return_cpos.html">return_cpos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.sharp_edges_feature_angle.html">sharp_edges_feature_angle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.show_edges.html">show_edges</a></li>
@@ -624,12 +654,21 @@
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
+
+
+  
+  <nav class="tocsection editthispage" aria-label="Edit this page">
+    <a href="None" rel="noopener noreferrer">
+      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+      
+      
+        
+          GitHub の編集
+        
+      
+    </a>
+  </nav>
+</div>
   </div>
 
 
@@ -698,7 +737,7 @@
 <h1>smooth_shading<a class="headerlink" href="#smooth-shading" title="Link to this heading">#</a></h1>
 <dl class="py property">
 <dt class="sig sig-object py" id="ansys.mapdl.core.plotting.MapdlTheme.smooth_shading">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">MapdlTheme.</span></span><span class="sig-name descname"><span class="pre">smooth_shading</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></em><a class="headerlink" href="#ansys.mapdl.core.plotting.MapdlTheme.smooth_shading" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">MapdlTheme.</span></span><span class="sig-name descname"><span class="pre">smooth_shading</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></em><a class="headerlink" href="#ansys.mapdl.core.plotting.MapdlTheme.smooth_shading" title="Link to this definition">#</a></dt>
 <dd><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">smooth_shading</span></code> parameter.</p>
 <p class="rubric">Examples</p>
 <p>Set the global smooth_shading parameter default to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
@@ -720,35 +759,6 @@
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> このページでは
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ansys.mapdl.core.plotting.MapdlTheme.smooth_shading"><code class="docutils literal notranslate"><span class="pre">MapdlTheme.smooth_shading</span></code></a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item"> 
-<div class="tocsection editthispage">
-  <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/api/_autosummary/ansys.mapdl.core.plotting.MapdlTheme.smooth_shading.rst">
-    <i class="fa-solid fa-pencil"></i>
-       Edit
-    on GitHub  
-  </a>
-</div>
-
-</div>
-
-</div></div>
               
             
           </div>
@@ -772,19 +782,22 @@
 
 <script>
 // Passing the search options to the search.js file
-const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text"], "limit": 10, "threshold": 0.2}');
+const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text", "objectID"], "limit": 10, "threshold": 0.2}');
 const SEARCH_FILE = "../../_static/search.json";
+const ADVANCE_SEARCH_PATH = "../../search.html";
+const EXTRA_SOURCES = JSON.parse('""');
 </script>
 
 
 <script src="../../_static/js/search.js"></script>
+
   
 <footer class="bd-footer" font-size="4px">
   <div class="bd-footer__inner bd-page-width">
     <div class="footer-items__start">
       <div class="footer-item">
         <p class="copyright">
-          PyMAPDL 0.69.dev0 © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
+          PyMAPDL 0.72.dev0 © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
           <br>
         </p>
       </div>
@@ -794,7 +807,7 @@ const SEARCH_FILE = "../../_static/search.json";
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.3.1. and
+          1.7.0. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
           on <span id="date"></span>
         </p>

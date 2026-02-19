@@ -1,6 +1,0 @@
-﻿get\_available\_ansys\_installations
-====================================
-
-.. currentmodule:: ansys.tools.path
-
-.. autofunction:: get_available_ansys_installations

@@ -32,6 +32,7 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -40,11 +41,11 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css?v=0909a4fa" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=91007d66" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cb9002b8" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
   <!-- So that users can add custom icons -->
@@ -61,7 +62,7 @@
   
     <link href="../../_static/css/breadcrumbs.css" rel="stylesheet" />
   
-    <script src="../../_static/documentation_options.js?v=7d205779"></script>
+    <script src="../../_static/documentation_options.js?v=36e1650e"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/thebelab-helper.js"></script>
@@ -99,9 +100,12 @@
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="Information module" href="../information.html" />
     <link rel="prev" title="convert_apdl_block" href="ansys.mapdl.core.convert.convert_apdl_block.html" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
-  <meta name="docsearch:version" content="0.69.dev0" />
+  <meta name="docsearch:version" content="0.72.dev0" />
+  <meta property="og:site_name" content="PyAnsys" />
+  <meta name="physics" content="Structures" />
   </head>
   
   
@@ -180,9 +184,15 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
+
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html" title="PyMAPDL home">Home</a>
+</li>
+
+
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting_started/index.html">
     使い始める
@@ -210,13 +220,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../examples/index.html">
-    使用例
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -225,6 +228,13 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../examples/index.html">
+    使用例
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../../changelog.html">
     リリースノート
@@ -235,15 +245,16 @@
             </li>
             
   </ul>
-</nav></div>
+</nav>
+</div>
       
     </div>
     
     
     <div class="navbar-header-items__end">
       
-        <div class="navbar-item navbar-persistent--container">
-          
+      
+        <div class="navbar-item">
 <div class="search-bar pst-js-only" id="search-bar">
   <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
     <i class="fa-solid fa-magnifying-glass"></i>
@@ -254,10 +265,10 @@
       <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
     </span>
   </form>
+  
   <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
-</div>
-        </div>
-      
+  
+</div></div>
       
         <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -332,45 +343,40 @@
   </div>
   
   
-    <div class="navbar-persistent--mobile">
-<div class="search-bar pst-js-only" id="search-bar">
-  <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
-      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
-      autocapitalize="off" spellcheck="false" />
-    <span class="search-button__kbd-shortcut">
-      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
-    </span>
-  </form>
-  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
-</div>
-    </div>
-  
 
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="このページでは">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
   
 </div>
 
     </header>
   
   
-    <div id="announcement_msg"></div>
+    
+<!--
+  Announcement Version Loader
+  Dynamically loads the announcement.html content into the announcement_msg div.
+-->
+<div id="announcement_msg" aria-live="polite"></div>
 <script>
+  // Fetch and inject the announcement HTML content
   fetch("announcement.html")
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`HTTP error: ${response.status}`);
+        throw new Error(`HTTP error: ${response.status} Announcement.html file not found, Please ignore this, if you are in dev/stable documentation`);
       }
       return response.text();
     })
-    .then(
-      (text) => (document.getElementById("announcement_msg").innerHTML = text),
-    )
-    .catch((error) => console.error(`Fetch problem: ${error.message}`));
+    .then((text) => {
+      var msgDiv = document.getElementById("announcement_msg");
+      if (msgDiv) {
+        msgDiv.innerHTML = text;
+      }
+    })
+    .catch((error) => {
+      // Log only unexpected fetch errors
+      if (!(error.message && error.message.startsWith("HTTP error: 404"))) {
+        console.error(`Fetch problem: ${error.message} Announcement.html could not be loaded.`);
+      }
+    });
 </script>
   
 
@@ -393,9 +399,15 @@
           
           
             <div class="navbar-item">
+
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html" title="PyMAPDL home">Home</a>
+</li>
+
+
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting_started/index.html">
     使い始める
@@ -438,7 +450,8 @@
 </li>
 
   </ul>
-</nav></div>
+</nav>
+</div>
           
         
       </div>
@@ -446,6 +459,22 @@
     
     
       <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="search-bar pst-js-only" id="search-bar">
+  <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
+  
+</div></div>
         
           <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -556,12 +585,21 @@
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
+
+
+  
+  <nav class="tocsection editthispage" aria-label="Edit this page">
+    <a href="None" rel="noopener noreferrer">
+      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+      
+      
+        
+          GitHub の編集
+        
+      
+    </a>
+  </nav>
+</div>
   </div>
 
 
@@ -631,79 +669,75 @@
 <dl class="field-list">
 <dt class="field-odd">パラメーター<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>filename_in</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><blockquote>
-<div><p>Filename of the ansys input file to read in.</p>
-</div></blockquote>
-<dl class="simple">
-<dt>filename_out<span class="classifier">str, optional</span></dt><dd><p>Filename of the python script to write a translation to.
+<dt><strong>filename_in</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Filename of the ansys input file to read in.</p>
+</dd>
+<dt><strong>filename_out</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Filename of the python script to write a translation to.
 Defaults to the <code class="docutils literal notranslate"><span class="pre">filename_in</span></code> name ending in <code class="docutils literal notranslate"><span class="pre">py</span></code>.</p>
 </dd>
-<dt>loglevel<span class="classifier">str, optional</span></dt><dd><p>Logging level of the ansys object within the script.</p>
+<dt><strong>loglevel</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Logging level of the ansys object within the script.</p>
 </dd>
-<dt>auto_exit<span class="classifier">bool, optional</span></dt><dd><p>Adds a line to the end of the script to exit MAPDL.  Default
+<dt><strong>auto_exit</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.14)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Adds a line to the end of the script to exit MAPDL.  Default
 <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
-<dt>line_ending<span class="classifier">str, optional</span></dt><dd><p>When None, automatically is ``</p>
+<dt><strong>line_ending</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>When None, automatically is <code class="docutils literal notranslate"><span class="pre">\n</span></code>.</p>
 </dd>
-</dl>
-</dd>
-<dt><strong>.``</strong></dt><dd><dl class="simple">
-<dt>exec_file<span class="classifier">str, optional</span></dt><dd><p>Specify the location of the ANSYS executable and include
+<dt><strong>exec_file</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Specify the location of the ANSYS executable and include
 it in the converter output <code class="docutils literal notranslate"><span class="pre">launch_mapdl</span></code> call.</p>
 </dd>
-<dt>macros_as_functions<span class="classifier">bool, optional</span></dt><dd><p>Attempt to convert MAPDL macros to python functions.</p>
+<dt><strong>macros_as_functions</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.14)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Attempt to convert MAPDL macros to python functions.</p>
 </dd>
-<dt>use_function_names<span class="classifier">bool, optional</span></dt><dd><p>Convert MAPDL functions to ansys.mapdl.core.Mapdl class
+<dt><strong>use_function_names</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.14)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Convert MAPDL functions to ansys.mapdl.core.Mapdl class
 methods.  When <code class="docutils literal notranslate"><span class="pre">True</span></code>, the MAPDL command &quot;K&quot; will be
 converted to <code class="docutils literal notranslate"><span class="pre">mapdl.k</span></code>.  When <code class="docutils literal notranslate"><span class="pre">False</span></code>, it will be
 converted to <code class="docutils literal notranslate"><span class="pre">mapdl.run('k')</span></code>.</p>
 </dd>
-<dt>show_log<span class="classifier">bool, optional</span></dt><dd><p>Print the converted commands using a logger (from <code class="docutils literal notranslate"><span class="pre">logging</span></code>
+<dt><strong>show_log</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.14)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Print the converted commands using a logger (from <code class="docutils literal notranslate"><span class="pre">logging</span></code>
 Python module).</p>
 </dd>
-<dt>add_imports<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, add the lines <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">ansys.mapdl.core</span> <span class="pre">import</span> <span class="pre">launch_mapdl</span></code>
+<dt><strong>add_imports</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.14)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, add the lines <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">ansys.mapdl.core</span> <span class="pre">import</span> <span class="pre">launch_mapdl</span></code>
 and <code class="docutils literal notranslate"><span class="pre">mapdl</span> <span class="pre">=</span> <span class="pre">launch_mapdl(loglevel=&quot;WARNING&quot;)</span></code> to the
 beginning of the output file. This option is useful if you
 are planning to use the output script from another mapdl
 session. See examples section.
 This option overrides <code class="docutils literal notranslate"><span class="pre">auto_exit</span></code>.</p>
 </dd>
-<dt>comment_solve<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, it will pythonically comment the lines that
+<dt><strong>comment_solve</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.14)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, it will pythonically comment the lines that
 contain <code class="docutils literal notranslate"><span class="pre">&quot;SOLVE&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;/EOF&quot;</span></code>.</p>
 </dd>
-<dt>cleanup_output<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code> the output is formatted using <code class="docutils literal notranslate"><span class="pre">autopep8</span></code> before writing
+<dt><strong>cleanup_output</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.14)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code> the output is formatted using <code class="docutils literal notranslate"><span class="pre">autopep8</span></code> before writing
 the file or returning the string. This requires <code class="docutils literal notranslate"><span class="pre">autopep8</span></code> to be
 installed.</p>
 </dd>
-<dt>header<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the default header is written in the first line
+<dt><strong>header</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.14)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the default header is written in the first line
 of the output. If a string is provided, this string will be
 used as header.</p>
 </dd>
-<dt>print_com<span class="classifier">bool, optional</span></dt><dd><p>Print command <code class="docutils literal notranslate"><span class="pre">/COM</span></code> arguments to python console.
+<dt><strong>print_com</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.14)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Print command <code class="docutils literal notranslate"><span class="pre">/COM</span></code> arguments to python console.
 Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
-<dt>only_commands<span class="classifier">bool, optional</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, it converts only the commands, meaning that header
+<dt><strong>only_commands</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.14)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, it converts only the commands, meaning that header
 (<code class="docutils literal notranslate"><span class="pre">header=False</span></code>), imports (<code class="docutils literal notranslate"><span class="pre">add_imports=False</span></code>),
 and exit commands are NOT included (<code class="docutils literal notranslate"><span class="pre">auto_exit=False</span></code>).
 Overrides <code class="docutils literal notranslate"><span class="pre">header</span></code>, <code class="docutils literal notranslate"><span class="pre">add_imports</span></code> and <code class="docutils literal notranslate"><span class="pre">auto_exit</span></code>.</p>
 </dd>
-<dt>graphics_backend<span class="classifier">bool, optional</span></dt><dd><p>It sets the <cite>mapdl.graphics_backend</cite> argument equals True or False depending on
+<dt><strong>graphics_backend</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GraphicsBackend</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>It sets the <cite>mapdl.graphics_backend</cite> argument equals True or False depending on
 this value.</p>
 </dd>
-<dt>clear_at_start<span class="classifier">bool, optional</span></dt><dd><p>Add a <cite>mapdl.clear()</cite> after the Mapdl object initialization.</p>
+<dt><strong>clear_at_start</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.14)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Add a <cite>mapdl.clear()</cite> after the Mapdl object initialization.</p>
 </dd>
-</dl>
+<dt><strong>check_parameter_names</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.14)"><span class="xref std std-ref">bool</span></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Check if parameter names are valid MAPDL parameter names.
+Defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></dt><dd><p>List of lines translated.</p>
+<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></dt><dd><p>List of lines translated.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</span></p>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</span></p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
@@ -745,35 +779,6 @@ since you do not need to write the file.</p>
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> このページでは
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ansys.mapdl.core.convert.convert_script"><code class="docutils literal notranslate"><span class="pre">convert_script()</span></code></a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item"> 
-<div class="tocsection editthispage">
-  <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/api/_autosummary/ansys.mapdl.core.convert.convert_script.rst">
-    <i class="fa-solid fa-pencil"></i>
-       Edit
-    on GitHub  
-  </a>
-</div>
-
-</div>
-
-</div></div>
-              
             
           </div>
           <footer class="bd-footer-content">
@@ -796,19 +801,22 @@ since you do not need to write the file.</p>
 
 <script>
 // Passing the search options to the search.js file
-const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text"], "limit": 10, "threshold": 0.2}');
+const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text", "objectID"], "limit": 10, "threshold": 0.2}');
 const SEARCH_FILE = "../../_static/search.json";
+const ADVANCE_SEARCH_PATH = "../../search.html";
+const EXTRA_SOURCES = JSON.parse('""');
 </script>
 
 
 <script src="../../_static/js/search.js"></script>
+
   
 <footer class="bd-footer" font-size="4px">
   <div class="bd-footer__inner bd-page-width">
     <div class="footer-items__start">
       <div class="footer-item">
         <p class="copyright">
-          PyMAPDL 0.69.dev0 © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
+          PyMAPDL 0.72.dev0 © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
           <br>
         </p>
       </div>
@@ -818,7 +826,7 @@ const SEARCH_FILE = "../../_static/search.json";
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.3.1. and
+          1.7.0. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
           on <span id="date"></span>
         </p>

@@ -32,6 +32,7 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -40,11 +41,11 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css?v=0909a4fa" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=91007d66" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cb9002b8" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
   <!-- So that users can add custom icons -->
@@ -61,7 +62,7 @@
   
     <link href="../../_static/css/breadcrumbs.css" rel="stylesheet" />
   
-    <script src="../../_static/documentation_options.js?v=7d205779"></script>
+    <script src="../../_static/documentation_options.js?v=36e1650e"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/thebelab-helper.js"></script>
@@ -99,9 +100,12 @@
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="Examples" href="examples.html" />
     <link rel="prev" title="Setting PyMAPDL" href="settings.html" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
-  <meta name="docsearch:version" content="0.69.dev0" />
+  <meta name="docsearch:version" content="0.72.dev0" />
+  <meta property="og:site_name" content="PyAnsys" />
+  <meta name="physics" content="Structures" />
   </head>
   
   
@@ -180,9 +184,15 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
+
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html" title="PyMAPDL home">Home</a>
+</li>
+
+
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting_started/index.html">
     使い始める
@@ -210,13 +220,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../examples/index.html">
-    使用例
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -225,6 +228,13 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../examples/index.html">
+    使用例
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../../changelog.html">
     リリースノート
@@ -235,15 +245,16 @@
             </li>
             
   </ul>
-</nav></div>
+</nav>
+</div>
       
     </div>
     
     
     <div class="navbar-header-items__end">
       
-        <div class="navbar-item navbar-persistent--container">
-          
+      
+        <div class="navbar-item">
 <div class="search-bar pst-js-only" id="search-bar">
   <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
     <i class="fa-solid fa-magnifying-glass"></i>
@@ -254,10 +265,10 @@
       <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
     </span>
   </form>
+  
   <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
-</div>
-        </div>
-      
+  
+</div></div>
       
         <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -332,45 +343,40 @@
   </div>
   
   
-    <div class="navbar-persistent--mobile">
-<div class="search-bar pst-js-only" id="search-bar">
-  <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
-      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
-      autocapitalize="off" spellcheck="false" />
-    <span class="search-button__kbd-shortcut">
-      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
-    </span>
-  </form>
-  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
-</div>
-    </div>
-  
 
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="このページでは">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
   
 </div>
 
     </header>
   
   
-    <div id="announcement_msg"></div>
+    
+<!--
+  Announcement Version Loader
+  Dynamically loads the announcement.html content into the announcement_msg div.
+-->
+<div id="announcement_msg" aria-live="polite"></div>
 <script>
+  // Fetch and inject the announcement HTML content
   fetch("announcement.html")
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`HTTP error: ${response.status}`);
+        throw new Error(`HTTP error: ${response.status} Announcement.html file not found, Please ignore this, if you are in dev/stable documentation`);
       }
       return response.text();
     })
-    .then(
-      (text) => (document.getElementById("announcement_msg").innerHTML = text),
-    )
-    .catch((error) => console.error(`Fetch problem: ${error.message}`));
+    .then((text) => {
+      var msgDiv = document.getElementById("announcement_msg");
+      if (msgDiv) {
+        msgDiv.innerHTML = text;
+      }
+    })
+    .catch((error) => {
+      // Log only unexpected fetch errors
+      if (!(error.message && error.message.startsWith("HTTP error: 404"))) {
+        console.error(`Fetch problem: ${error.message} Announcement.html could not be loaded.`);
+      }
+    });
 </script>
   
 
@@ -393,9 +399,15 @@
           
           
             <div class="navbar-item">
+
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html" title="PyMAPDL home">Home</a>
+</li>
+
+
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting_started/index.html">
     使い始める
@@ -438,7 +450,8 @@
 </li>
 
   </ul>
-</nav></div>
+</nav>
+</div>
           
         
       </div>
@@ -446,6 +459,22 @@
     
     
       <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="search-bar pst-js-only" id="search-bar">
+  <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
+  
+</div></div>
         
           <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -545,7 +574,6 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../xpl.html">File explorer overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../upf.html">Using Python to code UPF subroutines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../krylov.html">Harmonic analysis using the Krylov method</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
@@ -563,12 +591,21 @@
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
+
+
+  
+  <nav class="tocsection editthispage" aria-label="Edit this page">
+    <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/user_guide/hpc/pymapdl.rst" rel="noopener noreferrer">
+      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+      
+      
+        
+          GitHub の編集
+        
+      
+    </a>
+  </nav>
+</div>
   </div>
 
 
@@ -672,8 +709,8 @@ No changes are needed on a PyMAPDL script to run it on an SLURM cluster.</p>
 <p>Once the virtual environment is activated, you can launch any Python
 script that has the proper Python shebang (<code class="docutils literal notranslate"><span class="pre">#!/usr/bin/env</span> <span class="pre">python3</span></code>).</p>
 <p>For instance, assume that you want to launch the following <code class="docutils literal notranslate"><span class="pre">main.py</span></code> Python script:</p>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-text">main.py</span><a class="headerlink" href="#id4" title="Link to this code">#</a></div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">main.py</span><a class="headerlink" href="#id3" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
@@ -721,8 +758,8 @@ In this case, you must create two files:</p>
 <li><p>Bash script that activates the virtual environment and calls the
 Python script</p></li>
 </ul>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-text">main.py</span><a class="headerlink" href="#id5" title="Link to this code">#</a></div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">main.py</span><a class="headerlink" href="#id4" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 
 <span class="c1"># Number of processors must be lower than the</span>
@@ -737,8 +774,8 @@ Python script</p></li>
 </pre></div>
 </div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">job.sh</span><a class="headerlink" href="#id6" title="Link to this code">#</a></div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">job.sh</span><a class="headerlink" href="#id5" title="Link to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1"># Set SLURM options</span>
 <span class="c1">#SBATCH --job-name=ansys_job            # Job name</span>
@@ -789,7 +826,7 @@ To accomplish this, run these commands in your login node.</p>
 In case of SLURM, it uses the <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> command with the <code class="docutils literal notranslate"><span class="pre">--wrap</span></code> argument
 to pass the MAPDL command line to start.
 Other scheduler arguments can be specified using the <code class="docutils literal notranslate"><span class="pre">scheduler_options</span></code>
-argument as a Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>:</p>
+argument as a Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">scheduler_options</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nodes&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;ntasks-per-node&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">launch_on_hpc</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nproc</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">scheduler_options</span><span class="o">=</span><span class="n">scheduler_options</span><span class="p">)</span>
@@ -804,7 +841,7 @@ Hence, you must specify this value using the <code class="docutils literal notra
 are added automatically if PyMAPDL detects it is missing and the specified
 command is long more than 1 character in length).
 For instance, the <code class="docutils literal notranslate"><span class="pre">ntasks-per-node</span></code> argument is submitted as <code class="docutils literal notranslate"><span class="pre">--ntasks-per-node</span></code>.</p>
-<p>Or, a single Python string (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) is submitted:</p>
+<p>Or, a single Python string (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) is submitted:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">scheduler_options</span> <span class="o">=</span> <span class="s2">&quot;-N 10&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">launch_mapdl</span><span class="p">(</span><span class="n">launch_on_hpc</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">scheduler_options</span><span class="o">=</span><span class="n">scheduler_options</span><span class="p">)</span>
@@ -876,13 +913,13 @@ However, for large files, you might want to consider alternatives.</p>
 <p>Exiting MAPDL, either intentionally or unintentionally, stops the job.
 This behavior occurs because MAPDL is the main process at the job. Thus, when finished,
 the scheduler considers the job done.</p>
-<p>To exit MAPDL, you can use the <a class="reference internal" href="../../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.exit.html#ansys.mapdl.core.Mapdl.exit" title="ansys.mapdl.core.Mapdl.exit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">exit()</span></code></a> method.
+<p>To exit MAPDL, you can use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">exit()</span></code> method.
 This method exits MAPDL and sends a signal to the scheduler to cancel the job.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>When the Python process you are running PyMAPDL on finishes without errors, and you have not
-issued the <a class="reference internal" href="../../mapdl_commands/session/_autosummary/ansys.mapdl.core.Mapdl.exit.html#ansys.mapdl.core.Mapdl.exit" title="ansys.mapdl.core.Mapdl.exit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">exit()</span></code></a> method, the garbage collector
+issued the <code class="xref py py-meth docutils literal notranslate"><span class="pre">exit()</span></code> method, the garbage collector
 kills the MAPDL instance and its job. This is intended to save resources.</p>
 <p>If you prefer that the job is not killed, set the following attribute in the
 <a class="reference internal" href="../../api/mapdl.html#ansys.mapdl.core.mapdl.MapdlBase" title="ansys.mapdl.core.mapdl.MapdlBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code></a> class:</p>
@@ -997,53 +1034,6 @@ For more information, see <a class="reference internal" href="../mapdl.html#ref-
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> このページでは
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-job-submission-from-the-login-node">Batch job submission from the login node</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-a-submission-script">Using a submission script</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-mapdl-instance-launched-from-the-login-node">Interactive MAPDL instance launched from the login node</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-the-instance">Starting the instance</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-the-instance">Working with the instance</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-files">Sharing files</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exiting-mapdl">Exiting MAPDL</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-crashes-on-an-hpc">Handling crashes on an HPC</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-case-on-a-slurm-cluster">User case on a SLURM cluster</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tight-integration-between-mapdl-and-the-hpc-scheduler">Tight integration between MAPDL and the HPC scheduler</a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item"> 
-<div class="tocsection editthispage">
-  <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/user_guide/hpc/pymapdl.rst">
-    <i class="fa-solid fa-pencil"></i>
-       Edit
-    on GitHub  
-  </a>
-</div>
-
-</div>
-
-</div></div>
-              
             
           </div>
           <footer class="bd-footer-content">
@@ -1066,19 +1056,22 @@ For more information, see <a class="reference internal" href="../mapdl.html#ref-
 
 <script>
 // Passing the search options to the search.js file
-const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text"], "limit": 10, "threshold": 0.2}');
+const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text", "objectID"], "limit": 10, "threshold": 0.2}');
 const SEARCH_FILE = "../../_static/search.json";
+const ADVANCE_SEARCH_PATH = "../../search.html";
+const EXTRA_SOURCES = JSON.parse('""');
 </script>
 
 
 <script src="../../_static/js/search.js"></script>
+
   
 <footer class="bd-footer" font-size="4px">
   <div class="bd-footer__inner bd-page-width">
     <div class="footer-items__start">
       <div class="footer-item">
         <p class="copyright">
-          PyMAPDL 0.69.dev0 © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
+          PyMAPDL 0.72.dev0 © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
           <br>
         </p>
       </div>
@@ -1088,7 +1081,7 @@ const SEARCH_FILE = "../../_static/search.json";
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.3.1. and
+          1.7.0. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
           on <span id="date"></span>
         </p>

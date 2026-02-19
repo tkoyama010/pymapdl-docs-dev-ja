@@ -29,9 +29,10 @@ along a path for stress.  This shows some advanced features of the
 
 First, start MAPDL as a service and disable all but error messages.
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-44
+.. GENERATED FROM PYTHON SOURCE LINES 35-45
 
 .. code-block:: Python
+
 
 
     import matplotlib.pyplot as plt
@@ -43,13 +44,13 @@ First, start MAPDL as a service and disable all but error messages.
     mapdl = launch_mapdl(loglevel="ERROR")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 46-49
+.. GENERATED FROM PYTHON SOURCE LINES 47-50
 
 MAPDL: Solve a Beam with a Non-Uniform Load
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Create a beam, apply a load, and solve for the static solution.
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-90
+.. GENERATED FROM PYTHON SOURCE LINES 50-91
 
 .. code-block:: Python
 
@@ -95,14 +96,14 @@ Create a beam, apply a load, and solve for the static solution.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-95
+.. GENERATED FROM PYTHON SOURCE LINES 92-96
 
 Post-Processing - MAPDL Path Operation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Compute the stress along a path within MAPDL and convert the result
 to a numpy array
 
-.. GENERATED FROM PYTHON SOURCE LINES 95-139
+.. GENERATED FROM PYTHON SOURCE LINES 96-140
 
 .. code-block:: Python
 
@@ -151,7 +152,7 @@ to a numpy array
     print("Numpy Array from MAPDL Shape:", table.shape)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 140-154
+.. GENERATED FROM PYTHON SOURCE LINES 141-155
 
 Comparing with Path Operation Within `pyvista`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -168,7 +169,7 @@ identical interpolations).  The underlying algorithm of VTK is:
   point, uses the cell's interpolation functions to perform the
   interpolate / compute the point attributes.
 
-.. GENERATED FROM PYTHON SOURCE LINES 154-184
+.. GENERATED FROM PYTHON SOURCE LINES 155-185
 
 .. code-block:: Python
 
@@ -203,7 +204,7 @@ identical interpolations).  The underlying algorithm of VTK is:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 185-193
+.. GENERATED FROM PYTHON SOURCE LINES 186-194
 
 2D Slice Interpolation
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -214,7 +215,7 @@ Note that this slice occurs between the edge nodes of this beam,
 necessitating interpolation as stress/strain is (in general)
 extrapolated to the edge nodes of ANSYS FEMs.
 
-.. GENERATED FROM PYTHON SOURCE LINES 193-225
+.. GENERATED FROM PYTHON SOURCE LINES 194-226
 
 .. code-block:: Python
 
@@ -251,13 +252,13 @@ extrapolated to the edge nodes of ANSYS FEMs.
     _ = pl.show()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 226-229
+.. GENERATED FROM PYTHON SOURCE LINES 227-230
 
 Stop mapdl
 ~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 229-230
+.. GENERATED FROM PYTHON SOURCE LINES 230-231
 
 .. code-block:: Python
 

@@ -32,6 +32,7 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -40,11 +41,11 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/ansys_sphinx_theme.css?v=0909a4fa" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/ansys-sphinx-theme.css?v=a23b20f3" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=91007d66" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cb9002b8" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
   <!-- So that users can add custom icons -->
@@ -61,7 +62,7 @@
   
     <link href="../../_static/css/breadcrumbs.css" rel="stylesheet" />
   
-    <script src="../../_static/documentation_options.js?v=7d205779"></script>
+    <script src="../../_static/documentation_options.js?v=36e1650e"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/thebelab-helper.js"></script>
@@ -99,9 +100,12 @@
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="gp" href="_autosummary/ansys.mapdl.core.Mapdl.gp.html" />
     <link rel="prev" title="mlist" href="_autosummary/ansys.mapdl.core.Mapdl.mlist.html" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
-  <meta name="docsearch:version" content="0.69.dev0" />
+  <meta name="docsearch:version" content="0.72.dev0" />
+  <meta property="og:site_name" content="PyAnsys" />
+  <meta name="physics" content="Structures" />
   </head>
   
   
@@ -180,9 +184,15 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
+
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html" title="PyMAPDL home">Home</a>
+</li>
+
+
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting_started/index.html">
     使い始める
@@ -210,13 +220,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../examples/index.html">
-    使用例
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -225,6 +228,13 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../examples/index.html">
+    使用例
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../../changelog.html">
     リリースノート
@@ -235,15 +245,16 @@
             </li>
             
   </ul>
-</nav></div>
+</nav>
+</div>
       
     </div>
     
     
     <div class="navbar-header-items__end">
       
-        <div class="navbar-item navbar-persistent--container">
-          
+      
+        <div class="navbar-item">
 <div class="search-bar pst-js-only" id="search-bar">
   <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
     <i class="fa-solid fa-magnifying-glass"></i>
@@ -254,10 +265,10 @@
       <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
     </span>
   </form>
+  
   <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
-</div>
-        </div>
-      
+  
+</div></div>
       
         <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -332,45 +343,40 @@
   </div>
   
   
-    <div class="navbar-persistent--mobile">
-<div class="search-bar pst-js-only" id="search-bar">
-  <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
-      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
-      autocapitalize="off" spellcheck="false" />
-    <span class="search-button__kbd-shortcut">
-      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
-    </span>
-  </form>
-  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
-</div>
-    </div>
-  
 
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="このページでは">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
   
 </div>
 
     </header>
   
   
-    <div id="announcement_msg"></div>
+    
+<!--
+  Announcement Version Loader
+  Dynamically loads the announcement.html content into the announcement_msg div.
+-->
+<div id="announcement_msg" aria-live="polite"></div>
 <script>
+  // Fetch and inject the announcement HTML content
   fetch("announcement.html")
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`HTTP error: ${response.status}`);
+        throw new Error(`HTTP error: ${response.status} Announcement.html file not found, Please ignore this, if you are in dev/stable documentation`);
       }
       return response.text();
     })
-    .then(
-      (text) => (document.getElementById("announcement_msg").innerHTML = text),
-    )
-    .catch((error) => console.error(`Fetch problem: ${error.message}`));
+    .then((text) => {
+      var msgDiv = document.getElementById("announcement_msg");
+      if (msgDiv) {
+        msgDiv.innerHTML = text;
+      }
+    })
+    .catch((error) => {
+      // Log only unexpected fetch errors
+      if (!(error.message && error.message.startsWith("HTTP error: 404"))) {
+        console.error(`Fetch problem: ${error.message} Announcement.html could not be loaded.`);
+      }
+    });
 </script>
   
 
@@ -381,7 +387,7 @@
       
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -393,9 +399,15 @@
           
           
             <div class="navbar-item">
+
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html" title="PyMAPDL home">Home</a>
+</li>
+
+
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting_started/index.html">
     使い始める
@@ -438,7 +450,8 @@
 </li>
 
   </ul>
-</nav></div>
+</nav>
+</div>
           
         
       </div>
@@ -446,6 +459,22 @@
     
     
       <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="search-bar pst-js-only" id="search-bar">
+  <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" class="form-control" name="q" placeholder="Search the docs ..."
+      aria-label="Search the docs ..." autocomplete="off" autocorrect="off"
+      autocapitalize="off" spellcheck="false" />
+    <span class="search-button__kbd-shortcut">
+      <kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd>
+    </span>
+  </form>
+  
+  <div id="static-search-results" class="static-search-results" style="display:none;" tabindex="0"></div>
+  
+</div></div>
         
           <div class="navbar-item">
 <div class="version-switcher__container dropdown pst-js-only">
@@ -519,15 +548,161 @@
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="セクションナビゲーション">
+  <p class="bd-links__title" role="heading" aria-level="1">セクションナビゲーション</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Session</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../session/index.html">Session</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Database</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Database</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Graphics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../graphics/index.html">Graphics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">APDL</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../apdl/abbreviations.html">Abbreviations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apdl/parameter_definition.html">ParameterDefinition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apdl/matrix_operations.html">MatrixOperations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apdl/macro_files.html">MacroFiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apdl/encryption_decryption.html">EncryptionDecryption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apdl/array_parameters.html">ArrayParameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apdl/process_controls.html">ProcessControls</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Preprocessing</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../prep7/database.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/element_type.html">Element type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/real_constants.html">Real constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/materials.html">Materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/material_data_tables.html">Material data tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/primitives.html">Primitives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/keypoints.html">Keypoints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/hard_points.html">Hard points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/lines.html">Lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/areas.html">Areas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/volumes.html">Volumes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/booleans.html">Booleans</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/meshing.html">Meshing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/nodes.html">Nodes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/elements.html">Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/superelements.html">Superelements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/digitizing.html">Digitizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/coupled_dof.html">Coupled degrees of freedom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/constraint_equations.html">Constraint equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/status.html">Status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/explicit_dynamics.html">Explicit dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/sections.html">Sections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/morphing.html">Morphing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/artificially_matched_layers.html">Artificially matched layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prep7/special_purpose.html">Special purpose</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analysis_options.html">Analysis options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nonlinear_options.html">Nonlinear options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dynamic_options.html">Dynamic options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spectrum_options.html">Spectrum options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="load_step_options.html">Load step options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solid_constraints.html">Solid constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solid_forces.html">Solid forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solid_surface_loads.html">Solid surface loads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solid_body_loads.html">Solid body loads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inertia.html">Inertia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="miscellaneous_loads.html">Miscellaneous loads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="load_step_operations.html">Load step operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="master_dof.html">Master degrees of freedom</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Gap conditions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.gp.html">gp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.gpdele.html">gpdele</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.gplist.html">gplist</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2d_to_3d_analysis.html">2D to 3D analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="birth_and_death.html">Birth and death</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fe_constraints.html">FE constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fe_forces.html">FE forces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fe_surface_loads.html">FE surface loads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fe_body_loads.html">FE body loads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocean.html">Ocean</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solution_status.html">Solution status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radiosity.html">Radiosity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_definition_commands.html">Multi-Field solver definition commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_global_controls.html">Multi-Field solver global controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_time_controls.html">Multi-Field solver time controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_load_transfer.html">Multi-Field solver load transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_convergence_controls.html">Multi-Field solver convergence controls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_interface_mapping.html">Multi-Field solver interface mapping</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">POST1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../post1/index.html">Post1</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">POST26</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../post26/index.html">Post26</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AUX2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../aux2/index.html">Aux2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AUX3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../aux3/index.html">Aux3</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AUX12</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../aux12/index.html">Aux12</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">AUX15</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../aux15/index.html">Aux15</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">MAP</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../map/index.html">Map</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Connection</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../conn.html">Connection commands</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc.html">Miscellaneous</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Undocumented</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../inqfun.html">Undocumented inquire commands</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
+
+
+  
+  <nav class="tocsection editthispage" aria-label="Edit this page">
+    <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/mapdl_commands/solution/gap_conditions.rst" rel="noopener noreferrer">
+      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+      
+      
+        
+          GitHub の編集
+        
+      
+    </a>
+  </nav>
+</div>
   </div>
 
 
@@ -614,23 +789,6 @@
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item"> 
-<div class="tocsection editthispage">
-  <a href="https://github.com/ansys/pymapdl/edit/main/doc/source/mapdl_commands/solution/gap_conditions.rst">
-    <i class="fa-solid fa-pencil"></i>
-       Edit
-    on GitHub  
-  </a>
-</div>
-
-</div>
-
-</div></div>
-              
             
           </div>
           <footer class="bd-footer-content">
@@ -653,19 +811,22 @@
 
 <script>
 // Passing the search options to the search.js file
-const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text"], "limit": 10, "threshold": 0.2}');
+const SEARCH_OPTIONS = JSON.parse('{"keys": ["title", "text", "objectID"], "limit": 10, "threshold": 0.2}');
 const SEARCH_FILE = "../../_static/search.json";
+const ADVANCE_SEARCH_PATH = "../../search.html";
+const EXTRA_SOURCES = JSON.parse('""');
 </script>
 
 
 <script src="../../_static/js/search.js"></script>
+
   
 <footer class="bd-footer" font-size="4px">
   <div class="bd-footer__inner bd-page-width">
     <div class="footer-items__start">
       <div class="footer-item">
         <p class="copyright">
-          PyMAPDL 0.69.dev0 © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
+          PyMAPDL 0.72.dev0 © Copyright (c) 2024 ANSYS, Inc. All rights reserved.
           <br>
         </p>
       </div>
@@ -675,7 +836,7 @@ const SEARCH_FILE = "../../_static/search.json";
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.3.1. and
+          1.7.0. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
           on <span id="date"></span>
         </p>
