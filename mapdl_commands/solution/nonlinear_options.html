@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Nonlinear options &#8212; PyMAPDL</title>
+    <title>NonlinearOptions &#8212; PyMAPDL</title>
   
   
   
@@ -86,6 +86,7 @@
                 gtag('js', new Date());
                 gtag('config', 'G-JQJKPV6ZVB');
             </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mapdl_commands/solution/nonlinear_options';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
@@ -98,8 +99,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="arclen" href="_autosummary/ansys.mapdl.core.Mapdl.arclen.html" />
-    <link rel="prev" title="thopt" href="_autosummary/ansys.mapdl.core.Mapdl.thopt.html" />
+    <link rel="next" title="arclen" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.arclen.html" />
+    <link rel="prev" title="wsprings" href="_autosummary/ansys.mapdl.core._commands.solution.misc_loads.MiscLoads.wsprings.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -605,55 +606,58 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="analysis_options.html">Analysis options</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Nonlinear options</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.arclen.html">arclen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.arctrm.html">arctrm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bucopt.html">bucopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cnvtol.html">cnvtol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.crplim.html">crplim</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.gst.html">gst</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.lnsrch.html">lnsrch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ncnv.html">ncnv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.neqit.html">neqit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nladaptive.html">nladaptive</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nldiag.html">nldiag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nlgeom.html">nlgeom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nlhist.html">nlhist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nlmesh.html">nlmesh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nropt.html">nropt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.pred.html">pred</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.pstres.html">pstres</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Solution</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analysis_options.html">AnalysisOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inertia.html">Inertia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectrum_options.html">SpectrumOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_options.html">DynamicOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="additive_manufacturing.html">AdditiveManufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc_loads.html">MiscLoads</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">NonlinearOptions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.arclen.html">arclen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.arctrm.html">arctrm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.bucopt.html">bucopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.cnvtol.html">cnvtol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.gst.html">gst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.lnsrch.html">lnsrch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.ncnv.html">ncnv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.neqit.html">neqit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nladaptive.html">nladaptive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nldiag.html">nldiag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nlgeom.html">nlgeom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nlhist.html">nlhist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nlmesh.html">nlmesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nropt.html">nropt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.pred.html">pred</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.pstres.html">pstres</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.semiimplicit.html">semiimplicit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.soloption.html">soloption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.ssopt.html">ssopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.sstif.html">sstif</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="dynamic_options.html">Dynamic options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spectrum_options.html">Spectrum options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_step_options.html">Load step options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_constraints.html">Solid constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_forces.html">Solid forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_surface_loads.html">Solid surface loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_body_loads.html">Solid body loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inertia.html">Inertia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous_loads.html">Miscellaneous loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_step_operations.html">Load step operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="master_dof.html">Master degrees of freedom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gap_conditions.html">Gap conditions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2d_to_3d_analysis.html">2D to 3D analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="birth_and_death.html">Birth and death</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_constraints.html">FE constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_forces.html">FE forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_surface_loads.html">FE surface loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_body_loads.html">FE body loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ocean.html">Ocean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solution_status.html">Solution status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radiosity.html">Radiosity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_definition_commands.html">Multi-Field solver definition commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_global_controls.html">Multi-Field solver global controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_time_controls.html">Multi-Field solver time controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_load_transfer.html">Multi-Field solver load transfer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_convergence_controls.html">Multi-Field solver convergence controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_interface_mapping.html">Multi-Field solver interface mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_step_options.html">LoadStepOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_body_loads.html">FeBodyLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_body_loads.html">SolidBodyLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_nonlinear_options.html">NonlinearOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_constraints.html">FeConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_constraints.html">SolidConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="birth_and_death.html">BirthAndDeath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_forces.html">FeForces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_forces.html">SolidForces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_gap_conditions.html">GapConditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radiosity.html">Radiosity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_step_operations.html">LoadStepOperations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="master_dof.html">MasterDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis_2d_to_3d.html">Analysis2DTo3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocean.html">Ocean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_surface_loads.html">FeSurfaceLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_surface_loads.html">SolidSurfaceLoads</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">POST1</span></p>
 <ul class="nav bd-sidenav">
@@ -754,8 +758,12 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Solution</a>
+    </li>
       
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Nonlinear options</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">NonlinearOptions</span></li>
     
   </ul>
 </nav>
@@ -773,61 +781,74 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="nonlinear-options">
-<span id="ref-nonlinear-options-commands-api"></span><h1>Nonlinear options<a class="headerlink" href="#nonlinear-options" title="Link to this heading">#</a></h1>
-<p>These SOLUTION commands are used to define options for nonlinear analyses.</p>
+  <section id="nonlinearoptions">
+<span id="ref-nonlinear-options"></span><h1>NonlinearOptions<a class="headerlink" href="#nonlinearoptions" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.solution.nonlinear_options.</span></span><span class="sig-name descname"><span class="pre">NonlinearOptions</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.arclen.html#ansys.mapdl.core.Mapdl.arclen" title="ansys.mapdl.core.Mapdl.arclen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.arclen</span></code></a>([key, maxarc, minarc])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.arclen.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.arclen" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.arclen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.arclen</span></code></a>([key, maxarc, minarc])</p></td>
 <td><p>Activates the arc-length method.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.arctrm.html#ansys.mapdl.core.Mapdl.arctrm" title="ansys.mapdl.core.Mapdl.arctrm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.arctrm</span></code></a>([lab, val, node, dof])</p></td>
-<td><p>Controls termination of the solution when the arc-length method is</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.arctrm.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.arctrm" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.arctrm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.arctrm</span></code></a>([lab, val, node, dof])</p></td>
+<td><p>Controls termination of the solution when the arc-length method is used.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bucopt.html#ansys.mapdl.core.Mapdl.bucopt" title="ansys.mapdl.core.Mapdl.bucopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bucopt</span></code></a>([method, nmode, shift, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.bucopt.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.bucopt" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.bucopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.bucopt</span></code></a>([method, nmode, ...])</p></td>
 <td><p>Specifies buckling analysis options.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cnvtol.html#ansys.mapdl.core.Mapdl.cnvtol" title="ansys.mapdl.core.Mapdl.cnvtol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cnvtol</span></code></a>([lab, value, toler, norm, minref])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.cnvtol.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.cnvtol" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.cnvtol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.cnvtol</span></code></a>([lab, value, toler, ...])</p></td>
 <td><p>Sets convergence values for nonlinear analyses.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.crplim.html#ansys.mapdl.core.Mapdl.crplim" title="ansys.mapdl.core.Mapdl.crplim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.crplim</span></code></a>([crcr, option])</p></td>
-<td><p>Specifies the creep criterion for automatic time stepping.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.gst.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.gst" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.gst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.gst</span></code></a>([lab, runtrack])</p></td>
+<td><p>Enables the Graphical Solution Tracking (GST) feature.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.gst.html#ansys.mapdl.core.Mapdl.gst" title="ansys.mapdl.core.Mapdl.gst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.gst</span></code></a>([lab, lab2])</p></td>
-<td><p>Turns Graphical Solution Tracking (GST) on or off.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.lnsrch.html#ansys.mapdl.core.Mapdl.lnsrch" title="ansys.mapdl.core.Mapdl.lnsrch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.lnsrch</span></code></a>([key])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.lnsrch.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.lnsrch" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.lnsrch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.lnsrch</span></code></a>([key, lstol, lstrun])</p></td>
 <td><p>Activates a line search to be used with Newton-Raphson.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ncnv.html#ansys.mapdl.core.Mapdl.ncnv" title="ansys.mapdl.core.Mapdl.ncnv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ncnv</span></code></a>([kstop, dlim, itlim, etlim, cplim])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.ncnv.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.ncnv" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.ncnv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.ncnv</span></code></a>([kstop, dlim, itlim, ...])</p></td>
 <td><p>Sets the key to terminate an analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.neqit.html#ansys.mapdl.core.Mapdl.neqit" title="ansys.mapdl.core.Mapdl.neqit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.neqit</span></code></a>([neqit, forcekey])</p></td>
-<td><p>Specifies the maximum number of equilibrium iterations for nonlinear</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.neqit.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.neqit" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.neqit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.neqit</span></code></a>([neqit, forcekey])</p></td>
+<td><p>Specifies the maximum number of equilibrium iterations for nonlinear analyses.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nladaptive.html#ansys.mapdl.core.Mapdl.nladaptive" title="ansys.mapdl.core.Mapdl.nladaptive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nladaptive</span></code></a>([component, action, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nladaptive.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nladaptive" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nladaptive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.nladaptive</span></code></a>([component, ...])</p></td>
 <td><p>Defines the criteria under which the mesh is refined or modified during a nonlinear solution.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nldiag.html#ansys.mapdl.core.Mapdl.nldiag" title="ansys.mapdl.core.Mapdl.nldiag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nldiag</span></code></a>([label, key, maxfile])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nldiag.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nldiag" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nldiag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.nldiag</span></code></a>([label, key, maxfile])</p></td>
 <td><p>Sets nonlinear diagnostics functionality.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nlgeom.html#ansys.mapdl.core.Mapdl.nlgeom" title="ansys.mapdl.core.Mapdl.nlgeom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nlgeom</span></code></a>([key])</p></td>
-<td><p>Includes large-deflection effects in a static or full transient</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nlgeom.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nlgeom" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nlgeom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.nlgeom</span></code></a>([key])</p></td>
+<td><p>Includes large-deflection effects in a static or full transient analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nlhist.html#ansys.mapdl.core.Mapdl.nlhist" title="ansys.mapdl.core.Mapdl.nlhist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nlhist</span></code></a>([key, name, item, comp, node, ...])</p></td>
-<td><p>Specify result items to track during solution.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nlhist.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nlhist" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nlhist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.nlhist</span></code></a>([key, name, item, ...])</p></td>
+<td><p>Specify results items to track during solution.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nlmesh.html#ansys.mapdl.core.Mapdl.nlmesh" title="ansys.mapdl.core.Mapdl.nlmesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nlmesh</span></code></a>([control, val1, val2, val3, val4])</p></td>
-<td><p>Controls remeshing in nonlinear adaptivity.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nlmesh.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nlmesh" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nlmesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.nlmesh</span></code></a>([control, val1, val2])</p></td>
+<td><p>Controls remeshing in <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en/ans_nlad/Hlp_G_ADVREZ.html">nonlinear adaptivity</a>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nropt.html#ansys.mapdl.core.Mapdl.nropt" title="ansys.mapdl.core.Mapdl.nropt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nropt</span></code></a>([option1, option2, optval])</p></td>
-<td><p>Specifies the Newton-Raphson options in a static or full transient</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nropt.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nropt" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.nropt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.nropt</span></code></a>([option1, option2, ...])</p></td>
+<td><p>Specifies the Newton-Raphson options in a static or full transient analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.pred.html#ansys.mapdl.core.Mapdl.pred" title="ansys.mapdl.core.Mapdl.pred"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.pred</span></code></a>([sskey, lskey])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.pred.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.pred" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.pred"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.pred</span></code></a>([sskey, lskey])</p></td>
 <td><p>Activates a predictor in a nonlinear analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.pstres.html#ansys.mapdl.core.Mapdl.pstres" title="ansys.mapdl.core.Mapdl.pstres"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.pstres</span></code></a>([key])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.pstres.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.pstres" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.pstres"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.pstres</span></code></a>([key])</p></td>
 <td><p>Specifies whether prestress effects are calculated or included.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.semiimplicit.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.semiimplicit" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.semiimplicit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.semiimplicit</span></code></a>([option, ...])</p></td>
+<td><p>Specifies parameters for a semi-implicit solution.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.soloption.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.soloption" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.soloption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.soloption</span></code></a>([option, type_, ...])</p></td>
+<td><p>Specifies solution transition options.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.ssopt.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.ssopt" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.ssopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.ssopt</span></code></a>([option, par1, par2, ...])</p></td>
+<td><p>Defines a solution option for soil analysis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.sstif.html#ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.sstif" title="ansys.mapdl.core._commands.solution.nonlinear_options.NonlinearOptions.sstif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonlinearOptions.sstif</span></code></a>([key])</p></td>
+<td><p>Activates stress stiffness effects in a nonlinear analysis.</p></td>
 </tr>
 </tbody>
 </table>

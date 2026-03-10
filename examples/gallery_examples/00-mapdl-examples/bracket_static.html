@@ -1116,7 +1116,7 @@ call the APDL <code class="docutils literal notranslate"><span class="pre">/SOLU
 </pre></div>
 </div>
 <p>Set the analysis type with the
-<a class="reference internal" href="../../../mapdl_commands/solution/_autosummary/ansys.mapdl.core.Mapdl.antype.html#ansys.mapdl.core.Mapdl.antype" title="ansys.mapdl.core.Mapdl.antype"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.antype()</span></code></a> command.</p>
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.antype()</span></code> command.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="s2">&quot;STATIC&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1144,7 +1144,7 @@ to those lines using the <code class="xref py py-meth docutils literal notransla
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">fixNodes</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">nsll</span><span class="p">(</span><span class="n">type_</span><span class="o">=</span><span class="s2">&quot;S&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Next use the <a class="reference internal" href="../../../mapdl_commands/solution/_autosummary/ansys.mapdl.core.Mapdl.d.html#ansys.mapdl.core.Mapdl.d" title="ansys.mapdl.core.Mapdl.d"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.d()</span></code></a> command to set
+<p>Next use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.d()</span></code> command to set
 the displacement to zero (fixed constraint).</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up boundary conditions</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">d</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># The 0 is not required since default is zero</span>
@@ -1186,7 +1186,7 @@ half of the second pinhole circle.</p>
 </pre></div>
 </div>
 <p>Once you have the correct line, use
-the <a class="reference internal" href="../../../mapdl_commands/solution/_autosummary/ansys.mapdl.core.Mapdl.sf.html#ansys.mapdl.core.Mapdl.sf" title="ansys.mapdl.core.Mapdl.sf"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.sf()</span></code></a> command
+the <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.sf()</span></code> command
 to load the line with the varying surface load.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here you load the left side of the lower half of second pin hole.</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">sf</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span> <span class="s2">&quot;PRES&quot;</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span>
@@ -1215,7 +1215,7 @@ using the <a class="reference internal" href="../../../api/_autosummary/ansys.ma
 or the <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.slashsolu()</span></code>
 command. This was done a few steps earlier.</p>
 <p>The model is ready to be solved using the
-<a class="reference internal" href="../../../mapdl_commands/solution/_autosummary/ansys.mapdl.core.Mapdl.solve.html#ansys.mapdl.core.Mapdl.solve" title="ansys.mapdl.core.Mapdl.solve"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.solve()</span></code></a> command.</p>
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.solve()</span></code> command.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solve the model</span>
 <span class="n">output</span> <span class="o">=</span> <span class="n">mapdl</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>

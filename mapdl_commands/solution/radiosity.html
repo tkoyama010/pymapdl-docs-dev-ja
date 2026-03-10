@@ -86,6 +86,7 @@
                 gtag('js', new Date());
                 gtag('config', 'G-JQJKPV6ZVB');
             </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mapdl_commands/solution/radiosity';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
@@ -98,8 +99,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="rdec" href="_autosummary/ansys.mapdl.core.Mapdl.rdec.html" />
-    <link rel="prev" title="sptopt" href="_autosummary/ansys.mapdl.core.Mapdl.sptopt.html" />
+    <link rel="next" title="hemiopt" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.hemiopt.html" />
+    <link rel="prev" title="gplist" href="_autosummary/ansys.mapdl.core._commands.solution._gap_conditions.GapConditions.gplist.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -605,43 +606,49 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="analysis_options.html">Analysis options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nonlinear_options.html">Nonlinear options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dynamic_options.html">Dynamic options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spectrum_options.html">Spectrum options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_step_options.html">Load step options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_constraints.html">Solid constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_forces.html">Solid forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_surface_loads.html">Solid surface loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_body_loads.html">Solid body loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inertia.html">Inertia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous_loads.html">Miscellaneous loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_step_operations.html">Load step operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="master_dof.html">Master degrees of freedom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gap_conditions.html">Gap conditions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2d_to_3d_analysis.html">2D to 3D analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="birth_and_death.html">Birth and death</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_constraints.html">FE constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_forces.html">FE forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_surface_loads.html">FE surface loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_body_loads.html">FE body loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ocean.html">Ocean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solution_status.html">Solution status</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Radiosity</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rdec.html">rdec</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rsopt.html">rsopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rsurf.html">rsurf</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rsymm.html">rsymm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.qsopt.html">qsopt</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Solution</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analysis_options.html">AnalysisOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inertia.html">Inertia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectrum_options.html">SpectrumOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_options.html">DynamicOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="additive_manufacturing.html">AdditiveManufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc_loads.html">MiscLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nonlinear_options.html">NonlinearOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_step_options.html">LoadStepOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_body_loads.html">FeBodyLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_body_loads.html">SolidBodyLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_nonlinear_options.html">NonlinearOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_constraints.html">FeConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_constraints.html">SolidConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="birth_and_death.html">BirthAndDeath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_forces.html">FeForces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_forces.html">SolidForces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_gap_conditions.html">GapConditions</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Radiosity</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.hemiopt.html">hemiopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.qsopt.html">qsopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.radopt.html">radopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.rdec.html">rdec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.rsopt.html">rsopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.rsurf.html">rsurf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.rsymm.html">rsymm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.spcnod.html">spcnod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.spctemp.html">spctemp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.v2dopt.html">v2dopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.vfopt.html">vfopt</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_definition_commands.html">Multi-Field solver definition commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_global_controls.html">Multi-Field solver global controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_time_controls.html">Multi-Field solver time controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_load_transfer.html">Multi-Field solver load transfer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_convergence_controls.html">Multi-Field solver convergence controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_interface_mapping.html">Multi-Field solver interface mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_step_operations.html">LoadStepOperations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="master_dof.html">MasterDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis_2d_to_3d.html">Analysis2DTo3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocean.html">Ocean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_surface_loads.html">FeSurfaceLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_surface_loads.html">SolidSurfaceLoads</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">POST1</span></p>
 <ul class="nav bd-sidenav">
@@ -742,6 +749,10 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Solution</a>
+    </li>
       
     <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Radiosity</span></li>
     
@@ -762,26 +773,46 @@
                 <article class="bd-article">
                   
   <section id="radiosity">
-<span id="ref-radiosity-commands-api"></span><h1>Radiosity<a class="headerlink" href="#radiosity" title="Link to this heading">#</a></h1>
-<p>These SOLUTION commands are used to calculate the radiation view
-factors and to specify the solution parameters for the Radiosity
-solver method.</p>
+<span id="ref-radiosity"></span><h1>Radiosity<a class="headerlink" href="#radiosity" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.solution.radiosity.Radiosity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.solution.radiosity.</span></span><span class="sig-name descname"><span class="pre">Radiosity</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.solution.radiosity.Radiosity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rdec.html#ansys.mapdl.core.Mapdl.rdec" title="ansys.mapdl.core.Mapdl.rdec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.rdec</span></code></a>([option, reduc, nplace])</p></td>
-<td><p>Defines the decimation parameters.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.hemiopt.html#ansys.mapdl.core._commands.solution.radiosity.Radiosity.hemiopt" title="ansys.mapdl.core._commands.solution.radiosity.Radiosity.hemiopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Radiosity.hemiopt</span></code></a>([hres, tolerance])</p></td>
+<td><p>Specifies options for Hemicube view factor calculation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rsopt.html#ansys.mapdl.core.Mapdl.rsopt" title="ansys.mapdl.core.Mapdl.rsopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.rsopt</span></code></a>([opt, filename, ext, dir_])</p></td>
-<td><p>Creates or loads the radiosity mapping data file for SURF251 or SURF252</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rsurf.html#ansys.mapdl.core.Mapdl.rsurf" title="ansys.mapdl.core.Mapdl.rsurf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.rsurf</span></code></a>([options, delopts, etnum])</p></td>
-<td><p>Generates the radiosity surface elements (SURF251/SURF252) and stores</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rsymm.html#ansys.mapdl.core.Mapdl.rsymm" title="ansys.mapdl.core.Mapdl.rsymm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.rsymm</span></code></a>([option, cs, axis, nsect, condvalue])</p></td>
-<td><p>Defines the plane of symmetry or center of rotation for the radiosity</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.qsopt.html#ansys.mapdl.core.Mapdl.qsopt" title="ansys.mapdl.core.Mapdl.qsopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.qsopt</span></code></a>([opt])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.qsopt.html#ansys.mapdl.core._commands.solution.radiosity.Radiosity.qsopt" title="ansys.mapdl.core._commands.solution.radiosity.Radiosity.qsopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Radiosity.qsopt</span></code></a>([opt])</p></td>
 <td><p>Specifies quasi static radiation options.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.radopt.html#ansys.mapdl.core._commands.solution.radiosity.Radiosity.radopt" title="ansys.mapdl.core._commands.solution.radiosity.Radiosity.radopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Radiosity.radopt</span></code></a>([fluxtol, solver, maxiter, ...])</p></td>
+<td><p>Specifies Radiosity Solver options.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.rdec.html#ansys.mapdl.core._commands.solution.radiosity.Radiosity.rdec" title="ansys.mapdl.core._commands.solution.radiosity.Radiosity.rdec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Radiosity.rdec</span></code></a>([option, reduc, nplace])</p></td>
+<td><p>Defines the decimation parameters used by the radiosity solver method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.rsopt.html#ansys.mapdl.core._commands.solution.radiosity.Radiosity.rsopt" title="ansys.mapdl.core._commands.solution.radiosity.Radiosity.rsopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Radiosity.rsopt</span></code></a>([opt, filename, ext, dir_])</p></td>
+<td><p>Creates or loads the radiosity mapping data file for <code class="docutils literal notranslate"><span class="pre">SURF251</span></code> or <code class="docutils literal notranslate"><span class="pre">SURF252</span></code> element types.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.rsurf.html#ansys.mapdl.core._commands.solution.radiosity.Radiosity.rsurf" title="ansys.mapdl.core._commands.solution.radiosity.Radiosity.rsurf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Radiosity.rsurf</span></code></a>([options, delopts, etnum])</p></td>
+<td><p>Generates the radiosity surface elements and stores them in the database.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.rsymm.html#ansys.mapdl.core._commands.solution.radiosity.Radiosity.rsymm" title="ansys.mapdl.core._commands.solution.radiosity.Radiosity.rsymm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Radiosity.rsymm</span></code></a>([option, cs, axis, nsect, ...])</p></td>
+<td><p>Defines symmetry, rotation, or extrusion parameters for the radiosity method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.spcnod.html#ansys.mapdl.core._commands.solution.radiosity.Radiosity.spcnod" title="ansys.mapdl.core._commands.solution.radiosity.Radiosity.spcnod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Radiosity.spcnod</span></code></a>([encl, node])</p></td>
+<td><p>Defines a space node for radiation using the Radiosity method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.spctemp.html#ansys.mapdl.core._commands.solution.radiosity.Radiosity.spctemp" title="ansys.mapdl.core._commands.solution.radiosity.Radiosity.spctemp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Radiosity.spctemp</span></code></a>([encl, temp])</p></td>
+<td><p>Defines a free-space ambient temperature for radiation using the Radiosity method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.v2dopt.html#ansys.mapdl.core._commands.solution.radiosity.Radiosity.v2dopt" title="ansys.mapdl.core._commands.solution.radiosity.Radiosity.v2dopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Radiosity.v2dopt</span></code></a>([geom, ndiv, hidopt, nzone])</p></td>
+<td><p>Specifies 2D/axisymmetric view factor calculation options.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.radiosity.Radiosity.vfopt.html#ansys.mapdl.core._commands.solution.radiosity.Radiosity.vfopt" title="ansys.mapdl.core._commands.solution.radiosity.Radiosity.vfopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Radiosity.vfopt</span></code></a>([opt, filename, ext, dir_, ...])</p></td>
+<td><p>Specifies options for the view factor file and calculates view factors.</p></td>
 </tr>
 </tbody>
 </table>

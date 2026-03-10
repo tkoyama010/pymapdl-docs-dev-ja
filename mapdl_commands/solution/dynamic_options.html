@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Dynamic options &#8212; PyMAPDL</title>
+    <title>DynamicOptions &#8212; PyMAPDL</title>
   
   
   
@@ -86,6 +86,7 @@
                 gtag('js', new Date());
                 gtag('config', 'G-JQJKPV6ZVB');
             </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mapdl_commands/solution/dynamic_options';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
@@ -98,8 +99,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="alphad" href="_autosummary/ansys.mapdl.core.Mapdl.alphad.html" />
-    <link rel="prev" title="pstres" href="_autosummary/ansys.mapdl.core.Mapdl.pstres.html" />
+    <link rel="next" title="alphad" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.alphad.html" />
+    <link rel="prev" title="vddam" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.vddam.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -605,63 +606,66 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="analysis_options.html">Analysis options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nonlinear_options.html">Nonlinear options</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Dynamic options</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.alphad.html">alphad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.betad.html">betad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dmprat.html">dmprat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dmpstr.html">dmpstr</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.frqscl.html">frqscl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.harfrq.html">harfrq</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hrexp.html">hrexp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hrocean.html">hrocean</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hropt.html">hropt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hrout.html">hrout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.lvscale.html">lvscale</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mascale.html">mascale</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mdamp.html">mdamp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mdplot.html">mdplot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.midtol.html">midtol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.modcont.html">modcont</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.modseloption.html">modseloption</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.modopt.html">modopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mxpand.html">mxpand</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.qrdopt.html">qrdopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rigid.html">rigid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.subopt.html">subopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.timint.html">timint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.tintp.html">tintp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.trnopt.html">trnopt</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Solution</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analysis_options.html">AnalysisOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inertia.html">Inertia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectrum_options.html">SpectrumOptions</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">DynamicOptions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.alphad.html">alphad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.betad.html">betad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.dampopt.html">dampopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.dmprat.html">dmprat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.dmpstr.html">dmpstr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.frqscl.html">frqscl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.harfrq.html">harfrq</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hrexp.html">hrexp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hrocean.html">hrocean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hropt.html">hropt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hrout.html">hrout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.kryopt.html">kryopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.lvscale.html">lvscale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mascale.html">mascale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mcfopt.html">mcfopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mdamp.html">mdamp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mdplot.html">mdplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.midtol.html">midtol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.modcont.html">modcont</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.modopt.html">modopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.modseloption.html">modseloption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mxpand.html">mxpand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.qrdopt.html">qrdopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.rigid.html">rigid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.subopt.html">subopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.timint.html">timint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.tintp.html">tintp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.trnopt.html">trnopt</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="spectrum_options.html">Spectrum options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_step_options.html">Load step options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_constraints.html">Solid constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_forces.html">Solid forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_surface_loads.html">Solid surface loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_body_loads.html">Solid body loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inertia.html">Inertia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous_loads.html">Miscellaneous loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_step_operations.html">Load step operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="master_dof.html">Master degrees of freedom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gap_conditions.html">Gap conditions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2d_to_3d_analysis.html">2D to 3D analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="birth_and_death.html">Birth and death</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_constraints.html">FE constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_forces.html">FE forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_surface_loads.html">FE surface loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_body_loads.html">FE body loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ocean.html">Ocean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solution_status.html">Solution status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radiosity.html">Radiosity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_definition_commands.html">Multi-Field solver definition commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_global_controls.html">Multi-Field solver global controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_time_controls.html">Multi-Field solver time controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_load_transfer.html">Multi-Field solver load transfer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_convergence_controls.html">Multi-Field solver convergence controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_interface_mapping.html">Multi-Field solver interface mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="additive_manufacturing.html">AdditiveManufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc_loads.html">MiscLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nonlinear_options.html">NonlinearOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_step_options.html">LoadStepOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_body_loads.html">FeBodyLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_body_loads.html">SolidBodyLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_nonlinear_options.html">NonlinearOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_constraints.html">FeConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_constraints.html">SolidConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="birth_and_death.html">BirthAndDeath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_forces.html">FeForces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_forces.html">SolidForces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_gap_conditions.html">GapConditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radiosity.html">Radiosity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_step_operations.html">LoadStepOperations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="master_dof.html">MasterDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis_2d_to_3d.html">Analysis2DTo3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocean.html">Ocean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_surface_loads.html">FeSurfaceLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_surface_loads.html">SolidSurfaceLoads</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">POST1</span></p>
 <ul class="nav bd-sidenav">
@@ -762,8 +766,12 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Solution</a>
+    </li>
       
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Dynamic options</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">DynamicOptions</span></li>
     
   </ul>
 </nav>
@@ -781,84 +789,97 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="dynamic-options">
-<span id="ref-dynamic-options-commands-api"></span><h1>Dynamic options<a class="headerlink" href="#dynamic-options" title="Link to this heading">#</a></h1>
-<p>These SOLUTION commands are used to define options for dynamic analyses.</p>
+  <section id="dynamicoptions">
+<span id="ref-dynamic-options"></span><h1>DynamicOptions<a class="headerlink" href="#dynamicoptions" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.solution.dynamic_options.</span></span><span class="sig-name descname"><span class="pre">DynamicOptions</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.alphad.html#ansys.mapdl.core.Mapdl.alphad" title="ansys.mapdl.core.Mapdl.alphad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.alphad</span></code></a>([value])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.alphad.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.alphad" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.alphad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.alphad</span></code></a>([value])</p></td>
 <td><p>Defines the mass matrix multiplier for damping.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.betad.html#ansys.mapdl.core.Mapdl.betad" title="ansys.mapdl.core.Mapdl.betad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.betad</span></code></a>([value])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.betad.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.betad" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.betad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.betad</span></code></a>([value])</p></td>
 <td><p>Defines the stiffness matrix multiplier for damping.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dmprat.html#ansys.mapdl.core.Mapdl.dmprat" title="ansys.mapdl.core.Mapdl.dmprat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dmprat</span></code></a>([ratio])</p></td>
-<td><p>Sets a constant modal damping ratio.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.dampopt.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.dampopt" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.dampopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.dampopt</span></code></a>([option, value])</p></td>
+<td><p>Sets damped eigensolver options.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dmpstr.html#ansys.mapdl.core.Mapdl.dmpstr" title="ansys.mapdl.core.Mapdl.dmpstr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dmpstr</span></code></a>([coeff])</p></td>
-<td><p>Sets a constant structural damping coefficient.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.dmprat.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.dmprat" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.dmprat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.dmprat</span></code></a>([ratio])</p></td>
+<td><p>Sets a modal damping ratio.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.frqscl.html#ansys.mapdl.core.Mapdl.frqscl" title="ansys.mapdl.core.Mapdl.frqscl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.frqscl</span></code></a>([scaling])</p></td>
-<td><p>Turns on automatic scaling of the entire mass matrix and frequency</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.dmpstr.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.dmpstr" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.dmpstr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.dmpstr</span></code></a>([coeff, dmpsfreqtab])</p></td>
+<td><p>Sets constant structural damping data.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.harfrq.html#ansys.mapdl.core.Mapdl.harfrq" title="ansys.mapdl.core.Mapdl.harfrq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.harfrq</span></code></a>([freqb, freqe, logopt, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.frqscl.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.frqscl" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.frqscl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.frqscl</span></code></a>([scaling])</p></td>
+<td><p>Turns on automatic scaling of the entire mass matrix and frequency range for modal analyses.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.harfrq.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.harfrq" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.harfrq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.harfrq</span></code></a>([freqb, freqe, ...])</p></td>
 <td><p>Defines the frequency range in a harmonic analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hrexp.html#ansys.mapdl.core.Mapdl.hrexp" title="ansys.mapdl.core.Mapdl.hrexp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.hrexp</span></code></a>([angle])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hrexp.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hrexp" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hrexp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.hrexp</span></code></a>([angle])</p></td>
 <td><p>Specifies the phase angle for the harmonic analysis expansion pass.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hrocean.html#ansys.mapdl.core.Mapdl.hrocean" title="ansys.mapdl.core.Mapdl.hrocean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.hrocean</span></code></a>([type_, nphase])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hrocean.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hrocean" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hrocean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.hrocean</span></code></a>([type_, nphase])</p></td>
 <td><p>Perform the harmonic ocean wave procedure (HOWP).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hropt.html#ansys.mapdl.core.Mapdl.hropt" title="ansys.mapdl.core.Mapdl.hropt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.hropt</span></code></a>([method, maxmode, minmode, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hropt.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hropt" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hropt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.hropt</span></code></a>([method, value1, ...])</p></td>
 <td><p>Specifies harmonic analysis options.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.hrout.html#ansys.mapdl.core.Mapdl.hrout" title="ansys.mapdl.core.Mapdl.hrout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.hrout</span></code></a>([reimky, clust, mcont])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hrout.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hrout" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.hrout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.hrout</span></code></a>([reimky, clust, mcont, ...])</p></td>
 <td><p>Specifies the harmonic analysis output options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.lvscale.html#ansys.mapdl.core.Mapdl.lvscale" title="ansys.mapdl.core.Mapdl.lvscale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.lvscale</span></code></a>([fact, ldstep])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.kryopt.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.kryopt" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.kryopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.kryopt</span></code></a>([maxdim, restol])</p></td>
+<td><p>Specifies solution options for a Krylov method harmonic analysis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.lvscale.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.lvscale" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.lvscale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.lvscale</span></code></a>([fact, ldstep])</p></td>
 <td><p>Scales the load vector for mode-superposition analyses.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mascale.html#ansys.mapdl.core.Mapdl.mascale" title="ansys.mapdl.core.Mapdl.mascale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mascale</span></code></a>([massfact])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mascale.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mascale" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mascale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.mascale</span></code></a>([massfact])</p></td>
 <td><p>Activates scaling of the entire system matrix.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mdamp.html#ansys.mapdl.core.Mapdl.mdamp" title="ansys.mapdl.core.Mapdl.mdamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mdamp</span></code></a>([stloc, v1, v2, v3, v4, v5, v6])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mcfopt.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mcfopt" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mcfopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.mcfopt</span></code></a>([format_, type_, norm])</p></td>
+<td><p>Specifies options for the Modal Coordinates File ( <code class="file docutils literal notranslate"><span class="pre">Jobname.mcf</span></code> ).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mdamp.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mdamp" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mdamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.mdamp</span></code></a>([stloc, v1, v2, v3, ...])</p></td>
 <td><p>Defines the damping ratios as a function of mode.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mdplot.html#ansys.mapdl.core.Mapdl.mdplot" title="ansys.mapdl.core.Mapdl.mdplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mdplot</span></code></a>([function, dmpname, scale])</p></td>
-<td><p>Plots frequency-dependent modal damping coefficients calculated by</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mdplot.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mdplot" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mdplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.mdplot</span></code></a>([function, dmpname, scale])</p></td>
+<td><p>Plots frequency-dependent modal damping coefficients calculated by DMPEXT.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.midtol.html#ansys.mapdl.core.Mapdl.midtol" title="ansys.mapdl.core.Mapdl.midtol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.midtol</span></code></a>([key, tolerb, resfq])</p></td>
-<td><p>Sets midstep residual criterion values for structural transient</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.midtol.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.midtol" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.midtol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.midtol</span></code></a>([key, tolerb, resfq])</p></td>
+<td><p>Sets midstep residual criterion values for structural transient analyses.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.modcont.html#ansys.mapdl.core.Mapdl.modcont" title="ansys.mapdl.core.Mapdl.modcont"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.modcont</span></code></a>([mlskey, enforcedkey])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.modcont.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.modcont" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.modcont"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.modcont</span></code></a>([mlskey, ...])</p></td>
 <td><p>Specify additional modal analysis options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.modseloption.html#ansys.mapdl.core.Mapdl.modseloption" title="ansys.mapdl.core.Mapdl.modseloption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.modseloption</span></code></a>([dir1, dir2, dir3, dir4, ...])</p></td>
-<td><p>APDL Command: MODSELOPTION</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.modopt.html#ansys.mapdl.core.Mapdl.modopt" title="ansys.mapdl.core.Mapdl.modopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.modopt</span></code></a>([method, nmode, freqb, freqe, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.modopt.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.modopt" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.modopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.modopt</span></code></a>([method, nmode, ...])</p></td>
 <td><p>Specifies modal analysis options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mxpand.html#ansys.mapdl.core.Mapdl.mxpand" title="ansys.mapdl.core.Mapdl.mxpand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mxpand</span></code></a>([nmode, freqb, freqe, elcalc, ...])</p></td>
-<td><p>Specifies the number of modes to expand and write for a modal or</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.modseloption.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.modseloption" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.modseloption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.modseloption</span></code></a>([dir1, dir2, ...])</p></td>
+<td><p>Specifies the criteria for selecting the modes to be expanded.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.qrdopt.html#ansys.mapdl.core.Mapdl.qrdopt" title="ansys.mapdl.core.Mapdl.qrdopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.qrdopt</span></code></a>([reusekey, symmeth, cmccoutkey])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mxpand.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mxpand" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.mxpand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.mxpand</span></code></a>([nmode, freqb, freqe, ...])</p></td>
+<td><p>Specifies modal or buckling analysis expansion options.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.qrdopt.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.qrdopt" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.qrdopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.qrdopt</span></code></a>([reusekey, symmeth, ...])</p></td>
 <td><p>Specifies additional QRDAMP modal analysis options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rigid.html#ansys.mapdl.core.Mapdl.rigid" title="ansys.mapdl.core.Mapdl.rigid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.rigid</span></code></a>([dof1, dof2, dof3, dof4, dof5, dof6])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.rigid.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.rigid" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.rigid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.rigid</span></code></a>([dof1, dof2, dof3, ...])</p></td>
 <td><p>Specifies known rigid body modes (if any) of the model.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.subopt.html#ansys.mapdl.core.Mapdl.subopt" title="ansys.mapdl.core.Mapdl.subopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.subopt</span></code></a>([option, value1])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.subopt.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.subopt" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.subopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.subopt</span></code></a>([option, value1])</p></td>
 <td><p>Specifies Subspace (SUBSP) eigensolver options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.timint.html#ansys.mapdl.core.Mapdl.timint" title="ansys.mapdl.core.Mapdl.timint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.timint</span></code></a>([key, lab])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.timint.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.timint" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.timint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.timint</span></code></a>([key, lab])</p></td>
 <td><p>Turns on transient effects.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.tintp.html#ansys.mapdl.core.Mapdl.tintp" title="ansys.mapdl.core.Mapdl.tintp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.tintp</span></code></a>([gamma, alpha, delta, theta, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.tintp.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.tintp" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.tintp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.tintp</span></code></a>([gamma, alpha, delta, ...])</p></td>
 <td><p>Defines transient integration parameters.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.trnopt.html#ansys.mapdl.core.Mapdl.trnopt" title="ansys.mapdl.core.Mapdl.trnopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.trnopt</span></code></a>([method, maxmode, initialacc, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.trnopt.html#ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.trnopt" title="ansys.mapdl.core._commands.solution.dynamic_options.DynamicOptions.trnopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicOptions.trnopt</span></code></a>([method, maxmode, ...])</p></td>
 <td><p>Specifies transient analysis options.</p></td>
 </tr>
 </tbody>

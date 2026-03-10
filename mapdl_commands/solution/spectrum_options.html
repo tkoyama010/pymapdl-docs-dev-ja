@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Spectrum options &#8212; PyMAPDL</title>
+    <title>SpectrumOptions &#8212; PyMAPDL</title>
   
   
   
@@ -86,6 +86,7 @@
                 gtag('js', new Date());
                 gtag('config', 'G-JQJKPV6ZVB');
             </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mapdl_commands/solution/spectrum_options';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
@@ -98,8 +99,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="addam" href="_autosummary/ansys.mapdl.core.Mapdl.addam.html" />
-    <link rel="prev" title="trnopt" href="_autosummary/ansys.mapdl.core.Mapdl.trnopt.html" />
+    <link rel="next" title="addam" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.addam.html" />
+    <link rel="prev" title="synchro" href="_autosummary/ansys.mapdl.core._commands.solution.inertia.Inertia.synchro.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -605,73 +606,72 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="analysis_options.html">Analysis options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nonlinear_options.html">Nonlinear options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dynamic_options.html">Dynamic options</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Spectrum options</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.addam.html">addam</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.coval.html">coval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cqc.html">cqc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ddaspec.html">ddaspec</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dsum.html">dsum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.freq.html">freq</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.grp.html">grp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mmass.html">mmass</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nrlsum.html">nrlsum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.pfact.html">pfact</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.pivcheck.html">pivcheck</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdcom.html">psdcom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdfrq.html">psdfrq</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdgraph.html">psdgraph</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdres.html">psdres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdspl.html">psdspl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdunit.html">psdunit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdval.html">psdval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdwav.html">psdwav</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.qdval.html">qdval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rock.html">rock</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rose.html">rose</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rigresp.html">rigresp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.sed.html">sed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.spdamp.html">spdamp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.spfreq.html">spfreq</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.spgraph.html">spgraph</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.spopt.html">spopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.spunit.html">spunit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.spval.html">spval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.srss.html">srss</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.sv.html">sv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.svplot.html">svplot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.svtyp.html">svtyp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vddam.html">vddam</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Solution</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analysis_options.html">AnalysisOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inertia.html">Inertia</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">SpectrumOptions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.addam.html">addam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.coval.html">coval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.cqc.html">cqc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.ddaspec.html">ddaspec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.dsum.html">dsum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.freq.html">freq</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.grp.html">grp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.mmass.html">mmass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.nrlsum.html">nrlsum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.pfact.html">pfact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdcom.html">psdcom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdfrq.html">psdfrq</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdgraph.html">psdgraph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdres.html">psdres</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdspl.html">psdspl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdunit.html">psdunit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdval.html">psdval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdwav.html">psdwav</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.qdval.html">qdval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.rigresp.html">rigresp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.rock.html">rock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.rose.html">rose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.sed.html">sed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spdamp.html">spdamp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spfreq.html">spfreq</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spgraph.html">spgraph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spopt.html">spopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spunit.html">spunit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spval.html">spval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.srss.html">srss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.sv.html">sv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.svplot.html">svplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.svtyp.html">svtyp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.vddam.html">vddam</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="load_step_options.html">Load step options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_constraints.html">Solid constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_forces.html">Solid forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_surface_loads.html">Solid surface loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_body_loads.html">Solid body loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inertia.html">Inertia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous_loads.html">Miscellaneous loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_step_operations.html">Load step operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="master_dof.html">Master degrees of freedom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gap_conditions.html">Gap conditions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2d_to_3d_analysis.html">2D to 3D analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="birth_and_death.html">Birth and death</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_constraints.html">FE constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_forces.html">FE forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_surface_loads.html">FE surface loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_body_loads.html">FE body loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ocean.html">Ocean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solution_status.html">Solution status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radiosity.html">Radiosity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_definition_commands.html">Multi-Field solver definition commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_global_controls.html">Multi-Field solver global controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_time_controls.html">Multi-Field solver time controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_load_transfer.html">Multi-Field solver load transfer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_convergence_controls.html">Multi-Field solver convergence controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_interface_mapping.html">Multi-Field solver interface mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_options.html">DynamicOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="additive_manufacturing.html">AdditiveManufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc_loads.html">MiscLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nonlinear_options.html">NonlinearOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_step_options.html">LoadStepOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_body_loads.html">FeBodyLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_body_loads.html">SolidBodyLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_nonlinear_options.html">NonlinearOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_constraints.html">FeConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_constraints.html">SolidConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="birth_and_death.html">BirthAndDeath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_forces.html">FeForces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_forces.html">SolidForces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_gap_conditions.html">GapConditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radiosity.html">Radiosity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_step_operations.html">LoadStepOperations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="master_dof.html">MasterDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis_2d_to_3d.html">Analysis2DTo3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocean.html">Ocean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_surface_loads.html">FeSurfaceLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_surface_loads.html">SolidSurfaceLoads</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">POST1</span></p>
 <ul class="nav bd-sidenav">
@@ -772,8 +772,12 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Solution</a>
+    </li>
       
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Spectrum options</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">SpectrumOptions</span></li>
     
   </ul>
 </nav>
@@ -791,115 +795,116 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="spectrum-options">
-<span id="ref-spectrum-options-commands-api"></span><h1>Spectrum options<a class="headerlink" href="#spectrum-options" title="Link to this heading">#</a></h1>
-<p>These SOLUTION commands are used to define options for spectrum analyses.</p>
+  <section id="spectrumoptions">
+<span id="ref-spectrum-options"></span><h1>SpectrumOptions<a class="headerlink" href="#spectrumoptions" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.solution.spectrum_options.</span></span><span class="sig-name descname"><span class="pre">SpectrumOptions</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.addam.html#ansys.mapdl.core.Mapdl.addam" title="ansys.mapdl.core.Mapdl.addam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.addam</span></code></a>([af, aa, ab, ac, ad, amin])</p></td>
-<td><p>Specifies the acceleration spectrum computation constants for the</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.addam.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.addam" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.addam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.addam</span></code></a>([af, aa, ab, ac, ad, amin])</p></td>
+<td><p>Specifies the acceleration spectrum computation constants for the analysis of shock resistance of shipboard structures.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.coval.html#ansys.mapdl.core.Mapdl.coval" title="ansys.mapdl.core.Mapdl.coval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.coval</span></code></a>([tblno1, tblno2, sv1, sv2, sv3, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.coval.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.coval" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.coval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.coval</span></code></a>([tblno1, tblno2, sv1, ...])</p></td>
 <td><p>Defines PSD cospectral values.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cqc.html#ansys.mapdl.core.Mapdl.cqc" title="ansys.mapdl.core.Mapdl.cqc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cqc</span></code></a>([signif, label, forcetype])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.cqc.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.cqc" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.cqc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.cqc</span></code></a>([signif, label, forcetype])</p></td>
 <td><p>Specifies the complete quadratic mode combination method.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ddaspec.html#ansys.mapdl.core.Mapdl.ddaspec" title="ansys.mapdl.core.Mapdl.ddaspec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ddaspec</span></code></a>([keyref, shptyp, mountloc, ...])</p></td>
-<td><p>APDL Command: DDASPEC</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.ddaspec.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.ddaspec" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.ddaspec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.ddaspec</span></code></a>([keyref, shptyp, ...])</p></td>
+<td><p>Specifies the shock spectrum computation constants for DDAM analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dsum.html#ansys.mapdl.core.Mapdl.dsum" title="ansys.mapdl.core.Mapdl.dsum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dsum</span></code></a>([signif, label, td, forcetype])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.dsum.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.dsum" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.dsum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.dsum</span></code></a>([signif, label, td, ...])</p></td>
 <td><p>Specifies the double sum mode combination method.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.freq.html#ansys.mapdl.core.Mapdl.freq" title="ansys.mapdl.core.Mapdl.freq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.freq</span></code></a>([freq1, freq2, freq3, freq4, ...])</p></td>
-<td><p>Defines the frequency points for the SV vs.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.freq.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.freq" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.freq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.freq</span></code></a>([freq1, freq2, freq3, ...])</p></td>
+<td><p>Defines the frequency points for the <span class="xref std std-ref">sv</span> vs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.grp.html#ansys.mapdl.core.Mapdl.grp" title="ansys.mapdl.core.Mapdl.grp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.grp</span></code></a>([signif, label, forcetype])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.grp.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.grp" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.grp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.grp</span></code></a>([signif, label, forcetype])</p></td>
 <td><p>Specifies the grouping mode combination method.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mmass.html#ansys.mapdl.core.Mapdl.mmass" title="ansys.mapdl.core.Mapdl.mmass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mmass</span></code></a>([option, zpa])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.mmass.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.mmass" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.mmass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.mmass</span></code></a>([option, zpa])</p></td>
 <td><p>Specifies the missing mass response calculation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nrlsum.html#ansys.mapdl.core.Mapdl.nrlsum" title="ansys.mapdl.core.Mapdl.nrlsum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nrlsum</span></code></a>([signif, label, labelcsm, ...])</p></td>
-<td><p>Specifies the Naval Research Laboratory (NRL) sum mode combination</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.nrlsum.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.nrlsum" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.nrlsum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.nrlsum</span></code></a>([signif, label, ...])</p></td>
+<td><p>Specifies the Naval Research Laboratory (NRL) sum mode combination method.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.pfact.html#ansys.mapdl.core.Mapdl.pfact" title="ansys.mapdl.core.Mapdl.pfact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.pfact</span></code></a>([tblno, excit, parcor])</p></td>
-<td><p>Calculates participation factors for the PSD or multi-point response</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.pfact.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.pfact" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.pfact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.pfact</span></code></a>([tblno, excit, parcor])</p></td>
+<td><p>Calculates participation factors for the PSD or multi-point response spectrum table.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.pivcheck.html#ansys.mapdl.core.Mapdl.pivcheck" title="ansys.mapdl.core.Mapdl.pivcheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.pivcheck</span></code></a>([key, prntcntrl])</p></td>
-<td><p>Controls the behavior of an analysis when a negative or zero equation solver pivot value is encountered.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdcom.html#ansys.mapdl.core.Mapdl.psdcom" title="ansys.mapdl.core.Mapdl.psdcom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.psdcom</span></code></a>([signif, comode, forcetype])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdcom.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdcom" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdcom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.psdcom</span></code></a>([signif, comode, ...])</p></td>
 <td><p>Specifies the power spectral density mode combination method.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdfrq.html#ansys.mapdl.core.Mapdl.psdfrq" title="ansys.mapdl.core.Mapdl.psdfrq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.psdfrq</span></code></a>([tblno1, tblno2, freq1, freq2, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdfrq.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdfrq" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdfrq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.psdfrq</span></code></a>([tblno1, tblno2, ...])</p></td>
 <td><p>Defines the frequency points for the input spectrum tables PSDVAL vs.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdgraph.html#ansys.mapdl.core.Mapdl.psdgraph" title="ansys.mapdl.core.Mapdl.psdgraph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.psdgraph</span></code></a>([tblno1, tblno2, displaykey])</p></td>
-<td><p>Displays input PSD curves</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdgraph.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdgraph" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdgraph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.psdgraph</span></code></a>([tblno1, tblno2, ...])</p></td>
+<td><p>Displays input PSD curves.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdres.html#ansys.mapdl.core.Mapdl.psdres" title="ansys.mapdl.core.Mapdl.psdres"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.psdres</span></code></a>([lab, relkey])</p></td>
-<td><p>Controls solution output written to the results file from a PSD</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdres.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdres" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdres"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.psdres</span></code></a>([lab, relkey])</p></td>
+<td><p>Controls solution output written to the results file from a PSD analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdspl.html#ansys.mapdl.core.Mapdl.psdspl" title="ansys.mapdl.core.Mapdl.psdspl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.psdspl</span></code></a>([tblno, rmin, rmax])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdspl.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdspl" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdspl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.psdspl</span></code></a>([tblno, rmin, rmax])</p></td>
 <td><p>Defines a partially correlated excitation in a PSD analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdunit.html#ansys.mapdl.core.Mapdl.psdunit" title="ansys.mapdl.core.Mapdl.psdunit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.psdunit</span></code></a>([tblno, type_, gvalue])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdunit.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdunit" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdunit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.psdunit</span></code></a>([tblno, type_, gvalue])</p></td>
 <td><p>Defines the type of input PSD.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdval.html#ansys.mapdl.core.Mapdl.psdval" title="ansys.mapdl.core.Mapdl.psdval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.psdval</span></code></a>([tblno, sv1, sv2, sv3, sv4, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdval.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdval" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.psdval</span></code></a>([tblno, sv1, sv2, ...])</p></td>
 <td><p>Defines PSD values.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.psdwav.html#ansys.mapdl.core.Mapdl.psdwav" title="ansys.mapdl.core.Mapdl.psdwav"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.psdwav</span></code></a>([tblno, vx, vy, vz])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdwav.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdwav" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.psdwav"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.psdwav</span></code></a>([tblno, vx, vy, vz])</p></td>
 <td><p>Defines a wave propagation excitation in a PSD analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.qdval.html#ansys.mapdl.core.Mapdl.qdval" title="ansys.mapdl.core.Mapdl.qdval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.qdval</span></code></a>([tblno1, tblno2, sv1, sv2, sv3, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.qdval.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.qdval" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.qdval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.qdval</span></code></a>([tblno1, tblno2, sv1, ...])</p></td>
 <td><p>Defines PSD quadspectral values.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rock.html#ansys.mapdl.core.Mapdl.rock" title="ansys.mapdl.core.Mapdl.rock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.rock</span></code></a>([cgx, cgy, cgz, omx, omy, omz])</p></td>
-<td><p>Specifies a rocking response spectrum.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rose.html#ansys.mapdl.core.Mapdl.rose" title="ansys.mapdl.core.Mapdl.rose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.rose</span></code></a>([signif, label, td, forcetype])</p></td>
-<td><p>Specifies the Rosenblueth mode combination method.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rigresp.html#ansys.mapdl.core.Mapdl.rigresp" title="ansys.mapdl.core.Mapdl.rigresp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.rigresp</span></code></a>([option, method, val1, val2])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.rigresp.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.rigresp" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.rigresp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.rigresp</span></code></a>([option, method, ...])</p></td>
 <td><p>Specifies the rigid response calculation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.sed.html#ansys.mapdl.core.Mapdl.sed" title="ansys.mapdl.core.Mapdl.sed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.sed</span></code></a>([sedx, sedy, sedz, cname])</p></td>
-<td><p>Defines the excitation direction for response spectrum and PSD</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.rock.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.rock" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.rock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.rock</span></code></a>([cgx, cgy, cgz, omx, ...])</p></td>
+<td><p>Specifies a rocking response spectrum.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.spdamp.html#ansys.mapdl.core.Mapdl.spdamp" title="ansys.mapdl.core.Mapdl.spdamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.spdamp</span></code></a>([tblno, curvno, dampratio])</p></td>
-<td><p>Defines input spectrum damping in a multi-point response spectrum</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.rose.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.rose" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.rose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.rose</span></code></a>([signif, label, td, ...])</p></td>
+<td><p>Specifies the Rosenblueth mode combination method.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.spfreq.html#ansys.mapdl.core.Mapdl.spfreq" title="ansys.mapdl.core.Mapdl.spfreq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.spfreq</span></code></a>([tblno, freq1, freq2, freq3, ...])</p></td>
-<td><p>Defines the frequency points for the input spectrum tables SPVAL vs.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.sed.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.sed" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.sed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.sed</span></code></a>([sedx, sedy, sedz, cname])</p></td>
+<td><p>Defines the excitation direction for response spectrum and PSD analyses.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.spgraph.html#ansys.mapdl.core.Mapdl.spgraph" title="ansys.mapdl.core.Mapdl.spgraph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.spgraph</span></code></a>([tblno, curvno, curvnobeg])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spdamp.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spdamp" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spdamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.spdamp</span></code></a>([tblno, curvno, ...])</p></td>
+<td><p>Defines input spectrum damping in a multi-point response spectrum analysis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spfreq.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spfreq" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spfreq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.spfreq</span></code></a>([tblno, freq1, ...])</p></td>
+<td><p>Defines the frequency points for the input spectrum tables <span class="xref std std-ref">spval</span> vs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spgraph.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spgraph" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spgraph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.spgraph</span></code></a>([tblno, curvno, ...])</p></td>
 <td><p>Displays input spectrum curves for MPRS analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.spopt.html#ansys.mapdl.core.Mapdl.spopt" title="ansys.mapdl.core.Mapdl.spopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.spopt</span></code></a>([sptype, nmode, elcalc, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spopt.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spopt" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.spopt</span></code></a>([spectype, nmode, ...])</p></td>
 <td><p>Selects the spectrum type and other spectrum options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.spunit.html#ansys.mapdl.core.Mapdl.spunit" title="ansys.mapdl.core.Mapdl.spunit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.spunit</span></code></a>([tblno, type_, gvalue, keyinterp])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spunit.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spunit" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spunit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.spunit</span></code></a>([tblno, type_, ...])</p></td>
 <td><p>Defines the type of multi-point response spectrum.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.spval.html#ansys.mapdl.core.Mapdl.spval" title="ansys.mapdl.core.Mapdl.spval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.spval</span></code></a>([tblno, curvno, sv1, sv2, sv3, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spval.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spval" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.spval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.spval</span></code></a>([tblno, curvno, sv1, ...])</p></td>
 <td><p>Defines multi-point response spectrum values.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.srss.html#ansys.mapdl.core.Mapdl.srss" title="ansys.mapdl.core.Mapdl.srss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.srss</span></code></a>([signif, label, abssumkey, forcetype])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.srss.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.srss" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.srss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.srss</span></code></a>([signif, label, ...])</p></td>
 <td><p>Specifies the square root of sum of squares mode combination method.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.sv.html#ansys.mapdl.core.Mapdl.sv" title="ansys.mapdl.core.Mapdl.sv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.sv</span></code></a>([damp, sv1, sv2, sv3, sv4, sv5, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.sv.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.sv" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.sv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.sv</span></code></a>([damp, sv1, sv2, sv3, ...])</p></td>
 <td><p>Defines spectrum values to be associated with frequency points.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.svplot.html#ansys.mapdl.core.Mapdl.svplot" title="ansys.mapdl.core.Mapdl.svplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.svplot</span></code></a>([optionscale, damp1, damp2, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.svplot.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.svplot" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.svplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.svplot</span></code></a>([optionscale, damp1, ...])</p></td>
 <td><p>Displays input spectrum curves.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.svtyp.html#ansys.mapdl.core.Mapdl.svtyp" title="ansys.mapdl.core.Mapdl.svtyp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.svtyp</span></code></a>([ksv, fact, keyinterp])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.svtyp.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.svtyp" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.svtyp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.svtyp</span></code></a>([ksv, fact, keyinterp])</p></td>
 <td><p>Defines the type of single-point response spectrum.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vddam.html#ansys.mapdl.core.Mapdl.vddam" title="ansys.mapdl.core.Mapdl.vddam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vddam</span></code></a>([vf, va, vb, vc])</p></td>
-<td><p>Specifies the velocity spectrum computation constants for the analysis</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.vddam.html#ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.vddam" title="ansys.mapdl.core._commands.solution.spectrum_options.SpectrumOptions.vddam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumOptions.vddam</span></code></a>([vf, va, vb, vc])</p></td>
+<td><p>Specifies the velocity spectrum computation constants for the analysis of shock resistance of shipboard structures.</p></td>
 </tr>
 </tbody>
 </table>

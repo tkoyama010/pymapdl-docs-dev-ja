@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>FE body loads &#8212; PyMAPDL</title>
+    <title>FeBodyLoads &#8212; PyMAPDL</title>
   
   
   
@@ -98,8 +98,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="bf" href="_autosummary/ansys.mapdl.core.Mapdl.bf.html" />
-    <link rel="prev" title="sfscale" href="_autosummary/ansys.mapdl.core.Mapdl.sfscale.html" />
+    <link rel="next" title="bf" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bf.html" />
+    <link rel="prev" title="wrfull" href="_autosummary/ansys.mapdl.core._commands.solution.load_step_options.LoadStepOptions.wrfull.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -605,52 +605,51 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="analysis_options.html">Analysis options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nonlinear_options.html">Nonlinear options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dynamic_options.html">Dynamic options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spectrum_options.html">Spectrum options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_step_options.html">Load step options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_constraints.html">Solid constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_forces.html">Solid forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_surface_loads.html">Solid surface loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_body_loads.html">Solid body loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inertia.html">Inertia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous_loads.html">Miscellaneous loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_step_operations.html">Load step operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="master_dof.html">Master degrees of freedom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gap_conditions.html">Gap conditions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2d_to_3d_analysis.html">2D to 3D analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="birth_and_death.html">Birth and death</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_constraints.html">FE constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_forces.html">FE forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_surface_loads.html">FE surface loads</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">FE body loads</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bf.html">bf</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfcum.html">bfcum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfdele.html">bfdele</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfe.html">bfe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfecum.html">bfecum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfedele.html">bfedele</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfelist.html">bfelist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfescal.html">bfescal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bflist.html">bflist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfscale.html">bfscale</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfunif.html">bfunif</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ldread.html">ldread</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rimport.html">rimport</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.tunif.html">tunif</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Solution</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analysis_options.html">AnalysisOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inertia.html">Inertia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectrum_options.html">SpectrumOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_options.html">DynamicOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="additive_manufacturing.html">AdditiveManufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc_loads.html">MiscLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nonlinear_options.html">NonlinearOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_step_options.html">LoadStepOptions</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">FeBodyLoads</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bf.html">bf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfcum.html">bfcum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfdele.html">bfdele</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfe.html">bfe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfecum.html">bfecum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfedele.html">bfedele</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfelist.html">bfelist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfescal.html">bfescal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bflist.html">bflist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfport.html">bfport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfscale.html">bfscale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfunif.html">bfunif</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.tunif.html">tunif</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="ocean.html">Ocean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solution_status.html">Solution status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radiosity.html">Radiosity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_definition_commands.html">Multi-Field solver definition commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_global_controls.html">Multi-Field solver global controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_time_controls.html">Multi-Field solver time controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_load_transfer.html">Multi-Field solver load transfer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_convergence_controls.html">Multi-Field solver convergence controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_interface_mapping.html">Multi-Field solver interface mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_body_loads.html">SolidBodyLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_nonlinear_options.html">NonlinearOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_constraints.html">FeConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_constraints.html">SolidConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="birth_and_death.html">BirthAndDeath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_forces.html">FeForces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_forces.html">SolidForces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_gap_conditions.html">GapConditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radiosity.html">Radiosity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_step_operations.html">LoadStepOperations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="master_dof.html">MasterDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis_2d_to_3d.html">Analysis2DTo3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocean.html">Ocean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_surface_loads.html">FeSurfaceLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_surface_loads.html">SolidSurfaceLoads</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">POST1</span></p>
 <ul class="nav bd-sidenav">
@@ -751,8 +750,12 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Solution</a>
+    </li>
       
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">FE body loads</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">FeBodyLoads</span></li>
     
   </ul>
 </nav>
@@ -770,51 +773,52 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="fe-body-loads">
-<span id="ref-fe-body-loads-commands-api"></span><h1>FE body loads<a class="headerlink" href="#fe-body-loads" title="Link to this heading">#</a></h1>
-<p>These SOLUTION commands are used to define body loads on the finite element model.</p>
+  <section id="febodyloads">
+<span id="ref-fe-body-loads"></span><h1>FeBodyLoads<a class="headerlink" href="#febodyloads" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.solution.fe_body_loads.</span></span><span class="sig-name descname"><span class="pre">FeBodyLoads</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bf.html#ansys.mapdl.core.Mapdl.bf" title="ansys.mapdl.core.Mapdl.bf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bf</span></code></a>([node, lab, val1, val2, val3, ...])</p></td>
-<td><p>Defines a nodal body force load.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bf.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bf" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.bf</span></code></a>([node, lab, val1, val2, ...])</p></td>
+<td><p>Defines a nodal body-force load.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfcum.html#ansys.mapdl.core.Mapdl.bfcum" title="ansys.mapdl.core.Mapdl.bfcum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bfcum</span></code></a>([lab, oper, fact, tbase])</p></td>
-<td><p>Specifies that nodal body force loads are to be accumulated.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfcum.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfcum" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfcum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.bfcum</span></code></a>([lab, oper, fact, tbase])</p></td>
+<td><p>Specifies that nodal body-force loads are to be accumulated.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfdele.html#ansys.mapdl.core.Mapdl.bfdele" title="ansys.mapdl.core.Mapdl.bfdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bfdele</span></code></a>([node, lab])</p></td>
-<td><p>Deletes nodal body force loads.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfdele.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfdele" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.bfdele</span></code></a>([node, lab])</p></td>
+<td><p>Deletes nodal body-force loads.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfe.html#ansys.mapdl.core.Mapdl.bfe" title="ansys.mapdl.core.Mapdl.bfe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bfe</span></code></a>([elem, lab, stloc, val1, val2, ...])</p></td>
-<td><p>Defines an element body force load.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfe.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfe" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.bfe</span></code></a>([elem, lab, stloc, val1, ...])</p></td>
+<td><p>Defines an element body-force load.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfecum.html#ansys.mapdl.core.Mapdl.bfecum" title="ansys.mapdl.core.Mapdl.bfecum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bfecum</span></code></a>([lab, oper, fact, tbase])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfecum.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfecum" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfecum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.bfecum</span></code></a>([lab, oper, fact, tbase])</p></td>
 <td><p>Specifies whether to ignore subsequent element body force loads.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfedele.html#ansys.mapdl.core.Mapdl.bfedele" title="ansys.mapdl.core.Mapdl.bfedele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bfedele</span></code></a>([elem, lab])</p></td>
-<td><p>Deletes element body force loads.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfedele.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfedele" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfedele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.bfedele</span></code></a>([elem, lab])</p></td>
+<td><p>Deletes element body-force loads.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfelist.html#ansys.mapdl.core.Mapdl.bfelist" title="ansys.mapdl.core.Mapdl.bfelist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bfelist</span></code></a>([elem, lab])</p></td>
-<td><p>Lists the element body force loads.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfelist.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfelist" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfelist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.bfelist</span></code></a>([elem, lab])</p></td>
+<td><p>Lists the element body-force loads.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfescal.html#ansys.mapdl.core.Mapdl.bfescal" title="ansys.mapdl.core.Mapdl.bfescal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bfescal</span></code></a>([lab, fact, tbase])</p></td>
-<td><p>Scales element body force loads.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfescal.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfescal" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfescal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.bfescal</span></code></a>([lab, fact, tbase])</p></td>
+<td><p>Scales element body-force loads.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bflist.html#ansys.mapdl.core.Mapdl.bflist" title="ansys.mapdl.core.Mapdl.bflist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bflist</span></code></a>([node, lab])</p></td>
-<td><p>Lists the body force loads on nodes.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bflist.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bflist" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bflist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.bflist</span></code></a>([node, lab])</p></td>
+<td><p>Lists the body-force loads on nodes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfscale.html#ansys.mapdl.core.Mapdl.bfscale" title="ansys.mapdl.core.Mapdl.bfscale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bfscale</span></code></a>([lab, fact, tbase])</p></td>
-<td><p>Scales body force loads at nodes.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfport.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfport" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.bfport</span></code></a>([cmname])</p></td>
+<td><p>Transfers a thermal body-force load (HGEN) from selected <code class="docutils literal notranslate"><span class="pre">MESH200</span></code> elements to reinforcing elements.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.bfunif.html#ansys.mapdl.core.Mapdl.bfunif" title="ansys.mapdl.core.Mapdl.bfunif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.bfunif</span></code></a>([lab, value])</p></td>
-<td><p>Assigns a uniform body force load to all nodes.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfscale.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfscale" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfscale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.bfscale</span></code></a>([lab, fact, tbase])</p></td>
+<td><p>Scales body-force loads at nodes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ldread.html#ansys.mapdl.core.Mapdl.ldread" title="ansys.mapdl.core.Mapdl.ldread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ldread</span></code></a>([lab, lstep, sbstep, time, ...])</p></td>
-<td><p>Reads results from the results file and applies them as loads.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfunif.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfunif" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.bfunif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.bfunif</span></code></a>([lab, value])</p></td>
+<td><p>Assigns a uniform body-force load to all nodes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rimport.html#ansys.mapdl.core.Mapdl.rimport" title="ansys.mapdl.core.Mapdl.rimport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.rimport</span></code></a>([source, type_, loc, lstep, ...])</p></td>
-<td><p>Imports initial stresses from an explicit dynamics run into ANSYS.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.tunif.html#ansys.mapdl.core.Mapdl.tunif" title="ansys.mapdl.core.Mapdl.tunif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.tunif</span></code></a>([temp])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.tunif.html#ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.tunif" title="ansys.mapdl.core._commands.solution.fe_body_loads.FeBodyLoads.tunif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeBodyLoads.tunif</span></code></a>([temp])</p></td>
 <td><p>Assigns a uniform temperature to all nodes.</p></td>
 </tr>
 </tbody>

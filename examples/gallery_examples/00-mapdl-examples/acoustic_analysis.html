@@ -748,7 +748,7 @@ to download the full example code.</p>
 </section>
 <section id="boundary-conditions">
 <h2>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading">#</a></h2>
-<p>Add surface boundary condition to the nodes using <a class="reference internal" href="../../../mapdl_commands/solution/_autosummary/ansys.mapdl.core.Mapdl.sf.html#ansys.mapdl.core.Mapdl.sf" title="ansys.mapdl.core.Mapdl.sf"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.sf()</span></code></a>
+<p>Add surface boundary condition to the nodes using <code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.sf()</span></code>
 and the option <code class="docutils literal notranslate"><span class="pre">SHLD</span></code> for <em>Surface normal velocity or acceleration</em>.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">csys</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">asel</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;loc&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
@@ -761,7 +761,7 @@ and the option <code class="docutils literal notranslate"><span class="pre">SHLD
 </section>
 <section id="solve-the-model">
 <h2>Solve the model<a class="headerlink" href="#solve-the-model" title="Link to this heading">#</a></h2>
-<p>Using <a class="reference internal" href="../../../mapdl_commands/solution/_autosummary/ansys.mapdl.core.Mapdl.solve.html#ansys.mapdl.core.Mapdl.solve" title="ansys.mapdl.core.Mapdl.solve"><code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.solve()</span></code></a></p>
+<p>Using <code class="xref py py-func docutils literal notranslate"><span class="pre">Mapdl.solve()</span></code></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">allsel</span><span class="p">()</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;/SOLU&quot;</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">antype</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>

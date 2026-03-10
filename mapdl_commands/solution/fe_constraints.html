@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>FE constraints &#8212; PyMAPDL</title>
+    <title>FeConstraints &#8212; PyMAPDL</title>
   
   
   
@@ -86,6 +86,7 @@
                 gtag('js', new Date());
                 gtag('config', 'G-JQJKPV6ZVB');
             </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mapdl_commands/solution/fe_constraints';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
@@ -98,8 +99,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="d" href="_autosummary/ansys.mapdl.core.Mapdl.d.html" />
-    <link rel="prev" title="estif" href="_autosummary/ansys.mapdl.core.Mapdl.estif.html" />
+    <link rel="next" title="d" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.d.html" />
+    <link rel="prev" title="crplim" href="_autosummary/ansys.mapdl.core._commands.solution._nonlinear_options.NonlinearOptions.crplim.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -605,51 +606,52 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="analysis_options.html">Analysis options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nonlinear_options.html">Nonlinear options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dynamic_options.html">Dynamic options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spectrum_options.html">Spectrum options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_step_options.html">Load step options</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_constraints.html">Solid constraints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_forces.html">Solid forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_surface_loads.html">Solid surface loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solid_body_loads.html">Solid body loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="inertia.html">Inertia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="miscellaneous_loads.html">Miscellaneous loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_step_operations.html">Load step operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="master_dof.html">Master degrees of freedom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gap_conditions.html">Gap conditions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2d_to_3d_analysis.html">2D to 3D analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="birth_and_death.html">Birth and death</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">FE constraints</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.d.html">d</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dcum.html">dcum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ddele.html">ddele</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dflx.html">dflx</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dj.html">dj</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.djdele.html">djdele</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.djlist.html">djlist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dlist.html">dlist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dscale.html">dscale</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dsym.html">dsym</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dval.html">dval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.gsbdata.html">gsbdata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.gslist.html">gslist</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Solution</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analysis_options.html">AnalysisOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inertia.html">Inertia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spectrum_options.html">SpectrumOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic_options.html">DynamicOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="additive_manufacturing.html">AdditiveManufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="misc_loads.html">MiscLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nonlinear_options.html">NonlinearOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rezoning.html">Rezoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_step_options.html">LoadStepOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_body_loads.html">FeBodyLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_body_loads.html">SolidBodyLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_nonlinear_options.html">NonlinearOptions</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">FeConstraints</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.d.html">d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dcum.html">dcum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.ddele.html">ddele</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dflx.html">dflx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dj.html">dj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.djdele.html">djdele</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.djlist.html">djlist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dlist.html">dlist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dscale.html">dscale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dsym.html">dsym</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dval.html">dval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.gsbdata.html">gsbdata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.gslist.html">gslist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.ldread.html">ldread</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_forces.html">FE forces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_surface_loads.html">FE surface loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe_body_loads.html">FE body loads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ocean.html">Ocean</a></li>
-<li class="toctree-l1"><a class="reference internal" href="solution_status.html">Solution status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="radiosity.html">Radiosity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_definition_commands.html">Multi-Field solver definition commands</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_global_controls.html">Multi-Field solver global controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_time_controls.html">Multi-Field solver time controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_load_transfer.html">Multi-Field solver load transfer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_convergence_controls.html">Multi-Field solver convergence controls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="multi_field_solver_interface_mapping.html">Multi-Field solver interface mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_constraints.html">SolidConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="birth_and_death.html">BirthAndDeath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_forces.html">FeForces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_forces.html">SolidForces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_gap_conditions.html">GapConditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radiosity.html">Radiosity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_step_operations.html">LoadStepOperations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="master_dof.html">MasterDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis_2d_to_3d.html">Analysis2DTo3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocean.html">Ocean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe_surface_loads.html">FeSurfaceLoads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solid_surface_loads.html">SolidSurfaceLoads</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">POST1</span></p>
 <ul class="nav bd-sidenav">
@@ -750,8 +752,12 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Solution</a>
+    </li>
       
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">FE constraints</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">FeConstraints</span></li>
     
   </ul>
 </nav>
@@ -769,49 +775,56 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="fe-constraints">
-<span id="ref-fe-constraints-commands-api"></span><h1>FE constraints<a class="headerlink" href="#fe-constraints" title="Link to this heading">#</a></h1>
-<p>These SOLUTION commands are used to define constraints on the finite element model.</p>
+  <section id="feconstraints">
+<span id="ref-fe-constraints"></span><h1>FeConstraints<a class="headerlink" href="#feconstraints" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.solution.fe_constraints.</span></span><span class="sig-name descname"><span class="pre">FeConstraints</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.d.html#ansys.mapdl.core.Mapdl.d" title="ansys.mapdl.core.Mapdl.d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.d</span></code></a>([node, lab, value, value2, nend, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.d.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.d" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.d</span></code></a>([node, lab, value, value2, ...])</p></td>
 <td><p>Defines degree-of-freedom constraints at nodes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dcum.html#ansys.mapdl.core.Mapdl.dcum" title="ansys.mapdl.core.Mapdl.dcum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dcum</span></code></a>([oper, rfact, ifact, tbase])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dcum.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dcum" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dcum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.dcum</span></code></a>([oper, rfact, ifact, tbase])</p></td>
 <td><p>Specifies that DOF constraint values are to be accumulated.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ddele.html#ansys.mapdl.core.Mapdl.ddele" title="ansys.mapdl.core.Mapdl.ddele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ddele</span></code></a>([node, lab, nend, ninc, rkey])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.ddele.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.ddele" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.ddele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.ddele</span></code></a>([node, lab, nend, ninc, ...])</p></td>
 <td><p>Deletes degree-of-freedom constraints.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dflx.html#ansys.mapdl.core.Mapdl.dflx" title="ansys.mapdl.core.Mapdl.dflx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dflx</span></code></a>([node, bx, by, bz, bx2, by2, bz2])</p></td>
-<td><p>Imposes a uniform magnetic flux B on an edge-element electromagnetic</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dflx.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dflx" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dflx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.dflx</span></code></a>([node, bx, by, bz, bx2, ...])</p></td>
+<td><p>Imposes a uniform magnetic flux B on an edge-element electromagnetic model.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dj.html#ansys.mapdl.core.Mapdl.dj" title="ansys.mapdl.core.Mapdl.dj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dj</span></code></a>([elem, label, value])</p></td>
-<td><p>Specifies boundary conditions on the components of relative motion of a</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dj.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dj" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.dj</span></code></a>([elem, label, value])</p></td>
+<td><p>Specifies boundary conditions on the components of relative motion of a joint element.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.djdele.html#ansys.mapdl.core.Mapdl.djdele" title="ansys.mapdl.core.Mapdl.djdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.djdele</span></code></a>([elem, lab])</p></td>
-<td><p>Deletes boundary conditions on the components of relative motion of a</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.djdele.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.djdele" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.djdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.djdele</span></code></a>([elem, lab])</p></td>
+<td><p>Deletes boundary conditions on the components of relative motion of a joint element.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.djlist.html#ansys.mapdl.core.Mapdl.djlist" title="ansys.mapdl.core.Mapdl.djlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.djlist</span></code></a>([elem])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.djlist.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.djlist" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.djlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.djlist</span></code></a>([elem])</p></td>
 <td><p>Lists boundary conditions applied to joint elements.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dlist.html#ansys.mapdl.core.Mapdl.dlist" title="ansys.mapdl.core.Mapdl.dlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dlist</span></code></a>([node1, node2, ninc])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dlist.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dlist" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.dlist</span></code></a>([node1, node2, ninc])</p></td>
 <td><p>Lists DOF constraints.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dscale.html#ansys.mapdl.core.Mapdl.dscale" title="ansys.mapdl.core.Mapdl.dscale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dscale</span></code></a>([rfact, ifact, tbase])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dscale.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dscale" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dscale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.dscale</span></code></a>([rfact, ifact, tbase])</p></td>
 <td><p>Scales DOF constraint values.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dsym.html#ansys.mapdl.core.Mapdl.dsym" title="ansys.mapdl.core.Mapdl.dsym"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dsym</span></code></a>([lab, normal, kcn])</p></td>
-<td><p>Specifies symmetry or antisymmetry degree-of-freedom constraints on</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dsym.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dsym" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dsym"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.dsym</span></code></a>([lab, normal, kcn])</p></td>
+<td><p>Specifies symmetry or antisymmetry degree-of-freedom constraints on nodes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dval.html#ansys.mapdl.core.Mapdl.dval" title="ansys.mapdl.core.Mapdl.dval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dval</span></code></a>([baseid, lab, value, value2, keycal])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dval.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dval" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.dval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.dval</span></code></a>([baseid, lab, value, ...])</p></td>
 <td><p>Defines values at enforced motion base.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.gsbdata.html#ansys.mapdl.core.Mapdl.gsbdata" title="ansys.mapdl.core.Mapdl.gsbdata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.gsbdata</span></code></a>([labz, valuez, labx, valuex, ...])</p></td>
-<td><p>Specifies the constraints or applies the load at the ending point for</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.gsbdata.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.gsbdata" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.gsbdata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.gsbdata</span></code></a>([labz, valuez, labx, ...])</p></td>
+<td><p>Specifies the constraints or applies the load at the ending point for generalized plane strain option.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.gslist.html#ansys.mapdl.core.Mapdl.gslist" title="ansys.mapdl.core.Mapdl.gslist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.gslist</span></code></a>([lab])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.gslist.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.gslist" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.gslist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.gslist</span></code></a>([lab])</p></td>
 <td><p>When using generalized plane strain, lists the input data or solutions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.ldread.html#ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.ldread" title="ansys.mapdl.core._commands.solution.fe_constraints.FeConstraints.ldread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FeConstraints.ldread</span></code></a>([lab, lstep, sbstep, ...])</p></td>
+<td><p>Reads results from the results file and applies them as loads.</p></td>
 </tr>
 </tbody>
 </table>
