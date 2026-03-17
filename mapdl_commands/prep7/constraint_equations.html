@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Constraint equations &#8212; PyMAPDL</title>
+    <title>ConstraintEquations &#8212; PyMAPDL</title>
   
   
   
@@ -86,6 +86,7 @@
                 gtag('js', new Date());
                 gtag('config', 'G-JQJKPV6ZVB');
             </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mapdl_commands/prep7/constraint_equations';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
@@ -98,8 +99,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="ce" href="_autosummary/ansys.mapdl.core.Mapdl.ce.html" />
-    <link rel="prev" title="cpsgen" href="_autosummary/ansys.mapdl.core.Mapdl.cpsgen.html" />
+    <link rel="next" title="ce" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ce.html" />
+    <link rel="prev" title="tbtemp" href="_autosummary/ansys.mapdl.core._commands.prep7.data_tables.DataTables.tbtemp.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -577,41 +578,48 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preprocessing</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="database.html">Database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="element_type.html">Element type</a></li>
-<li class="toctree-l1"><a class="reference internal" href="real_constants.html">Real constants</a></li>
-<li class="toctree-l1"><a class="reference internal" href="materials.html">Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="material_data_tables.html">Material data tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="primitives.html">Primitives</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hard_points.html">Hard points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lines.html">Lines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="areas.html">Areas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="volumes.html">Volumes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="booleans.html">Booleans</a></li>
-<li class="toctree-l1"><a class="reference internal" href="meshing.html">Meshing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="superelements.html">Superelements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coupled_dof.html">Coupled degrees of freedom</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Constraint equations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ce.html">ce</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cecyc.html">cecyc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cedele.html">cedele</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ceintf.html">ceintf</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.celist.html">celist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cerig.html">cerig</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cesgen.html">cesgen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rbe3.html">rbe3</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Prep7</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="areas.html">Areas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="booleans.html">Booleans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meshing.html">Meshing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="special_purpose.html">SpecialPurpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="piping.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html">Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross_sections.html">CrossSections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lines.html">Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_tables.html">DataTables</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">ConstraintEquations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ce.html">ce</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cecycms.html">cecycms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cedele.html">cedele</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ceims.html">ceims</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ceintf.html">ceintf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.celist.html">celist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cerig.html">cerig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cesel.html">cesel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cesgen.html">cesgen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.rbe3.html">rbe3</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="status.html">Status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="explicit_dynamics.html">Explicit dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="morphing.html">Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="artificially_matched_layers.html">Artificially matched layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="special_purpose.html">Special purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations_.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupled_dof.html">CoupledDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morphing.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="element_type.html">ElementType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="volumes.html">Volumes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hard_points.html">HardPoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artificially_matched_layers.html">ArtificiallyMatchedLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="real_constants.html">RealConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superelements.html">Superelements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explicit_dynamics.html">ExplicitDynamics</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="nav bd-sidenav">
@@ -716,8 +724,12 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Prep7</a>
+    </li>
       
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Constraint equations</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">ConstraintEquations</span></li>
     
   </ul>
 </nav>
@@ -735,34 +747,44 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="constraint-equations">
-<span id="ref-constraint-equations-commands-api"></span><h1>Constraint equations<a class="headerlink" href="#constraint-equations" title="Link to this heading">#</a></h1>
-<p>These PREP7 commands are used to define, modify, list, etc., constraint equations.</p>
+  <section id="constraintequations">
+<span id="ref-constraint-equations"></span><h1>ConstraintEquations<a class="headerlink" href="#constraintequations" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.prep7.constraint_equations.</span></span><span class="sig-name descname"><span class="pre">ConstraintEquations</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ce.html#ansys.mapdl.core.Mapdl.ce" title="ansys.mapdl.core.Mapdl.ce"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ce</span></code></a>([neqn, const, node1, lab1, c1, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ce.html#ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ce" title="ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ce"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstraintEquations.ce</span></code></a>([neqn, const, node1, ...])</p></td>
 <td><p>Defines a constraint equation relating degrees of freedom.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cecyc.html#ansys.mapdl.core.Mapdl.cecyc" title="ansys.mapdl.core.Mapdl.cecyc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cecyc</span></code></a>([lowname, highname, nsector, ...])</p></td>
-<td><p>Generates the constraint equations for a cyclic symmetry analysis</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cecycms.html#ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cecycms" title="ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cecycms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstraintEquations.cecycms</span></code></a>([cyclownod, ...])</p></td>
+<td><p>Generates the constraint equations for a <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en/ans_mstag/ans_mstag_introTheory.html">multistage cyclic symmetry analysis</a>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cedele.html#ansys.mapdl.core.Mapdl.cedele" title="ansys.mapdl.core.Mapdl.cedele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cedele</span></code></a>([neqn1, neqn2, ninc, nsel])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cedele.html#ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cedele" title="ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cedele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstraintEquations.cedele</span></code></a>([neqn1, neqn2, ...])</p></td>
 <td><p>Deletes constraint equations.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ceintf.html#ansys.mapdl.core.Mapdl.ceintf" title="ansys.mapdl.core.Mapdl.ceintf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ceintf</span></code></a>([toler, dof1, dof2, dof3, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ceims.html#ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ceims" title="ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ceims"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstraintEquations.ceims</span></code></a>([toler, sname1, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ceintf.html#ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ceintf" title="ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.ceintf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstraintEquations.ceintf</span></code></a>([toler, dof1, ...])</p></td>
 <td><p>Generates constraint equations at an interface.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.celist.html#ansys.mapdl.core.Mapdl.celist" title="ansys.mapdl.core.Mapdl.celist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.celist</span></code></a>([neqn1, neqn2, ninc, option])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.celist.html#ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.celist" title="ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.celist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstraintEquations.celist</span></code></a>([neqn1, neqn2, ...])</p></td>
 <td><p>Lists the constraint equations.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cerig.html#ansys.mapdl.core.Mapdl.cerig" title="ansys.mapdl.core.Mapdl.cerig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cerig</span></code></a>([maste, slave, ldof, ldof2, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cerig.html#ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cerig" title="ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cerig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstraintEquations.cerig</span></code></a>([independ, ...])</p></td>
 <td><p>Defines a rigid region.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cesgen.html#ansys.mapdl.core.Mapdl.cesgen" title="ansys.mapdl.core.Mapdl.cesgen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cesgen</span></code></a>([itime, inc, nset1, nset2, ninc])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cesel.html#ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cesel" title="ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cesel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstraintEquations.cesel</span></code></a>([type_, vmin, ...])</p></td>
+<td><p>Selects constraint equations via predefined reference numbers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cesgen.html#ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cesgen" title="ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.cesgen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstraintEquations.cesgen</span></code></a>([itime, inc, ...])</p></td>
 <td><p>Generates a set of constraint equations from existing sets.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rbe3.html#ansys.mapdl.core.Mapdl.rbe3" title="ansys.mapdl.core.Mapdl.rbe3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.rbe3</span></code></a>([master, dof, slaves, wtfact])</p></td>
-<td><p>Distributes the force/moment applied at the master node to a set  of</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.rbe3.html#ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.rbe3" title="ansys.mapdl.core._commands.prep7.constraint_equations.ConstraintEquations.rbe3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstraintEquations.rbe3</span></code></a>([independ, dof, ...])</p></td>
+<td><p>Distributes the force/moment applied at an independent node to a set of dependent nodes.</p></td>
 </tr>
 </tbody>
 </table>

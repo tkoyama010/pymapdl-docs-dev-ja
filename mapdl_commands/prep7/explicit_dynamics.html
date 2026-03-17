@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Explicit dynamics &#8212; PyMAPDL</title>
+    <title>ExplicitDynamics &#8212; PyMAPDL</title>
   
   
   
@@ -98,8 +98,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="edasmp" href="_autosummary/ansys.mapdl.core.Mapdl.edasmp.html" />
-    <link rel="prev" title="volumes" href="_autosummary/ansys.mapdl.core.Mapdl.volumes.html" />
+    <link rel="next" title="edadapt" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edadapt.html" />
+    <link rel="prev" title="setran" href="_autosummary/ansys.mapdl.core._commands.prep7.superelements.Superelements.setran.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -577,91 +577,77 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preprocessing</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="database.html">Database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="element_type.html">Element type</a></li>
-<li class="toctree-l1"><a class="reference internal" href="real_constants.html">Real constants</a></li>
-<li class="toctree-l1"><a class="reference internal" href="materials.html">Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="material_data_tables.html">Material data tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="primitives.html">Primitives</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hard_points.html">Hard points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lines.html">Lines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="areas.html">Areas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="volumes.html">Volumes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="booleans.html">Booleans</a></li>
-<li class="toctree-l1"><a class="reference internal" href="meshing.html">Meshing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="superelements.html">Superelements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coupled_dof.html">Coupled degrees of freedom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constraint_equations.html">Constraint equations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="status.html">Status</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Explicit dynamics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edasmp.html">edasmp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edbound.html">edbound</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edbx.html">edbx</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcgen.html">edcgen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edclist.html">edclist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcmore.html">edcmore</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcnstr.html">edcnstr</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcontact.html">edcontact</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcrb.html">edcrb</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcurve.html">edcurve</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.eddbl.html">eddbl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.eddc.html">eddc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edipart.html">edipart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edlcs.html">edlcs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edmp.html">edmp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ednb.html">ednb</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edndtsd.html">edndtsd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ednrot.html">ednrot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edpart.html">edpart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edpc.html">edpc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edsp.html">edsp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edweld.html">edweld</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edadapt.html">edadapt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edale.html">edale</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edbvis.html">edbvis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcadapt.html">edcadapt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcpu.html">edcpu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcsc.html">edcsc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcts.html">edcts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.eddamp.html">eddamp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.eddrelax.html">eddrelax</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.eddump.html">eddump</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edenergy.html">edenergy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edfplot.html">edfplot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edgcale.html">edgcale</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edhgls.html">edhgls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edhist.html">edhist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edhtime.html">edhtime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edint.html">edint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edis.html">edis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edload.html">edload</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edopt.html">edopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edout.html">edout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edpl.html">edpl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edpvel.html">edpvel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edrc.html">edrc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edrd.html">edrd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edri.html">edri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edrst.html">edrst</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edrun.html">edrun</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edshell.html">edshell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edsolv.html">edsolv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edstart.html">edstart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edterm.html">edterm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edtp.html">edtp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edvel.html">edvel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edwrite.html">edwrite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rexport.html">rexport</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Prep7</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="areas.html">Areas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="booleans.html">Booleans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meshing.html">Meshing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="special_purpose.html">SpecialPurpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="piping.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html">Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross_sections.html">CrossSections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lines.html">Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_tables.html">DataTables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations_.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupled_dof.html">CoupledDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morphing.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="element_type.html">ElementType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="volumes.html">Volumes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hard_points.html">HardPoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artificially_matched_layers.html">ArtificiallyMatchedLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="real_constants.html">RealConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superelements.html">Superelements</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">ExplicitDynamics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edadapt.html">edadapt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edbvis.html">edbvis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edclist.html">edclist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcmore.html">edcmore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcnstr.html">edcnstr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcpu.html">edcpu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcrb.html">edcrb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcsc.html">edcsc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcts.html">edcts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcurve.html">edcurve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddamp.html">eddamp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddbl.html">eddbl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddc.html">eddc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddump.html">eddump</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edenergy.html">edenergy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edfplot.html">edfplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edgcale.html">edgcale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edhgls.html">edhgls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edhist.html">edhist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edhtime.html">edhtime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edint.html">edint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edis.html">edis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.ednb.html">ednb</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edopt.html">edopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edout.html">edout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edpart.html">edpart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edpc.html">edpc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edpl.html">edpl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrc.html">edrc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrd.html">edrd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrst.html">edrst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrun.html">edrun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edshell.html">edshell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edsolv.html">edsolv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edsp.html">edsp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edstart.html">edstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edterm.html">edterm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edwrite.html">edwrite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.rexport.html">rexport</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="morphing.html">Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="artificially_matched_layers.html">Artificially matched layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="special_purpose.html">Special purpose</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="nav bd-sidenav">
@@ -766,8 +752,12 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Prep7</a>
+    </li>
       
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Explicit dynamics</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">ExplicitDynamics</span></li>
     
   </ul>
 </nav>
@@ -785,189 +775,130 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="explicit-dynamics">
-<span id="ref-explicit-dynamics-commands-api"></span><h1>Explicit dynamics<a class="headerlink" href="#explicit-dynamics" title="Link to this heading">#</a></h1>
-<p>These PREP7 commands are used for an explicit dynamic analysis.</p>
+  <section id="explicitdynamics">
+<span id="ref-explicit-dynamics"></span><h1>ExplicitDynamics<a class="headerlink" href="#explicitdynamics" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.prep7.explicit_dynamics.</span></span><span class="sig-name descname"><span class="pre">ExplicitDynamics</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edasmp.html#ansys.mapdl.core.Mapdl.edasmp" title="ansys.mapdl.core.Mapdl.edasmp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edasmp</span></code></a>([option, asmid, part1, part2, ...])</p></td>
-<td><p>Creates a part assembly to be used in an explicit dynamic analysis.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edbound.html#ansys.mapdl.core.Mapdl.edbound" title="ansys.mapdl.core.Mapdl.edbound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edbound</span></code></a>([option, lab, cname, xc, yc, ...])</p></td>
-<td><p>Defines a boundary plane for sliding or cyclic symmetry.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edbx.html#ansys.mapdl.core.Mapdl.edbx" title="ansys.mapdl.core.Mapdl.edbx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edbx</span></code></a>([option, boxid, xmin, xmax, ...])</p></td>
-<td><p>Creates a box shaped volume to be used in a contact definition for</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcgen.html#ansys.mapdl.core.Mapdl.edcgen" title="ansys.mapdl.core.Mapdl.edcgen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edcgen</span></code></a>([option, cont, targ, fs, fd, ...])</p></td>
-<td><p>Specifies contact parameters for an explicit dynamics analysis.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edclist.html#ansys.mapdl.core.Mapdl.edclist" title="ansys.mapdl.core.Mapdl.edclist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edclist</span></code></a>([num])</p></td>
-<td><p>Lists contact entity specifications in an explicit dynamics analysis.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcmore.html#ansys.mapdl.core.Mapdl.edcmore" title="ansys.mapdl.core.Mapdl.edcmore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edcmore</span></code></a>([option, num, val1, val2])</p></td>
-<td><p>Specifies additional contact parameters for a given contact definition</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcnstr.html#ansys.mapdl.core.Mapdl.edcnstr" title="ansys.mapdl.core.Mapdl.edcnstr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edcnstr</span></code></a>([option, ctype, comp1, comp2, ...])</p></td>
-<td><p>Defines various types of constraints for an explicit dynamic analysis.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcontact.html#ansys.mapdl.core.Mapdl.edcontact" title="ansys.mapdl.core.Mapdl.edcontact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edcontact</span></code></a>([sfsi, rwpn, ipck, shtk, ...])</p></td>
-<td><p>Specifies contact surface controls for an explicit dynamics analysis.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcrb.html#ansys.mapdl.core.Mapdl.edcrb" title="ansys.mapdl.core.Mapdl.edcrb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edcrb</span></code></a>([option, neqn, partm, parts])</p></td>
-<td><p>Constrains two rigid bodies to act as one in an explicit dynamics</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcurve.html#ansys.mapdl.core.Mapdl.edcurve" title="ansys.mapdl.core.Mapdl.edcurve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edcurve</span></code></a>([option, lcid, par1, par2])</p></td>
-<td><p>Specifies data curves for an explicit dynamic analysis.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.eddbl.html#ansys.mapdl.core.Mapdl.eddbl" title="ansys.mapdl.core.Mapdl.eddbl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.eddbl</span></code></a>([key])</p></td>
-<td><p>Selects a numerical precision type of the explicit dynamics analysis.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.eddc.html#ansys.mapdl.core.Mapdl.eddc" title="ansys.mapdl.core.Mapdl.eddc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.eddc</span></code></a>([option, ctype, cont, targ])</p></td>
-<td><p>Deletes or deactivates/reactivates contact surface specifications in an</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edipart.html#ansys.mapdl.core.Mapdl.edipart" title="ansys.mapdl.core.Mapdl.edipart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edipart</span></code></a>([part, option, cvect, tm, ...])</p></td>
-<td><p>Defines inertia for rigid parts in an explicit dynamics analysis.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edlcs.html#ansys.mapdl.core.Mapdl.edlcs" title="ansys.mapdl.core.Mapdl.edlcs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edlcs</span></code></a>([option, cid, x1, y1, z1, x2, ...])</p></td>
-<td><p>Defines a local coordinate system for use in explicit dynamics</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edmp.html#ansys.mapdl.core.Mapdl.edmp" title="ansys.mapdl.core.Mapdl.edmp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edmp</span></code></a>([lab, mat, val1, val2, val3, ...])</p></td>
-<td><p>Defines material properties for an explicit dynamics analysis.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ednb.html#ansys.mapdl.core.Mapdl.ednb" title="ansys.mapdl.core.Mapdl.ednb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ednb</span></code></a>([option, cname, ad, as_])</p></td>
-<td><p>Defines a nonreflecting boundary in an explicit dynamic analysis.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edndtsd.html#ansys.mapdl.core.Mapdl.edndtsd" title="ansys.mapdl.core.Mapdl.edndtsd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edndtsd</span></code></a>([vect1, vect2, datap, fitpt, ...])</p></td>
-<td><p>Allows smoothing of noisy data for explicit dynamics analyses and</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.ednrot.html#ansys.mapdl.core.Mapdl.ednrot" title="ansys.mapdl.core.Mapdl.ednrot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.ednrot</span></code></a>([option, cid, cname, dof1, ...])</p></td>
-<td><p>Applies a rotated coordinate nodal constraint in an explicit dynamics</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edpart.html#ansys.mapdl.core.Mapdl.edpart" title="ansys.mapdl.core.Mapdl.edpart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edpart</span></code></a>([option, partid, cname])</p></td>
-<td><p>Configures parts for an explicit dynamics analysis.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edpc.html#ansys.mapdl.core.Mapdl.edpc" title="ansys.mapdl.core.Mapdl.edpc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edpc</span></code></a>([min_, max_, inc])</p></td>
-<td><p>Selects and plots explicit dynamic contact entities.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edsp.html#ansys.mapdl.core.Mapdl.edsp" title="ansys.mapdl.core.Mapdl.edsp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edsp</span></code></a>([option, min_, max_, inc])</p></td>
-<td><p>Specifies small penetration checking for contact entities in an</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edweld.html#ansys.mapdl.core.Mapdl.edweld" title="ansys.mapdl.core.Mapdl.edweld"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edweld</span></code></a>([option, nweld, n1, n2, sn, ...])</p></td>
-<td><p>Defines a massless spotweld or generalized weld for use in an explicit</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>These SOLUTION commands are used for an explicit dynamic analysis.</p>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edadapt.html#ansys.mapdl.core.Mapdl.edadapt" title="ansys.mapdl.core.Mapdl.edadapt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edadapt</span></code></a>([part, key])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edadapt.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edadapt" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edadapt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edadapt</span></code></a>([part, key])</p></td>
 <td><p>Activates adaptive meshing in an explicit dynamic analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edale.html#ansys.mapdl.core.Mapdl.edale" title="ansys.mapdl.core.Mapdl.edale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edale</span></code></a>([option, afac, bfac, dfac, ...])</p></td>
-<td><p>Assigns mesh smoothing to explicit dynamic elements that use</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edbvis.html#ansys.mapdl.core.Mapdl.edbvis" title="ansys.mapdl.core.Mapdl.edbvis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edbvis</span></code></a>([qvco, lvco])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edbvis.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edbvis" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edbvis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edbvis</span></code></a>([qvco, lvco])</p></td>
 <td><p>Specifies global bulk viscosity coefficients for an explicit dynamics</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcadapt.html#ansys.mapdl.core.Mapdl.edcadapt" title="ansys.mapdl.core.Mapdl.edcadapt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edcadapt</span></code></a>([freq, tol, opt, maxlvl, ...])</p></td>
-<td><p>Specifies adaptive meshing controls for an explicit dynamic analysis.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edclist.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edclist" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edclist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edclist</span></code></a>([num])</p></td>
+<td><p>Lists contact entity specifications in an explicit dynamics analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcpu.html#ansys.mapdl.core.Mapdl.edcpu" title="ansys.mapdl.core.Mapdl.edcpu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edcpu</span></code></a>([cputime])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcmore.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcmore" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcmore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edcmore</span></code></a>([option, num, ...])</p></td>
+<td><p>Specifies additional contact parameters for a given contact definition</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcnstr.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcnstr" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcnstr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edcnstr</span></code></a>([option, ctype, ...])</p></td>
+<td><p>Defines various types of constraints for an explicit dynamic analysis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcpu.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcpu" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcpu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edcpu</span></code></a>([cputime])</p></td>
 <td><p>Specifies CPU time limit for an explicit dynamics analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcsc.html#ansys.mapdl.core.Mapdl.edcsc" title="ansys.mapdl.core.Mapdl.edcsc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edcsc</span></code></a>([key])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcrb.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcrb" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcrb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edcrb</span></code></a>([option, neqn, ...])</p></td>
+<td><p>Constrains two rigid bodies to act as one in an explicit dynamics</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcsc.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcsc" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcsc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edcsc</span></code></a>([key])</p></td>
 <td><p>Specifies whether to use subcycling in an explicit dynamics analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edcts.html#ansys.mapdl.core.Mapdl.edcts" title="ansys.mapdl.core.Mapdl.edcts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edcts</span></code></a>([dtms, tssfac])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcts.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcts" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edcts</span></code></a>([dtms, tssfac])</p></td>
 <td><p>Specifies mass scaling and scale factor of computed time step for an</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.eddamp.html#ansys.mapdl.core.Mapdl.eddamp" title="ansys.mapdl.core.Mapdl.eddamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.eddamp</span></code></a>([part, lcid, valdmp])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcurve.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcurve" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edcurve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edcurve</span></code></a>([option, lcid, ...])</p></td>
+<td><p>Specifies data curves for an explicit dynamic analysis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddamp.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddamp" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.eddamp</span></code></a>([part, lcid, valdmp])</p></td>
 <td><p>Defines mass weighted (Alpha) or stiffness weighted (Beta) damping for</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.eddrelax.html#ansys.mapdl.core.Mapdl.eddrelax" title="ansys.mapdl.core.Mapdl.eddrelax"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.eddrelax</span></code></a>([option, nrcyck, drtol, ...])</p></td>
-<td><p>Activates initialization to a prescribed geometry or dynamic relaxation</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddbl.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddbl" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddbl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.eddbl</span></code></a>([key])</p></td>
+<td><p>Selects a numerical precision type of the explicit dynamics analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.eddump.html#ansys.mapdl.core.Mapdl.eddump" title="ansys.mapdl.core.Mapdl.eddump"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.eddump</span></code></a>([num, dt])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddc.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddc" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.eddc</span></code></a>([option, ctype, cont, ...])</p></td>
+<td><p>Deletes or deactivates/reactivates contact surface specifications in an</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddump.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddump" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.eddump"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.eddump</span></code></a>([num, dt])</p></td>
 <td><p>Specifies output frequency for the explicit dynamic restart file</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edenergy.html#ansys.mapdl.core.Mapdl.edenergy" title="ansys.mapdl.core.Mapdl.edenergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edenergy</span></code></a>([hgen, swen, sien, rlen])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edenergy.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edenergy" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edenergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edenergy</span></code></a>([hgen, swen, ...])</p></td>
 <td><p>Specifies energy dissipation controls for an explicit dynamics</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edfplot.html#ansys.mapdl.core.Mapdl.edfplot" title="ansys.mapdl.core.Mapdl.edfplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edfplot</span></code></a>([key])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edfplot.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edfplot" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edfplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edfplot</span></code></a>([key])</p></td>
 <td><p>Allows plotting of explicit dynamics forces and other load symbols.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edgcale.html#ansys.mapdl.core.Mapdl.edgcale" title="ansys.mapdl.core.Mapdl.edgcale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edgcale</span></code></a>([nadv, meth])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edgcale.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edgcale" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edgcale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edgcale</span></code></a>([nadv, meth])</p></td>
 <td><p>Defines global ALE controls for an explicit dynamic analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edhgls.html#ansys.mapdl.core.Mapdl.edhgls" title="ansys.mapdl.core.Mapdl.edhgls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edhgls</span></code></a>([hgco])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edhgls.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edhgls" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edhgls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edhgls</span></code></a>([hgco])</p></td>
 <td><p>Specifies the hourglass coefficient for an explicit dynamics analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edhist.html#ansys.mapdl.core.Mapdl.edhist" title="ansys.mapdl.core.Mapdl.edhist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edhist</span></code></a>([comp])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edhist.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edhist" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edhist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edhist</span></code></a>([comp])</p></td>
 <td><p>Specifies time-history output for an explicit dynamic analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edhtime.html#ansys.mapdl.core.Mapdl.edhtime" title="ansys.mapdl.core.Mapdl.edhtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edhtime</span></code></a>([nstep, dt])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edhtime.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edhtime" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edhtime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edhtime</span></code></a>([nstep, dt])</p></td>
 <td><p>Specifies the time-history output interval for an explicit dynamics</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edint.html#ansys.mapdl.core.Mapdl.edint" title="ansys.mapdl.core.Mapdl.edint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edint</span></code></a>([shellip, beamip])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edint.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edint" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edint</span></code></a>([shellip, beamip])</p></td>
 <td><p>Specifies number of integration points for explicit shell and beam</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edis.html#ansys.mapdl.core.Mapdl.edis" title="ansys.mapdl.core.Mapdl.edis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edis</span></code></a>([option, pidn, pido])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edis.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edis" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edis</span></code></a>([option, pidn, pido])</p></td>
 <td><p>Specifies stress initialization in an explicit dynamic full restart</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edload.html#ansys.mapdl.core.Mapdl.edload" title="ansys.mapdl.core.Mapdl.edload"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edload</span></code></a>([option, lab, key, cname, ...])</p></td>
-<td><p>Specifies loads for an explicit dynamics analysis.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.ednb.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.ednb" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.ednb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.ednb</span></code></a>([option, cname, ad, as_])</p></td>
+<td><p>Defines a nonreflecting boundary in an explicit dynamic analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edopt.html#ansys.mapdl.core.Mapdl.edopt" title="ansys.mapdl.core.Mapdl.edopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edopt</span></code></a>([option, value])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edopt.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edopt" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edopt</span></code></a>([option, value])</p></td>
 <td><p>Specifies the type of output for an explicit dynamics analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edout.html#ansys.mapdl.core.Mapdl.edout" title="ansys.mapdl.core.Mapdl.edout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edout</span></code></a>([option])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edout.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edout" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edout</span></code></a>([option])</p></td>
 <td><p>Specifies time-history output (ASCII format) for an explicit dynamics</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edpl.html#ansys.mapdl.core.Mapdl.edpl" title="ansys.mapdl.core.Mapdl.edpl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edpl</span></code></a>([ldnum])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edpart.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edpart" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edpart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edpart</span></code></a>([option, partid, cname])</p></td>
+<td><p>Configures parts for an explicit dynamics analysis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edpc.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edpc" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edpc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edpc</span></code></a>([min_, max_, inc])</p></td>
+<td><p>Selects and plots explicit dynamic contact entities.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edpl.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edpl" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edpl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edpl</span></code></a>([ldnum])</p></td>
 <td><p>Plots a time dependent load curve in an explicit dynamic analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edpvel.html#ansys.mapdl.core.Mapdl.edpvel" title="ansys.mapdl.core.Mapdl.edpvel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edpvel</span></code></a>([option, pid, vx, vy, vz, ...])</p></td>
-<td><p>Applies initial velocities to parts or part assemblies in an explicit</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edrc.html#ansys.mapdl.core.Mapdl.edrc" title="ansys.mapdl.core.Mapdl.edrc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edrc</span></code></a>([option, nrbf, ncsf, dtmax])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrc.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrc" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edrc</span></code></a>([option, nrbf, ncsf, ...])</p></td>
 <td><p>Specifies rigid/deformable switch controls in an explicit dynamic</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edrd.html#ansys.mapdl.core.Mapdl.edrd" title="ansys.mapdl.core.Mapdl.edrd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edrd</span></code></a>([option, part, mrb])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrd.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrd" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edrd</span></code></a>([option, part, mrb])</p></td>
 <td><p>Switches a part from deformable to rigid or from rigid to deformable in</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edri.html#ansys.mapdl.core.Mapdl.edri" title="ansys.mapdl.core.Mapdl.edri"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edri</span></code></a>([option, part, xc, yc, zc, tm, ...])</p></td>
-<td><p>Defines inertia properties for a new rigid body that is created when a</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edrst.html#ansys.mapdl.core.Mapdl.edrst" title="ansys.mapdl.core.Mapdl.edrst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edrst</span></code></a>([nstep, dt])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrst.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrst" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edrst</span></code></a>([nstep, dt])</p></td>
 <td><p>Specifies the output interval for an explicit dynamic analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edrun.html#ansys.mapdl.core.Mapdl.edrun" title="ansys.mapdl.core.Mapdl.edrun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edrun</span></code></a>([option, cons, ncpu])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrun.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrun" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edrun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edrun</span></code></a>([option, cons, ncpu])</p></td>
 <td><p>Specify LS-DYNA serial or parallel processing.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edshell.html#ansys.mapdl.core.Mapdl.edshell" title="ansys.mapdl.core.Mapdl.edshell"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edshell</span></code></a>([wpan, shnu, shtc, wpbt, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edshell.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edshell" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edshell"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edshell</span></code></a>([wpan, shnu, shtc, ...])</p></td>
 <td><p>Specifies shell computation controls for an explicit dynamics analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edsolv.html#ansys.mapdl.core.Mapdl.edsolv" title="ansys.mapdl.core.Mapdl.edsolv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edsolv</span></code></a>(**kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edsolv.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edsolv" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edsolv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edsolv</span></code></a>(**kwargs)</p></td>
 <td><p>Specifies &quot;explicit dynamics solution&quot; as the subsequent status topic.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edstart.html#ansys.mapdl.core.Mapdl.edstart" title="ansys.mapdl.core.Mapdl.edstart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edstart</span></code></a>([restart, memory, fsize, dumpfile])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edsp.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edsp" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edsp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edsp</span></code></a>([option, min_, max_, inc])</p></td>
+<td><p>Specifies small penetration checking for contact entities in an</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edstart.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edstart" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edstart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edstart</span></code></a>([restart, memory, ...])</p></td>
 <td><p>Specifies status (new or restart) of an explicit dynamics analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edterm.html#ansys.mapdl.core.Mapdl.edterm" title="ansys.mapdl.core.Mapdl.edterm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edterm</span></code></a>([option, lab, num, stop, maxc, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edterm.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edterm" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edterm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edterm</span></code></a>([option, lab, num, ...])</p></td>
 <td><p>Specifies termination criteria for an explicit dynamic analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edtp.html#ansys.mapdl.core.Mapdl.edtp" title="ansys.mapdl.core.Mapdl.edtp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edtp</span></code></a>([option, value1, value2])</p></td>
-<td><p>Plots explicit elements based on their time step size.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edvel.html#ansys.mapdl.core.Mapdl.edvel" title="ansys.mapdl.core.Mapdl.edvel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edvel</span></code></a>([option, cname, vx, vy, vz, ...])</p></td>
-<td><p>Applies initial velocities to nodes or node components in an explicit</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.edwrite.html#ansys.mapdl.core.Mapdl.edwrite" title="ansys.mapdl.core.Mapdl.edwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.edwrite</span></code></a>([option, fname, ext])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edwrite.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edwrite" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.edwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.edwrite</span></code></a>([option, fname, ext])</p></td>
 <td><p>Writes explicit dynamics input to an LS-DYNA input file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.rexport.html#ansys.mapdl.core.Mapdl.rexport" title="ansys.mapdl.core.Mapdl.rexport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.rexport</span></code></a>([target, lstep, sbstep, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.rexport.html#ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.rexport" title="ansys.mapdl.core._commands.prep7.explicit_dynamics.ExplicitDynamics.rexport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExplicitDynamics.rexport</span></code></a>([target, lstep, ...])</p></td>
 <td><p>Exports displacements from an implicit run to ANSYS LS-DYNA.</p></td>
 </tr>
 </tbody>

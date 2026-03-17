@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Special purpose &#8212; PyMAPDL</title>
+    <title>SpecialPurpose &#8212; PyMAPDL</title>
   
   
   
@@ -86,6 +86,7 @@
                 gtag('js', new Date());
                 gtag('config', 'G-JQJKPV6ZVB');
             </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mapdl_commands/prep7/special_purpose';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
@@ -98,8 +99,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="aerocoeff" href="_autosummary/ansys.mapdl.core.Mapdl.aerocoeff.html" />
-    <link rel="prev" title="pmlsize" href="_autosummary/ansys.mapdl.core.Mapdl.pmlsize.html" />
+    <link rel="next" title="adpci" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.adpci.html" />
+    <link rel="prev" title="vsweep" href="_autosummary/ansys.mapdl.core._commands.prep7.meshing.Meshing.vsweep.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -577,46 +578,53 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preprocessing</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="database.html">Database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="element_type.html">Element type</a></li>
-<li class="toctree-l1"><a class="reference internal" href="real_constants.html">Real constants</a></li>
-<li class="toctree-l1"><a class="reference internal" href="materials.html">Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="material_data_tables.html">Material data tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="primitives.html">Primitives</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hard_points.html">Hard points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lines.html">Lines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="areas.html">Areas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="volumes.html">Volumes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="booleans.html">Booleans</a></li>
-<li class="toctree-l1"><a class="reference internal" href="meshing.html">Meshing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="superelements.html">Superelements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coupled_dof.html">Coupled degrees of freedom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constraint_equations.html">Constraint equations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="status.html">Status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="explicit_dynamics.html">Explicit dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="morphing.html">Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="artificially_matched_layers.html">Artificially matched layers</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Special purpose</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.aerocoeff.html">aerocoeff</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cint.html">cint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cycexpand.html">cycexpand</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cycfreq.html">cycfreq</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cyclic.html">cyclic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cycopt.html">cycopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.emsym.html">emsym</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mstole.html">mstole</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.perbc2d.html">perbc2d</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.physics.html">physics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.race.html">race</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.sstate.html">sstate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.xfdata.html">xfdata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.xfenrich.html">xfenrich</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.xflist.html">xflist</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Prep7</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="areas.html">Areas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="booleans.html">Booleans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meshing.html">Meshing</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">SpecialPurpose</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.adpci.html">adpci</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.aerocoeff.html">aerocoeff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cint.html">cint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cycexpand.html">cycexpand</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cycfreq.html">cycfreq</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cyclic.html">cyclic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cycopt.html">cycopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.emsym.html">emsym</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.msopt.html">msopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.mstole.html">mstole</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.perbc2d.html">perbc2d</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.race.html">race</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.sstate.html">sstate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xfcrkmesh.html">xfcrkmesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xfdata.html">xfdata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xfenrich.html">xfenrich</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xflist.html">xflist</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="piping.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html">Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross_sections.html">CrossSections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lines.html">Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_tables.html">DataTables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations_.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupled_dof.html">CoupledDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morphing.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="element_type.html">ElementType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="volumes.html">Volumes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hard_points.html">HardPoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artificially_matched_layers.html">ArtificiallyMatchedLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="real_constants.html">RealConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superelements.html">Superelements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explicit_dynamics.html">ExplicitDynamics</a></li>
 </ul>
 </details></li>
 </ul>
@@ -723,8 +731,12 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Prep7</a>
+    </li>
       
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Special purpose</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">SpecialPurpose</span></li>
     
   </ul>
 </nav>
@@ -742,54 +754,64 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="special-purpose">
-<span id="ref-special-purpose-commands-api"></span><h1>Special purpose<a class="headerlink" href="#special-purpose" title="Link to this heading">#</a></h1>
-<p>These PREP7 commands are used for special-purpose operations.</p>
+  <section id="specialpurpose">
+<span id="ref-special-purpose"></span><h1>SpecialPurpose<a class="headerlink" href="#specialpurpose" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.prep7.special_purpose.</span></span><span class="sig-name descname"><span class="pre">SpecialPurpose</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.aerocoeff.html#ansys.mapdl.core.Mapdl.aerocoeff" title="ansys.mapdl.core.Mapdl.aerocoeff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.aerocoeff</span></code></a>([aeromodetype, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.adpci.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.adpci" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.adpci"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.adpci</span></code></a>([action, par1, par2, ...])</p></td>
+<td><p>Defines parameters associated with adaptive crack initiation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.aerocoeff.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.aerocoeff" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.aerocoeff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.aerocoeff</span></code></a>([aeromodetype, ...])</p></td>
 <td><p>Computes the aero-damping and stiffness coefficients and writes them to an APDL array.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cint.html#ansys.mapdl.core.Mapdl.cint" title="ansys.mapdl.core.Mapdl.cint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cint</span></code></a>([action, par1, par2, par3, par4, ...])</p></td>
-<td><p>Defines parameters associated with fracture parameter calculations</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cint.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cint" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.cint</span></code></a>([action, par1, par2, ...])</p></td>
+<td><p>Defines parameters associated with fracture-parameter calculations.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cycexpand.html#ansys.mapdl.core.Mapdl.cycexpand" title="ansys.mapdl.core.Mapdl.cycexpand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cycexpand</span></code></a>([wn, option, value1, value2])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cycexpand.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cycexpand" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cycexpand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.cycexpand</span></code></a>([wn, option, ...])</p></td>
 <td><p>Graphically expands displacements, stresses and strains of a cyclically symmetric model.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cycfreq.html#ansys.mapdl.core.Mapdl.cycfreq" title="ansys.mapdl.core.Mapdl.cycfreq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cycfreq</span></code></a>([option, value1, value2, ...])</p></td>
-<td><p>Specifies solution options for a cyclic symmetry mode-superposition</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cycfreq.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cycfreq" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cycfreq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.cycfreq</span></code></a>([option, value1, ...])</p></td>
+<td><p>Specifies solution options for a cyclic symmetry mode-superposition harmonic analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cyclic.html#ansys.mapdl.core.Mapdl.cyclic" title="ansys.mapdl.core.Mapdl.cyclic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cyclic</span></code></a>([nsector, angle, kcn, name, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cyclic.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cyclic" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cyclic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.cyclic</span></code></a>([nsector, angle, kcn, ...])</p></td>
 <td><p>Specifies a cyclic symmetry analysis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cycopt.html#ansys.mapdl.core.Mapdl.cycopt" title="ansys.mapdl.core.Mapdl.cycopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cycopt</span></code></a>([option, value1, value2, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cycopt.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cycopt" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.cycopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.cycopt</span></code></a>([option, value1, ...])</p></td>
 <td><p>Specifies solution options for a cyclic symmetry analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.emsym.html#ansys.mapdl.core.Mapdl.emsym" title="ansys.mapdl.core.Mapdl.emsym"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.emsym</span></code></a>([nsect])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.emsym.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.emsym" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.emsym"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.emsym</span></code></a>([nsect])</p></td>
 <td><p>Specifies circular symmetry for electromagnetic sources.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mstole.html#ansys.mapdl.core.Mapdl.mstole" title="ansys.mapdl.core.Mapdl.mstole"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mstole</span></code></a>([method, namesurf, namefluid])</p></td>
-<td><p>Adds two extra nodes from FLUID116 elements to SURF151 or SURF152</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.msopt.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.msopt" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.msopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.msopt</span></code></a>([option, sname, ...])</p></td>
+<td><p>Specifies solution options for a <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en/ans_mstag/ans_mstag_introTheory.html">multistage cyclic symmetry analysis</a>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.perbc2d.html#ansys.mapdl.core.Mapdl.perbc2d" title="ansys.mapdl.core.Mapdl.perbc2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.perbc2d</span></code></a>([loc1, loc2, loctol, r1, r2, ...])</p></td>
-<td><p>Generates periodic constraints for 2-D planar magnetic field analyses.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.mstole.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.mstole" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.mstole"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.mstole</span></code></a>([method, namesurf, ...])</p></td>
+<td><p>Adds two extra nodes from <code class="docutils literal notranslate"><span class="pre">FLUID116</span></code> elements to <code class="docutils literal notranslate"><span class="pre">SURF151</span></code> or <code class="docutils literal notranslate"><span class="pre">SURF152</span></code> elements for convection analyses.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.physics.html#ansys.mapdl.core.Mapdl.physics" title="ansys.mapdl.core.Mapdl.physics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.physics</span></code></a>([option, title, fname, ext])</p></td>
-<td><p>Writes, reads, or lists all element information</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.perbc2d.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.perbc2d" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.perbc2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.perbc2d</span></code></a>([loc1, loc2, loctol, ...])</p></td>
+<td><p>Generates periodic constraints for 2D planar magnetic field analyses.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.race.html#ansys.mapdl.core.Mapdl.race" title="ansys.mapdl.core.Mapdl.race"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.race</span></code></a>([xc, yc, rad, tcur, dy, dz, cname])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.race.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.race" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.race"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.race</span></code></a>([xc, yc, rad, tcur, dy, ...])</p></td>
 <td><p>Defines a &quot;racetrack&quot; current source.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.sstate.html#ansys.mapdl.core.Mapdl.sstate" title="ansys.mapdl.core.Mapdl.sstate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.sstate</span></code></a>([action, cm_name, val1, val2, ...])</p></td>
-<td><p>Defines a steady-state analysis.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.sstate.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.sstate" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.sstate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.sstate</span></code></a>([action, cm_name, ...])</p></td>
+<td><p>Defines a steady-state rolling analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.xfdata.html#ansys.mapdl.core.Mapdl.xfdata" title="ansys.mapdl.core.Mapdl.xfdata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.xfdata</span></code></a>([enrichmentid, lsm, elemnum, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xfcrkmesh.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xfcrkmesh" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xfcrkmesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.xfcrkmesh</span></code></a>([enrichmentid, ...])</p></td>
+<td><p>Defines a crack in the model when the crack surface is discretized by <code class="docutils literal notranslate"><span class="pre">MESH200</span></code> elements</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xfdata.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xfdata" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xfdata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.xfdata</span></code></a>([enrichmentid, lsm, ...])</p></td>
 <td><p>Defines a crack in the model by specifying nodal level set values</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.xfenrich.html#ansys.mapdl.core.Mapdl.xfenrich" title="ansys.mapdl.core.Mapdl.xfenrich"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.xfenrich</span></code></a>([enrichmentid, compname, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xfenrich.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xfenrich" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xfenrich"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.xfenrich</span></code></a>([enrichmentid, ...])</p></td>
 <td><p>Defines parameters associated with crack propagation using XFEM</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.xflist.html#ansys.mapdl.core.Mapdl.xflist" title="ansys.mapdl.core.Mapdl.xflist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.xflist</span></code></a>([enrichmentid])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xflist.html#ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xflist" title="ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xflist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpecialPurpose.xflist</span></code></a>([enrichmentid])</p></td>
 <td><p>Lists enrichment details and associated crack information</p></td>
 </tr>
 </tbody>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Element type &#8212; PyMAPDL</title>
+    <title>ElementType &#8212; PyMAPDL</title>
   
   
   
@@ -98,8 +98,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="dof" href="_autosummary/ansys.mapdl.core.Mapdl.dof.html" />
-    <link rel="prev" title="numstr" href="_autosummary/ansys.mapdl.core.Mapdl.numstr.html" />
+    <link rel="next" title="dof" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.dof.html" />
+    <link rel="prev" title="morph" href="_autosummary/ansys.mapdl.core._commands.prep7.morphing.Morphing.morph.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -577,42 +577,46 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preprocessing</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="database.html">Database</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Element type</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dof.html">dof</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.elbow.html">elbow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.et.html">et</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.etchg.html">etchg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.etcontrol.html">etcontrol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.etdele.html">etdele</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.etlist.html">etlist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.keyopt.html">keyopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nsvr.html">nsvr</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Prep7</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="areas.html">Areas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="booleans.html">Booleans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meshing.html">Meshing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="special_purpose.html">SpecialPurpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="piping.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html">Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross_sections.html">CrossSections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lines.html">Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_tables.html">DataTables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations_.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupled_dof.html">CoupledDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morphing.html">Morphing</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">ElementType</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.dof.html">dof</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.et.html">et</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.etchg.html">etchg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.etcontrol.html">etcontrol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.etdele.html">etdele</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.etlist.html">etlist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.keyopt.html">keyopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.nsvr.html">nsvr</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="real_constants.html">Real constants</a></li>
-<li class="toctree-l1"><a class="reference internal" href="materials.html">Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="material_data_tables.html">Material data tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="primitives.html">Primitives</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hard_points.html">Hard points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lines.html">Lines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="areas.html">Areas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="volumes.html">Volumes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="booleans.html">Booleans</a></li>
-<li class="toctree-l1"><a class="reference internal" href="meshing.html">Meshing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="superelements.html">Superelements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coupled_dof.html">Coupled degrees of freedom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constraint_equations.html">Constraint equations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="status.html">Status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="explicit_dynamics.html">Explicit dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="morphing.html">Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="artificially_matched_layers.html">Artificially matched layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="special_purpose.html">Special purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="volumes.html">Volumes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hard_points.html">HardPoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artificially_matched_layers.html">ArtificiallyMatchedLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="real_constants.html">RealConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superelements.html">Superelements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explicit_dynamics.html">ExplicitDynamics</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="nav bd-sidenav">
@@ -717,8 +721,12 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Prep7</a>
+    </li>
       
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Element type</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">ElementType</span></li>
     
   </ul>
 </nav>
@@ -736,37 +744,38 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="element-type">
-<span id="ref-element-type-commands-api"></span><h1>Element type<a class="headerlink" href="#element-type" title="Link to this heading">#</a></h1>
-<p>These PREP7 commands define the type of elements to be used in the model.</p>
+  <section id="elementtype">
+<span id="ref-element-type"></span><h1>ElementType<a class="headerlink" href="#elementtype" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.prep7.element_type.ElementType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.prep7.element_type.</span></span><span class="sig-name descname"><span class="pre">ElementType</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.prep7.element_type.ElementType" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.dof.html#ansys.mapdl.core.Mapdl.dof" title="ansys.mapdl.core.Mapdl.dof"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.dof</span></code></a>([lab1, lab2, lab3, lab4, lab5, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.dof.html#ansys.mapdl.core._commands.prep7.element_type.ElementType.dof" title="ansys.mapdl.core._commands.prep7.element_type.ElementType.dof"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementType.dof</span></code></a>([lab1, lab2, lab3, lab4, ...])</p></td>
 <td><p>Adds degrees of freedom to the current DOF set.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.elbow.html#ansys.mapdl.core.Mapdl.elbow" title="ansys.mapdl.core.Mapdl.elbow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.elbow</span></code></a>([transkey, tol, dof, cons1, ...])</p></td>
-<td><p>APDL Command: ELBOW</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.et.html#ansys.mapdl.core._commands.prep7.element_type.ElementType.et" title="ansys.mapdl.core._commands.prep7.element_type.ElementType.et"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementType.et</span></code></a>([itype, ename, kop1, kop2, ...])</p></td>
+<td><p>Defines a local element type from the element library.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.et.html#ansys.mapdl.core.Mapdl.et" title="ansys.mapdl.core.Mapdl.et"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.et</span></code></a>([itype, ename, kop1, kop2, kop3, ...])</p></td>
-<td><p>Define a local element type from the element library.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.etchg.html#ansys.mapdl.core.Mapdl.etchg" title="ansys.mapdl.core.Mapdl.etchg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.etchg</span></code></a>([cnv])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.etchg.html#ansys.mapdl.core._commands.prep7.element_type.ElementType.etchg" title="ansys.mapdl.core._commands.prep7.element_type.ElementType.etchg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementType.etchg</span></code></a>([cnv])</p></td>
 <td><p>Changes element types to their corresponding types.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.etcontrol.html#ansys.mapdl.core.Mapdl.etcontrol" title="ansys.mapdl.core.Mapdl.etcontrol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.etcontrol</span></code></a>([eltech, eldegene])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.etcontrol.html#ansys.mapdl.core._commands.prep7.element_type.ElementType.etcontrol" title="ansys.mapdl.core._commands.prep7.element_type.ElementType.etcontrol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementType.etcontrol</span></code></a>([eltech, eldegene])</p></td>
 <td><p>Control the element technologies used in element formulation (for applicable elements).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.etdele.html#ansys.mapdl.core.Mapdl.etdele" title="ansys.mapdl.core.Mapdl.etdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.etdele</span></code></a>([ityp1, ityp2, inc])</p></td>
-<td><p>APDL Command: ETDELE</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.etdele.html#ansys.mapdl.core._commands.prep7.element_type.ElementType.etdele" title="ansys.mapdl.core._commands.prep7.element_type.ElementType.etdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementType.etdele</span></code></a>([ityp1, ityp2, inc])</p></td>
+<td><p>Deletes element types.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.etlist.html#ansys.mapdl.core.Mapdl.etlist" title="ansys.mapdl.core.Mapdl.etlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.etlist</span></code></a>([ityp1, ityp2, inc])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.etlist.html#ansys.mapdl.core._commands.prep7.element_type.ElementType.etlist" title="ansys.mapdl.core._commands.prep7.element_type.ElementType.etlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementType.etlist</span></code></a>([ityp1, ityp2, inc])</p></td>
 <td><p>Lists currently defined element types.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.keyopt.html#ansys.mapdl.core.Mapdl.keyopt" title="ansys.mapdl.core.Mapdl.keyopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.keyopt</span></code></a>([itype, knum, value])</p></td>
-<td><p>APDL Command: KEYOPT</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.keyopt.html#ansys.mapdl.core._commands.prep7.element_type.ElementType.keyopt" title="ansys.mapdl.core._commands.prep7.element_type.ElementType.keyopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementType.keyopt</span></code></a>([itype, knum, value])</p></td>
+<td><p>Sets element key options.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nsvr.html#ansys.mapdl.core.Mapdl.nsvr" title="ansys.mapdl.core.Mapdl.nsvr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nsvr</span></code></a>([itype, nstv])</p></td>
-<td><p>APDL Command: NSVR</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.nsvr.html#ansys.mapdl.core._commands.prep7.element_type.ElementType.nsvr" title="ansys.mapdl.core._commands.prep7.element_type.ElementType.nsvr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ElementType.nsvr</span></code></a>([itype, nstv])</p></td>
+<td><p>Defines the number of variables for user-programmable element options.</p></td>
 </tr>
 </tbody>
 </table>

@@ -772,7 +772,7 @@ construct the bracket easily with combinations of rectangles and circle primitiv
 <p>Select an arbitrary global origin location, and then define the rectangle and circle
 primitives relative to that origin. For this analysis, use the center of the
 upper-left hole. Begin by defining a rectangle relative to that location.</p>
-<p>The APDL command <a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.rectng.html#ansys.mapdl.core.Mapdl.rectng" title="ansys.mapdl.core.Mapdl.rectng"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.prep7()</span></code></a> is
+<p>The APDL command <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.prep7()</span></code> is
 used to create a rectangle with <code class="docutils literal notranslate"><span class="pre">X1</span></code>, <code class="docutils literal notranslate"><span class="pre">X2</span></code>, <code class="docutils literal notranslate"><span class="pre">Y1</span></code>, and <code class="docutils literal notranslate"><span class="pre">Y2</span></code> dimensions.
 In PyMAPDL the <code class="xref py py-class docutils literal notranslate"><span class="pre">mapdl()</span></code> class is used
 to call the APDL command.</p>
@@ -843,7 +843,7 @@ the original geometric parameters (<code class="docutils literal notranslate"><s
 a full circle on each end and then combine the circles and rectangles with a
 Boolean add operation (discussed in <a class="reference internal" href="#subtract-pin-holes-from-bracket">Subtract pin holes from bracket</a>).</p>
 <p>The APDL command to create the circles is
-<a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.cyl4.html#ansys.mapdl.core.Mapdl.cyl4" title="ansys.mapdl.core.Mapdl.cyl4"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.cyl4()</span></code></a>.</p>
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.cyl4()</span></code>.</p>
 <p>The first circle area is located on the left side at the X,Y location, and
 its radius is <span class="math notranslate nohighlight">\(1\)</span>.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create first circle</span>
@@ -874,7 +874,7 @@ as the first circle area.</p>
 <h3>Add areas<a class="headerlink" href="#add-areas" title="Link to this heading">#</a></h3>
 <p>Now that the appropriate pieces of the model (rectangles and circles) are defined,
 add them together so the model becomes one continuous area.
-Use the Boolean add operation <a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.aadd.html#ansys.mapdl.core.Mapdl.aadd" title="ansys.mapdl.core.Mapdl.aadd"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.aadd()</span></code></a>
+Use the Boolean add operation <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.aadd()</span></code>
 to add the areas together.</p>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">all</span></code> argument to add all areas.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">aadd</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>  <span class="c1"># Prints the ID of the created area</span>
@@ -909,7 +909,7 @@ the fillet line.</p>
 </pre></div>
 </div>
 <p>Once you have both lines selected, you can use the PyMAPDL command
-<a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.lfillt.html#ansys.mapdl.core.Mapdl.lfillt" title="ansys.mapdl.core.Mapdl.lfillt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.lfillt()</span></code></a> to generate the fillet
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.lfillt()</span></code> to generate the fillet
 between the lines.</p>
 <p><strong>Note</strong> that Python could return a list if more than one line is selected.</p>
 <p>Here you use a mix of the APDL parameter as a string <code class="docutils literal notranslate"><span class="pre">line1</span></code> and
@@ -927,7 +927,7 @@ the <code class="docutils literal notranslate"><span class="pre">l2</span></code
 <section id="create-fillet-area">
 <h3>Create fillet area<a class="headerlink" href="#create-fillet-area" title="Link to this heading">#</a></h3>
 <p>To create the area delineated by <code class="docutils literal notranslate"><span class="pre">line1</span></code>, <code class="docutils literal notranslate"><span class="pre">line2</span></code>, and newly created
-<code class="docutils literal notranslate"><span class="pre">line3</span></code>, use the <a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.al.html#ansys.mapdl.core.Mapdl.al" title="ansys.mapdl.core.Mapdl.al"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.al()</span></code></a> method.
+<code class="docutils literal notranslate"><span class="pre">line3</span></code>, use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.al()</span></code> method.
 The three lines are the input. If you select them all, you can use
 the <code class="docutils literal notranslate"><span class="pre">'ALL'</span></code> argument to create the area.</p>
 <p>First you have to reselect the newly created lines in the fillet area.
@@ -953,7 +953,7 @@ Note the <code class="docutils literal notranslate"><span class="pre">'A'</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">lplot</span><span class="p">(</span><span class="n">cpos</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">,</span> <span class="n">show_line_numbering</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Then use <a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.al.html#ansys.mapdl.core.Mapdl.al" title="ansys.mapdl.core.Mapdl.al"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.al()</span></code></a> command to create the areas
+<p>Then use <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.al()</span></code> command to create the areas
 from the lines.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the area</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">al</span><span class="p">(</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>  <span class="c1"># Prints the ID of the newly created area</span>
@@ -963,7 +963,7 @@ from the lines.</p>
 <section id="add-areas-together">
 <h3>Add areas together<a class="headerlink" href="#add-areas-together" title="Link to this heading">#</a></h3>
 <p>Append all areas again using the
-<a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.aadd.html#ansys.mapdl.core.Mapdl.aadd" title="ansys.mapdl.core.Mapdl.aadd"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.aadd()</span></code></a> method.
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.aadd()</span></code> method.
 Because you have only the two areas to combine, use the <code class="docutils literal notranslate"><span class="pre">'ALL'</span></code> argument.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add the area to the main area</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">aadd</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
@@ -1010,7 +1010,7 @@ For this pinhole the dimensions are:</p>
 <h3>Subtract pin holes from bracket<a class="headerlink" href="#subtract-pin-holes-from-bracket" title="Link to this heading">#</a></h3>
 <p>If you use the <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.Mapdl.aplot.html#ansys.mapdl.core.Mapdl.aplot" title="ansys.mapdl.core.Mapdl.aplot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.aplot()</span></code></a> command with lines, at
 this point, you have created two circle areas overlapping the bracket.
-You can use the <a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.asba.html#ansys.mapdl.core.Mapdl.asba" title="ansys.mapdl.core.Mapdl.asba"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.asba()</span></code></a> command, which is
+You can use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.asba()</span></code> command, which is
 the Boolean command to subtract areas, to remove the circles from the bracket.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove pin hole areas from bracket</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">asba</span><span class="p">(</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">pinhole1</span><span class="p">)</span>
@@ -1030,7 +1030,7 @@ A36 Steel, with given values for the Young's modulus of elasticity and Poisson's
 <span class="n">prxy</span> <span class="o">=</span> <span class="mf">0.27</span>  <span class="c1"># Poisson&#39;s ratio</span>
 </pre></div>
 </div>
-<p>Use the <a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.mp.html#ansys.mapdl.core.Mapdl.mp" title="ansys.mapdl.core.Mapdl.mp"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.mp()</span></code></a> command to
+<p>Use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.mp()</span></code> command to
 define material properties in PyMAPDL.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;EX&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ex</span><span class="p">)</span>
 <span class="n">mapdl</span><span class="o">.</span><span class="n">mp</span><span class="p">(</span><span class="s2">&quot;PRXY&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">prxy</span><span class="p">)</span>
@@ -1039,7 +1039,7 @@ define material properties in PyMAPDL.</p>
 </section>
 <section id="define-element-types-and-options">
 <h3>Define element types and options<a class="headerlink" href="#define-element-types-and-options" title="Link to this heading">#</a></h3>
-<p>You use the <a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.et.html#ansys.mapdl.core.Mapdl.et" title="ansys.mapdl.core.Mapdl.et"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.et()</span></code></a> command to select an element .</p>
+<p>You use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.et()</span></code> command to select an element .</p>
 <p>In any analysis, you select elements from a library of element types and
 define the appropriate ones for the analysis. In this case, only one element
 type is used: <a class="reference external" href="https://ansyshelp.ansys.com/account/Secured?returnurl=/Views/Secured/corp/v242/en/ans_elem/Hlp_E_PLANE183.html">PLANE183</a>, a 2D, quadratic, structural,
@@ -1066,7 +1066,7 @@ Ansys Help.</p>
 <h3>Define real constants<a class="headerlink" href="#define-real-constants" title="Link to this heading">#</a></h3>
 <p>Assuming plane stress with thickness, enter the thickness as a real constant
 for <a class="reference external" href="https://ansyshelp.ansys.com/account/Secured?returnurl=/Views/Secured/corp/v242/en/ans_elem/Hlp_E_PLANE183.html">PLANE183</a>:</p>
-<p>You use the <a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.r.html#ansys.mapdl.core.Mapdl.r" title="ansys.mapdl.core.Mapdl.r"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.r()</span></code></a> command to set real
+<p>You use the <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.r()</span></code> command to set real
 constants.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set element thickness</span>
 <span class="n">thick</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -1081,9 +1081,9 @@ constants.</p>
 unsure of how to determine mesh density, you can allow Mechanical APDL to apply
 a default mesh. For this model, however, you want to specify a global element size
 to control overall mesh density.
-Set global size control using the <a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.esize.html#ansys.mapdl.core.Mapdl.esize" title="ansys.mapdl.core.Mapdl.esize"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.esize()</span></code></a>
+Set global size control using the <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.esize()</span></code>
 command. Set a size of <span class="math notranslate nohighlight">\(0.5\)</span> or a slightly smaller value to improve the mesh.</p>
-<p>Mesh the areas using the <a class="reference internal" href="../../../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.amesh.html#ansys.mapdl.core.Mapdl.amesh" title="ansys.mapdl.core.Mapdl.amesh"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.amesh()</span></code></a> command.
+<p>Mesh the areas using the <code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.amesh()</span></code> command.
 Your mesh may vary slightly from the mesh shown. You may see slightly different
 results during postprocessing.</p>
 <p>Now you can use the <a class="reference internal" href="../../../api/_autosummary/ansys.mapdl.core.Mapdl.eplot.html#ansys.mapdl.core.Mapdl.eplot" title="ansys.mapdl.core.Mapdl.eplot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">mapdl.eplot()</span></code></a> command to see the mesh.</p>

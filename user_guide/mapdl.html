@@ -863,7 +863,7 @@ The following code snippet is a demonstration of this kind of problem:</p>
 </pre></div>
 </div>
 <p>This is because the first <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.get_array.html#ansys.mapdl.core.Mapdl.get_array" title="ansys.mapdl.core.Mapdl.get_array"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.get_array()</span></code></a>
-method call is executed <em>before</em> the <a class="reference internal" href="../mapdl_commands/prep7/_autosummary/ansys.mapdl.core.Mapdl.k.html#ansys.mapdl.core.Mapdl.k" title="ansys.mapdl.core.Mapdl.k"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.k()</span></code></a> method call.</p>
+method call is executed <em>before</em> the <code class="xref py py-meth docutils literal notranslate"><span class="pre">Mapdl.k()</span></code> method call.</p>
 <p>You should not retrieve any data in a Pythonic way from the MAPDL instance while using the
 <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">non_interactive</span> <span class="pre">context</span></code></a> method.
 Being aware of this kind of behavior and how the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.Mapdl.non_interactive.html#ansys.mapdl.core.Mapdl.non_interactive" title="ansys.mapdl.core.Mapdl.non_interactive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">non_interactive</span> <span class="pre">context</span></code></a> method

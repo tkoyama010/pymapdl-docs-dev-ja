@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Coupled degrees of freedom &#8212; PyMAPDL</title>
+    <title>CoupledDof &#8212; PyMAPDL</title>
   
   
   
@@ -98,8 +98,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="cp" href="_autosummary/ansys.mapdl.core.Mapdl.cp.html" />
-    <link rel="prev" title="dsurf" href="_autosummary/ansys.mapdl.core.Mapdl.dsurf.html" />
+    <link rel="next" title="cp" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cp.html" />
+    <link rel="prev" title="transfer" href="_autosummary/ansys.mapdl.core._commands.prep7.nodes.Nodes.transfer.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -577,41 +577,47 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preprocessing</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="database.html">Database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="element_type.html">Element type</a></li>
-<li class="toctree-l1"><a class="reference internal" href="real_constants.html">Real constants</a></li>
-<li class="toctree-l1"><a class="reference internal" href="materials.html">Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="material_data_tables.html">Material data tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="primitives.html">Primitives</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hard_points.html">Hard points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lines.html">Lines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="areas.html">Areas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="volumes.html">Volumes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="booleans.html">Booleans</a></li>
-<li class="toctree-l1"><a class="reference internal" href="meshing.html">Meshing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="superelements.html">Superelements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">Digitizing</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Coupled degrees of freedom</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cp.html">cp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cpdele.html">cpdele</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cpintf.html">cpintf</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cplgen.html">cplgen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cplist.html">cplist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cpmerge.html">cpmerge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cpngen.html">cpngen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cpsgen.html">cpsgen</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Prep7</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="areas.html">Areas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="booleans.html">Booleans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meshing.html">Meshing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="special_purpose.html">SpecialPurpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="piping.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html">Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross_sections.html">CrossSections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lines.html">Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_tables.html">DataTables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations_.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">CoupledDof</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cp.html">cp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpdele.html">cpdele</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpintf.html">cpintf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cplgen.html">cplgen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cplist.html">cplist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpmerge.html">cpmerge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpngen.html">cpngen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpsel.html">cpsel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpsgen.html">cpsgen</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="constraint_equations.html">Constraint equations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="status.html">Status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="explicit_dynamics.html">Explicit dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="morphing.html">Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="artificially_matched_layers.html">Artificially matched layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="special_purpose.html">Special purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morphing.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="element_type.html">ElementType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="volumes.html">Volumes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hard_points.html">HardPoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artificially_matched_layers.html">ArtificiallyMatchedLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="real_constants.html">RealConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superelements.html">Superelements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explicit_dynamics.html">ExplicitDynamics</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="nav bd-sidenav">
@@ -716,8 +722,12 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Prep7</a>
+    </li>
       
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Coupled degrees of freedom</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">CoupledDof</span></li>
     
   </ul>
 </nav>
@@ -735,34 +745,40 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="coupled-degrees-of-freedom">
-<span id="ref-coupled-dof-commands-api"></span><h1>Coupled degrees of freedom<a class="headerlink" href="#coupled-degrees-of-freedom" title="Link to this heading">#</a></h1>
-<p>These PREP7 commands are used to define, modify, list, etc., coupled
-degrees of freedom.</p>
+  <section id="coupleddof">
+<span id="ref-coupled-dof"></span><h1>CoupledDof<a class="headerlink" href="#coupleddof" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.prep7.coupled_dof.</span></span><span class="sig-name descname"><span class="pre">CoupledDof</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cp.html#ansys.mapdl.core.Mapdl.cp" title="ansys.mapdl.core.Mapdl.cp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cp</span></code></a>([nset, lab, node1, node2, node3, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cp.html#ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cp" title="ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoupledDof.cp</span></code></a>([nset, lab, node1, node2, ...])</p></td>
 <td><p>Defines (or modifies) a set of coupled degrees of freedom.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cpdele.html#ansys.mapdl.core.Mapdl.cpdele" title="ansys.mapdl.core.Mapdl.cpdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cpdele</span></code></a>([nset1, nset2, ninc, nsel])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpdele.html#ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpdele" title="ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoupledDof.cpdele</span></code></a>([nset1, nset2, ninc, nsel])</p></td>
 <td><p>Deletes coupled degree of freedom sets.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cpintf.html#ansys.mapdl.core.Mapdl.cpintf" title="ansys.mapdl.core.Mapdl.cpintf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cpintf</span></code></a>([lab, toler])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpintf.html#ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpintf" title="ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpintf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoupledDof.cpintf</span></code></a>([lab, toler])</p></td>
 <td><p>Defines coupled degrees of freedom at an interface.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cplgen.html#ansys.mapdl.core.Mapdl.cplgen" title="ansys.mapdl.core.Mapdl.cplgen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cplgen</span></code></a>([nsetf, lab1, lab2, lab3, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cplgen.html#ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cplgen" title="ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cplgen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoupledDof.cplgen</span></code></a>([nsetf, lab1, lab2, lab3, ...])</p></td>
 <td><p>Generates sets of coupled nodes from an existing set.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cplist.html#ansys.mapdl.core.Mapdl.cplist" title="ansys.mapdl.core.Mapdl.cplist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cplist</span></code></a>([nset1, nset2, ninc, nsel])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cplist.html#ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cplist" title="ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cplist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoupledDof.cplist</span></code></a>([nset1, nset2, ninc, nsel])</p></td>
 <td><p>Lists the coupled degree of freedom sets.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cpmerge.html#ansys.mapdl.core.Mapdl.cpmerge" title="ansys.mapdl.core.Mapdl.cpmerge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cpmerge</span></code></a>([lab])</p></td>
-<td><p>Merges different couple sets with duplicate degrees of freedom into one</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpmerge.html#ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpmerge" title="ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpmerge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoupledDof.cpmerge</span></code></a>([lab])</p></td>
+<td><p>Merges different couple sets with duplicate degrees of freedom into one couple set.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cpngen.html#ansys.mapdl.core.Mapdl.cpngen" title="ansys.mapdl.core.Mapdl.cpngen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cpngen</span></code></a>([nset, lab, node1, node2, ninc])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpngen.html#ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpngen" title="ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpngen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoupledDof.cpngen</span></code></a>([nset, lab, node1, node2, ...])</p></td>
 <td><p>Defines, modifies, or adds to a set of coupled degrees of freedom.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cpsgen.html#ansys.mapdl.core.Mapdl.cpsgen" title="ansys.mapdl.core.Mapdl.cpsgen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cpsgen</span></code></a>([itime, inc, nset1, nset2, ninc])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpsel.html#ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpsel" title="ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpsel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoupledDof.cpsel</span></code></a>([type_, vmin, vmax, vinc])</p></td>
+<td><p>Selects coupled degree-of-freedom sets via predefined reference numbers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpsgen.html#ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpsgen" title="ansys.mapdl.core._commands.prep7.coupled_dof.CoupledDof.cpsgen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CoupledDof.cpsgen</span></code></a>([itime, inc, nset1, ...])</p></td>
 <td><p>Generates sets of coupled nodes from existing sets.</p></td>
 </tr>
 </tbody>

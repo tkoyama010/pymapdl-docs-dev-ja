@@ -86,6 +86,7 @@
                 gtag('js', new Date());
                 gtag('config', 'G-JQJKPV6ZVB');
             </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mapdl_commands/prep7/database';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
@@ -98,8 +99,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="aflist" href="_autosummary/ansys.mapdl.core.Mapdl.aflist.html" />
-    <link rel="prev" title="wait" href="../apdl/_autosummary/ansys.mapdl.core._commands.apdl.process_controls.ProcessControls.wait.html" />
+    <link rel="next" title="aflist" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.aflist.html" />
+    <link rel="prev" title="xflist" href="_autosummary/ansys.mapdl.core._commands.prep7.special_purpose.SpecialPurpose.xflist.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -577,46 +578,52 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preprocessing</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Database</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.aflist.html">aflist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cdread.html">cdread</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cdwrite.html">cdwrite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cdopt.html">cdopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cecheck.html">cecheck</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.check.html">check</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.igesout.html">igesout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mfimport.html">mfimport</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nooffset.html">nooffset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.numcmp.html">numcmp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nummrg.html">nummrg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.numoff.html">numoff</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.numstr.html">numstr</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Prep7</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="areas.html">Areas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="booleans.html">Booleans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meshing.html">Meshing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="special_purpose.html">SpecialPurpose</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Database</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.aflist.html">aflist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.cdopt.html">cdopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.cdread.html">cdread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.cdwrite.html">cdwrite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.cecheck.html">cecheck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.check.html">check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.cncheck.html">cncheck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.escheck.html">escheck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.igesout.html">igesout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.nooffset.html">nooffset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.numcmp.html">numcmp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.nummrg.html">nummrg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.numoff.html">numoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.numstr.html">numstr</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="element_type.html">Element type</a></li>
-<li class="toctree-l1"><a class="reference internal" href="real_constants.html">Real constants</a></li>
-<li class="toctree-l1"><a class="reference internal" href="materials.html">Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="material_data_tables.html">Material data tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="primitives.html">Primitives</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hard_points.html">Hard points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lines.html">Lines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="areas.html">Areas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="volumes.html">Volumes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="booleans.html">Booleans</a></li>
-<li class="toctree-l1"><a class="reference internal" href="meshing.html">Meshing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="superelements.html">Superelements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coupled_dof.html">Coupled degrees of freedom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constraint_equations.html">Constraint equations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="status.html">Status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="explicit_dynamics.html">Explicit dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="morphing.html">Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="artificially_matched_layers.html">Artificially matched layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="special_purpose.html">Special purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="piping.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html">Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross_sections.html">CrossSections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lines.html">Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_tables.html">DataTables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations_.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupled_dof.html">CoupledDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morphing.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="element_type.html">ElementType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials.html">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="volumes.html">Volumes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hard_points.html">HardPoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artificially_matched_layers.html">ArtificiallyMatchedLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="real_constants.html">RealConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superelements.html">Superelements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explicit_dynamics.html">ExplicitDynamics</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="nav bd-sidenav">
@@ -721,6 +728,10 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Prep7</a>
+    </li>
       
     <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Database</span></li>
     
@@ -741,49 +752,54 @@
                 <article class="bd-article">
                   
   <section id="database">
-<span id="ref-database-commands-api"></span><h1>Database<a class="headerlink" href="#database" title="Link to this heading">#</a></h1>
-<p>These PREP7 commands are used to read model data into the database,
-list out the database, and control the numbering of entities in the
-database.</p>
+<span id="ref-database"></span><h1>Database<a class="headerlink" href="#database" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.prep7.database.Database">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.prep7.database.</span></span><span class="sig-name descname"><span class="pre">Database</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.prep7.database.Database" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.aflist.html#ansys.mapdl.core.Mapdl.aflist" title="ansys.mapdl.core.Mapdl.aflist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.aflist</span></code></a>(**kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.aflist.html#ansys.mapdl.core._commands.prep7.database.Database.aflist" title="ansys.mapdl.core._commands.prep7.database.Database.aflist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.aflist</span></code></a>(**kwargs)</p></td>
 <td><p>Lists the current data in the database.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cdread.html#ansys.mapdl.core.Mapdl.cdread" title="ansys.mapdl.core.Mapdl.cdread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cdread</span></code></a>([option, fname, ext, fnamei, exti])</p></td>
-<td><p>Reads a file of solid model and database information into the database.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cdwrite.html#ansys.mapdl.core.Mapdl.cdwrite" title="ansys.mapdl.core.Mapdl.cdwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cdwrite</span></code></a>([option, fname, ext, fnamei, ...])</p></td>
-<td><p>Writes geometry and load database items to a file.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cdopt.html#ansys.mapdl.core.Mapdl.cdopt" title="ansys.mapdl.core.Mapdl.cdopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cdopt</span></code></a>([option])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.cdopt.html#ansys.mapdl.core._commands.prep7.database.Database.cdopt" title="ansys.mapdl.core._commands.prep7.database.Database.cdopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.cdopt</span></code></a>([option])</p></td>
 <td><p>Specifies format to be used for archiving geometry.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.cecheck.html#ansys.mapdl.core.Mapdl.cecheck" title="ansys.mapdl.core.Mapdl.cecheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.cecheck</span></code></a>([itemlab, tolerance, dof])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.cdread.html#ansys.mapdl.core._commands.prep7.database.Database.cdread" title="ansys.mapdl.core._commands.prep7.database.Database.cdread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.cdread</span></code></a>([option, fname, ext, ...])</p></td>
+<td><p>Reads a file of solid model and database information into the database.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.cdwrite.html#ansys.mapdl.core._commands.prep7.database.Database.cdwrite" title="ansys.mapdl.core._commands.prep7.database.Database.cdwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.cdwrite</span></code></a>([option, fname, ext, ...])</p></td>
+<td><p>Writes geometry and load database items to a file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.cecheck.html#ansys.mapdl.core._commands.prep7.database.Database.cecheck" title="ansys.mapdl.core._commands.prep7.database.Database.cecheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.cecheck</span></code></a>([itemlab, tolerance, dof])</p></td>
 <td><p>Check constraint equations and couplings for rigid body motions.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.check.html#ansys.mapdl.core.Mapdl.check" title="ansys.mapdl.core.Mapdl.check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.check</span></code></a>([sele, levl])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.check.html#ansys.mapdl.core._commands.prep7.database.Database.check" title="ansys.mapdl.core._commands.prep7.database.Database.check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.check</span></code></a>([sele, levl])</p></td>
 <td><p>Checks current database items for completeness.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.igesout.html#ansys.mapdl.core.Mapdl.igesout" title="ansys.mapdl.core.Mapdl.igesout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.igesout</span></code></a>([fname, ext, att])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.cncheck.html#ansys.mapdl.core._commands.prep7.database.Database.cncheck" title="ansys.mapdl.core._commands.prep7.database.Database.cncheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.cncheck</span></code></a>([option, rid1, rid2, rinc, ...])</p></td>
+<td><p>Provides and/or adjusts the initial status of contact pairs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.escheck.html#ansys.mapdl.core._commands.prep7.database.Database.escheck" title="ansys.mapdl.core._commands.prep7.database.Database.escheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.escheck</span></code></a>([sele, levl, defkey])</p></td>
+<td><p>Perform element shape checking for a selected element set.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.igesout.html#ansys.mapdl.core._commands.prep7.database.Database.igesout" title="ansys.mapdl.core._commands.prep7.database.Database.igesout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.igesout</span></code></a>([fname, ext, att])</p></td>
 <td><p>Writes solid model data to a file in IGES Version 5.1 format.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mfimport.html#ansys.mapdl.core.Mapdl.mfimport" title="ansys.mapdl.core.Mapdl.mfimport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mfimport</span></code></a>([fnumb, option, fname, ext])</p></td>
-<td><p>Imports a new field into a current ANSYS Multi-field solver analysis.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.nooffset.html#ansys.mapdl.core._commands.prep7.database.Database.nooffset" title="ansys.mapdl.core._commands.prep7.database.Database.nooffset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.nooffset</span></code></a>([label])</p></td>
+<td><p>Prevents the <span class="xref std std-ref">cdread</span> command from offsetting specified data items</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nooffset.html#ansys.mapdl.core.Mapdl.nooffset" title="ansys.mapdl.core.Mapdl.nooffset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nooffset</span></code></a>([label])</p></td>
-<td><p>Prevents the CDREAD command from offsetting specified data items</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.numcmp.html#ansys.mapdl.core.Mapdl.numcmp" title="ansys.mapdl.core.Mapdl.numcmp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.numcmp</span></code></a>([label])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.numcmp.html#ansys.mapdl.core._commands.prep7.database.Database.numcmp" title="ansys.mapdl.core._commands.prep7.database.Database.numcmp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.numcmp</span></code></a>([label])</p></td>
 <td><p>Compresses the numbering of defined items.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.nummrg.html#ansys.mapdl.core.Mapdl.nummrg" title="ansys.mapdl.core.Mapdl.nummrg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.nummrg</span></code></a>([label, toler, gtoler, action, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.nummrg.html#ansys.mapdl.core._commands.prep7.database.Database.nummrg" title="ansys.mapdl.core._commands.prep7.database.Database.nummrg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.nummrg</span></code></a>([label, toler, gtoler, ...])</p></td>
 <td><p>Merges coincident or equivalently defined items.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.numoff.html#ansys.mapdl.core.Mapdl.numoff" title="ansys.mapdl.core.Mapdl.numoff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.numoff</span></code></a>([label, value])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.numoff.html#ansys.mapdl.core._commands.prep7.database.Database.numoff" title="ansys.mapdl.core._commands.prep7.database.Database.numoff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.numoff</span></code></a>([label, value, kref])</p></td>
 <td><p>Adds a number offset to defined items.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.numstr.html#ansys.mapdl.core.Mapdl.numstr" title="ansys.mapdl.core.Mapdl.numstr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.numstr</span></code></a>([label, value])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.database.Database.numstr.html#ansys.mapdl.core._commands.prep7.database.Database.numstr" title="ansys.mapdl.core._commands.prep7.database.Database.numstr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Database.numstr</span></code></a>([label, value])</p></td>
 <td><p>Establishes starting numbers for automatically numbered items.</p></td>
 </tr>
 </tbody>

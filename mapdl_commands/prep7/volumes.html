@@ -98,8 +98,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="extopt" href="_autosummary/ansys.mapdl.core.Mapdl.extopt.html" />
-    <link rel="prev" title="splot" href="_autosummary/ansys.mapdl.core.Mapdl.splot.html" />
+    <link rel="next" title="extopt" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.extopt.html" />
+    <link rel="prev" title="uimp" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.uimp.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -577,48 +577,54 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preprocessing</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="database.html">Database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="element_type.html">Element type</a></li>
-<li class="toctree-l1"><a class="reference internal" href="real_constants.html">Real constants</a></li>
-<li class="toctree-l1"><a class="reference internal" href="materials.html">Materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="material_data_tables.html">Material data tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="primitives.html">Primitives</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hard_points.html">Hard points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lines.html">Lines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="areas.html">Areas</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Volumes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.extopt.html">extopt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.v.html">v</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.va.html">va</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vdele.html">vdele</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vdgl.html">vdgl</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vdrag.html">vdrag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vext.html">vext</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vgen.html">vgen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vlist.html">vlist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vlscale.html">vlscale</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.voffst.html">voffst</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vrotat.html">vrotat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vsum.html">vsum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vsymm.html">vsymm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vtran.html">vtran</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Prep7</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="areas.html">Areas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="booleans.html">Booleans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meshing.html">Meshing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="special_purpose.html">SpecialPurpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="piping.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html">Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross_sections.html">CrossSections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lines.html">Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_tables.html">DataTables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations_.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupled_dof.html">CoupledDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morphing.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="element_type.html">ElementType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials.html">Materials</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Volumes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.extopt.html">extopt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.v.html">v</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.va.html">va</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vdele.html">vdele</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vdgl.html">vdgl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vdrag.html">vdrag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vext.html">vext</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vgen.html">vgen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vlist.html">vlist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vlscale.html">vlscale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.voffst.html">voffst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vplot.html">vplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vrotat.html">vrotat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vsum.html">vsum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vsymm.html">vsymm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vtran.html">vtran</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="booleans.html">Booleans</a></li>
-<li class="toctree-l1"><a class="reference internal" href="meshing.html">Meshing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="superelements.html">Superelements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coupled_dof.html">Coupled degrees of freedom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constraint_equations.html">Constraint equations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="status.html">Status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="explicit_dynamics.html">Explicit dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="morphing.html">Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="artificially_matched_layers.html">Artificially matched layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="special_purpose.html">Special purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hard_points.html">HardPoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artificially_matched_layers.html">ArtificiallyMatchedLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="real_constants.html">RealConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superelements.html">Superelements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explicit_dynamics.html">ExplicitDynamics</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="nav bd-sidenav">
@@ -723,6 +729,10 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Prep7</a>
+    </li>
       
     <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Volumes</span></li>
     
@@ -743,53 +753,60 @@
                 <article class="bd-article">
                   
   <section id="volumes">
-<span id="ref-volumes-commands-api"></span><h1>Volumes<a class="headerlink" href="#volumes" title="Link to this heading">#</a></h1>
-<p>These PREP7 commands are used to create, modify, list, etc., volumes.</p>
+<span id="ref-volumes"></span><h1>Volumes<a class="headerlink" href="#volumes" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.prep7.volumes.Volumes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.prep7.volumes.</span></span><span class="sig-name descname"><span class="pre">Volumes</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.prep7.volumes.Volumes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.extopt.html#ansys.mapdl.core.Mapdl.extopt" title="ansys.mapdl.core.Mapdl.extopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.extopt</span></code></a>([lab, val1, val2, val3, val4])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.extopt.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.extopt" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.extopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.extopt</span></code></a>([lab, val1, val2, val3, val4])</p></td>
 <td><p>Controls options relating to the generation of volume elements from area elements.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.v.html#ansys.mapdl.core.Mapdl.v" title="ansys.mapdl.core.Mapdl.v"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.v</span></code></a>([p1, p2, p3, p4, p5, p6, p7, p8])</p></td>
-<td><p>Define a volume through keypoints.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.v.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.v" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.v"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.v</span></code></a>([p1, p2, p3, p4, p5, p6, p7, p8])</p></td>
+<td><p>Defines a volume through keypoints.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.va.html#ansys.mapdl.core.Mapdl.va" title="ansys.mapdl.core.Mapdl.va"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.va</span></code></a>([a1, a2, a3, a4, a5, a6, a7, a8, ...])</p></td>
-<td><p>Generate a volume bounded by existing areas.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.va.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.va" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.va"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.va</span></code></a>([a1, a2, a3, a4, a5, a6, a7, a8, ...])</p></td>
+<td><p>Generates a volume bounded by existing areas.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vdele.html#ansys.mapdl.core.Mapdl.vdele" title="ansys.mapdl.core.Mapdl.vdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vdele</span></code></a>([nv1, nv2, ninc, kswp])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vdele.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.vdele" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.vdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.vdele</span></code></a>([nv1, nv2, ninc, kswp])</p></td>
 <td><p>Deletes unmeshed volumes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vdgl.html#ansys.mapdl.core.Mapdl.vdgl" title="ansys.mapdl.core.Mapdl.vdgl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vdgl</span></code></a>([nv1, nv2, ninc])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vdgl.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.vdgl" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.vdgl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.vdgl</span></code></a>([nv1, nv2, ninc])</p></td>
 <td><p>Lists keypoints of a volume that lie on a parametric degeneracy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vdrag.html#ansys.mapdl.core.Mapdl.vdrag" title="ansys.mapdl.core.Mapdl.vdrag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vdrag</span></code></a>([na1, na2, na3, na4, na5, na6, ...])</p></td>
-<td><p>Generate volumes by dragging an area pattern along a path.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vdrag.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.vdrag" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.vdrag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.vdrag</span></code></a>([na1, na2, na3, na4, na5, ...])</p></td>
+<td><p>Generates volumes by dragging an area pattern along a path.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vext.html#ansys.mapdl.core.Mapdl.vext" title="ansys.mapdl.core.Mapdl.vext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vext</span></code></a>([na1, na2, ninc, dx, dy, dz, rx, ...])</p></td>
-<td><p>Generate additional volumes by extruding areas.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vext.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.vext" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.vext"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.vext</span></code></a>([na1, na2, ninc, dx, dy, dz, ...])</p></td>
+<td><p>Generates additional volumes by extruding areas.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vgen.html#ansys.mapdl.core.Mapdl.vgen" title="ansys.mapdl.core.Mapdl.vgen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vgen</span></code></a>([itime, nv1, nv2, ninc, dx, dy, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vgen.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.vgen" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.vgen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.vgen</span></code></a>([itime, nv1, nv2, ninc, dx, ...])</p></td>
 <td><p>Generates additional volumes from a pattern of volumes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vlist.html#ansys.mapdl.core.Mapdl.vlist" title="ansys.mapdl.core.Mapdl.vlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vlist</span></code></a>([nv1, nv2, ninc])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vlist.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.vlist" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.vlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.vlist</span></code></a>([nv1, nv2, ninc])</p></td>
 <td><p>Lists the defined volumes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vlscale.html#ansys.mapdl.core.Mapdl.vlscale" title="ansys.mapdl.core.Mapdl.vlscale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vlscale</span></code></a>([nv1, nv2, ninc, rx, ry, rz, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vlscale.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.vlscale" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.vlscale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.vlscale</span></code></a>([nv1, nv2, ninc, rx, ry, ...])</p></td>
 <td><p>Generates a scaled set of volumes from a pattern of volumes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.voffst.html#ansys.mapdl.core.Mapdl.voffst" title="ansys.mapdl.core.Mapdl.voffst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.voffst</span></code></a>([narea, dist, kinc])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.voffst.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.voffst" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.voffst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.voffst</span></code></a>([narea, dist, kinc])</p></td>
 <td><p>Generates a volume, offset from a given area.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vrotat.html#ansys.mapdl.core.Mapdl.vrotat" title="ansys.mapdl.core.Mapdl.vrotat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vrotat</span></code></a>([na1, na2, na3, na4, na5, na6, ...])</p></td>
-<td><p>Generate cylindrical volumes by rotating an area pattern about an axis.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vplot.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.vplot" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.vplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.vplot</span></code></a>([nv1, nv2, ninc, degen, scale])</p></td>
+<td><p>Displays the selected volumes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vsum.html#ansys.mapdl.core.Mapdl.vsum" title="ansys.mapdl.core.Mapdl.vsum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vsum</span></code></a>([lab])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vrotat.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.vrotat" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.vrotat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.vrotat</span></code></a>([na1, na2, na3, na4, na5, ...])</p></td>
+<td><p>Generates cylindrical volumes by rotating an area pattern about an axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vsum.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.vsum" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.vsum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.vsum</span></code></a>([lab])</p></td>
 <td><p>Calculates and prints geometry statistics of the selected volumes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vsymm.html#ansys.mapdl.core.Mapdl.vsymm" title="ansys.mapdl.core.Mapdl.vsymm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vsymm</span></code></a>([ncomp, nv1, nv2, ninc, kinc, ...])</p></td>
-<td><p>Generate volumes from a volume pattern by symmetry reflection.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vsymm.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.vsymm" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.vsymm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.vsymm</span></code></a>([ncomp, nv1, nv2, ninc, kinc, ...])</p></td>
+<td><p>Generates volumes from a volume pattern by symmetry reflection.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.vtran.html#ansys.mapdl.core.Mapdl.vtran" title="ansys.mapdl.core.Mapdl.vtran"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.vtran</span></code></a>([kcnto, nv1, nv2, ninc, kinc, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.volumes.Volumes.vtran.html#ansys.mapdl.core._commands.prep7.volumes.Volumes.vtran" title="ansys.mapdl.core._commands.prep7.volumes.Volumes.vtran"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volumes.vtran</span></code></a>([kcnto, nv1, nv2, ninc, kinc, ...])</p></td>
 <td><p>Transfers a pattern of volumes to another coordinate system.</p></td>
 </tr>
 </tbody>

@@ -1,6 +1,0 @@
-﻿cycexpand
-=========
-
-.. currentmodule:: ansys.mapdl.core
-
-.. automethod:: Mapdl.cycexpand

@@ -86,7 +86,6 @@
                 gtag('js', new Date());
                 gtag('config', 'G-JQJKPV6ZVB');
             </script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mapdl_commands/prep7/materials';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
@@ -99,8 +98,8 @@
     <link rel="icon" href="../../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="emunit" href="_autosummary/ansys.mapdl.core.Mapdl.emunit.html" />
-    <link rel="prev" title="setfgap" href="_autosummary/ansys.mapdl.core.Mapdl.setfgap.html" />
+    <link rel="next" title="emunit" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.emunit.html" />
+    <link rel="prev" title="nsvr" href="_autosummary/ansys.mapdl.core._commands.prep7.element_type.ElementType.nsvr.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ja"/>
@@ -578,51 +577,61 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preprocessing</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="database.html">Database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="element_type.html">Element type</a></li>
-<li class="toctree-l1"><a class="reference internal" href="real_constants.html">Real constants</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Materials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.emunit.html">emunit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mp.html">mp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpamod.html">mpamod</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpchg.html">mpchg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpcopy.html">mpcopy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpdata.html">mpdata</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpdele.html">mpdele</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpdres.html">mpdres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mplib.html">mplib</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mplist.html">mplist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpplot.html">mpplot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpread.html">mpread</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mptemp.html">mptemp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mptgen.html">mptgen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mptres.html">mptres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpwrite.html">mpwrite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.tbft.html">tbft</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.uimp.html">uimp</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Prep7</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="areas.html">Areas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="booleans.html">Booleans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meshing.html">Meshing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="special_purpose.html">SpecialPurpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database.html">Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elements.html">Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="piping.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primitives.html">Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross_sections.html">CrossSections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lines.html">Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_tables.html">DataTables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="constraint_equations_.html">ConstraintEquations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nodes.html">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coupled_dof.html">CoupledDof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morphing.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="element_type.html">ElementType</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Materials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.emunit.html">emunit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.fc.html">fc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.fccheck.html">fccheck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.fcdele.html">fcdele</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.fclist.html">fclist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mp.html">mp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpamod.html">mpamod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpchg.html">mpchg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpcopy.html">mpcopy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpdata.html">mpdata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpdele.html">mpdele</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpdres.html">mpdres</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mplib.html">mplib</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mplist.html">mplist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpplot.html">mpplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpread.html">mpread</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mptemp.html">mptemp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mptgen.html">mptgen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mptres.html">mptres</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpwrite.html">mpwrite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.tbfplot.html">tbfplot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.tbft.html">tbft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.uimp.html">uimp</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="material_data_tables.html">Material data tables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="primitives.html">Primitives</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hard_points.html">Hard points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lines.html">Lines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="areas.html">Areas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="volumes.html">Volumes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="booleans.html">Booleans</a></li>
-<li class="toctree-l1"><a class="reference internal" href="meshing.html">Meshing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="elements.html">Elements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="superelements.html">Superelements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="digitizing.html">Digitizing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="coupled_dof.html">Coupled degrees of freedom</a></li>
-<li class="toctree-l1"><a class="reference internal" href="constraint_equations.html">Constraint equations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="status.html">Status</a></li>
-<li class="toctree-l1"><a class="reference internal" href="explicit_dynamics.html">Explicit dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sections.html">Sections</a></li>
-<li class="toctree-l1"><a class="reference internal" href="morphing.html">Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="artificially_matched_layers.html">Artificially matched layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="special_purpose.html">Special purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="volumes.html">Volumes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_status.html">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keypoints.html">Keypoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hard_points.html">HardPoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="artificially_matched_layers.html">ArtificiallyMatchedLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="real_constants.html">RealConstants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superelements.html">Superelements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explicit_dynamics.html">ExplicitDynamics</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solution</span></p>
 <ul class="nav bd-sidenav">
@@ -727,6 +736,10 @@
     <li class="breadcrumb-item">
       <a href="../index.html" class="nav-link">MAPDLコマンド集</a>
     </li>
+     
+    <li class="breadcrumb-item">
+      <a href="index.html" class="nav-link">Prep7</a>
+    </li>
       
     <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Materials</span></li>
     
@@ -747,63 +760,82 @@
                 <article class="bd-article">
                   
   <section id="materials">
-<span id="ref-materials-commands-api"></span><h1>Materials<a class="headerlink" href="#materials" title="Link to this heading">#</a></h1>
-<p>These PREP7 commands are used to define the linear material properties.</p>
+<span id="ref-materials"></span><h1>Materials<a class="headerlink" href="#materials" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="ansys.mapdl.core._commands.prep7.materials.Materials">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ansys.mapdl.core._commands.prep7.materials.</span></span><span class="sig-name descname"><span class="pre">Materials</span></span><a class="headerlink" href="#ansys.mapdl.core._commands.prep7.materials.Materials" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.emunit.html#ansys.mapdl.core.Mapdl.emunit" title="ansys.mapdl.core.Mapdl.emunit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.emunit</span></code></a>([lab, value])</p></td>
-<td><p>APDL Command: EMUNIT</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.emunit.html#ansys.mapdl.core._commands.prep7.materials.Materials.emunit" title="ansys.mapdl.core._commands.prep7.materials.Materials.emunit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.emunit</span></code></a>([lab, value])</p></td>
+<td><p>Specifies the system of units for magnetic field problems.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mp.html#ansys.mapdl.core.Mapdl.mp" title="ansys.mapdl.core.Mapdl.mp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mp</span></code></a>([lab, mat, c0, c1, c2, c3, c4])</p></td>
-<td><p>APDL Command: MP</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.fc.html#ansys.mapdl.core._commands.prep7.materials.Materials.fc" title="ansys.mapdl.core._commands.prep7.materials.Materials.fc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.fc</span></code></a>([mat, lab1, lab2, data1, ...])</p></td>
+<td><p>Provides failure criteria information and activates a data table to input temperature-dependent stress and strain limits.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpamod.html#ansys.mapdl.core.Mapdl.mpamod" title="ansys.mapdl.core.Mapdl.mpamod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mpamod</span></code></a>([mat, deftemp])</p></td>
-<td><p>APDL Command: MPAMOD</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.fccheck.html#ansys.mapdl.core._commands.prep7.materials.Materials.fccheck" title="ansys.mapdl.core._commands.prep7.materials.Materials.fccheck"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.fccheck</span></code></a>(**kwargs)</p></td>
+<td><p>Checks both the strain and stress input criteria for all materials.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpchg.html#ansys.mapdl.core.Mapdl.mpchg" title="ansys.mapdl.core.Mapdl.mpchg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mpchg</span></code></a>([mat, elem])</p></td>
-<td><p>APDL Command: MPCHG</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.fcdele.html#ansys.mapdl.core._commands.prep7.materials.Materials.fcdele" title="ansys.mapdl.core._commands.prep7.materials.Materials.fcdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.fcdele</span></code></a>([mat])</p></td>
+<td><p>Deletes previously defined failure criterion data for the given material.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpcopy.html#ansys.mapdl.core.Mapdl.mpcopy" title="ansys.mapdl.core.Mapdl.mpcopy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mpcopy</span></code></a>([matf, matt])</p></td>
-<td><p>APDL Command: MPCOPY</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.fclist.html#ansys.mapdl.core._commands.prep7.materials.Materials.fclist" title="ansys.mapdl.core._commands.prep7.materials.Materials.fclist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.fclist</span></code></a>([mat, temp])</p></td>
+<td><p>To list what the failure criteria is that you have input.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpdata.html#ansys.mapdl.core.Mapdl.mpdata" title="ansys.mapdl.core.Mapdl.mpdata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mpdata</span></code></a>([lab, mat, sloc, c1, c2, c3, ...])</p></td>
-<td><p>APDL Command: MPDATA</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mp.html#ansys.mapdl.core._commands.prep7.materials.Materials.mp" title="ansys.mapdl.core._commands.prep7.materials.Materials.mp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mp</span></code></a>([lab, mat, c0, c1, c2, c3, c4])</p></td>
+<td><p>Defines a linear material property as a constant or a function of temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpdele.html#ansys.mapdl.core.Mapdl.mpdele" title="ansys.mapdl.core.Mapdl.mpdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mpdele</span></code></a>([lab, mat1, mat2, inc, lchk])</p></td>
-<td><p>APDL Command: MPDELE</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpamod.html#ansys.mapdl.core._commands.prep7.materials.Materials.mpamod" title="ansys.mapdl.core._commands.prep7.materials.Materials.mpamod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mpamod</span></code></a>([mat, deftemp])</p></td>
+<td><p>Modifies temperature-dependent secant coefficients of thermal expansion.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpdres.html#ansys.mapdl.core.Mapdl.mpdres" title="ansys.mapdl.core.Mapdl.mpdres"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mpdres</span></code></a>([labf, matf, labt, matt])</p></td>
-<td><p>APDL Command: MPDRES</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpchg.html#ansys.mapdl.core._commands.prep7.materials.Materials.mpchg" title="ansys.mapdl.core._commands.prep7.materials.Materials.mpchg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mpchg</span></code></a>([mat, elem])</p></td>
+<td><p>Changes the material number attribute of an element.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mplib.html#ansys.mapdl.core.Mapdl.mplib" title="ansys.mapdl.core.Mapdl.mplib"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mplib</span></code></a>([r_w_opt, path])</p></td>
-<td><p>APDL Command: /MPLIB</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpcopy.html#ansys.mapdl.core._commands.prep7.materials.Materials.mpcopy" title="ansys.mapdl.core._commands.prep7.materials.Materials.mpcopy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mpcopy</span></code></a>([matf, matt])</p></td>
+<td><p>Copies linear material model data from one material reference number to another.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mplist.html#ansys.mapdl.core.Mapdl.mplist" title="ansys.mapdl.core.Mapdl.mplist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mplist</span></code></a>([mat1, mat2, inc, lab, tevl])</p></td>
-<td><p>APDL Command: MPLIST</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpdata.html#ansys.mapdl.core._commands.prep7.materials.Materials.mpdata" title="ansys.mapdl.core._commands.prep7.materials.Materials.mpdata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mpdata</span></code></a>([lab, mat, sloc, c1, c2, ...])</p></td>
+<td><p>Defines property data to be associated with the temperature table.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpplot.html#ansys.mapdl.core.Mapdl.mpplot" title="ansys.mapdl.core.Mapdl.mpplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mpplot</span></code></a>([lab, mat, tmin, tmax, pmin, pmax])</p></td>
-<td><p>APDL Command: MPPLOT</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpdele.html#ansys.mapdl.core._commands.prep7.materials.Materials.mpdele" title="ansys.mapdl.core._commands.prep7.materials.Materials.mpdele"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mpdele</span></code></a>([lab, mat1, mat2, inc, lchk])</p></td>
+<td><p>Deletes linear material properties.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpread.html#ansys.mapdl.core.Mapdl.mpread" title="ansys.mapdl.core.Mapdl.mpread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mpread</span></code></a>([fname, ext, lib])</p></td>
-<td><p>APDL Command: MPREAD</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpdres.html#ansys.mapdl.core._commands.prep7.materials.Materials.mpdres" title="ansys.mapdl.core._commands.prep7.materials.Materials.mpdres"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mpdres</span></code></a>([labf, matf, labt, matt])</p></td>
+<td><p>Reassembles existing material data with the temperature table.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mptemp.html#ansys.mapdl.core.Mapdl.mptemp" title="ansys.mapdl.core.Mapdl.mptemp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mptemp</span></code></a>([sloc, t1, t2, t3, t4, t5, t6])</p></td>
-<td><p>APDL Command: MPTEMP</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mplib.html#ansys.mapdl.core._commands.prep7.materials.Materials.mplib" title="ansys.mapdl.core._commands.prep7.materials.Materials.mplib"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mplib</span></code></a>([r_w_opt, path])</p></td>
+<td><p>Sets the default material library read and write paths.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mptgen.html#ansys.mapdl.core.Mapdl.mptgen" title="ansys.mapdl.core.Mapdl.mptgen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mptgen</span></code></a>([stloc, num, tstrt, tinc])</p></td>
-<td><p>APDL Command: MPTGEN</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mplist.html#ansys.mapdl.core._commands.prep7.materials.Materials.mplist" title="ansys.mapdl.core._commands.prep7.materials.Materials.mplist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mplist</span></code></a>([mat1, mat2, inc, lab, tevl])</p></td>
+<td><p>Lists linear material properties.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mptres.html#ansys.mapdl.core.Mapdl.mptres" title="ansys.mapdl.core.Mapdl.mptres"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mptres</span></code></a>([lab, mat])</p></td>
-<td><p>APDL Command: MPTRES</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpplot.html#ansys.mapdl.core._commands.prep7.materials.Materials.mpplot" title="ansys.mapdl.core._commands.prep7.materials.Materials.mpplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mpplot</span></code></a>([lab, mat, tmin, tmax, ...])</p></td>
+<td><p>Plots linear material properties as a function of temperature.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.mpwrite.html#ansys.mapdl.core.Mapdl.mpwrite" title="ansys.mapdl.core.Mapdl.mpwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.mpwrite</span></code></a>([fname, ext, lib, mat])</p></td>
-<td><p>APDL Command: MPWRITE</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpread.html#ansys.mapdl.core._commands.prep7.materials.Materials.mpread" title="ansys.mapdl.core._commands.prep7.materials.Materials.mpread"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mpread</span></code></a>([fname, ext, lib])</p></td>
+<td><p>Reads a file containing material properties.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.tbft.html#ansys.mapdl.core.Mapdl.tbft" title="ansys.mapdl.core.Mapdl.tbft"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.tbft</span></code></a>([oper, id_, option1, option2, ...])</p></td>
-<td><p>APDL Command: TBFT</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mptemp.html#ansys.mapdl.core._commands.prep7.materials.Materials.mptemp" title="ansys.mapdl.core._commands.prep7.materials.Materials.mptemp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mptemp</span></code></a>([sloc, t1, t2, t3, t4, t5, t6])</p></td>
+<td><p>Defines a temperature table for material properties.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.Mapdl.uimp.html#ansys.mapdl.core.Mapdl.uimp" title="ansys.mapdl.core.Mapdl.uimp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mapdl.uimp</span></code></a>([mat, lab1, lab2, lab3, val1, ...])</p></td>
-<td><p>APDL Command: UIMP</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mptgen.html#ansys.mapdl.core._commands.prep7.materials.Materials.mptgen" title="ansys.mapdl.core._commands.prep7.materials.Materials.mptgen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mptgen</span></code></a>([stloc, num, tstrt, tinc])</p></td>
+<td><p>Adds temperatures to the temperature table by generation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mptres.html#ansys.mapdl.core._commands.prep7.materials.Materials.mptres" title="ansys.mapdl.core._commands.prep7.materials.Materials.mptres"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mptres</span></code></a>([lab, mat])</p></td>
+<td><p>Restores a temperature table previously defined.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.mpwrite.html#ansys.mapdl.core._commands.prep7.materials.Materials.mpwrite" title="ansys.mapdl.core._commands.prep7.materials.Materials.mpwrite"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.mpwrite</span></code></a>([fname, ext, lib, mat])</p></td>
+<td><p>Writes linear material properties in the database to a file (if the LIB option is not specified) or writes both linear and nonlinear material properties (if LIB is specified) from the database to a file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.tbfplot.html#ansys.mapdl.core._commands.prep7.materials.Materials.tbfplot" title="ansys.mapdl.core._commands.prep7.materials.Materials.tbfplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.tbfplot</span></code></a>([matid, curvefitname, ...])</p></td>
+<td><p>Plots <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en/ans_mat/Hlp_AM_GMCF.html">material curve-fitting</a> data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.tbft.html#ansys.mapdl.core._commands.prep7.materials.Materials.tbft" title="ansys.mapdl.core._commands.prep7.materials.Materials.tbft"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.tbft</span></code></a>([oper, matid, option1, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.prep7.materials.Materials.uimp.html#ansys.mapdl.core._commands.prep7.materials.Materials.uimp" title="ansys.mapdl.core._commands.prep7.materials.Materials.uimp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Materials.uimp</span></code></a>([mat, lab1, lab2, lab3, ...])</p></td>
+<td><p>Defines constant material properties (GUI).</p></td>
 </tr>
 </tbody>
 </table>
