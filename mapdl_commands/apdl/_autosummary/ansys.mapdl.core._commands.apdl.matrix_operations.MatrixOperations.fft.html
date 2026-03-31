@@ -645,10 +645,6 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../conn.html">Connection commands</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../misc.html">Miscellaneous</a></li>
-</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Undocumented</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../inqfun.html">Undocumented inquire commands</a></li>
@@ -825,12 +821,30 @@ noisy input signal.</p>
 <p><strong>Example Usage</strong></p>
 <p id="a-fft-example">The fast Fourier transformation can be used to create a filter to remove noise from a noisy input
 signal.</p>
+<figure class="align-default" id="id6">
+<img alt="../../../_images/gFFT1.PNG" src="../../../_images/gFFT1.PNG" />
+<figcaption>
+<p><span class="caption-text">Input Signal</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The input signal is decomposed in the Fourier space using the <span class="xref std std-ref">fft</span>, <code class="docutils literal notranslate"><span class="pre">FORW</span></code> command so that
 the frequencies that compose the signal can be observed.</p>
+<figure class="align-default" id="id7">
+<img alt="../../../_images/gFFT2.PNG" src="../../../_images/gFFT2.PNG" />
+<figcaption>
+<p><span class="caption-text">Amplitude Spectrum of the FFT</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The filter applies a threshold on the Fourier coefficients. Fourier coefficients of small amplitude
 are the result of the noise in the input signal. Only coefficients of a large amplitude are
 significant. The inversion of the <span class="xref std std-ref">fft</span> command ( <span class="xref std std-ref">fft</span>, <code class="docutils literal notranslate"><span class="pre">BACK</span></code> command) rebuilds the
 signal from the remaining coefficients.</p>
+<figure class="align-default" id="id8">
+<img alt="../../../_images/gFFT3.PNG" src="../../../_images/gFFT3.PNG" />
+<figcaption>
+<p><span class="caption-text">Signal Obtained with the Filter</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Example input demonstrating <span class="xref std std-ref">fft</span> usage is provided below:</p>
 <div class="highlight-apdl notranslate"><div class="highlight"><pre><span></span><span class="k">/com</span><span class="p">,</span><span class="o">*************************************************</span>
 <span class="k">/com</span><span class="p">,</span><span class="o">*</span><span class="w">  </span><span class="nv">Usage</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="o">*</span><span class="nv">FFT</span><span class="w"> </span><span class="nv">APDLMath</span><span class="w"> </span><span class="nv">command</span><span class="p">.</span><span class="w">  </span><span class="o">*</span>

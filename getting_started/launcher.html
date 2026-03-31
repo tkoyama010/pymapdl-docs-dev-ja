@@ -684,6 +684,38 @@ function to start MAPDL and automatically connect to it:</p>
 <p>これはPyMAPDLを起動して実行する最も簡単で速い方法ですが、MAPDLをローカルで起動できなければなりません。</p>
 <p>PyMAPDL がローカルのインストールを見つけられない場合は、 <a class="reference internal" href="#setting-the-mapdl-location-in-pymapdl">Setting MAPDL location in PyMAPDL</a> を参照してください。</p>
 <p>MAPDLをローカルで起動する方法の詳細については、 <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a> 関数の説明を参照してください。</p>
+<section id="launch-mapdl-process-without-creating-a-client">
+<h3>Launch MAPDL process without creating a client<a class="headerlink" href="#launch-mapdl-process-without-creating-a-client" title="Link to this heading">#</a></h3>
+<p>Sometimes you may want to launch a MAPDL process without immediately creating a
+client connection. This is useful for:</p>
+<ul class="simple">
+<li><p>Starting MAPDL from the command-line interface</p></li>
+<li><p>Managing multiple MAPDL instances programmatically</p></li>
+<li><p>Launching MAPDL in a separate process for later connection</p></li>
+</ul>
+<p>For these scenarios, you can use the <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl_process.html#ansys.mapdl.core.launcher.launch_mapdl_process" title="ansys.mapdl.core.launcher.launch_mapdl_process"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl_process()</span></code></a>
+function, which starts MAPDL and returns connection information without creating a client:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core.launcher</span><span class="w"> </span><span class="kn">import</span> <span class="n">launch_mapdl_process</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">pid</span> <span class="o">=</span> <span class="n">launch_mapdl_process</span><span class="p">(</span><span class="n">nproc</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">50052</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAPDL is running at </span><span class="si">{</span><span class="n">ip</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2"> (PID: </span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+<span class="go">MAPDL is running at 127.0.0.1:50052 (PID: 12345)</span>
+</pre></div>
+</div>
+<p>You can later connect to this instance using the <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapdl</span></code> class:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">ansys.mapdl.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mapdl</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span> <span class="o">=</span> <span class="n">Mapdl</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="n">ip</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="n">port</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This approach gives you more control over the MAPDL process lifecycle and allows
+you to manage the process independently from the client connection.</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>The <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl_process.html#ansys.mapdl.core.launcher.launch_mapdl_process" title="ansys.mapdl.core.launcher.launch_mapdl_process"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl_process()</span></code></a>
+function always starts a new MAPDL instance. It cannot be used to connect to
+an existing instance. Use <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">launch_mapdl()</span></code></a>
+with <code class="docutils literal notranslate"><span class="pre">start_instance=False</span></code> for that purpose.</p>
+</div>
+</section>
 </section>
 <section id="connect-pymapdl-to-a-local-mapdl-instance">
 <h2>PyMAPDL をローカルの MAPDL インスタンスに接続する<a class="headerlink" href="#connect-pymapdl-to-a-local-mapdl-instance" title="Link to this heading">#</a></h2>

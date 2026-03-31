@@ -646,10 +646,6 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../conn.html">Connection commands</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../misc.html">Miscellaneous</a></li>
-</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Undocumented</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../inqfun.html">Undocumented inquire commands</a></li>
@@ -762,11 +758,12 @@
 <dt><strong>threshold</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Numerical threshold value used to manage the compression. The default value depends on the
 method of compression: 1E-7 for SVD; 1E-14 for MGS; 1E-16 for SPARSE.</p>
 </dd>
-<dt><strong>val1</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the vector used to store the <span class="math notranslate nohighlight">\(equation not available\)</span>  values (see
-<span class="xref std std-ref">a-COMP_notes</span> below). This argument is optional.</p>
+<dt><strong>val1</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the vector used to store the <span class="math notranslate nohighlight">\(equation not available\)</span>  values (see  <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en/ans_cmd/Hlp_C_COMP.html#eq11850956-35ca-43ce-a803-b83b50b4d2af">Notes</a>
+below). This argument is optional.</p>
 </dd>
 <dt><strong>val2</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Name of the dense matrix used to store the <span class="math notranslate nohighlight">\(equation not available\)</span>  output matrix (see
-<span class="xref std std-ref">a-COMP_notes</span> below). This argument is optional.</p>
+<a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en/ans_cmd/Hlp_C_COMP.html#eq11850956-35ca-43ce-a803-b83b50b4d2af">Notes</a>
+below). This argument is optional.</p>
 </dd>
 </dl>
 </dd>
@@ -794,9 +791,11 @@ depends on the method of compression: 1E-7 for SVD; 1E-14 for MGS; 1E-16 for SPA
 <p><code class="docutils literal notranslate"><span class="pre">Val1</span></code> and <code class="docutils literal notranslate"><span class="pre">Val2</span></code> are additional input used only for the SVD algorithm:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">val1</span> <span class="pre">:</span> <span class="pre">str</span></code> - Name of the vector used to store the <span class="math notranslate nohighlight">\(equation not available\)</span>  values (see
-<span class="xref std std-ref">a-COMP_notes</span> below). This argument is optional.</p></li>
+<a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en/ans_cmd/Hlp_C_COMP.html#eq11850956-35ca-43ce-a803-b83b50b4d2af">Notes</a>
+below). This argument is optional.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">val2</span> <span class="pre">:</span> <span class="pre">str</span></code> - Name of the dense matrix used to store the <span class="math notranslate nohighlight">\(equation not available\)</span>  output
-matrix (see <span class="xref std std-ref">a-COMP_notes</span> below). This argument is optional.</p></li>
+matrix (see <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en/ans_cmd/Hlp_C_COMP.html#eq11850956-35ca-43ce-a803-b83b50b4d2af">Notes</a>
+below). This argument is optional.</p></li>
 </ul>
 <p id="a-comp-notes">The SVD and MGS algorithms are only applicable to dense matrices that were created using the
 <span class="xref std std-ref">dmat</span> command. Columns that are linearly dependent on others are removed, leaving the

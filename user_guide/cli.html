@@ -705,10 +705,12 @@ Linux</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<p>This <code class="docutils literal notranslate"><span class="pre">pymapdl</span> <span class="pre">start</span></code> command aims to replicate the function
-<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.launcher.launch_mapdl()</span></code></a>. Hence, you can use
-some of the arguments which this function allows.
-For instance, you could specify the working directory:</p>
+<p>This <code class="docutils literal notranslate"><span class="pre">pymapdl</span> <span class="pre">start</span></code> command uses the
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl_process.html#ansys.mapdl.core.launcher.launch_mapdl_process" title="ansys.mapdl.core.launcher.launch_mapdl_process"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.launcher.launch_mapdl_process()</span></code></a> function internally
+to start MAPDL without creating a client connection. The command returns the
+connection information (IP, port, and PID) that you can use to connect later.</p>
+<p>Some of the arguments that <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.launcher.launch_mapdl()</span></code></a> allows
+are also available in the CLI. For instance, you could specify the working directory:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 <label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-4">
@@ -727,7 +729,8 @@ Linux</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<p>For more information, see <a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.launcher.launch_mapdl()</span></code></a>.</p>
+<p>For more information about the underlying function, see
+<a class="reference internal" href="../api/_autosummary/ansys.mapdl.core.launcher.launch_mapdl_process.html#ansys.mapdl.core.launcher.launch_mapdl_process" title="ansys.mapdl.core.launcher.launch_mapdl_process"><code class="xref py py-func docutils literal notranslate"><span class="pre">ansys.mapdl.core.launcher.launch_mapdl_process()</span></code></a>.</p>
 </section>
 <section id="stop-mapdl-instances">
 <h2>MAPDLインスタンスを停止する<a class="headerlink" href="#stop-mapdl-instances" title="Link to this heading">#</a></h2>

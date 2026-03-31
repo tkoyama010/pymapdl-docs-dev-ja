@@ -674,10 +674,6 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../conn.html">Connection commands</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../misc.html">Miscellaneous</a></li>
-</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Undocumented</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../inqfun.html">Undocumented inquire commands</a></li>
@@ -772,7 +768,7 @@
 <h1>macopt<a class="headerlink" href="#macopt" title="Link to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core._commands.post1.special_purpose.SpecialPurpose.macopt">
-<span class="sig-prename descclassname"><span class="pre">SpecialPurpose.</span></span><span class="sig-name descname"><span class="pre">macopt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core._commands.post1.special_purpose.SpecialPurpose.macopt" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">SpecialPurpose.</span></span><span class="sig-name descname"><span class="pre">macopt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core._commands.post1.special_purpose.SpecialPurpose.macopt" title="Link to this definition">#</a></dt>
 <dd><p>Specifies modal assurance criterion (MAC) or frequency response function (FRF) correlation criteria
 calculation options for <span class="xref std std-ref">rstmac</span>.</p>
 <p>Mechanical APDL Command: <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en//ans_cmd/Hlp_C_MACOPT.html">MACOPT</a></p>
@@ -780,7 +776,35 @@ calculation options for <span class="xref std std-ref">rstmac</span>.</p>
 If <span class="xref std std-ref">macopt</span> is not issued prior to <span class="xref std std-ref">rstmac</span>, node matching based on location is used by
 default in MAC calculations performed by <span class="xref std std-ref">rstmac</span>. Unless otherwise specified, an absolute
 tolerance (ABSTOLN) value of 0.01 is used for the node matching.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>option</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The description of the argument is missing in the Python function. Please, refer to the <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en//ans_cmd/Hlp_C_MACOPT.html">command
+documentation</a> for
+further information.</p>
+</dd>
+<dt><strong>value1</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The description of the argument is missing in the Python function. Please, refer to the <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en//ans_cmd/Hlp_C_MACOPT.html">command
+documentation</a> for
+further information.</p>
+</dd>
+<dt><strong>value2</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The description of the argument is missing in the Python function. Please, refer to the <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en//ans_cmd/Hlp_C_MACOPT.html">command
+documentation</a> for
+further information.</p>
+</dd>
+<dt><strong>value3</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The description of the argument is missing in the Python function. Please, refer to the <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en//ans_cmd/Hlp_C_MACOPT.html">command
+documentation</a> for
+further information.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>This function contains specificities regarding the argument definitions.
+Please refer to the <a class="reference external" href="https://ansyshelp.ansys.com/Views/Secured/corp/v232/en//ans_cmd/Hlp_C_MACOPT.html">command documentation</a>
+for further explanations.</p>
+</div>
 <p id="macopt-notes">The <span class="xref std std-ref">rstmac</span> command calculates the MAC or FRF criteria values based on the options specified
 via <span class="xref std std-ref">macopt</span>. The <span class="xref std std-ref">macopt</span> command must be issued before the <span class="xref std std-ref">rstmac</span> command. These
 commands enable you to compare nodal solutions from two results files ( <code class="file docutils literal notranslate"><span class="pre">.rst</span></code> or

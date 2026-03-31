@@ -593,6 +593,7 @@
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.desol.html">desol</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.detab.html">detab</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.dnsol.html">dnsol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.file.html">file</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.hrcplx.html">hrcplx</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.rescombine.html">rescombine</a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.reset.html">reset</a></li>
@@ -644,10 +645,6 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Connection</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../conn.html">Connection commands</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../misc.html">Miscellaneous</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Undocumented</span></p>
 <ul class="nav bd-sidenav">
@@ -756,19 +753,22 @@
 <tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.dnsol.html#ansys.mapdl.core._commands.post1.set_up.SetUp.dnsol" title="ansys.mapdl.core._commands.post1.set_up.SetUp.dnsol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetUp.dnsol</span></code></a>([node, item, comp, v1, v2, v3, ...])</p></td>
 <td><p>Defines or modifies solution results at a node.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.hrcplx.html#ansys.mapdl.core._commands.post1.set_up.SetUp.hrcplx" title="ansys.mapdl.core._commands.post1.set_up.SetUp.hrcplx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetUp.hrcplx</span></code></a>([loadstep, substep, omegat, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.file.html#ansys.mapdl.core._commands.post1.set_up.SetUp.file" title="ansys.mapdl.core._commands.post1.set_up.SetUp.file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetUp.file</span></code></a>([fname, ext])</p></td>
+<td><p>Specifies the data file where results are to be found.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.hrcplx.html#ansys.mapdl.core._commands.post1.set_up.SetUp.hrcplx" title="ansys.mapdl.core._commands.post1.set_up.SetUp.hrcplx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetUp.hrcplx</span></code></a>([loadstep, substep, omegat, ...])</p></td>
 <td><p>Computes and stores in the database the time-harmonic solution at a prescribed phase angle.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.rescombine.html#ansys.mapdl.core._commands.post1.set_up.SetUp.rescombine" title="ansys.mapdl.core._commands.post1.set_up.SetUp.rescombine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetUp.rescombine</span></code></a>([numfiles, fname, ext, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.rescombine.html#ansys.mapdl.core._commands.post1.set_up.SetUp.rescombine" title="ansys.mapdl.core._commands.post1.set_up.SetUp.rescombine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetUp.rescombine</span></code></a>([numfiles, fname, ext, ...])</p></td>
 <td><p>Reads results from local results files into the database after a distributed-memory parallel solution.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.reset.html#ansys.mapdl.core._commands.post1.set_up.SetUp.reset" title="ansys.mapdl.core._commands.post1.set_up.SetUp.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetUp.reset</span></code></a>(**kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.reset.html#ansys.mapdl.core._commands.post1.set_up.SetUp.reset" title="ansys.mapdl.core._commands.post1.set_up.SetUp.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetUp.reset</span></code></a>(**kwargs)</p></td>
 <td><p>Resets all POST1 or POST26 specifications to initial defaults.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.set.html#ansys.mapdl.core._commands.post1.set_up.SetUp.set" title="ansys.mapdl.core._commands.post1.set_up.SetUp.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetUp.set</span></code></a>([lstep, sbstep, fact, kimg, time, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.set.html#ansys.mapdl.core._commands.post1.set_up.SetUp.set" title="ansys.mapdl.core._commands.post1.set_up.SetUp.set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetUp.set</span></code></a>([lstep, sbstep, fact, kimg, time, ...])</p></td>
 <td><p>Defines the data set to be read from the results file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.subset.html#ansys.mapdl.core._commands.post1.set_up.SetUp.subset" title="ansys.mapdl.core._commands.post1.set_up.SetUp.subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetUp.subset</span></code></a>([lstep, sbstep, fact, kimg, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core._commands.post1.set_up.SetUp.subset.html#ansys.mapdl.core._commands.post1.set_up.SetUp.subset" title="ansys.mapdl.core._commands.post1.set_up.SetUp.subset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetUp.subset</span></code></a>([lstep, sbstep, fact, kimg, ...])</p></td>
 <td><p>Reads results for the selected portions of the model.</p></td>
 </tr>
 </tbody>

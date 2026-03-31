@@ -635,10 +635,6 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../conn.html">Connection commands</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../misc.html">Miscellaneous</a></li>
-</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Undocumented</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../inqfun.html">Undocumented inquire commands</a></li>
@@ -745,11 +741,12 @@ separate commands specifying each file type.</p>
 <p>All <code class="file docutils literal notranslate"><span class="pre">.log</span></code> files except the master ( <code class="file docutils literal notranslate"><span class="pre">Jobname0.log</span></code> ) are deleted.</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Because /FCLEAN deletes all local files, it should only be issued if you are sure that none of
-those files are needed in any downstream analyses. Deleting files that are necessary for
+<p>Because <span class="xref std std-ref">fclean</span> deletes all local files, it should only be issued if you are sure that
+none of those files are needed in any downstream analyses. Deleting files that are necessary for
 subsequent substeps, load steps, commands, or analyses will prevent continuation of the run. For
-example, since the local files are combined into global files when you issue FINISH in the
-solution processor, issuing /FCLEAN before FINISH in /SOLU will result in a program crash.</p>
+example, since the local files are combined into global files when you issue <span class="xref std std-ref">finish</span> in
+the solution processor, issuing <span class="xref std std-ref">fclean</span> before <span class="xref std std-ref">finish</span> in <span class="xref std std-ref">slashsolu</span> will
+result in a program crash.</p>
 </div>
 </dd></dl>
 

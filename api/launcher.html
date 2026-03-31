@@ -98,7 +98,7 @@
     <link rel="icon" href="../_static/ansys-favicon.png"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="get_default_ansys" href="_autosummary/ansys.mapdl.core.launcher.get_default_ansys.html" />
+    <link rel="next" title="launch_mapdl" href="_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html" />
     <link rel="prev" title="is_orthogonal" href="_autosummary/ansys.mapdl.core.krylov.KrylovSolver.is_orthogonal.html" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -563,10 +563,8 @@
 <li class="toctree-l1"><a class="reference internal" href="inline.html">Inline functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="krylov.html"><code class="docutils literal notranslate"><span class="pre">KrylovSolver</span></code> module</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Launcher</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.get_default_ansys.html">get_default_ansys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.get_default_ansys_path.html">get_default_ansys_path</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.get_default_ansys_version.html">get_default_ansys_version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html">launch_mapdl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.launch_mapdl_process.html">launch_mapdl_process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.close_all_local_instances.html">close_all_local_instances</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.tools.common.path.change_default_ansys_path.html">change_default_ansys_path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/ansys.tools.common.path.find_mapdl.html">find_mapdl</a></li>
@@ -670,17 +668,11 @@ Most of these commands are called from the
 library <a href="#id4"><span class="problematic" id="id5">`ansys-tools-common.path &lt;ansys_tools_common_&gt;`_</span></a>.</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.get_default_ansys.html#ansys.mapdl.core.launcher.get_default_ansys" title="ansys.mapdl.core.launcher.get_default_ansys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_ansys</span></code></a>()</p></td>
-<td><p>Searches for ansys path within the standard install location and returns the path and version of the latest MAPDL version installed.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch_mapdl</span></code></a>([exec_file, run_location, ...])</p></td>
+<td><p>Launch MAPDL or connect to existing instance.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.get_default_ansys_path.html#ansys.mapdl.core.launcher.get_default_ansys_path" title="ansys.mapdl.core.launcher.get_default_ansys_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_ansys_path</span></code></a>()</p></td>
-<td><p>Searches for ansys path within the standard install location and returns the path of the latest MAPDL version installed.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.get_default_ansys_version.html#ansys.mapdl.core.launcher.get_default_ansys_version" title="ansys.mapdl.core.launcher.get_default_ansys_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_default_ansys_version</span></code></a>()</p></td>
-<td><p>Searches for ansys path within the standard install location and returns the version of the latest MAPDL version installed.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.launch_mapdl.html#ansys.mapdl.core.launcher.launch_mapdl" title="ansys.mapdl.core.launcher.launch_mapdl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch_mapdl</span></code></a>([exec_file, run_location, ...])</p></td>
-<td><p>Start MAPDL locally.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.launch_mapdl_process.html#ansys.mapdl.core.launcher.launch_mapdl_process" title="ansys.mapdl.core.launcher.launch_mapdl_process"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch_mapdl_process</span></code></a>([exec_file, ...])</p></td>
+<td><p>Launch MAPDL process and return connection info without creating client.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/ansys.mapdl.core.launcher.close_all_local_instances.html#ansys.mapdl.core.launcher.close_all_local_instances" title="ansys.mapdl.core.launcher.close_all_local_instances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close_all_local_instances</span></code></a>([port_range])</p></td>
 <td><p>Close all MAPDL instances within a port_range.</p></td>
