@@ -664,7 +664,8 @@
                   
   <section id="pymapdl-command-line-interface">
 <span id="ref-cli"></span><h1>PyMAPDL コマンドラインインターフェイス.<a class="headerlink" href="#pymapdl-command-line-interface" title="Link to this heading">#</a></h1>
-<p>便利なように、PyMAPDLパッケージには、ローカルのMAPDLインスタンスを起動、停止、一覧表示できるコマンドラインインターフェイスが含まれています。</p>
+<p>For your convenience, PyMAPDL package includes a command line interface
+which allows you to launch, stop, list, and execute commands on MAPDL instances.</p>
 <section id="launch-mapdl-instances">
 <h2>MAPDLインスタンスを起動する<a class="headerlink" href="#launch-mapdl-instances" title="Link to this heading">#</a></h2>
 <p>MAPDLを起動するには、起動した仮想環境上で次のように入力します:</p>
@@ -900,14 +901,129 @@ Linux</label><div class="sd-tab-content docutils">
 MAPDL files to PyMAPDL. For more information, see
 <a class="reference internal" href="#ref-cli-converter"><span class="std std-ref">Convert APDL code</span></a>.</p>
 </section>
+<section id="execute-mapdl-commands">
+<span id="ref-cli-exec"></span><h2>Execute MAPDL commands<a class="headerlink" href="#execute-mapdl-commands" title="Link to this heading">#</a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">pymapdl</span> <span class="pre">exec</span></code> to send APDL commands to a running MAPDL instance and
+print the output to stdout. The command always connects to an existing
+instance, it never starts a new one. Use <code class="docutils literal notranslate"><span class="pre">pymapdl</span> <span class="pre">start</span></code> first if needed.</p>
+<p>There are three mutually exclusive ways to supply commands. The recommended
+approach is to use the <code class="docutils literal notranslate"><span class="pre">-c</span></code> / <code class="docutils literal notranslate"><span class="pre">--command</span></code> option, which can be repeated.
+Each <code class="docutils literal notranslate"><span class="pre">-c</span></code> value is one APDL command; all commands are sent as a single block:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-20" name="sd-tab-set-10" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-20">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">pymapdl</span> <span class="n">exec</span> <span class="n">-c</span> <span class="p">/</span><span class="n">prep7</span> <span class="n">-c</span> <span class="s2">&quot;BLOCK,0,1,0,1,0,1&quot;</span> <span class="n">-c</span> <span class="n">SAVE</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-21" name="sd-tab-set-10" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-21">
+Linux</label><div class="sd-tab-content docutils">
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pymapdl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-c<span class="w"> </span>/prep7<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;BLOCK,0,1,0,1,0,1&quot;</span><span class="w"> </span>-c<span class="w"> </span>SAVE
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also read commands from an APDL script file using <code class="docutils literal notranslate"><span class="pre">--file</span></code> / <code class="docutils literal notranslate"><span class="pre">-f</span></code>:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-22" name="sd-tab-set-11" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-22">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">pymapdl</span> <span class="n">exec</span> <span class="p">-</span><span class="o">-file</span> <span class="n">my_script</span><span class="p">.</span><span class="n">inp</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-23" name="sd-tab-set-11" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-23">
+Linux</label><div class="sd-tab-content docutils">
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pymapdl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--file<span class="w"> </span>my_script.inp
+</pre></div>
+</div>
+</div>
+</div>
+<p>To pipe commands from another program, pass <code class="docutils literal notranslate"><span class="pre">-</span></code> as a positional argument to
+read from stdin:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-24" name="sd-tab-set-12" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-24">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="nb">Get-Content</span> <span class="n">my_script</span><span class="p">.</span><span class="n">inp</span> <span class="p">|</span> <span class="n">pymapdl</span> <span class="n">exec</span> <span class="p">-</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-25" name="sd-tab-set-12" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-25">
+Linux</label><div class="sd-tab-content docutils">
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>cat<span class="w"> </span>my_script.inp<span class="w"> </span><span class="p">|</span><span class="w"> </span>pymapdl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">pymapdl</span> <span class="pre">exec</span></code> connects without clearing the MAPDL database, so
+successive calls share the same model state. Use the <code class="docutils literal notranslate"><span class="pre">--clear-on-connect</span></code>
+flag to clear the database before sending commands:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-26" name="sd-tab-set-13" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-26">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">pymapdl</span> <span class="n">exec</span> <span class="p">-</span><span class="n">-clear-on-connect</span> <span class="n">-c</span> <span class="p">/</span><span class="n">prep7</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-27" name="sd-tab-set-13" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-27">
+Linux</label><div class="sd-tab-content docutils">
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pymapdl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--clear-on-connect<span class="w"> </span>-c<span class="w"> </span>/prep7
+</pre></div>
+</div>
+</div>
+</div>
+<p>A common workflow is to start MAPDL once, send one or more command blocks, and
+then stop the instance:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-28" name="sd-tab-set-14" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-28">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">pymapdl</span> <span class="nb">start</span>
+<span class="go">Success: Launched an MAPDL instance (PID=23644) at 127.0.0.1:50052</span>
+<span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">pymapdl</span> <span class="n">exec</span> <span class="n">-c</span> <span class="p">/</span><span class="n">prep7</span> <span class="n">-c</span> <span class="s2">&quot;BLOCK,0,1,0,1,0,1&quot;</span>
+<span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">pymapdl</span> <span class="n">exec</span> <span class="n">-c</span> <span class="n">SAVE</span>
+<span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">pymapdl</span> <span class="n">stop</span>
+<span class="go">Success: Ansys instances running on port 50052 have been stopped.</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-29" name="sd-tab-set-14" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-29">
+Linux</label><div class="sd-tab-content docutils">
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pymapdl<span class="w"> </span>start
+<span class="go">Success: Launched an MAPDL instance (PID=23644) at 127.0.0.1:50052</span>
+<span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pymapdl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-c<span class="w"> </span>/prep7<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;BLOCK,0,1,0,1,0,1&quot;</span>
+<span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pymapdl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-c<span class="w"> </span>SAVE
+<span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pymapdl<span class="w"> </span>stop
+<span class="go">Success: Ansys instances running on port 50052 have been stopped.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p><code class="docutils literal notranslate"><span class="pre">pymapdl</span> <span class="pre">exec</span></code> writes command output to stdout and errors to stderr,
+making it suitable for use in shell scripts and pipelines. The process
+exits with code <code class="docutils literal notranslate"><span class="pre">0</span></code> on success and <code class="docutils literal notranslate"><span class="pre">1</span></code> on failure.</p>
+</div>
+<p>To convert an existing APDL script to Python instead of executing it, see
+<a class="reference internal" href="#ref-cli-converter"><span class="std std-ref">Convert APDL code</span></a>.</p>
+</section>
 <section id="convert-apdl-code">
 <span id="ref-cli-converter"></span><h2>Convert APDL code<a class="headerlink" href="#convert-apdl-code" title="Link to this heading">#</a></h2>
 <p>After you have activated and installed the package as described
 in <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/getting_started/install.html#installation" title="(in PyDPF-Core v0.15.0)"><span>Installation</span></a>, you can use the converter from your terminal.
 Here is how you use the <code class="docutils literal notranslate"><span class="pre">pymapdl</span> <span class="pre">convert</span></code> command:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-20" name="sd-tab-set-10" type="radio">
-<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-20">
+<input checked="checked" id="sd-tab-item-30" name="sd-tab-set-15" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-30">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">pymapdl</span> <span class="n">convert</span> <span class="n">mapdl</span><span class="p">.</span><span class="n">dat</span> <span class="n">-o</span> <span class="n">python</span><span class="p">.</span><span class="n">py</span>
 
@@ -915,8 +1031,8 @@ Windows</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-21" name="sd-tab-set-10" type="radio">
-<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-21">
+<input id="sd-tab-item-31" name="sd-tab-set-15" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-31">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pymapdl<span class="w"> </span>convert<span class="w"> </span>mapdl.dat<span class="w"> </span>-o<span class="w"> </span>python.py
 
@@ -927,8 +1043,8 @@ Linux</label><div class="sd-tab-content docutils">
 </div>
 <p>To obtain help on converter usage, options, and examples, type this command:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-22" name="sd-tab-set-11" type="radio">
-<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-22">
+<input checked="checked" id="sd-tab-item-32" name="sd-tab-set-16" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-32">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">pymapdl</span> <span class="n">convert</span> <span class="p">-</span><span class="n">-help</span>
 
@@ -943,8 +1059,8 @@ Windows</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-23" name="sd-tab-set-11" type="radio">
-<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-23">
+<input id="sd-tab-item-33" name="sd-tab-set-16" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-33">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pymapdl<span class="w"> </span>convert<span class="w"> </span>--help
 
