@@ -600,6 +600,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.hidden_line_removal.html">hidden_line_removal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.image_scale.html">image_scale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interactive.html">interactive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interactor_style.html">interactor_style</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interpolate_before_map.html">interpolate_before_map</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.jupyter_backend.html">jupyter_backend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.lighting.html">lighting</a></li>
@@ -613,6 +614,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.notebook.html">notebook</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.opacity.html">opacity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.outline_color.html">outline_color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.point_shape.html">point_shape</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.point_size.html">point_size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.render_lines_as_tubes.html">render_lines_as_tubes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.render_points_as_spheres.html">render_points_as_spheres</a></li>
@@ -738,7 +740,26 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="ansys.mapdl.core.plotting.MapdlTheme.from_dict">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">MapdlTheme.</span></span><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ansys.mapdl.core.plotting.MapdlTheme.from_dict" title="Link to this definition">#</a></dt>
-<dd><p>Create from a dictionary.</p>
+<dd><p>Create an instance from a dictionary of attribute values.</p>
+<dl class="field-list">
+<dt class="field-odd">パラメーター<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>dict_</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Mapping of public attribute name to value, as produced by
+<a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.to_dict.html#ansys.mapdl.core.plotting.MapdlTheme.to_dict" title="ansys.mapdl.core.plotting.MapdlTheme.to_dict"><code class="xref py py-meth docutils literal notranslate"><span class="pre">to_dict()</span></code></a>. Nested config objects are recursively
+reconstructed via their own <code class="docutils literal notranslate"><span class="pre">from_dict</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">Self</span></code></dt><dd><p>New instance of <code class="docutils literal notranslate"><span class="pre">cls</span></code> populated from <code class="docutils literal notranslate"><span class="pre">dict_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Self</span></code></span></p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>

@@ -600,6 +600,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.hidden_line_removal.html">hidden_line_removal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.image_scale.html">image_scale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interactive.html">interactive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interactor_style.html">interactor_style</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interpolate_before_map.html">interpolate_before_map</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.jupyter_backend.html">jupyter_backend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.lighting.html">lighting</a></li>
@@ -613,6 +614,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.notebook.html">notebook</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.opacity.html">opacity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.outline_color.html">outline_color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.point_shape.html">point_shape</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.point_size.html">point_size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.render_lines_as_tubes.html">render_lines_as_tubes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.render_points_as_spheres.html">render_points_as_spheres</a></li>
@@ -762,7 +764,7 @@
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.from_dict.html#ansys.mapdl.core.plotting.MapdlTheme.from_dict" title="ansys.mapdl.core.plotting.MapdlTheme.from_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.from_dict</span></code></a>(dict_)</p></td>
-<td><p>Create from a dictionary.</p></td>
+<td><p>Create an instance from a dictionary of attribute values.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.load_theme.html#ansys.mapdl.core.plotting.MapdlTheme.load_theme" title="ansys.mapdl.core.plotting.MapdlTheme.load_theme"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.load_theme</span></code></a>(theme)</p></td>
 <td><p>Overwrite the current theme with a theme.</p></td>
@@ -774,7 +776,7 @@
 <td><p>Serialize this theme to a json file.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.to_dict.html#ansys.mapdl.core.plotting.MapdlTheme.to_dict" title="ansys.mapdl.core.plotting.MapdlTheme.to_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.to_dict</span></code></a>()</p></td>
-<td><p>Return theme config parameters as a dictionary.</p></td>
+<td><p>Return config parameters as a dictionary.</p></td>
 </tr>
 </tbody>
 </table>
@@ -857,44 +859,50 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interactive.html#ansys.mapdl.core.plotting.MapdlTheme.interactive" title="ansys.mapdl.core.plotting.MapdlTheme.interactive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.interactive</span></code></a></p></td>
 <td><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">interactive</span></code> parameter.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interpolate_before_map.html#ansys.mapdl.core.plotting.MapdlTheme.interpolate_before_map" title="ansys.mapdl.core.plotting.MapdlTheme.interpolate_before_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.interpolate_before_map</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interactor_style.html#ansys.mapdl.core.plotting.MapdlTheme.interactor_style" title="ansys.mapdl.core.plotting.MapdlTheme.interactor_style"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.interactor_style</span></code></a></p></td>
+<td><p>Return or set the default interactor style.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interpolate_before_map.html#ansys.mapdl.core.plotting.MapdlTheme.interpolate_before_map" title="ansys.mapdl.core.plotting.MapdlTheme.interpolate_before_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.interpolate_before_map</span></code></a></p></td>
 <td><p>Return or set whether to interpolate colors before mapping.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.jupyter_backend.html#ansys.mapdl.core.plotting.MapdlTheme.jupyter_backend" title="ansys.mapdl.core.plotting.MapdlTheme.jupyter_backend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.jupyter_backend</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.jupyter_backend.html#ansys.mapdl.core.plotting.MapdlTheme.jupyter_backend" title="ansys.mapdl.core.plotting.MapdlTheme.jupyter_backend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.jupyter_backend</span></code></a></p></td>
 <td><p>Return or set the jupyter notebook plotting backend.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.lighting.html#ansys.mapdl.core.plotting.MapdlTheme.lighting" title="ansys.mapdl.core.plotting.MapdlTheme.lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.lighting</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.lighting.html#ansys.mapdl.core.plotting.MapdlTheme.lighting" title="ansys.mapdl.core.plotting.MapdlTheme.lighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.lighting</span></code></a></p></td>
 <td><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">lighting</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.lighting_params.html#ansys.mapdl.core.plotting.MapdlTheme.lighting_params" title="ansys.mapdl.core.plotting.MapdlTheme.lighting_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.lighting_params</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.lighting_params.html#ansys.mapdl.core.plotting.MapdlTheme.lighting_params" title="ansys.mapdl.core.plotting.MapdlTheme.lighting_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.lighting_params</span></code></a></p></td>
 <td><p>Return or set the default lighting configuration.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.line_width.html#ansys.mapdl.core.plotting.MapdlTheme.line_width" title="ansys.mapdl.core.plotting.MapdlTheme.line_width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.line_width</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.line_width.html#ansys.mapdl.core.plotting.MapdlTheme.line_width" title="ansys.mapdl.core.plotting.MapdlTheme.line_width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.line_width</span></code></a></p></td>
 <td><p>Return or set the default line width.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.logo_file.html#ansys.mapdl.core.plotting.MapdlTheme.logo_file" title="ansys.mapdl.core.plotting.MapdlTheme.logo_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.logo_file</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.logo_file.html#ansys.mapdl.core.plotting.MapdlTheme.logo_file" title="ansys.mapdl.core.plotting.MapdlTheme.logo_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.logo_file</span></code></a></p></td>
 <td><p>Return or set the logo file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.multi_rendering_splitting_position.html#ansys.mapdl.core.plotting.MapdlTheme.multi_rendering_splitting_position" title="ansys.mapdl.core.plotting.MapdlTheme.multi_rendering_splitting_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.multi_rendering_splitting_position</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.multi_rendering_splitting_position.html#ansys.mapdl.core.plotting.MapdlTheme.multi_rendering_splitting_position" title="ansys.mapdl.core.plotting.MapdlTheme.multi_rendering_splitting_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.multi_rendering_splitting_position</span></code></a></p></td>
 <td><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">multi_rendering_splitting_position</span></code> parameter.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.multi_samples.html#ansys.mapdl.core.plotting.MapdlTheme.multi_samples" title="ansys.mapdl.core.plotting.MapdlTheme.multi_samples"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.multi_samples</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.multi_samples.html#ansys.mapdl.core.plotting.MapdlTheme.multi_samples" title="ansys.mapdl.core.plotting.MapdlTheme.multi_samples"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.multi_samples</span></code></a></p></td>
 <td><p>Return or set the default <code class="docutils literal notranslate"><span class="pre">multi_samples</span></code> parameter.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.name.html#ansys.mapdl.core.plotting.MapdlTheme.name" title="ansys.mapdl.core.plotting.MapdlTheme.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.name</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.name.html#ansys.mapdl.core.plotting.MapdlTheme.name" title="ansys.mapdl.core.plotting.MapdlTheme.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.name</span></code></a></p></td>
 <td><p>Return or set the name of the theme.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.nan_color.html#ansys.mapdl.core.plotting.MapdlTheme.nan_color" title="ansys.mapdl.core.plotting.MapdlTheme.nan_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.nan_color</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.nan_color.html#ansys.mapdl.core.plotting.MapdlTheme.nan_color" title="ansys.mapdl.core.plotting.MapdlTheme.nan_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.nan_color</span></code></a></p></td>
 <td><p>Return or set the default NaN color.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.notebook.html#ansys.mapdl.core.plotting.MapdlTheme.notebook" title="ansys.mapdl.core.plotting.MapdlTheme.notebook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.notebook</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.notebook.html#ansys.mapdl.core.plotting.MapdlTheme.notebook" title="ansys.mapdl.core.plotting.MapdlTheme.notebook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.notebook</span></code></a></p></td>
 <td><p>Return or set the state of notebook plotting.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.opacity.html#ansys.mapdl.core.plotting.MapdlTheme.opacity" title="ansys.mapdl.core.plotting.MapdlTheme.opacity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.opacity</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.opacity.html#ansys.mapdl.core.plotting.MapdlTheme.opacity" title="ansys.mapdl.core.plotting.MapdlTheme.opacity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.opacity</span></code></a></p></td>
 <td><p>Return or set the opacity.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.outline_color.html#ansys.mapdl.core.plotting.MapdlTheme.outline_color" title="ansys.mapdl.core.plotting.MapdlTheme.outline_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.outline_color</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.outline_color.html#ansys.mapdl.core.plotting.MapdlTheme.outline_color" title="ansys.mapdl.core.plotting.MapdlTheme.outline_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.outline_color</span></code></a></p></td>
 <td><p>Return or set the default outline color.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.point_shape.html#ansys.mapdl.core.plotting.MapdlTheme.point_shape" title="ansys.mapdl.core.plotting.MapdlTheme.point_shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.point_shape</span></code></a></p></td>
+<td><p>Return or set the default point sprite shape.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.point_size.html#ansys.mapdl.core.plotting.MapdlTheme.point_size" title="ansys.mapdl.core.plotting.MapdlTheme.point_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlTheme.point_size</span></code></a></p></td>
 <td><p>Return or set the default point size.</p></td>

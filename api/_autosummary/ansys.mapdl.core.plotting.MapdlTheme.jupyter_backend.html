@@ -600,6 +600,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.hidden_line_removal.html">hidden_line_removal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.image_scale.html">image_scale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interactive.html">interactive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interactor_style.html">interactor_style</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.interpolate_before_map.html">interpolate_before_map</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">jupyter_backend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.lighting.html">lighting</a></li>
@@ -613,6 +614,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.notebook.html">notebook</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.opacity.html">opacity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.outline_color.html">outline_color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.point_shape.html">point_shape</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.point_size.html">point_size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.render_lines_as_tubes.html">render_lines_as_tubes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.MapdlTheme.render_points_as_spheres.html">render_points_as_spheres</a></li>
@@ -737,7 +739,7 @@
 <h1>jupyter_backend<a class="headerlink" href="#jupyter-backend" title="Link to this heading">#</a></h1>
 <dl class="py property">
 <dt class="sig sig-object py" id="ansys.mapdl.core.plotting.MapdlTheme.jupyter_backend">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">MapdlTheme.</span></span><span class="sig-name descname"><span class="pre">jupyter_backend</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Literal" title="(in Python v3.14)"><span class="pre">Literal</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'static'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'client'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'server'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'trame'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'html'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'none'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#ansys.mapdl.core.plotting.MapdlTheme.jupyter_backend" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">MapdlTheme.</span></span><span class="sig-name descname"><span class="pre">jupyter_backend</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></em><a class="headerlink" href="#ansys.mapdl.core.plotting.MapdlTheme.jupyter_backend" title="Link to this definition">#</a></dt>
 <dd><p>Return or set the jupyter notebook plotting backend.</p>
 <p>Jupyter backend to use when plotting.  Must be one of the
 following:</p>
@@ -773,6 +775,10 @@ virtual framebuffer.</p></li>
 </div>
 <p>Disable all plotting within JupyterLab and display using a
 standard desktop VTK render window.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pv</span><span class="o">.</span><span class="n">set_jupyter_backend</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>  
+</pre></div>
+</div>
+<p>Reset to auto-detect the best available backend.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pv</span><span class="o">.</span><span class="n">set_jupyter_backend</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>  
 </pre></div>
 </div>

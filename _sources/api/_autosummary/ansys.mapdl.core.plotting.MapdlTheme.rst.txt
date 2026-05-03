@@ -64,6 +64,7 @@
       MapdlTheme.hidden_line_removal
       MapdlTheme.image_scale
       MapdlTheme.interactive
+      MapdlTheme.interactor_style
       MapdlTheme.interpolate_before_map
       MapdlTheme.jupyter_backend
       MapdlTheme.lighting
@@ -77,6 +78,7 @@
       MapdlTheme.notebook
       MapdlTheme.opacity
       MapdlTheme.outline_color
+      MapdlTheme.point_shape
       MapdlTheme.point_size
       MapdlTheme.render_lines_as_tubes
       MapdlTheme.render_points_as_spheres
