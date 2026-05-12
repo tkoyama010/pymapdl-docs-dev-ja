@@ -7,6 +7,10 @@ Miscellaneous examples
 These examples demonstrate miscellaneous tips and tricks for using PyMAPDL.
 
 
+.. raw:: html
+
+  <div id='sg-tag-list' class='sphx-glr-tag-list'></div>
+
 
 .. raw:: html
 
