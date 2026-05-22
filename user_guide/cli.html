@@ -667,6 +667,9 @@
 <span id="ref-cli"></span><h1>PyMAPDL コマンドラインインターフェイス.<a class="headerlink" href="#pymapdl-command-line-interface" title="Link to this heading">#</a></h1>
 <p>For your convenience, PyMAPDL package includes a command line interface
 which allows you to launch, stop, list, and execute commands on MAPDL instances.</p>
+<p>The list of available commands can be obtained by typing <code class="docutils literal notranslate"><span class="pre">pymapdl</span> <span class="pre">--help</span></code> in your
+terminal after activating the virtual environment.
+For more information about the installation, see <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/getting_started/install.html#installation" title="(in PyDPF-Core v0.16.0)"><span>Installation</span></a>.</p>
 <section id="launch-mapdl-instances">
 <h2>MAPDLインスタンスを起動する<a class="headerlink" href="#launch-mapdl-instances" title="Link to this heading">#</a></h2>
 <p>MAPDLを起動するには、起動した仮想環境上で次のように入力します:</p>
@@ -1046,14 +1049,62 @@ exits with code <code class="docutils literal notranslate"><span class="pre">0</
 <p>To convert an existing APDL script to Python instead of executing it, see
 <a class="reference internal" href="#ref-cli-converter"><span class="std std-ref">Convert APDL code</span></a>.</p>
 </section>
+<section id="get-help">
+<span id="ref-cli-help"></span><h2>Get help<a class="headerlink" href="#get-help" title="Link to this heading">#</a></h2>
+<p>The command-line tool provides a generic help command that lists available MAPDL keywords and
+functions. The output can be filtered using standard shell tools. For example,
+filter for GET-related entries containing NODE and LOC with grep:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-32" name="sd-tab-set-16" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-32">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">pymapdl</span> <span class="n">help</span> <span class="s2">&quot;*GET&quot;</span> <span class="p">|</span> <span class="nb">Select-String</span> <span class="n">-Context</span> <span class="n">3</span><span class="p">,</span><span class="n">3</span> <span class="s2">&quot;NODE&quot;</span> <span class="p">|</span> <span class="nb">Select-String</span> <span class="n">-Context</span> <span class="n">3</span><span class="p">,</span><span class="n">3</span> <span class="s2">&quot;LOC&quot;</span>
+<span class="go">    ┣━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫</span>
+<span class="go">    ┃ Item1 ┃ IT1NUM   ┃ Description                                                                                       ┃</span>
+<span class="go">    ┡━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩</span>
+<span class="go">    │ LOC   │ X, Y, Z  │ X, Y, Z location in the active coordinate system. Alternative get functions: NX( N ), NY( N ),    │</span>
+<span class="go">    │       │          │ NZ( N ). Inverse get function. NODE( x,y,z ) returns the number of the selected node nearest the  │</span>
+<span class="go">    │       │          │ x,y,z location (in the active coordinate system, lowest number for coincident nodes).             │</span>
+<span class="go">    ├───────┼──────────┼───────────────────────────────────────────────────────────────────────────────────────────────────┤</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>The <cite>-Context</cite> argument controls the number of lines to print before and after the match (<cite>-Context &lt;n&gt;</cite>)
+which can be helpful to understand the context of the matched keyword.
+You can also control them separately with <cite>-Context &lt;before&gt;,&lt;after&gt;</cite>.</p>
+</div>
+</div>
+<input id="sd-tab-item-33" name="sd-tab-set-16" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-33">
+Linux</label><div class="sd-tab-content docutils">
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pymapdl<span class="w"> </span><span class="nb">help</span><span class="w"> </span><span class="s2">&quot;*GET&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-C<span class="w"> </span><span class="m">3</span><span class="w"> </span>NODE<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-C<span class="w"> </span><span class="m">3</span><span class="w"> </span>LOC
+<span class="go">    ┣━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫</span>
+<span class="go">    ┃ Item1 ┃ IT1NUM   ┃ Description                                                                                       ┃</span>
+<span class="go">    ┡━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩</span>
+<span class="go">    │ LOC   │ X, Y, Z  │ X, Y, Z location in the active coordinate system. Alternative get functions: NX( N ), NY( N ),    │</span>
+<span class="go">    │       │          │ NZ( N ). Inverse get function. NODE( x,y,z ) returns the number of the selected node nearest the  │</span>
+<span class="go">    │       │          │ x,y,z location (in the active coordinate system, lowest number for coincident nodes).             │</span>
+<span class="go">    ├───────┼──────────┼───────────────────────────────────────────────────────────────────────────────────────────────────┤</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>The <cite>-C</cite> / <cite>--context</cite> option of grep shows lines before and after the matched line,
+which can be helpful to understand the context of the matched keyword.</p>
+</div>
+</div>
+</div>
+<p>This shows a matched table excerpt; adjust the grep pattern to match the keywords you need.</p>
+</section>
 <section id="convert-apdl-code">
 <span id="ref-cli-converter"></span><h2>Convert APDL code<a class="headerlink" href="#convert-apdl-code" title="Link to this heading">#</a></h2>
 <p>After you have activated and installed the package as described
 in <a class="reference external" href="https://dpf.docs.pyansys.com/version/stable/getting_started/install.html#installation" title="(in PyDPF-Core v0.16.0)"><span>Installation</span></a>, you can use the converter from your terminal.
 Here is how you use the <code class="docutils literal notranslate"><span class="pre">pymapdl</span> <span class="pre">convert</span></code> command:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-32" name="sd-tab-set-16" type="radio">
-<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-32">
+<input checked="checked" id="sd-tab-item-34" name="sd-tab-set-17" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-34">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">pymapdl</span> <span class="n">convert</span> <span class="n">mapdl</span><span class="p">.</span><span class="n">dat</span> <span class="n">-o</span> <span class="n">python</span><span class="p">.</span><span class="n">py</span>
 
@@ -1061,8 +1112,8 @@ Windows</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-33" name="sd-tab-set-16" type="radio">
-<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-33">
+<input id="sd-tab-item-35" name="sd-tab-set-17" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-35">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pymapdl<span class="w"> </span>convert<span class="w"> </span>mapdl.dat<span class="w"> </span>-o<span class="w"> </span>python.py
 
@@ -1073,8 +1124,8 @@ Linux</label><div class="sd-tab-content docutils">
 </div>
 <p>To obtain help on converter usage, options, and examples, type this command:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-34" name="sd-tab-set-17" type="radio">
-<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-34">
+<input checked="checked" id="sd-tab-item-36" name="sd-tab-set-18" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-36">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-pwsh-session notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">PS C:\Users\user\pymapdl&gt; </span><span class="n">pymapdl</span> <span class="n">convert</span> <span class="p">-</span><span class="n">-help</span>
 
@@ -1089,8 +1140,8 @@ Windows</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-35" name="sd-tab-set-17" type="radio">
-<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-35">
+<input id="sd-tab-item-37" name="sd-tab-set-18" type="radio">
+<label class="sd-tab-label" data-sync-group="tab" data-sync-id="key1" for="sd-tab-item-37">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">user@machine:~$ </span>pymapdl<span class="w"> </span>convert<span class="w"> </span>--help
 
