@@ -571,10 +571,15 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../plotting.html">Plotting</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">MapdlPlotter</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_labels.html">add_labels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_lines.html">add_lines</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_mesh.html">add_mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_planes.html">add_planes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_points.html">add_points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_text.html">add_text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.animate.html">animate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.bc_nodes_plot.html">bc_nodes_plot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.bc_plot.html">bc_plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.clear.html">clear</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.get_meshes_from_plotter.html">get_meshes_from_plotter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot.html">plot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot_iter.html">plot_iter</a></li>
@@ -707,11 +712,23 @@ The picker is implemented in PyMAPDL-specific classes due to the characteristics
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_labels.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_labels" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_labels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.add_labels</span></code></a>(points, labels, ...)</p></td>
 <td><p>Add labels to the plotter.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_mesh.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_mesh" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.add_mesh</span></code></a>([meshes, points, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_lines.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_lines" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.add_lines</span></code></a>(points[, ...])</p></td>
+<td><p>Add line segments to the scene.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_mesh.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_mesh" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.add_mesh</span></code></a>([meshes, points, ...])</p></td>
 <td><p>Adds a mesh to the plotter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_planes.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_planes" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_planes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.add_planes</span></code></a>([center, normal, ...])</p></td>
+<td><p>Add a plane to the scene.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_points.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_points" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.add_points</span></code></a>(points, ...)</p></td>
 <td><p>Add points to the plotter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_text.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_text" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.add_text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.add_text</span></code></a>(text, position[, ...])</p></td>
+<td><p>Add text to the scene.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.animate.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.animate" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.animate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.animate</span></code></a>(frames[, fps, loop, ...])</p></td>
+<td><p>Create an animation from a sequence of frames.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.bc_nodes_plot.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.bc_nodes_plot" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.bc_nodes_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.bc_nodes_plot</span></code></a>(mapdl, bc_labels)</p></td>
 <td><p>Plot nodes BC given a list of labels.</p></td>
@@ -719,19 +736,22 @@ The picker is implemented in PyMAPDL-specific classes due to the characteristics
 <tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.bc_plot.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.bc_plot" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.bc_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.bc_plot</span></code></a>([mapdl, bc_labels, ...])</p></td>
 <td><p>Plot boundary conditions.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.get_meshes_from_plotter.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.get_meshes_from_plotter" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.get_meshes_from_plotter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.get_meshes_from_plotter</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.clear.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.clear" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.clear"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.clear</span></code></a>()</p></td>
+<td><p>Clear all actors from the scene.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.get_meshes_from_plotter.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.get_meshes_from_plotter" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.get_meshes_from_plotter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.get_meshes_from_plotter</span></code></a>()</p></td>
 <td><p>Get the meshes plotted in the plotter.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.plot</span></code></a>([meshes, points, labels, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.plot</span></code></a>([meshes, points, labels, ...])</p></td>
 <td><p>Add an object to the plotter.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot_iter.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot_iter" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot_iter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.plot_iter</span></code></a>(plotting_list[, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot_iter.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot_iter" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.plot_iter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.plot_iter</span></code></a>(plotting_list[, ...])</p></td>
 <td><p>Add a list of objects to the plotter.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.show.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.show" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.show</span></code></a>([window_size, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.show.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.show" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.show</span></code></a>([window_size, ...])</p></td>
 <td><p>Show the plotter.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.switch_scene.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.switch_scene" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.switch_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.switch_scene</span></code></a>(pl)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.switch_scene.html#ansys.mapdl.core.plotting.visualizer.MapdlPlotter.switch_scene" title="ansys.mapdl.core.plotting.visualizer.MapdlPlotter.switch_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapdlPlotter.switch_scene</span></code></a>(pl)</p></td>
 <td><p>Switches the backend scene to the given plotter.</p></td>
 </tr>
 </tbody>

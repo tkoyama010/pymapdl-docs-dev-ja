@@ -18,16 +18,31 @@
       MapdlPlotter.add_labels
       
       
+      MapdlPlotter.add_lines
+      
+      
       MapdlPlotter.add_mesh
       
       
+      MapdlPlotter.add_planes
+      
+      
       MapdlPlotter.add_points
+      
+      
+      MapdlPlotter.add_text
+      
+      
+      MapdlPlotter.animate
       
       
       MapdlPlotter.bc_nodes_plot
       
       
       MapdlPlotter.bc_plot
+      
+      
+      MapdlPlotter.clear
       
       
       MapdlPlotter.get_meshes_from_plotter
