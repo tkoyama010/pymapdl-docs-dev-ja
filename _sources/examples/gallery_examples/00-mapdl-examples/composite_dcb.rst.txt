@@ -404,7 +404,7 @@ Postprocessing results using PyDPF
 Use PyDPF to visualize the crack opening throughout the simulation as
 an animation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 353-458
+.. GENERATED FROM PYTHON SOURCE LINES 353-460
 
 .. code-block:: Python
 
@@ -479,12 +479,15 @@ an animation.
 
     # Add the contact mesh to the scene
     mesh_contact = result_mesh.grid
+    damage_scalars_name = "Cohesive Damage"
+    mesh_contact.cell_data[damage_scalars_name] = np.zeros(mesh_contact.n_cells)
+    mesh_contact.set_active_scalars(damage_scalars_name, preference="cell")
     plotter.add_mesh(
         mesh_contact,
         opacity=0.9,
         scalar_bar_args={"title": "Cohesive Damage"},
         clim=[0, 1],
-        scalars=np.zeros((mesh_contact.n_cells)),
+        scalars=damage_scalars_name,
     )
     for i in range(1, 100):
         # Get displacements
@@ -506,19 +509,18 @@ an animation.
 
         mesh_beam.points = disp_result.data
         mesh_contact.points = disp_cohesive.data
-
-        plotter.update_scalars(cohesive_damage.data, mesh=mesh_contact, render=False)
+        mesh_contact.cell_data[damage_scalars_name][:] = cohesive_damage.data
         plotter.write_frame()
 
     plotter.close()
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 459-460
+.. GENERATED FROM PYTHON SOURCE LINES 461-462
 
 Plot the reaction force at the bottom nodes
 
-.. GENERATED FROM PYTHON SOURCE LINES 460-486
+.. GENERATED FROM PYTHON SOURCE LINES 462-488
 
 .. code-block:: Python
 
@@ -549,14 +551,14 @@ Plot the reaction force at the bottom nodes
     plt.show()
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 487-491
+.. GENERATED FROM PYTHON SOURCE LINES 489-493
 
 Animate results using PyDPF with .animate() method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Use PyDPF method :func:`FieldsContainer.animate() <ansys.dpf.core.fields_container.FieldsContainer.animate>` to visualize the crack opening throughout the simulation as
 an animation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 491-499
+.. GENERATED FROM PYTHON SOURCE LINES 493-501
 
 .. code-block:: Python
 
@@ -569,11 +571,11 @@ an animation.
     )
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 500-501
+.. GENERATED FROM PYTHON SOURCE LINES 502-503
 
 Exit MAPDL
 
-.. GENERATED FROM PYTHON SOURCE LINES 502-503
+.. GENERATED FROM PYTHON SOURCE LINES 504-505
 
 .. code-block:: Python
 
