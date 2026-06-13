@@ -32,7 +32,7 @@
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/ansys-sphinx-theme.css?v=fb294b3b" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/ansys-sphinx-theme.css?v=5ffe81b6" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -41,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/ansys-sphinx-theme.css?v=fb294b3b" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/ansys-sphinx-theme.css?v=5ffe81b6" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -935,6 +935,38 @@ unit tests are in the <a class="reference external" href="https://github.com/ans
 along with integration tests. The difference between a unit test and an
 integration test is that the latter tests several units of the code to ensure
 that they all work together.</p>
+<section id="local-vs-remote-testing">
+<h3><code class="docutils literal notranslate"><span class="pre">local</span></code> vs <code class="docutils literal notranslate"><span class="pre">remote</span></code> testing<a class="headerlink" href="#local-vs-remote-testing" title="Link to this heading">#</a></h3>
+<p>The PyMAPDL test suite is designed to run when MAPDL is installed on the local
+machine (<code class="docutils literal notranslate"><span class="pre">local</span></code> testing) and when it is not (<code class="docutils literal notranslate"><span class="pre">remote</span></code> testing).
+When working in <code class="docutils literal notranslate"><span class="pre">local</span></code> MAPDL is launched by the test suite, and it has
+access to the local resources, while in <code class="docutils literal notranslate"><span class="pre">remote</span></code> it is expected to be running
+on a remote server or container and it does not have access to the local filesystem.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id3">
+<caption><span class="caption-text">Key differences between <code class="docutils literal notranslate"><span class="pre">local</span></code> and <code class="docutils literal notranslate"><span class="pre">remote</span></code> testing</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Mode</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">Local</span></code> testing</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">Remote</span></code> testing</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Launching MAPDL</p></td>
+<td><p>PyMAPDL finds the local MAPDL installation and launches a MAPDL instance with the specified configuration.
+Use <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_PORT</span></code> to specify the port.</p></td>
+<td><p>PyMAPDL connects to a running instance of MAPDL that is expected to be running on a remote server or container.
+Set <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_START_INSTANCE</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code> so PyMAPDL connects instead of launching a local instance.
+You need to start MAPDL before running the tests, and use <span class="target" id="index-2"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_PORT</span></code> and <span class="target" id="index-3"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_IP</span></code> environment variables
+to configure the connection to the running instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Access to local resources</p></td>
+<td><p>Has access to the local filesystem and resources.</p></td>
+<td><p>Does not have access to the local filesystem and resources. PyMAPDL uploads/downloads files to the remote instance as needed.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 <section id="creation-of-a-unit-test">
 <h3>Creation of a unit test<a class="headerlink" href="#creation-of-a-unit-test" title="Link to this heading">#</a></h3>
 <p>The name of a <code class="docutils literal notranslate"><span class="pre">pytest</span></code> file must be in the form <code class="docutils literal notranslate"><span class="pre">test_XXX.py</span></code>, where <code class="docutils literal notranslate"><span class="pre">XXX</span></code>
@@ -1014,52 +1046,52 @@ To test these different configurations, you can use the <cite>pytest</cite> fram
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">ON_CI</span></code></p></td>
+<tr class="row-even"><td><p><span class="target" id="index-4"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">ON_CI</span></code></p></td>
 <td><p><cite>True</cite>/<cite>False</cite></p></td>
 <td><p><cite>False</cite></p></td>
 <td><p>Tell Pytest it is running on GitHub Actions</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">ON_LOCAL</span></code></p></td>
+<tr class="row-odd"><td><p><span class="target" id="index-5"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">ON_LOCAL</span></code></p></td>
 <td><p><cite>True</cite>/<cite>False</cite></p></td>
 <td><p>Detected</p></td>
-<td><p>Tell Pytest that PyMAPDL is running on local, and the test should match that. The default is to detect whether MAPDL is installed or not. If the environment variable <span class="target" id="index-2"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_START_INSTANCE</span></code> is set, then <span class="target" id="index-3"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">ON_LOCAL</span></code> is <cite>False</cite>.</p></td>
+<td><p>Tell Pytest that PyMAPDL is running on local, and the test should match that. The default is to detect whether MAPDL is installed or not. If the environment variable <span class="target" id="index-6"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_START_INSTANCE</span></code> is set, then <span class="target" id="index-7"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">ON_LOCAL</span></code> is <cite>False</cite>.</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="target" id="index-4"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">ON_UBUNTU</span></code></p></td>
+<tr class="row-even"><td><p><span class="target" id="index-8"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">ON_UBUNTU</span></code></p></td>
 <td><p><cite>True</cite>/<cite>False</cite></p></td>
 <td><p>Detected</p></td>
 <td><p>Tell Pytest that PyMAPDL is running on Ubuntu, and the test should match that.</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="target" id="index-5"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">TESTING_MINIMAL</span></code></p></td>
+<tr class="row-odd"><td><p><span class="target" id="index-9"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">TESTING_MINIMAL</span></code></p></td>
 <td><p><cite>True</cite>/<cite>False</cite></p></td>
 <td><p><cite>False</cite></p></td>
 <td><p>Tell Pytest that PyMAPDL is installed with the minimal requirements, hence it won't run tests that requires libraries like Pyvista, DPF, etc.</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="target" id="index-6"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_DEBUG_TESTING</span></code></p></td>
+<tr class="row-even"><td><p><span class="target" id="index-10"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_DEBUG_TESTING</span></code></p></td>
 <td><p><cite>True</cite>/<cite>False</cite></p></td>
 <td><p><cite>False</cite></p></td>
 <td><p>Tell PyMAPDL to enable debug while testing. This means that the APDL commands are recorded to the file <cite>pymapdl.apdl</cite> and the debug calls are logged into the file <cite>pymapdl.log</cite>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="target" id="index-7"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HAS_GRPC</span></code></p></td>
+<tr class="row-odd"><td><p><span class="target" id="index-11"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HAS_GRPC</span></code></p></td>
 <td><p><cite>True</cite>/<cite>False</cite></p></td>
 <td><p>Detected</p></td>
 <td><p>Tell PyMAPDL that the gRPC interface is available for testing. If <cite>TESTING_MINIMAL</cite> is <cite>True</cite>, then this is <cite>True</cite> by default.</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="target" id="index-8"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HAS_DPF</span></code></p></td>
+<tr class="row-even"><td><p><span class="target" id="index-12"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">HAS_DPF</span></code></p></td>
 <td><p><cite>True</cite>/<cite>False</cite></p></td>
 <td><p><cite>False</cite></p></td>
 <td><p>Tell Pytest that DPF should be tested.</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="target" id="index-9"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">DISTRIBUTED_MODE</span></code></p></td>
+<tr class="row-odd"><td><p><span class="target" id="index-13"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">DISTRIBUTED_MODE</span></code></p></td>
 <td><p><cite>SMP</cite>/<cite>DMP</cite></p></td>
 <td><p><cite>SMP</cite></p></td>
 <td><p>Tell Pytest that MAPDL is running a given distributed mode.</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="target" id="index-10"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">SUPPORT_PLOTTING</span></code></p></td>
+<tr class="row-even"><td><p><span class="target" id="index-14"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">SUPPORT_PLOTTING</span></code></p></td>
 <td><p><cite>True</cite>/<cite>False</cite></p></td>
 <td><p>Detected</p></td>
 <td><p>Tell Pytest that the machine supports plotting (it has a display).</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="target" id="index-11"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">TEST_DPF_BACKEND</span></code></p></td>
+<tr class="row-odd"><td><p><span class="target" id="index-15"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">TEST_DPF_BACKEND</span></code></p></td>
 <td><p><cite>Yes</cite>/<cite>No</cite></p></td>
 <td><p><cite>NO</cite></p></td>
 <td><p>Tell Pytest that the module <cite>Result</cite> with DPF backend should be tested.</p></td>
@@ -1068,9 +1100,87 @@ To test these different configurations, you can use the <cite>pytest</cite> fram
 </table>
 </div>
 <p>Additionally, you can use any <a class="reference internal" href="../user_guide/mapdl.html#ref-environment-variables"><span class="std std-ref">Environment variables</span></a>
-like the <span class="target" id="index-12"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_MAPDL_EXEC</span></code> and <span class="target" id="index-13"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_MAPDL_VERSION</span></code>
+like the <span class="target" id="index-16"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_MAPDL_EXEC</span></code> and <span class="target" id="index-17"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_MAPDL_VERSION</span></code>
 environment variables to specify the MAPDL executable path and the version to launch (if
 multiple versions of MAPDL are installed).</p>
+</section>
+<section id="running-ci-like-tests-with-tox-docker-envs">
+<h3>Running CI-like tests with tox docker envs<a class="headerlink" href="#running-ci-like-tests-with-tox-docker-envs" title="Link to this heading">#</a></h3>
+<p>The project provides tox environments that start Docker services, build images if
+necessary, and run the test matrix similarly to the CI pipeline. These are useful
+for reproducing CI behavior locally.</p>
+<p>Common tox envs and quick explanation:</p>
+<p><strong>Run MAPDL containers</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">docker-run-mapdl</span></code>:
+Start a MAPDL Docker container (background). Useful to start MAPDL and connect local services
+to it (i.e. <code class="docutils literal notranslate"><span class="pre">pytest</span></code> which requires a running container).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker-run-mapdl-dpf</span></code>:
+Start MAPDL and DPF containers required for DPF-enabled tests.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker-stop-mapdl</span></code>:
+Stop and remove MAPDL containers started by <code class="docutils literal notranslate"><span class="pre">docker-run-mapdl</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker-stop-mapdl-dpf</span></code>:
+Stop and remove MAPDL+DPF containers started by <code class="docutils literal notranslate"><span class="pre">docker-run-mapdl-dpf</span></code>.</p></li>
+</ul>
+<p><strong>Testing</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">docker-test-local-build</span></code>:
+Rebuild the local-host Docker image (<code class="docutils literal notranslate"><span class="pre">local</span></code> profile) without running tests.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker-test-remote-build</span></code>:
+Rebuild the remote-host Docker image (<code class="docutils literal notranslate"><span class="pre">remote</span></code> profile) without running tests.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker-test-local</span></code>:
+Run tests using local Docker images/containers (CI-like behavior on your machine).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker-test-remote</span></code>:
+Run tests against remote images/environment (mirrors CI environment closely).</p></li>
+</ul>
+<p>Typical usage:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Start<span class="w"> </span>MAPDL<span class="w"> </span>container<span class="w"> </span><span class="o">(</span>background<span class="o">)</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>run<span class="w"> </span><span class="nb">local</span><span class="w"> </span>tests
+<span class="go">export ANSYSLMD_LICENSE_FILE=1055@license-server</span>
+<span class="go">export DOCKER_IMAGE=ghcr.io/ansys/mapdl:v25.2.7-ubuntu-cicd</span>
+<span class="go">tox -e docker-run-mapdl</span>
+<span class="go">pytest -k &quot;my_test&quot;  # run tests that require a running container</span>
+
+<span class="gp"># </span>Or<span class="w"> </span>run<span class="w"> </span>combined<span class="w"> </span><span class="nb">test</span><span class="w"> </span>env<span class="w"> </span><span class="o">(</span>starts<span class="w"> </span>containers,<span class="w"> </span>runs<span class="w"> </span>tests,<span class="w"> </span>stops<span class="w"> </span>containers<span class="o">)</span>
+<span class="go">export ANSYSLMD_LICENSE_FILE=1055@license-server</span>
+<span class="go">export DOCKER_IMAGE=ghcr.io/ansys/mapdl:v25.2.7-ubuntu-cicd</span>
+<span class="go">tox -e docker-test-local</span>
+</pre></div>
+</div>
+<section id="note-about-uv-uvx">
+<h4>Note about uv/uvx<a class="headerlink" href="#note-about-uv-uvx" title="Link to this heading">#</a></h4>
+<p>The repository's CI uses the uvx wrapper to run tox inside the pinned virtual environment.
+Developers are encouraged to use uv or uvx too. Example (CI-like remote test run):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">uvx tox -e docker-test-remote</span>
+</pre></div>
+</div>
+<p>Or for local runs:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">uvx tox -e docker-test-local</span>
+</pre></div>
+</div>
+</section>
+<section id="environment-variable-files">
+<h4>Environment variable files<a class="headerlink" href="#environment-variable-files" title="Link to this heading">#</a></h4>
+<p>Required environment variables for the tox Docker envs are provided in <code class="docutils literal notranslate"><span class="pre">docker/run/example.env</span></code> and <code class="docutils literal notranslate"><span class="pre">docker/testing/example.env</span></code>.
+Copy each <code class="docutils literal notranslate"><span class="pre">example.env</span></code> to a <code class="docutils literal notranslate"><span class="pre">.env</span></code> file in the same directory and update the values to match your environment.
+For example: <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">docker/testing/example.env</span> <span class="pre">docker/testing/.env</span></code>.
+The tox envs read these <code class="docutils literal notranslate"><span class="pre">.env</span></code> files when present.</p>
+<p>Windows PowerShell example:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nv">$env:PYTEST_ARGUMENTS</span> <span class="p">=</span> <span class="s2">&quot;-vvv tests/test_mapdl.py&quot;</span><span class="p">;</span> <span class="n">tox</span> <span class="n">-e</span> <span class="n">docker-run-mapdl</span>
+</pre></div>
+</div>
+<p>Environment variables that influence behaviour:</p>
+<ul class="simple">
+<li><p><span class="target" id="index-18"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_START_INSTANCE</span></code>: When True, tox envs start MAPDL/Dpf containers; set to False to reuse existing instances.</p></li>
+<li><p><span class="target" id="index-19"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_PORT</span></code> / <span class="target" id="index-20"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">PYMAPDL_IP</span></code>: Connection address/port used by tests.</p></li>
+<li><p><span class="target" id="index-21"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">TOX_TEST_MODE</span></code>: &quot;local&quot; or &quot;remote&quot; to select the test/build flow used by the tox envs.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>The tox docker envs are intended to mirror CI steps. Ensure Docker is running and you have sufficient permissions.
+For long-running or repeated work, prefer starting containers with <code class="docutils literal notranslate"><span class="pre">docker-run-mapdl</span></code> and stopping them later
+with <code class="docutils literal notranslate"><span class="pre">docker-stop-mapdl</span></code> to reduce rebuild time.</p>
+</div>
+</section>
 </section>
 <section id="continuous-integration-and-continuous-deployment">
 <h3>Continuous integration and continuous deployment<a class="headerlink" href="#continuous-integration-and-continuous-deployment" title="Link to this heading">#</a></h3>
@@ -1309,7 +1419,7 @@ const EXTRA_SOURCES = JSON.parse('""');
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.8.1. and
+          1.8.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
           on <span id="date"></span>
         </p>

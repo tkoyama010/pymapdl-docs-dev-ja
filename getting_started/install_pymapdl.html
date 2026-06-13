@@ -32,7 +32,7 @@
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/ansys-sphinx-theme.css?v=fb294b3b" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/ansys-sphinx-theme.css?v=5ffe81b6" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/thebelab.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -41,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/ansys-sphinx-theme.css?v=fb294b3b" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/ansys-sphinx-theme.css?v=5ffe81b6" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" type="text/css" href="https://www.nerdfonts.com/assets/css/webfont.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -691,17 +691,28 @@
 <span id="ref-pymapdl-installation"></span><h1>PyMAPDLをインストールする.<a class="headerlink" href="#install-pymapdl" title="Link to this heading">#</a></h1>
 <section id="python-module">
 <h2>Python module<a class="headerlink" href="#python-module" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>These instructions assume you are working on Windows/macOS/Linux and are familiar
+with <code class="docutils literal notranslate"><span class="pre">pip</span></code> and the command line. If they are new to you, you should read
+the <cite>Python Packaging User Guide Tutorial on pip &lt;python_installing_packages&gt;</cite>
+before proceeding.</p>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">ansys.mapdl.core</span></code> package currently supports Python 3.10 through
 Python 3.13 on Windows, macOS, and Linux.</p>
-<p>以下のコマンドで <a class="reference external" href="https://pypi.org/project/ansys-mapdl-core/">PyPi</a> から最新リリースをインストールします:</p>
+<p>Install the latest release from <a class="reference external" href="https://pypi.org/project/ansys-mapdl-core/">PyPi</a> with this command on
+the command line, terminal, or in PowerShell:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install ansys-mapdl-core</span>
 </pre></div>
 </div>
-<p>あるいは、以下のコマンドで PyMAPDL GitHub &lt;<a class="reference external" href="https://github.com/ansys/pymapdl/issues">pymapdl_issues</a>&gt;`_ から最新のものをインストールしてください:</p>
+<p>Alternatively, install the latest release from
+<a class="reference external" href="https://github.com/ansys/pymapdl/issues">PyMAPDL GitHub</a> with this command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install git+https://github.com/ansys/pymapdl.git</span>
 </pre></div>
 </div>
-<p>For a local <em>development</em> version, install with these commands:</p>
+<p>For a local <em>development</em> version, install with the following commands.
+If you are unfamiliar with git or do not have it installed,
+see the <cite>contributing to PyMAPDL guide &lt;_developing_pymapdl&gt;</cite> for more information.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/ansys/pymapdl.git</span>
 <span class="go">cd pymapdl</span>
 <span class="go">pip install -e .</span>
@@ -738,7 +749,7 @@ install using the preceding command.</p>
 </pre></div>
 </div>
 <p>For information on launching PyMAPDL and connecting it
-to an MAPDL instance, see:ref:<cite>ref_launch_pymapdl</cite>.</p>
+to an MAPDL instance, see <span class="xref std std-ref">_ref_launch_pymapdl</span>.</p>
 </section>
 </section>
 
@@ -800,7 +811,7 @@ const EXTRA_SOURCES = JSON.parse('""');
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.8.1. and
+          1.8.2. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
           on <span id="date"></span>
         </p>
