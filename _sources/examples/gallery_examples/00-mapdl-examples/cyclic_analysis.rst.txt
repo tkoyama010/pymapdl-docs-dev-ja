@@ -218,7 +218,7 @@ Visualize a traveling wave from the modal analysis.
 
 For more details, see `Validation of a Modal Work Approach for Forced
 Response Analysis of Bladed Disks
-<https://www.mdpi.com/2076-3417/11/12/5437/pdf>`_, or the `Cyclic Symmetry
+<https://www.mdpi.com/2076 - 3417/11/12/5437/pdf>`_, or the `Cyclic Symmetry
 Analysis Guide
 <https://ansyshelp.ansys.com/Views/Secured/corp/v222/en/pdf/Ansys_Mechanical_APDL_Cyclic_Symmetry_Analysis_Guide.pdf>`_
 
