@@ -28,8 +28,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=0790524f97105ba85085" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=0790524f97105ba85085" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/ansys-sphinx-theme.css?v=5ffe81b6" />
@@ -49,10 +49,10 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <script defer src="_static/scripts/fontawesome.js?digest=0790524f97105ba85085"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=0790524f97105ba85085" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=0790524f97105ba85085" />
 
 
   <!-- Include desired assets -->
@@ -101,7 +101,7 @@
             </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'changelog';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.17.1';
+        DOCUMENTATION_OPTIONS.theme_version = '0.18.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://mapdl.docs.pyansys.com/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
@@ -311,11 +311,18 @@
       
         <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="ライト"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="ダーク"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="ライト"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="ダーク"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>ライト</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>ダーク</button></li>
+  </ul>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -328,8 +335,7 @@
           
           
           
-          <a href="https://github.com/ansys/pymapdl" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/ansys/pymapdl" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
         <li class="nav-item">
           
@@ -340,8 +346,7 @@
           
           
           
-          <a href="https://github.com/ansys/pymapdl/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Support</span></a>
+          <a href="https://github.com/ansys/pymapdl/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i><span class="visually-hidden">Support</span></a>
         </li>
         <li class="nav-item">
           
@@ -352,8 +357,7 @@
           
           
           
-          <a href="https://mapdl.docs.pyansys.com/version/dev/getting_started/contribution.html" title="Contribute" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-wrench fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Contribute</span></a>
+          <a href="https://mapdl.docs.pyansys.com/version/dev/getting_started/contribution.html" title="Contribute" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-wrench fa-lg" aria-hidden="true"></i><span class="visually-hidden">Contribute</span></a>
         </li>
 </ul></div>
       
@@ -517,11 +521,18 @@
         
           <div class="navbar-item">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="ライト"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="ダーク"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button></div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="ライト"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="ダーク"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>ライト</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>ダーク</button></li>
+  </ul>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -534,8 +545,7 @@
           
           
           
-          <a href="https://github.com/ansys/pymapdl" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">GitHub</span></a>
+          <a href="https://github.com/ansys/pymapdl" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
         </li>
         <li class="nav-item">
           
@@ -546,8 +556,7 @@
           
           
           
-          <a href="https://github.com/ansys/pymapdl/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Support</span></a>
+          <a href="https://github.com/ansys/pymapdl/discussions" title="Support" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-comment fa-fw fa-lg" aria-hidden="true"></i><span class="visually-hidden">Support</span></a>
         </li>
         <li class="nav-item">
           
@@ -558,8 +567,7 @@
           
           
           
-          <a href="https://mapdl.docs.pyansys.com/version/dev/getting_started/contribution.html" title="Contribute" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-wrench fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Contribute</span></a>
+          <a href="https://mapdl.docs.pyansys.com/version/dev/getting_started/contribution.html" title="Contribute" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa fa-wrench fa-lg" aria-hidden="true"></i><span class="visually-hidden">Contribute</span></a>
         </li>
 </ul></div>
         
@@ -657,11 +665,28 @@
   <section id="release-notes">
 <span id="ref-release-notes"></span><h1>リリースノート<a class="headerlink" href="#release-notes" title="Link to this heading">#</a></h1>
 <p>このドキュメントには、プロジェクトのリリースノートが含まれています。</p>
-<section id="june-08-2026">
-<span id="v0-73-1"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.73.1">0.73.1</a> - June 08, 2026<a class="headerlink" href="#june-08-2026" title="Link to this heading">#</a></h2>
+<section id="july-02-2026">
+<span id="v0-73-2"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.73.2">0.73.2</a> - July 02, 2026<a class="headerlink" href="#july-02-2026" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
+修正</label><div class="sd-tab-content docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Implement missing abstract methods for ansys-tools-visualization-interface 0.13.x</p></td>
+<td><p><a class="reference external" href="https://github.com/ansys/pymapdl/pull/4601">#4601</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="june-08-2026">
+<span id="v0-73-1"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.73.1">0.73.1</a> - June 08, 2026<a class="headerlink" href="#june-08-2026" title="Link to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-1" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
 修正</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -678,8 +703,8 @@
 </table>
 </div>
 </div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
+<input id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
 Maintenance</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -695,8 +720,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <section id="april-20-2026">
 <span id="v0-73-0"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.73.0">0.73.0</a> - April 20, 2026<a class="headerlink" href="#april-20-2026" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
 依存関係</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -710,8 +735,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-3">
+<input id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
 Maintenance</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -725,10 +750,10 @@ Maintenance</label><div class="sd-tab-content docutils">
 </div>
 </section>
 <section id="april-16-2026">
-<span id="id10"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.73.0">0.73.0</a> - April 16, 2026<a class="headerlink" href="#april-16-2026" title="Link to this heading">#</a></h2>
+<span id="id12"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.73.0">0.73.0</a> - April 16, 2026<a class="headerlink" href="#april-16-2026" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-4">
+<input checked="checked" id="sd-tab-item-5" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
 追加</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -793,8 +818,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-5">
+<input id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
 修正</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -847,8 +872,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-6">
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-7">
 依存関係</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -919,8 +944,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-7">
+<input id="sd-tab-item-8" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-8">
 ドキュメンテーション</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -931,8 +956,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-8" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-8">
+<input id="sd-tab-item-9" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-9">
 その他</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -946,8 +971,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-9" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-9">
+<input id="sd-tab-item-10" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-10">
 Maintenance</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -988,8 +1013,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-10" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-10">
+<input id="sd-tab-item-11" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-11">
 Test</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1011,8 +1036,8 @@ Test</label><div class="sd-tab-content docutils">
 <section id="march-04-2026">
 <span id="v0-72-1"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.72.1">0.72.1</a> - March 04, 2026<a class="headerlink" href="#march-04-2026" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-11" name="sd-tab-set-3" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-11">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-12">
 追加</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1041,8 +1066,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-12" name="sd-tab-set-3" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-12">
+<input id="sd-tab-item-13" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-13">
 修正</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1062,8 +1087,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-13" name="sd-tab-set-3" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-13">
+<input id="sd-tab-item-14" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-14">
 依存関係</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1119,8 +1144,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-14" name="sd-tab-set-3" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-14">
+<input id="sd-tab-item-15" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-15">
 その他</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1131,8 +1156,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-15" name="sd-tab-set-3" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-15">
+<input id="sd-tab-item-16" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-16">
 Maintenance</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1179,8 +1204,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-16" name="sd-tab-set-3" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-16">
+<input id="sd-tab-item-17" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-17">
 Test</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1199,8 +1224,8 @@ Test</label><div class="sd-tab-content docutils">
 <section id="january-27-2026">
 <span id="v0-72-0"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.72.0">0.72.0</a> - January 27, 2026<a class="headerlink" href="#january-27-2026" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-17" name="sd-tab-set-4" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-17">
+<input checked="checked" id="sd-tab-item-18" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-18">
 追加</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1223,8 +1248,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-18" name="sd-tab-set-4" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-18">
+<input id="sd-tab-item-19" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-19">
 修正</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1238,8 +1263,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-19" name="sd-tab-set-4" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-19">
+<input id="sd-tab-item-20" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-20">
 依存関係</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1283,8 +1308,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-20" name="sd-tab-set-4" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-20">
+<input id="sd-tab-item-21" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-21">
 その他</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1295,8 +1320,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-21" name="sd-tab-set-4" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-21">
+<input id="sd-tab-item-22" name="sd-tab-set-5" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-22">
 Maintenance</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1327,8 +1352,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <section id="december-11-2025">
 <span id="v0-71-3"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.71.3">0.71.3</a> - December 11, 2025<a class="headerlink" href="#december-11-2025" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-22" name="sd-tab-set-5" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-22">
+<input checked="checked" id="sd-tab-item-23" name="sd-tab-set-6" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-23">
 修正</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1342,8 +1367,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-23" name="sd-tab-set-5" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-23">
+<input id="sd-tab-item-24" name="sd-tab-set-6" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-24">
 依存関係</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1363,8 +1388,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-24" name="sd-tab-set-5" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-24">
+<input id="sd-tab-item-25" name="sd-tab-set-6" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-25">
 その他</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1375,8 +1400,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-25" name="sd-tab-set-5" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-25">
+<input id="sd-tab-item-26" name="sd-tab-set-6" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-26">
 Maintenance</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1407,8 +1432,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <section id="november-26-2025">
 <span id="v0-71-2"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.71.2">0.71.2</a> - November 26, 2025<a class="headerlink" href="#november-26-2025" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-26" name="sd-tab-set-6" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-26">
+<input checked="checked" id="sd-tab-item-27" name="sd-tab-set-7" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-27">
 修正</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1425,8 +1450,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-27" name="sd-tab-set-6" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-27">
+<input id="sd-tab-item-28" name="sd-tab-set-7" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-28">
 依存関係</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1440,8 +1465,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-28" name="sd-tab-set-6" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-28">
+<input id="sd-tab-item-29" name="sd-tab-set-7" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-29">
 ドキュメンテーション</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1452,8 +1477,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-29" name="sd-tab-set-6" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-29">
+<input id="sd-tab-item-30" name="sd-tab-set-7" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-30">
 Maintenance</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1472,8 +1497,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <section id="october-30-2025">
 <span id="v0-71-1"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.71.1">0.71.1</a> - October 30, 2025<a class="headerlink" href="#october-30-2025" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-30" name="sd-tab-set-7" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-30">
+<input checked="checked" id="sd-tab-item-31" name="sd-tab-set-8" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-31">
 追加</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1493,8 +1518,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-31" name="sd-tab-set-7" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-31">
+<input id="sd-tab-item-32" name="sd-tab-set-8" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-32">
 修正</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1523,8 +1548,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-32" name="sd-tab-set-7" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-32">
+<input id="sd-tab-item-33" name="sd-tab-set-8" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-33">
 依存関係</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1595,8 +1620,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-33" name="sd-tab-set-7" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-33">
+<input id="sd-tab-item-34" name="sd-tab-set-8" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-34">
 ドキュメンテーション</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1613,8 +1638,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-34" name="sd-tab-set-7" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-34">
+<input id="sd-tab-item-35" name="sd-tab-set-8" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-35">
 その他</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1637,8 +1662,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-35" name="sd-tab-set-7" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-35">
+<input id="sd-tab-item-36" name="sd-tab-set-8" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-36">
 Maintenance</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1694,8 +1719,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-36" name="sd-tab-set-7" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-36">
+<input id="sd-tab-item-37" name="sd-tab-set-8" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-37">
 Test</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1711,8 +1736,8 @@ Test</label><div class="sd-tab-content docutils">
 <section id="august-22-2025">
 <span id="v0-71-0"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.71.0">0.71.0</a> - August 22, 2025<a class="headerlink" href="#august-22-2025" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-37" name="sd-tab-set-8" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-37">
+<input checked="checked" id="sd-tab-item-38" name="sd-tab-set-9" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-38">
 追加</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1771,8 +1796,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-38" name="sd-tab-set-8" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-38">
+<input id="sd-tab-item-39" name="sd-tab-set-9" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-39">
 修正</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1864,8 +1889,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-39" name="sd-tab-set-8" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-39">
+<input id="sd-tab-item-40" name="sd-tab-set-9" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-40">
 依存関係</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -1966,8 +1991,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-40" name="sd-tab-set-8" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-40">
+<input id="sd-tab-item-41" name="sd-tab-set-9" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-41">
 その他</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2083,8 +2108,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-41" name="sd-tab-set-8" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-41">
+<input id="sd-tab-item-42" name="sd-tab-set-9" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-42">
 ドキュメンテーション</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2122,8 +2147,8 @@ Test</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-42" name="sd-tab-set-8" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-42">
+<input id="sd-tab-item-43" name="sd-tab-set-9" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-43">
 Maintenance</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2157,8 +2182,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <section id="june-26-2025">
 <span id="v0-70-2"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.70.2">0.70.2</a> - June 26, 2025<a class="headerlink" href="#june-26-2025" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-43" name="sd-tab-set-9" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-43">
+<input checked="checked" id="sd-tab-item-44" name="sd-tab-set-10" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-44">
 修正</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2169,8 +2194,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-44" name="sd-tab-set-9" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-44">
+<input id="sd-tab-item-45" name="sd-tab-set-10" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-45">
 その他</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2186,8 +2211,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <section id="may-12-2025">
 <span id="v0-70-1"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.70.1">0.70.1</a> - May 12, 2025<a class="headerlink" href="#may-12-2025" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-45" name="sd-tab-set-10" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-45">
+<input checked="checked" id="sd-tab-item-46" name="sd-tab-set-11" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-46">
 追加</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2201,8 +2226,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-46" name="sd-tab-set-10" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-46">
+<input id="sd-tab-item-47" name="sd-tab-set-11" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-47">
 修正</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2216,8 +2241,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-47" name="sd-tab-set-10" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-47">
+<input id="sd-tab-item-48" name="sd-tab-set-11" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-48">
 依存関係</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2231,8 +2256,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-48" name="sd-tab-set-10" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-48">
+<input id="sd-tab-item-49" name="sd-tab-set-11" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-49">
 Maintenance</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2254,8 +2279,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <section id="may-09-2025">
 <span id="v0-70-0"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.70.0">0.70.0</a> - May 09, 2025<a class="headerlink" href="#may-09-2025" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-49" name="sd-tab-set-11" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-49">
+<input checked="checked" id="sd-tab-item-50" name="sd-tab-set-12" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-50">
 追加</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2281,8 +2306,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-50" name="sd-tab-set-11" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-50">
+<input id="sd-tab-item-51" name="sd-tab-set-12" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-51">
 修正</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2350,8 +2375,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-51" name="sd-tab-set-11" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-51">
+<input id="sd-tab-item-52" name="sd-tab-set-12" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-52">
 依存関係</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2389,8 +2414,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-52" name="sd-tab-set-11" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-52">
+<input id="sd-tab-item-53" name="sd-tab-set-12" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-53">
 その他</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2407,8 +2432,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-53" name="sd-tab-set-11" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-53">
+<input id="sd-tab-item-54" name="sd-tab-set-12" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-54">
 ドキュメンテーション</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2434,8 +2459,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<input id="sd-tab-item-54" name="sd-tab-set-11" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-54">
+<input id="sd-tab-item-55" name="sd-tab-set-12" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-55">
 Maintenance</label><div class="sd-tab-content docutils">
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -2485,7 +2510,7 @@ Maintenance</label><div class="sd-tab-content docutils">
 </div>
 </section>
 <section id="v0-69-3">
-<span id="id471"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.3">0.69.3</a> - 2025-02-27<a class="headerlink" href="#v0-69-3" title="Link to this heading">#</a></h2>
+<span id="id473"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.3">0.69.3</a> - 2025-02-27<a class="headerlink" href="#v0-69-3" title="Link to this heading">#</a></h2>
 <section id="added">
 <h3>追加<a class="headerlink" href="#added" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -2564,9 +2589,9 @@ Maintenance</label><div class="sd-tab-content docutils">
 </section>
 </section>
 <section id="v0-69-2">
-<span id="id521"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.2">0.69.2</a> - 2025-01-22<a class="headerlink" href="#v0-69-2" title="Link to this heading">#</a></h2>
-<section id="id522">
-<h3>追加<a class="headerlink" href="#id522" title="Link to this heading">#</a></h3>
+<span id="id523"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.2">0.69.2</a> - 2025-01-22<a class="headerlink" href="#v0-69-2" title="Link to this heading">#</a></h2>
+<section id="id524">
+<h3>追加<a class="headerlink" href="#id524" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>chore: update CHANGELOG for v0.69.1 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3643">#3643</a></p></li>
 <li><p>feat: adding __len__ to components <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3663">#3663</a></p></li>
@@ -2574,15 +2599,15 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>test: making sure the full and rst files exists before running the tests <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3666">#3666</a></p></li>
 </ul>
 </section>
-<section id="id527">
-<h3>修正<a class="headerlink" href="#id527" title="Link to this heading">#</a></h3>
+<section id="id529">
+<h3>修正<a class="headerlink" href="#id529" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: parsing components when too many <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3662">#3662</a></p></li>
 <li><p>fix: avoid com logging if not in debug mode <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3665">#3665</a></p></li>
 </ul>
 </section>
-<section id="id530">
-<h3>依存関係<a class="headerlink" href="#id530" title="Link to this heading">#</a></h3>
+<section id="id532">
+<h3>依存関係<a class="headerlink" href="#id532" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump grpcio from 1.68.1 to 1.69.0 in the grpc-deps group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3645">#3645</a></p></li>
 <li><p>build: bump scipy from 1.14.1 to 1.15.0 in the core group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3646">#3646</a></p></li>
@@ -2593,14 +2618,14 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>build: bump pyfakefs from 5.7.3 to 5.7.4 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3673">#3673</a></p></li>
 </ul>
 </section>
-<section id="id538">
-<h3>ドキュメンテーション<a class="headerlink" href="#id538" title="Link to this heading">#</a></h3>
+<section id="id540">
+<h3>ドキュメンテーション<a class="headerlink" href="#id540" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>docs: fix post documentation <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3684">#3684</a></p></li>
 </ul>
 </section>
-<section id="id540">
-<h3>Maintenance<a class="headerlink" href="#id540" title="Link to this heading">#</a></h3>
+<section id="id542">
+<h3>Maintenance<a class="headerlink" href="#id542" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>ci: pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3657">#3657</a>, <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3681">#3681</a></p></li>
 <li><p>ci: pin ubuntu OS to 22.04. <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3659">#3659</a></p></li>
@@ -2612,30 +2637,30 @@ Maintenance</label><div class="sd-tab-content docutils">
 </section>
 </section>
 <section id="v0-69-1">
-<span id="id549"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.1">0.69.1</a> - 2025-01-08<a class="headerlink" href="#v0-69-1" title="Link to this heading">#</a></h2>
-<section id="id550">
-<h3>追加<a class="headerlink" href="#id550" title="Link to this heading">#</a></h3>
+<span id="id551"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.1">0.69.1</a> - 2025-01-08<a class="headerlink" href="#v0-69-1" title="Link to this heading">#</a></h2>
+<section id="id552">
+<h3>追加<a class="headerlink" href="#id552" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>chore: update CHANGELOG for v0.69.0 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3641">#3641</a></p></li>
 </ul>
 </section>
-<section id="id552">
-<h3>修正<a class="headerlink" href="#id552" title="Link to this heading">#</a></h3>
+<section id="id554">
+<h3>修正<a class="headerlink" href="#id554" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: timeout for file checking <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3642">#3642</a></p></li>
 </ul>
 </section>
-<section id="id554">
-<h3>その他<a class="headerlink" href="#id554" title="Link to this heading">#</a></h3>
+<section id="id556">
+<h3>その他<a class="headerlink" href="#id556" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: node/element selection commands returning selected ids <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3636">#3636</a></p></li>
 </ul>
 </section>
 </section>
 <section id="v0-69-0">
-<span id="id557"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.0">0.69.0</a> - 2025-01-08<a class="headerlink" href="#v0-69-0" title="Link to this heading">#</a></h2>
-<section id="id558">
-<h3>追加<a class="headerlink" href="#id558" title="Link to this heading">#</a></h3>
+<span id="id559"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.69.0">0.69.0</a> - 2025-01-08<a class="headerlink" href="#v0-69-0" title="Link to this heading">#</a></h2>
+<section id="id560">
+<h3>追加<a class="headerlink" href="#id560" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>test: skip test <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3259">#3259</a></p></li>
 <li><p>refactor: modifying <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> calls and removing <code class="docutils literal notranslate"><span class="pre">try</span> <span class="pre">except</span> <span class="pre">continue</span></code> statements <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3474">#3474</a></p></li>
@@ -2679,8 +2704,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>build: bump certifi from 2024.2.2 to 2024.7.4 in /doc/source/examples/extended_examples/hpc <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3242">#3242</a></p></li>
 </ul>
 </section>
-<section id="id594">
-<h3>修正<a class="headerlink" href="#id594" title="Link to this heading">#</a></h3>
+<section id="id596">
+<h3>修正<a class="headerlink" href="#id596" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: using same labels everywhere <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3188">#3188</a></p></li>
 <li><p>ci: Fix missing labels format in dependabot file <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3204">#3204</a></p></li>
@@ -2704,8 +2729,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>fix: changelog <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3640">#3640</a></p></li>
 </ul>
 </section>
-<section id="id615">
-<h3>依存関係<a class="headerlink" href="#id615" title="Link to this heading">#</a></h3>
+<section id="id617">
+<h3>依存関係<a class="headerlink" href="#id617" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump pyvista[trame] from 0.43.9 to 0.43.10 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3194">#3194</a></p></li>
 <li><p>build: bump the minimal group across 1 directory with 2 updates <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3197">#3197</a></p></li>
@@ -2736,8 +2761,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>build: bump pyfakefs from 5.7.2 to 5.7.3 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3630">#3630</a></p></li>
 </ul>
 </section>
-<section id="id648">
-<h3>その他<a class="headerlink" href="#id648" title="Link to this heading">#</a></h3>
+<section id="id650">
+<h3>その他<a class="headerlink" href="#id650" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>ci: [pre-commit.ci] pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3206">#3206</a></p></li>
 <li><p>ci: Adding v251 CentOS based image to testing <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3210">#3210</a></p></li>
@@ -2756,8 +2781,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>feat: avoid errors when retrieving invalid routine <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3606">#3606</a></p></li>
 </ul>
 </section>
-<section id="id665">
-<h3>ドキュメンテーション<a class="headerlink" href="#id665" title="Link to this heading">#</a></h3>
+<section id="id667">
+<h3>ドキュメンテーション<a class="headerlink" href="#id667" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>docs: documenting using pymapdl on clusters <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3466">#3466</a></p></li>
 <li><p>ci: avoiding linkcheck on changelog page <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3488">#3488</a></p></li>
@@ -2775,8 +2800,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>feat: update copyright year <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3637">#3637</a></p></li>
 </ul>
 </section>
-<section id="id680">
-<h3>Maintenance<a class="headerlink" href="#id680" title="Link to this heading">#</a></h3>
+<section id="id682">
+<h3>Maintenance<a class="headerlink" href="#id682" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>ci: bump thollander/actions-comment-pull-request from 2 to 3 in the actions group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3481">#3481</a></p></li>
 <li><p>ci: pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3482">#3482</a>, <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3522">#3522</a>, <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3545">#3545</a>, <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3599">#3599</a></p></li>
@@ -2798,16 +2823,16 @@ Maintenance</label><div class="sd-tab-content docutils">
 </section>
 </section>
 <section id="v0-68-6">
-<span id="id701"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.6">0.68.6</a> - 2024-10-11<a class="headerlink" href="#v0-68-6" title="Link to this heading">#</a></h2>
-<section id="id702">
-<h3>追加<a class="headerlink" href="#id702" title="Link to this heading">#</a></h3>
+<span id="id703"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.6">0.68.6</a> - 2024-10-11<a class="headerlink" href="#v0-68-6" title="Link to this heading">#</a></h2>
+<section id="id704">
+<h3>追加<a class="headerlink" href="#id704" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>chore: update CHANGELOG for v0.68.5 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3455">#3455</a></p></li>
 <li><p>refactor: removing deprecated arguments <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3473">#3473</a></p></li>
 </ul>
 </section>
-<section id="id705">
-<h3>修正<a class="headerlink" href="#id705" title="Link to this heading">#</a></h3>
+<section id="id707">
+<h3>修正<a class="headerlink" href="#id707" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: contributors file <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3457">#3457</a></p></li>
 <li><p>fix: environment variables not being passed to MAPDL process <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3461">#3461</a></p></li>
@@ -2815,8 +2840,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>fix: add <code class="docutils literal notranslate"><span class="pre">build</span> <span class="pre">cheatsheet</span></code> as env variable within doc-build <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3468">#3468</a></p></li>
 </ul>
 </section>
-<section id="id710">
-<h3>依存関係<a class="headerlink" href="#id710" title="Link to this heading">#</a></h3>
+<section id="id712">
+<h3>依存関係<a class="headerlink" href="#id712" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump grpcio from 1.66.1 to 1.66.2 in the grpc-deps group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3453">#3453</a></p></li>
 <li><p>build: bump sphinx-autobuild from 2024.9.19 to 2024.10.3 in the documentation group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3454">#3454</a></p></li>
@@ -2824,21 +2849,21 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>build: bump the documentation group with 3 updates <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3478">#3478</a></p></li>
 </ul>
 </section>
-<section id="id715">
-<h3>その他<a class="headerlink" href="#id715" title="Link to this heading">#</a></h3>
+<section id="id717">
+<h3>その他<a class="headerlink" href="#id717" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: having two global flags. One for visualizer and one for pyvista <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3460">#3460</a></p></li>
 </ul>
 </section>
-<section id="id717">
-<h3>ドキュメンテーション<a class="headerlink" href="#id717" title="Link to this heading">#</a></h3>
+<section id="id719">
+<h3>ドキュメンテーション<a class="headerlink" href="#id719" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>docs: another hpc docs reorg <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3465">#3465</a></p></li>
 <li><p>docs: fix cheat sheet rendering <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3469">#3469</a></p></li>
 </ul>
 </section>
-<section id="id720">
-<h3>Maintenance<a class="headerlink" href="#id720" title="Link to this heading">#</a></h3>
+<section id="id722">
+<h3>Maintenance<a class="headerlink" href="#id722" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>ci: bump the actions group with 2 updates <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3470">#3470</a></p></li>
 <li><p>ci: pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3471">#3471</a></p></li>
@@ -2848,9 +2873,9 @@ Maintenance</label><div class="sd-tab-content docutils">
 </section>
 </section>
 <section id="v0-68-5">
-<span id="id726"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.5">0.68.5</a> - 2024-10-04<a class="headerlink" href="#v0-68-5" title="Link to this heading">#</a></h2>
-<section id="id727">
-<h3>追加<a class="headerlink" href="#id727" title="Link to this heading">#</a></h3>
+<span id="id728"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.5">0.68.5</a> - 2024-10-04<a class="headerlink" href="#v0-68-5" title="Link to this heading">#</a></h2>
+<section id="id729">
+<h3>追加<a class="headerlink" href="#id729" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: Adapt PyMAPDL to common plotter <a class="reference external" href="https://github.com/ansys/pymapdl/pull/2799">#2799</a></p></li>
 <li><p>refactor: clean mapdl inprocess and move mute to MapdlCore <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3220">#3220</a></p></li>
@@ -2864,16 +2889,16 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>perf: reduce-testing-time <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3427">#3427</a></p></li>
 </ul>
 </section>
-<section id="id738">
-<h3>変更<a class="headerlink" href="#id738" title="Link to this heading">#</a></h3>
+<section id="id740">
+<h3>変更<a class="headerlink" href="#id740" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>ci: bump docker/login-action from 3.2.0 to 3.3.0 in the actions group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3306">#3306</a></p></li>
 <li><p>build: bump importlib-metadata from 8.0.0 to 8.2.0 in the minimal group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3309">#3309</a></p></li>
 <li><p>build: update pre-commit-hook <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3339">#3339</a></p></li>
 </ul>
 </section>
-<section id="id742">
-<h3>修正<a class="headerlink" href="#id742" title="Link to this heading">#</a></h3>
+<section id="id744">
+<h3>修正<a class="headerlink" href="#id744" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: removing io error when logging to closed streams <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3273">#3273</a></p></li>
 <li><p>fix: increasing timeout for local-min <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3282">#3282</a></p></li>
@@ -2891,8 +2916,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>fix: changelog <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3452">#3452</a></p></li>
 </ul>
 </section>
-<section id="id757">
-<h3>依存関係<a class="headerlink" href="#id757" title="Link to this heading">#</a></h3>
+<section id="id759">
+<h3>依存関係<a class="headerlink" href="#id759" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump numpy from 1.26.4 to 2.0.0 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3177">#3177</a></p></li>
 <li><p>build: bump sphinx from 7.3.7 to 7.4.4 in the documentation group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3283">#3283</a></p></li>
@@ -2923,8 +2948,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>build: bump pandas from 2.2.2 to 2.2.3 in the documentation group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3433">#3433</a></p></li>
 </ul>
 </section>
-<section id="id788">
-<h3>その他<a class="headerlink" href="#id788" title="Link to this heading">#</a></h3>
+<section id="id790">
+<h3>その他<a class="headerlink" href="#id790" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat/adding missing argument <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3293">#3293</a></p></li>
 <li><p>feat/adding preppost license to allowed <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3294">#3294</a></p></li>
@@ -2941,8 +2966,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>feat: removing-CDB-files <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3441">#3441</a></p></li>
 </ul>
 </section>
-<section id="id804">
-<h3>ドキュメンテーション<a class="headerlink" href="#id804" title="Link to this heading">#</a></h3>
+<section id="id806">
+<h3>ドキュメンテーション<a class="headerlink" href="#id806" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: Supporting SLURM env vars for launching MAPDL configuration <a class="reference external" href="https://github.com/ansys/pymapdl/pull/2754">#2754</a></p></li>
 <li><p>Docs/improving hpc documentation <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3379">#3379</a></p></li>
@@ -2957,8 +2982,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>docs: adding directive to hide elements <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3449">#3449</a></p></li>
 </ul>
 </section>
-<section id="id816">
-<h3>Maintenance<a class="headerlink" href="#id816" title="Link to this heading">#</a></h3>
+<section id="id818">
+<h3>Maintenance<a class="headerlink" href="#id818" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump pyansys-tools-versioning from 0.5.0 to 0.6.0 in the minimal group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3357">#3357</a></p></li>
 <li><p>build: bump importlib-metadata from 8.2.0 to 8.4.0 in the minimal group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3366">#3366</a></p></li>
@@ -2970,12 +2995,12 @@ Maintenance</label><div class="sd-tab-content docutils">
 </section>
 </section>
 <section id="v0-68-4">
-<span id="id825"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.4">0.68.4</a> - 2024-07-15<a class="headerlink" href="#v0-68-4" title="Link to this heading">#</a></h2>
-<section id="id826">
-<h3>追加<a class="headerlink" href="#id826" title="Link to this heading">#</a></h3>
+<span id="id827"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.4">0.68.4</a> - 2024-07-15<a class="headerlink" href="#v0-68-4" title="Link to this heading">#</a></h2>
+<section id="id828">
+<h3>追加<a class="headerlink" href="#id828" title="Link to this heading">#</a></h3>
 </section>
-<section id="id827">
-<h3>修正<a class="headerlink" href="#id827" title="Link to this heading">#</a></h3>
+<section id="id829">
+<h3>修正<a class="headerlink" href="#id829" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: missing arguments on <code class="docutils literal notranslate"><span class="pre">OCDATA</span></code> command <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3226">#3226</a></p></li>
 <li><p>fix: Raising <cite>ValueError</cite> when using ips within pool library <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3240">#3240</a></p></li>
@@ -2987,15 +3012,15 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>fix: incorrect env vars section <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3252">#3252</a></p></li>
 </ul>
 </section>
-<section id="id836">
-<h3>ドキュメンテーション<a class="headerlink" href="#id836" title="Link to this heading">#</a></h3>
+<section id="id838">
+<h3>ドキュメンテーション<a class="headerlink" href="#id838" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>docs: adapt static images to dark/light themes <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3249">#3249</a></p></li>
 <li><p>docs: documenting new naming conventions for commits, branches and PRs. <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3228">#3228</a></p></li>
 </ul>
 </section>
-<section id="id839">
-<h3>依存関係<a class="headerlink" href="#id839" title="Link to this heading">#</a></h3>
+<section id="id841">
+<h3>依存関係<a class="headerlink" href="#id841" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump grpcio from 1.64.1 to 1.65.0 in the grpc-deps group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3270">#3270</a></p></li>
 <li><p>build: bump zipp from 3.17.0 to 3.19.1 in /doc/source/examples/extended_examples/hpc <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3261">#3261</a></p></li>
@@ -3018,8 +3043,8 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>test: skip test <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3259">#3259</a></p></li>
 </ul>
 </section>
-<section id="id854">
-<h3>Maintenance<a class="headerlink" href="#id854" title="Link to this heading">#</a></h3>
+<section id="id856">
+<h3>Maintenance<a class="headerlink" href="#id856" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>[pre-commit.ci] pre-commit autoupdate <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3238">#3238</a>, <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3253">#3253</a></p></li>
 <li><p>ci: Fix missing labels format in dependabot file <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3204">#3204</a></p></li>
@@ -3036,26 +3061,26 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>ci: run extended array based on the person who open the PR <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3256">#3256</a></p></li>
 </ul>
 </section>
-<section id="id869">
-<h3>その他<a class="headerlink" href="#id869" title="Link to this heading">#</a></h3>
+<section id="id871">
+<h3>その他<a class="headerlink" href="#id871" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>chore: update CHANGELOG for v0.68.2 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3183">#3183</a></p></li>
 </ul>
 </section>
 </section>
 <section id="v0-68-3">
-<span id="id872"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.3">0.68.3</a> - 2024-06-21<a class="headerlink" href="#v0-68-3" title="Link to this heading">#</a></h2>
-<section id="id873">
-<h3>追加<a class="headerlink" href="#id873" title="Link to this heading">#</a></h3>
+<span id="id874"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.3">0.68.3</a> - 2024-06-21<a class="headerlink" href="#v0-68-3" title="Link to this heading">#</a></h2>
+<section id="id875">
+<h3>追加<a class="headerlink" href="#id875" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: Add an inprocess backend to pymapdl <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3198">#3198</a></p></li>
 </ul>
 </section>
 </section>
 <section id="v0-68-2">
-<span id="id876"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.2">0.68.2</a> - 2024-06-18<a class="headerlink" href="#v0-68-2" title="Link to this heading">#</a></h2>
-<section id="id877">
-<h3>追加<a class="headerlink" href="#id877" title="Link to this heading">#</a></h3>
+<span id="id878"></span><h2><a class="reference external" href="https://github.com/ansys/pymapdl/releases/tag/v0.68.2">0.68.2</a> - 2024-06-18<a class="headerlink" href="#v0-68-2" title="Link to this heading">#</a></h2>
+<section id="id879">
+<h3>追加<a class="headerlink" href="#id879" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>feat: add a MAPDL version section in for bug issues <a class="reference external" href="https://github.com/ansys/pymapdl/pull/2982">#2982</a></p></li>
 <li><p>feat: adding some env var print to report <a class="reference external" href="https://github.com/ansys/pymapdl/pull/2999">#2999</a></p></li>
@@ -3071,22 +3096,22 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>feat: making old API function discoverable when Click is not installed <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3086">#3086</a></p></li>
 </ul>
 </section>
-<section id="id890">
-<h3>変更<a class="headerlink" href="#id890" title="Link to this heading">#</a></h3>
+<section id="id892">
+<h3>変更<a class="headerlink" href="#id892" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>refactor: refactoring CLI <a class="reference external" href="https://github.com/ansys/pymapdl/pull/2960">#2960</a></p></li>
 </ul>
 </section>
-<section id="id892">
-<h3>修正<a class="headerlink" href="#id892" title="Link to this heading">#</a></h3>
+<section id="id894">
+<h3>修正<a class="headerlink" href="#id894" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>fix: avoiding future sphinx warning <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3035">#3035</a></p></li>
 <li><p>fix: update the general files to align with PyAnsys standards <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3151">#3151</a></p></li>
 <li><p>fix: combine the <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> files <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3169">#3169</a></p></li>
 </ul>
 </section>
-<section id="id896">
-<h3>ドキュメンテーション<a class="headerlink" href="#id896" title="Link to this heading">#</a></h3>
+<section id="id898">
+<h3>ドキュメンテーション<a class="headerlink" href="#id898" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>docs: adding previous changes in <code class="docutils literal notranslate"><span class="pre">changelog.d</span></code> repository <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3182">#3182</a></p></li>
 <li><p>docs: clarifying MAPDL commands API section <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3071">#3071</a></p></li>
@@ -3098,16 +3123,16 @@ Maintenance</label><div class="sd-tab-content docutils">
 <li><p>docs: update a minor typo in <cite>mapdl.rst</cite> <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3140">#3140</a></p></li>
 </ul>
 </section>
-<section id="id905">
-<h3>依存関係<a class="headerlink" href="#id905" title="Link to this heading">#</a></h3>
+<section id="id907">
+<h3>依存関係<a class="headerlink" href="#id907" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>build: bump autopep8 from 2.2.0 to 2.3.0 in the testing group <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3179">#3179</a></p></li>
 <li><p>build: bump pyvista[trame] from 0.43.9 to 0.43.10 <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3180">#3180</a></p></li>
 <li><p>build: bump ansys-sphinx-theme from 0.16.5 to 0.16.6 in the core group across 1 directory <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3181">#3181</a></p></li>
 </ul>
 </section>
-<section id="id909">
-<h3>その他<a class="headerlink" href="#id909" title="Link to this heading">#</a></h3>
+<section id="id911">
+<h3>その他<a class="headerlink" href="#id911" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>chore: removing cdb files <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3036">#3036</a></p></li>
 <li><p>ci: having only one set of Dependabot rules <a class="reference external" href="https://github.com/ansys/pymapdl/pull/3107">#3107</a></p></li>
@@ -3142,8 +3167,8 @@ Maintenance</label><div class="sd-tab-content docutils">
   
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=0790524f97105ba85085"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=0790524f97105ba85085"></script>
 
 
   <!-- Include desired assets -->
@@ -3177,7 +3202,7 @@ const EXTRA_SOURCES = JSON.parse('""');
         <p class="theme-version">
           Built with the
           <a href="https://sphinxdocs.ansys.com/version/stable/index.html">Ansys Sphinx Theme</a>
-          1.8.2. and
+          1.9.0. and
            <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
           on <span id="date"></span>
         </p>
